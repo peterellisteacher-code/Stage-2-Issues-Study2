@@ -1,0 +1,17 @@
+# Runtime
+server.log
+__pycache__/
+*.pyc
+
+# Local-only secrets (sit outside this repo at ~/.mcp-servers/ai-image/)
+service-account.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Build / test scratch
+.pytest_cache/
+.venv/
+venv/

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issues Study Lab</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="brand-mark">IS</div>
+      <div>
+        <div class="brand-title">Issues Study Lab</div>
+        <div class="brand-sub">SACE Stage 2 Philosophy · 2026</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <label class="name-field">
+        <span>Your name</span>
+        <input id="student-name" type="text" placeholder="Required to save and export" autocomplete="name" maxlength="80" />
+      </label>
+      <div class="status" id="status">starting…</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- LEFT: question selector -->
+    <section class="panel panel-left" aria-label="Question selector">
+      <h2>Pick a question</h2>
+      <select id="question-select" aria-label="Sample questions">
+        <option value="">— choose —</option>
+      </select>
+
+      <div id="question-card" class="card hidden">
+        <div class="card-domain" id="question-domain"></div>
+        <div class="card-question" id="question-text"></div>
+        <div class="card-meta">
+          <strong>Cluster:</strong>
+          <span id="question-philosophers"></span>
+        </div>
+      </div>
+
+      <details class="dialectic-wrap" id="dialectic-wrap">
+        <summary>The dialectic <span class="dialectic-hint">(why this question is contested)</span></summary>
+        <div id="dialectic-card" class="dialectic-card"></div>
+      </details>
+
+      <h3>Curated readings</h3>
+      <ul id="readings-list" class="readings"></ul>
+
+      <details class="help">
+        <summary>How to use this Lab</summary>
+        <ol>
+          <li>Pick a question. The right-hand panels unlock.</li>
+          <li>In the middle panel, ask the cached library to walk you
+              through positions, find quotes, push back on your reasoning.</li>
+          <li>In the right panel, paste your draft. Click <em>Get feedback</em>
+              for criterion-referenced grading against the SACE rubric.</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- MIDDLE: chat -->
+    <section class="panel panel-mid" aria-label="Chat with cached library">
+      <h2>Develop your argument</h2>
+      <div class="chat-window" id="chat-window">
+        <div class="chat-empty" id="chat-empty">
+          Pick a question to start a conversation grounded in the cached
+          philosophy texts. Try: <em>“Walk me through the strongest
+          position.”</em> or <em>“What would Kant say in objection?”</em>
+        </div>
+      </div>
+      <form id="chat-form" class="chat-form">
+        <textarea id="chat-input" placeholder="Ask about positions, reasoning, objections, quotes…" rows="3" disabled></textarea>
+        <button id="chat-send" type="submit" disabled>Send</button>
+      </form>
+      <div class="chat-meta" id="chat-meta"></div>
+    </section>
+
+    <!-- RIGHT: draft + feedback -->
+    <section class="panel panel-right" aria-label="Draft and feedback">
+      <div class="panel-head">
+        <h2>Draft &amp; feedback</h2>
+        <span class="autosave-indicator" id="autosave-indicator">not saved</span>
+      </div>
+      <textarea id="draft-input" placeholder="Paste your full draft response here. Minimum ~200 characters." rows="14" disabled></textarea>
+      <div class="draft-controls">
+        <span id="draft-counter">0 chars</span>
+        <div class="button-row">
+          <button id="export-pdf-btn" type="button" disabled title="Save the current question, your chat history, draft, and latest feedback as a PDF">Save as PDF</button>
+          <button id="feedback-btn" type="button" disabled>Get feedback</button>
+        </div>
+      </div>
+      <div id="feedback-output" class="feedback"></div>
+    </section>
+  </main>
+
+  <footer>
+    Local broker on <code>127.0.0.1:5050</code> · GCP project
+    <code>gen-lang-client-0274569601</code>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

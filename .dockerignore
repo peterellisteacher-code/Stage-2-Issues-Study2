@@ -1,0 +1,29 @@
+# Stuff the runtime doesn't need
+.git/
+.gitignore
+.dockerignore
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Static assets are served by Netlify, not by Cloud Run
+readings/
+text_packs/
+screenshots/
+test_transcripts/
+index.html
+script.js
+styles.css
+
+# Source-of-truth + scripts -- not needed at runtime
+*.md
+filter_*.json
+cluster_plan.json
+surviving_questions.json
+unit_corpus_state.json
+preprocess.py
+filter_and_cluster.py
+build_clustered_corpus.py
+run_tests.py
+server.log
