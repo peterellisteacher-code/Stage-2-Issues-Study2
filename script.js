@@ -172,13 +172,21 @@ function renderMarkdown(md) {
 }
 
 // ── API helpers ─────────────────────────────────────────────────────────
+// On Netlify the /api/* path is proxied to Cloud Run, but the proxy has a
+// 30 s edge timeout that kills /api/chat (often 60-90 s on a cold pack).
+// So when running on netlify.app we hit Cloud Run directly. CORS on the
+// Cloud Run service already allows the Netlify origin.
+const API_BASE = (location.hostname.endsWith(".netlify.app") || location.hostname.endsWith(".netlify.com"))
+  ? "https://issues-study-lab-167911956198.us-central1.run.app"
+  : "";   // same-origin (local dev or Cloud Run-served page)
+
 async function api(path, body) {
   const opts = {
     method: body ? "POST" : "GET",
     headers: { "Content-Type": "application/json" },
   };
   if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(path, opts);
+  const res = await fetch(API_BASE + path, opts);
   const data = await res.json().catch(() => ({}));
   if (!res.ok) {
     throw new Error(data.error || data.detail || `HTTP ${res.status}`);
@@ -499,7 +507,7 @@ async function onExportClick() {
   els.exportBtn.textContent = "Building PDF…";
 
   try {
-    const res = await fetch("/api/export_pdf", {
+    const res = await fetch(API_BASE + "/api/export_pdf", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
