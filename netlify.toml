@@ -9,15 +9,23 @@
   publish = "."
   command = "echo 'no build step'"
 
-# Reverse-proxy /api/* to the Cloud Run backend.
-# When this config is processed, BACKEND_URL must be set in Netlify env.
+# Reverse-proxy /api/* AND /readings/* to the Cloud Run backend.
+# Cloud Run hosts both the Flask API and the 137 source PDFs (the readings/
+# folder is too big for a Netlify static deploy via the MCP path).
+# BACKEND_URL must be set on Netlify before the redirect resolves.
 [[redirects]]
   from = "/api/*"
   to = "${BACKEND_URL}/api/:splat"
   status = 200
   force = true
 
-# Cache headers for the static reading PDFs -- they don't change once cached.
+[[redirects]]
+  from = "/readings/*"
+  to = "${BACKEND_URL}/readings/:splat"
+  status = 200
+  force = true
+
+# Cache headers for the proxied PDFs -- they don't change once cached.
 [[headers]]
   for = "/readings/*"
   [headers.values]

@@ -7,8 +7,8 @@ __pycache__/
 .venv/
 venv/
 
-# Static assets are served by Netlify, not by Cloud Run
-readings/
+# Cloud Run serves /readings/<filename> directly so the 538 MB of PDFs go
+# in the image. Netlify proxies /readings/* -> Cloud Run.
 text_packs/
 screenshots/
 test_transcripts/
