@@ -21,7 +21,7 @@
 
 [[redirects]]
   from = "/readings/*"
-  to = "${BACKEND_URL}/readings/:splat"
+  to = "https://storage.googleapis.com/issues-study-lab-readings/:splat"
   status = 200
   force = true
 
