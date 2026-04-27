@@ -15,7 +15,7 @@
 # BACKEND_URL must be set on Netlify before the redirect resolves.
 [[redirects]]
   from = "/api/*"
-  to = "${BACKEND_URL}/api/:splat"
+  to = "https://issues-study-lab-167911956198.us-central1.run.app/api/:splat"
   status = 200
   force = true
 
