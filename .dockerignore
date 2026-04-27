@@ -7,8 +7,9 @@ __pycache__/
 .venv/
 venv/
 
-# Cloud Run serves /readings/<filename> directly so the 538 MB of PDFs go
-# in the image. Netlify proxies /readings/* -> Cloud Run.
+# readings/ + text_packs/ live on a public GCS bucket, NOT in the image.
+# Netlify proxies /readings/* directly to the GCS bucket public URL.
+readings/
 text_packs/
 screenshots/
 test_transcripts/

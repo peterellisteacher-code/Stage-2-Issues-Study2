@@ -62,10 +62,21 @@ EXEMPLAR_FOR_DOMAIN = {
 }
 
 # ── Auth ───────────────────────────────────────────────────────────────────
+# Local dev: read the SA JSON from disk and point GOOGLE_APPLICATION_CREDENTIALS at it.
+# Cloud Run / GCE: no JSON on disk; the runtime binds the SA via the metadata
+# server, and the google-genai client picks up Application Default Credentials
+# automatically. Skip the file check in that case.
+_ON_CLOUD_RUN = bool(
+    os.environ.get("K_SERVICE")
+    or os.environ.get("CLOUD_RUN_JOB")
+    or os.environ.get("K_CONFIGURATION")
+)
 if SA_JSON_PATH.exists():
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(SA_JSON_PATH)
-else:
-    raise SystemExit(f"service-account.json not found at {SA_JSON_PATH}")
+elif not _ON_CLOUD_RUN:
+    raise SystemExit(
+        f"service-account.json not found at {SA_JSON_PATH} (and not running on Cloud Run)"
+    )
 
 vertex_client = genai.Client(
     vertexai=True,

@@ -12,15 +12,14 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
-# Copy what the runtime needs. readings/ is included so Cloud Run can
-# serve /readings/<filename>; Netlify proxies that path through to here.
+# Copy only what the runtime needs. readings/ are hosted on a public GCS
+# bucket, NOT in the image (538MB) — Netlify proxies /readings/* there.
 COPY server.py /app/
 COPY cache_handles.json /app/
 COPY pack_metadata.json /app/
 COPY lab_corpus.json /app/
 COPY question_to_cluster.json /app/
 COPY extracted_docx /app/extracted_docx
-COPY readings /app/readings
 
 # Cloud Run sets PORT; default to 8080 for local docker run testing
 ENV PORT=8080 PYTHONUNBUFFERED=1
