@@ -5,8 +5,8 @@
 # first deploy, e.g. BACKEND_URL=https://issues-study-lab-xyz.run.app
 
 [build]
-  publish = "Issues_Study_Lab"
-  # Nothing to build -- the site is plain HTML/JS/CSS plus the readings/ folder.
+  # The lab files are at the repo root after the deploy restructure.
+  publish = "."
   command = "echo 'no build step'"
 
 # Reverse-proxy /api/* to the Cloud Run backend.
