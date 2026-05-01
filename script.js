@@ -87,6 +87,7 @@ const els = {
 // ── Persistence ────────────────────────────────────────────────
 const NAME_KEY = "lab_student_name";
 const QID_KEY = "lab_current_qid";
+const PAGE_KEY = "lab_last_page";
 const stateKey = (qid) => `lab_state_${qid}`;
 
 function getStudentName() { return (els.studentName.value || "").trim(); }
@@ -238,6 +239,9 @@ function navigate(page, push = true) {
   if (location.hash !== "#" + page) {
     history.replaceState(null, "", "#" + page);
   }
+  // Remember where the student was so a returning visit lands them back
+  // on their last working page rather than the welcome screen.
+  if (page !== "welcome") localStorage.setItem(PAGE_KEY, page);
   window.scrollTo(0, 0);
 
   if (page === "readings" && state.questionId) renderReadingsForCurrent();
@@ -775,7 +779,15 @@ async function init() {
   updateChamberPrompt();
   updateFeedbackPrompt();
   refreshControls();
-  navigate(location.hash.replace(/^#/, "") || DEFAULT_PAGE, false);
+
+  // Returning students with a saved name + saved question land back on
+  // their last-visited page. New students (no name) get sent to welcome
+  // by navigate()'s name-gate. URL hash always wins over the saved page.
+  const fromHash = location.hash.replace(/^#/, "");
+  const savedLastPage = localStorage.getItem(PAGE_KEY);
+  const startPage = fromHash
+    || (getStudentName() && savedLastPage && PAGES.includes(savedLastPage) ? savedLastPage : DEFAULT_PAGE);
+  navigate(startPage, false);
 }
 
 document.addEventListener("DOMContentLoaded", init);

@@ -6,7 +6,7 @@
   --paper: #ffffff;
   --ink: #1d1b18;
   --ink-soft: #44413c;
-  --ink-faint: #807a6f;
+  --ink-faint: #6a655c; /* darkened from #807a6f to clear WCAG AA (4.5:1) */
   --rule: #e3dccb;
   --accent: #5a3e2b;
   --accent-soft: #8c6a4f;
@@ -43,6 +43,20 @@ body {
 
 a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-soft); }
+
+/* Visible keyboard focus ring on every interactive element. The brown
+   .primary-btn swallows the default browser ring, so we override with an
+   inset white ring on those. */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.primary-btn:focus-visible {
+  outline-color: #fff;
+  outline-offset: -3px;
+}
 
 /* ── Top bar ────────────────────────────────────────────────────── */
 
@@ -603,10 +617,20 @@ h3 { font-size: 21px; line-height: 1.3; margin: var(--space-4) 0 var(--space-1);
   gap: var(--space-2);
   margin: var(--space-1) 0 var(--space-3);
   font-family: var(--mono);
-  font-size: 12px;
-  color: var(--ink-faint);
+  font-size: 13px;
+  color: var(--ink-soft);
 }
-.autosave-indicator.saved { color: var(--green); }
+.autosave-indicator {
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--bg-alt);
+  transition: background .25s, color .25s;
+}
+.autosave-indicator.saved {
+  color: var(--green);
+  background: #e2efde;
+}
 
 .action-bar {
   display: flex;
