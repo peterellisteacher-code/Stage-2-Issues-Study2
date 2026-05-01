@@ -58,10 +58,10 @@ A single letter grade (A+, A, A-, B+, B, B-, C+, C, C-, D, E) based on the rubri
 2–4 bullets naming what the draft is genuinely doing well, with specific phrases or moves quoted from the draft.
 
 ## Per-criterion feedback
-A short paragraph for each of: **KU1**, **KU2**, **RA1**, **RA2**, **RA3**, **CA1**, **C1/C2**. For each, name what's there, what's missing, and the single most useful revision.
+A short paragraph for each of: **KU1**, **KU2**, **RA1**, **RA2**, **RA3**, **CA1**, **C1/C2**. For each, name what's there, what's missing, and the single most useful revision. Under **RA2**: if the draft does not present arguments in *standard form* (numbered premises → conclusion), name this explicitly — per the 2025 SACE Assessment Advice it is the single most-impactful AT3 move. Don't gesture at "premises and inference" without naming the form.
 
 ## Top three revisions
-A numbered list of the three most leverage-positive things to change. Concrete, specific, actionable.
+A numbered list of the three most leverage-positive things to change. Concrete, specific, actionable. **Describe each move and what it would do for the draft. Do NOT write a model sentence the student could paste in.** The student must do the writing themselves; your job is to point at the move, not perform it. If you find yourself starting a revision with a phrase the student could lift verbatim, rewrite it as a description of the move instead.
 
 ## What the exemplar does that this draft doesn't yet
 2–3 bullets pointing to specific moves in the exemplar the student could borrow. Reference the exemplar by name.
