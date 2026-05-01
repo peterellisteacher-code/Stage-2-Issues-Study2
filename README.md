@@ -78,6 +78,36 @@ The 137 reading PDFs live in `readings/` at the repo root, served directly by Ne
 
 To add or replace a reading: drop the PDF into `readings/`, update the corresponding entry in `pack_metadata.json` if it's new, regenerate `data/readings.json` (`python build_static_data.py`), commit, push.
 
+### Grounding the chat in actual reading text
+
+The chamber chat passes the curated readings to Claude Haiku as document attachments so it can quote and analyse them, not just describe them by title.
+
+Two pathways:
+
+- **Files API** (for PDFs ≤32 MB AND ≤100 pages — most readings). Uploaded once via `tools/upload_readings.py`. The mapping `filename → file_id` lives in `data/file_ids.json`.
+- **Inline text excerpts** (for the ~23 book-length sources that exceed Files API caps). Pre-extracted up to ~80K chars per file via `tools/extract_long_readings.py`. Output: `data/readings_text.json`.
+
+Both data files are bundled into the Netlify Function at deploy time (`netlify.toml` → `[functions] included_files = ["data/*.json"]`). The chat function attaches them as document blocks on the first user message; Anthropic's prompt cache makes subsequent turns cheap.
+
+#### Re-running the uploads
+
+After adding or replacing readings:
+
+```sh
+pip install anthropic pymupdf
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Extract text from book-length sources
+python tools/extract_long_readings.py
+
+# Upload everything else to Anthropic Files API (idempotent: skips already-uploaded files)
+python tools/upload_readings.py
+```
+
+Then `git add data/file_ids.json data/readings_text.json && git commit && git push`. Netlify auto-deploys.
+
+If `data/file_ids.json` is empty (or missing), the chat still works — it just falls back to title + dialectic for ungrounded readings, and the AI is told not to invent quotes.
+
 ## Files
 
 | File | Role |
