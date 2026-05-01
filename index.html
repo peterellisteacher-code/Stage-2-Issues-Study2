@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Issues Study Lab — SACE Stage 2 Philosophy</title>
-  <link rel="stylesheet" href="/styles.css?v=2026-05-01-static" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-01-haiku" />
 </head>
 <body>
 
@@ -66,11 +66,11 @@
         </div>
         <div class="callout">
           <h3>4. The chamber</h3>
-          <p>Build a Socratic starter prompt — the question, dialectic and reading list — and take it into the AI tool of your choice.</p>
+          <p>A Socratic dialogue partner that has read every text in your question's reading cluster. It pushes back; it doesn't write the essay.</p>
         </div>
         <div class="callout">
           <h3>5. The drafting</h3>
-          <p>A focused write space, a feedback prompt that pairs your draft with the SACE rubric and exemplar, and a Save as PDF button.</p>
+          <p>A focused write space, criterion-referenced feedback against the SACE rubric, and a Save as PDF button.</p>
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@
     <ul class="readings-list" id="readings-secondary"></ul>
 
     <div class="page-footer" id="readings-footer">
-      <a class="primary-btn" href="#chamber">Take the chamber to your AI tool <span class="arrow">→</span></a>
+      <a class="primary-btn" href="#chamber">Talk to the chamber <span class="arrow">→</span></a>
     </div>
   </section>
 
@@ -199,50 +199,34 @@
         <em>Pick a question first.</em>
       </div>
       <p class="chamber-note">
-        The chamber is a Socratic interlocutor — it pushes back, steel-mans
-        weak views, and refuses to write your essay for you. This lab no
-        longer hosts the chat itself; instead it builds a starter prompt
-        that turns any AI tool into the chamber. Copy it, open the tool of
-        your choice, paste, and (for the deepest engagement) upload the
-        reading PDFs from <a href="#readings">Step 3</a>.
+        A Socratic dialogue partner that has read every text in your question's
+        reading cluster. It will <em>not</em> write your essay. Bring it partial
+        thoughts and ask for objections, quotes, or steel-manning of a view you
+        find weak.
       </p>
-    </div>
-
-    <div class="handoff" id="chamber-handoff">
-      <div class="handoff-actions">
-        <button id="chamber-copy" type="button" class="primary-btn" disabled>
-          Copy prompt
-        </button>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-claude"
-           href="https://claude.ai/new" target="_blank" rel="noopener">
-          Open in Claude.ai
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-chatgpt"
-           href="https://chat.openai.com/" target="_blank" rel="noopener">
-          Open in ChatGPT
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-gemini"
-           href="https://gemini.google.com/app" target="_blank" rel="noopener">
-          Open in Gemini
-        </a>
-      </div>
-      <label class="handoff-label" for="chamber-prompt">
-        <span>Starter prompt</span>
-        <span class="handoff-meta" id="chamber-prompt-meta"></span>
-      </label>
-      <textarea id="chamber-prompt" class="handoff-textarea" rows="14"
-                spellcheck="false" readonly
-                placeholder="Pick a question first to generate the chamber prompt."></textarea>
       <details class="suggestions">
-        <summary>How to get the most out of the chamber</summary>
+        <summary>Prompt ideas</summary>
         <ul>
-          <li>Paste the prompt as your first message — it sets the AI up as a Socratic partner.</li>
-          <li>Upload the primary readings as PDF attachments. Most AI tools will read them directly.</li>
-          <li>Bring partial thoughts, not finished answers. Ask: "Steel-man the view I find weakest." Or: "Where's the most damaging objection to the position I'm leaning toward?"</li>
-          <li>Resist asking it to write paragraphs for you. Ask it to <em>push</em>, then write your own.</li>
+          <li>Walk me through the strongest position, with one quote.</li>
+          <li>What's the strongest objection to that position? Who raises it?</li>
+          <li>Steel-man the view I find weakest.</li>
+          <li>Where in the cached texts is X discussed? Quote a passage.</li>
+          <li>I want to argue Y. What's the most damaging counter I'd have to address?</li>
         </ul>
       </details>
     </div>
+
+    <div class="chat-window" id="chat-window">
+      <div class="chat-empty" id="chat-empty">
+        Send a message to begin.
+      </div>
+    </div>
+    <form id="chat-form" class="chat-form">
+      <textarea id="chat-input" rows="3"
+                placeholder="Ask about positions, reasoning, objections, quotes…" disabled></textarea>
+      <button id="chat-send" type="submit" class="primary-btn" disabled>Send</button>
+    </form>
+    <div class="chat-meta" id="chat-meta"></div>
 
     <div class="page-footer">
       <a class="primary-btn" href="#drafting">Now write your response <span class="arrow">→</span></a>
@@ -260,12 +244,13 @@
       <p>
         Up to 2,000 words. Make sure you address the five prompts: why is it
         philosophical, what positions, their reasoning, objections, and your own
-        defended position. Auto-saves as you type.
+        defended position. Auto-saves as you type. Get feedback when you're
+        ready, then save as PDF.
       </p>
     </div>
 
     <textarea id="draft-input"
-              placeholder="Paste or type your full draft response here. Build the feedback prompt once you've passed 200 characters."
+              placeholder="Paste or type your full draft response here. The model needs at least 200 characters before feedback unlocks."
               disabled></textarea>
 
     <div class="draft-controls">
@@ -274,45 +259,16 @@
     </div>
 
     <div class="action-bar">
-      <button id="feedback-build-btn" type="button" class="primary-btn" disabled>
-        Build feedback prompt
+      <button id="feedback-btn" type="button" class="primary-btn" disabled>
+        Get feedback against the rubric
       </button>
       <button id="export-pdf-btn" type="button" class="ghost-btn" disabled
-              title="Opens your browser's print dialog. Choose 'Save as PDF' to keep a copy of your name, the question, your draft and the feedback prompt.">
+              title="Opens your browser's print dialog. Choose 'Save as PDF' to keep a copy of your name, the question, the chat, the draft and the feedback.">
         Save as PDF
       </button>
     </div>
 
-    <div class="handoff" id="feedback-handoff" hidden>
-      <div class="handoff-actions">
-        <button id="feedback-copy" type="button" class="primary-btn">
-          Copy feedback prompt
-        </button>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-claude"
-           href="https://claude.ai/new" target="_blank" rel="noopener">
-          Open in Claude.ai
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-chatgpt"
-           href="https://chat.openai.com/" target="_blank" rel="noopener">
-          Open in ChatGPT
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-gemini"
-           href="https://gemini.google.com/app" target="_blank" rel="noopener">
-          Open in Gemini
-        </a>
-      </div>
-      <label class="handoff-label" for="feedback-prompt">
-        <span>Feedback prompt</span>
-        <span class="handoff-meta" id="feedback-prompt-meta"></span>
-      </label>
-      <textarea id="feedback-prompt" class="handoff-textarea" rows="16"
-                spellcheck="false" readonly></textarea>
-      <p class="handoff-hint">
-        The prompt embeds your draft, the SACE rubric, and the closest grade-banded
-        exemplar. Paste it as your first message — the AI will return structured,
-        criterion-referenced feedback (KU1-2, RA1-3, CA1, C1-2) and a predicted band.
-      </p>
-    </div>
+    <div id="feedback-output" class="feedback"></div>
   </section>
 
 </main>
@@ -322,10 +278,9 @@
   questions · 14 curated reading clusters.
 </footer>
 
-<!-- ═════════════════════════════════════════════════════════ PRINT VIEW -->
 <!-- Hidden until window.print() is called; populated on demand by script.js. -->
 <aside id="print-view" class="print-only" aria-hidden="true"></aside>
 
-<script src="/script.js?v=2026-05-01-static"></script>
+<script src="/script.js?v=2026-05-01-haiku"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "name": "issues-study-lab",
+  "version": "2.0.0",
+  "description": "SACE Stage 2 Philosophy Issues Study workspace, served from Netlify with Anthropic-backed Chamber + Feedback functions.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  }
+}

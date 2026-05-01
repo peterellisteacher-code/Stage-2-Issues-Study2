@@ -6,6 +6,12 @@ __pycache__/
 # Local-only secrets (sit outside this repo at ~/.mcp-servers/ai-image/)
 service-account.json
 
+# Local API key for development / smoke tests. The production key lives in
+# Netlify env vars (ANTHROPIC_API_KEY); never commit a real key.
+.env
+.env.local
+.env.*.local
+
 # OS / editor
 .DS_Store
 Thumbs.db
