@@ -90,15 +90,38 @@ ${dialectic}${attachedLines}${missingLines}`;
 }
 
 // Build document content blocks (file sources + inline text excerpts) for the question's readings.
-// Returns: { docs: [...content blocks], attached: [filenames], missing: [filenames] }
+// Caps the total estimated token cost of attached docs so we don't blow Claude's 200K context.
+//   PDF estimate:  ~50 tokens/KB (Anthropic charges PDF pages ~1500-2500 tokens each).
+//   Text estimate: ~0.25 tokens/char (4 chars/token).
+// Primary-tier readings are attached first; anything that would push us over budget
+// goes into `missing` so the AI knows the title but is told not to invent quotes.
 function buildDocumentBlocks(entry, fileIds, readingsText) {
+  const TOKEN_BUDGET = 120_000;        // leaves ~80K for system + history + output
+  const TOKENS_PER_PDF_BYTE = 1 / 20;  // ~50 tokens/KB
+  const TOKENS_PER_TEXT_CHAR = 0.25;   // 4 chars/token
+
   const docs = [];
   const attached = [];
   const missing = [];
-  for (const r of (entry.readings || [])) {
+  let used = 0;
+
+  // Primary readings first, then secondary.
+  const ordered = [...(entry.readings || [])].sort((a, b) => {
+    const ta = (a && a.tier) === "primary" ? 0 : 1;
+    const tb = (b && b.tier) === "primary" ? 0 : 1;
+    return ta - tb;
+  });
+
+  for (const r of ordered) {
     const name = r.filename || "";
     if (!name) continue;
+
     if (fileIds[name]) {
+      const cost = (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
+      if (used + cost > TOKEN_BUDGET) {
+        missing.push(name);
+        continue;
+      }
       docs.push({
         type: "document",
         source: { type: "file", file_id: fileIds[name] },
@@ -106,22 +129,27 @@ function buildDocumentBlocks(entry, fileIds, readingsText) {
         context: r.why || undefined,
       });
       attached.push(name);
+      used += cost;
     } else if (readingsText[name] && readingsText[name].text) {
+      const text = readingsText[name].text;
+      const cost = text.length * TOKENS_PER_TEXT_CHAR;
+      if (used + cost > TOKEN_BUDGET) {
+        missing.push(name);
+        continue;
+      }
       docs.push({
         type: "document",
-        source: {
-          type: "text",
-          media_type: "text/plain",
-          data: readingsText[name].text,
-        },
+        source: { type: "text", media_type: "text/plain", data: text },
         title: name.replace(/\.pdf$/i, ""),
         context: r.why || undefined,
       });
       attached.push(name);
+      used += cost;
     } else {
       missing.push(name);
     }
   }
+
   // Cache breakpoint on the last doc so the whole reading set caches as one prefix.
   if (docs.length > 0) {
     docs[docs.length - 1].cache_control = { type: "ephemeral" };
