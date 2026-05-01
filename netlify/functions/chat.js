@@ -183,7 +183,12 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
 
     // 2. Single Files-API PDF?
     if (fileIds[name]) {
-      const cost = (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
+      // Prefer page-based estimate (2000 tok/page) when known — accurate
+      // for image-heavy PDFs where size_bytes wildly over-estimates tokens.
+      // Fall back to size-based estimate if pages aren't recorded.
+      const cost = (r.pages && r.pages > 0)
+        ? r.pages * TOKENS_PER_PAGE
+        : (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
       if (used + cost > TOKEN_BUDGET) {
         missing.push(name);
         continue;

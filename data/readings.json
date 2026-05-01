@@ -15,7 +15,8 @@
         "tier": "primary",
         "download_url": "/readings/Louis Pojman - A Defense of the Death Penalty.pdf",
         "size_bytes": 56032,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Student Charles Jessup - Against the death penalty.pdf",
@@ -24,7 +25,8 @@
         "tier": "primary",
         "download_url": "/readings/Student Charles Jessup - Against the death penalty.pdf",
         "size_bytes": 469926,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 31
       },
       {
         "filename": "Claire Finkelstein - A Contractarian Argument Against the Death Penalty.pdf",
@@ -33,7 +35,8 @@
         "tier": "primary",
         "download_url": "/readings/Claire Finkelstein - A Contractarian Argument Against the Death Penalty.pdf",
         "size_bytes": 3241746,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 49
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -42,7 +45,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -51,7 +55,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -71,7 +76,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Humans and Nonhuman Animals.pdf",
@@ -80,7 +86,8 @@
         "tier": "primary",
         "download_url": "/readings/Humans and Nonhuman Animals.pdf",
         "size_bytes": 114008,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -89,7 +96,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -98,7 +106,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Haidt - Righteous Mind - Sanctity and Degradation.pdf",
@@ -107,7 +116,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
         "size_bytes": 11765500,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 4
       }
     ]
   },
@@ -127,7 +137,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -136,7 +147,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -145,7 +157,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       },
       {
         "filename": "Humans and Nonhuman Animals.pdf",
@@ -154,7 +167,8 @@
         "tier": "secondary",
         "download_url": "/readings/Humans and Nonhuman Animals.pdf",
         "size_bytes": 114008,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       }
     ]
   },
@@ -174,7 +188,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Haidt - Righteous Mind - Sanctity and Degradation.pdf",
@@ -183,7 +198,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
         "size_bytes": 11765500,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 4
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -192,7 +208,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Don Marquis - Why Abotion is Immoral.pdf",
@@ -201,7 +218,8 @@
         "tier": "primary",
         "download_url": "/readings/Don Marquis - Why Abotion is Immoral.pdf",
         "size_bytes": 129538,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Humans and Nonhuman Animals.pdf",
@@ -210,7 +228,8 @@
         "tier": "secondary",
         "download_url": "/readings/Humans and Nonhuman Animals.pdf",
         "size_bytes": 114008,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "J Gay-William - The Wrongfulness of Euthanasia.pdf",
@@ -219,7 +238,8 @@
         "tier": "secondary",
         "download_url": "/readings/J Gay-William - The Wrongfulness of Euthanasia.pdf",
         "size_bytes": 47522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -228,7 +248,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       }
     ]
   },
@@ -248,7 +269,8 @@
         "tier": "primary",
         "download_url": "/readings/Judith Jarvis Thomson - A Defense of Abortion.pdf",
         "size_bytes": 134352,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Don Marquis - Why Abotion is Immoral.pdf",
@@ -257,7 +279,8 @@
         "tier": "primary",
         "download_url": "/readings/Don Marquis - Why Abotion is Immoral.pdf",
         "size_bytes": 129538,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
@@ -266,7 +289,8 @@
         "tier": "primary",
         "download_url": "/readings/Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
         "size_bytes": 122994,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Peter Singer on Abortion.pdf",
@@ -275,7 +299,8 @@
         "tier": "primary",
         "download_url": "/readings/Peter Singer on Abortion.pdf",
         "size_bytes": 942835,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Embryo Research.pdf",
@@ -284,7 +309,8 @@
         "tier": "secondary",
         "download_url": "/readings/Embryo Research.pdf",
         "size_bytes": 231060,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -293,7 +319,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -313,7 +340,8 @@
         "tier": "primary",
         "download_url": "/readings/Embryo Research.pdf",
         "size_bytes": 231060,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Don Marquis - Why Abotion is Immoral.pdf",
@@ -322,7 +350,8 @@
         "tier": "primary",
         "download_url": "/readings/Don Marquis - Why Abotion is Immoral.pdf",
         "size_bytes": 129538,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
@@ -331,7 +360,8 @@
         "tier": "primary",
         "download_url": "/readings/Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
         "size_bytes": 122994,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -340,7 +370,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Enhancement Genetic Engineering.pdf",
@@ -349,7 +380,8 @@
         "tier": "secondary",
         "download_url": "/readings/Enhancement Genetic Engineering.pdf",
         "size_bytes": 763959,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       }
     ]
   },
@@ -369,7 +401,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels - The Morality of Euthanasia.pdf",
         "size_bytes": 50622,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "J Gay-William - The Wrongfulness of Euthanasia.pdf",
@@ -378,7 +411,8 @@
         "tier": "primary",
         "download_url": "/readings/J Gay-William - The Wrongfulness of Euthanasia.pdf",
         "size_bytes": 47522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Chapter 2 - Moral Issues - Euthanasia.pdf",
@@ -387,7 +421,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 2 - Moral Issues - Euthanasia.pdf",
         "size_bytes": 1011026,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "James Rachels textbook - the utilitarian approach.pdf",
@@ -396,7 +431,8 @@
         "tier": "secondary",
         "download_url": "/readings/James Rachels textbook - the utilitarian approach.pdf",
         "size_bytes": 145239,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Judith Jarvis Thomson - Killing and Letting Die.pdf",
@@ -405,7 +441,8 @@
         "tier": "secondary",
         "download_url": "/readings/Judith Jarvis Thomson - Killing and Letting Die.pdf",
         "size_bytes": 75967,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -414,7 +451,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -434,7 +472,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels - The Morality of Euthanasia.pdf",
         "size_bytes": 50622,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "J Gay-William - The Wrongfulness of Euthanasia.pdf",
@@ -443,7 +482,8 @@
         "tier": "primary",
         "download_url": "/readings/J Gay-William - The Wrongfulness of Euthanasia.pdf",
         "size_bytes": 47522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -452,7 +492,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "James Rachels textbook - the utilitarian approach.pdf",
@@ -461,7 +502,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - the utilitarian approach.pdf",
         "size_bytes": 145239,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Chapter 2 - Moral Issues - Euthanasia.pdf",
@@ -470,7 +512,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 2 - Moral Issues - Euthanasia.pdf",
         "size_bytes": 1011026,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "Judith Jarvis Thomson - Killing and Letting Die.pdf",
@@ -479,7 +522,8 @@
         "tier": "secondary",
         "download_url": "/readings/Judith Jarvis Thomson - Killing and Letting Die.pdf",
         "size_bytes": 75967,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -488,7 +532,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       }
     ]
   },
@@ -508,7 +553,8 @@
         "tier": "primary",
         "download_url": "/readings/Enhancement Genetic Engineering.pdf",
         "size_bytes": 763959,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "2016 - Bercic - Genetic Engineering.pdf",
@@ -517,7 +563,8 @@
         "tier": "primary",
         "download_url": "/readings/2016 - Bercic - Genetic Engineering.pdf",
         "size_bytes": 124692,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Embryo Research.pdf",
@@ -526,7 +573,8 @@
         "tier": "primary",
         "download_url": "/readings/Embryo Research.pdf",
         "size_bytes": 231060,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -535,7 +583,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Don Marquis - Why Abotion is Immoral.pdf",
@@ -544,7 +593,8 @@
         "tier": "secondary",
         "download_url": "/readings/Don Marquis - Why Abotion is Immoral.pdf",
         "size_bytes": 129538,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       }
     ]
   },
@@ -564,7 +614,8 @@
         "tier": "primary",
         "download_url": "/readings/Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 222078,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Floridi - The Ethics of Artificial Intelligence.pdf",
@@ -573,7 +624,8 @@
         "tier": "primary",
         "download_url": "/readings/Floridi - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 5177098,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf",
@@ -582,7 +634,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 221438,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "excerpt.pdf",
@@ -591,7 +644,8 @@
         "tier": "secondary",
         "download_url": "/readings/excerpt.pdf",
         "size_bytes": 48342,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -600,7 +654,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       }
     ]
   },
@@ -620,7 +675,8 @@
         "tier": "primary",
         "download_url": "/readings/Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 222078,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Floridi - The Ethics of Artificial Intelligence.pdf",
@@ -629,7 +685,8 @@
         "tier": "primary",
         "download_url": "/readings/Floridi - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 5177098,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "excerpt.pdf",
@@ -638,7 +695,8 @@
         "tier": "primary",
         "download_url": "/readings/excerpt.pdf",
         "size_bytes": 48342,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -647,7 +705,8 @@
         "tier": "secondary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Enhancement Genetic Engineering.pdf",
@@ -656,7 +715,8 @@
         "tier": "secondary",
         "download_url": "/readings/Enhancement Genetic Engineering.pdf",
         "size_bytes": 763959,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -665,7 +725,8 @@
         "tier": "secondary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       }
     ]
   },
@@ -685,7 +746,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 221438,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
@@ -694,7 +756,8 @@
         "tier": "primary",
         "download_url": "/readings/Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
         "size_bytes": 222078,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "excerpt.pdf",
@@ -703,7 +766,8 @@
         "tier": "primary",
         "download_url": "/readings/excerpt.pdf",
         "size_bytes": 48342,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -712,7 +776,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Enhancement Genetic Engineering.pdf",
@@ -721,7 +786,8 @@
         "tier": "secondary",
         "download_url": "/readings/Enhancement Genetic Engineering.pdf",
         "size_bytes": 763959,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -730,7 +796,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       }
     ]
   },
@@ -750,7 +817,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
@@ -759,7 +827,8 @@
         "tier": "primary",
         "download_url": "/readings/Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
         "size_bytes": 122994,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -768,7 +837,8 @@
         "tier": "primary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Enhancement Genetic Engineering.pdf",
@@ -777,7 +847,8 @@
         "tier": "primary",
         "download_url": "/readings/Enhancement Genetic Engineering.pdf",
         "size_bytes": 763959,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -786,7 +857,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       }
     ]
   },
@@ -806,7 +878,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Humans and Nonhuman Animals.pdf",
@@ -815,7 +888,8 @@
         "tier": "primary",
         "download_url": "/readings/Humans and Nonhuman Animals.pdf",
         "size_bytes": 114008,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -824,7 +898,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       },
       {
         "filename": "Haidt - Righteous Mind - Sanctity and Degradation.pdf",
@@ -833,7 +908,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
         "size_bytes": 11765500,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 4
       },
       {
         "filename": "Chapter 8 - The Law of Limited Competition.pdf",
@@ -842,7 +918,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 8 - The Law of Limited Competition.pdf",
         "size_bytes": 8676769,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 29
       }
     ]
   },
@@ -862,7 +939,8 @@
         "tier": "primary",
         "download_url": "/readings/Luban - Torture and the Ticking Bomb.pdf",
         "size_bytes": 70410,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Kant and Retribution.pdf",
@@ -871,7 +949,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Retribution.pdf",
         "size_bytes": 119023,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 6
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -880,7 +959,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -889,7 +969,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
@@ -898,7 +979,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -907,7 +989,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       }
     ]
   },
@@ -927,7 +1010,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "1982 - In a Different Voice - Carol Gilligan.pdf",
@@ -936,7 +1020,8 @@
         "tier": "primary",
         "download_url": "/readings/1982 - In a Different Voice - Carol Gilligan.pdf",
         "size_bytes": 11641801,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 217
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -945,7 +1030,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Judith Jarvis Thomson - A Defense of Abortion.pdf",
@@ -954,7 +1040,8 @@
         "tier": "primary",
         "download_url": "/readings/Judith Jarvis Thomson - A Defense of Abortion.pdf",
         "size_bytes": 134352,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
@@ -963,7 +1050,8 @@
         "tier": "secondary",
         "download_url": "/readings/Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
         "size_bytes": 122994,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -983,7 +1071,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "The Prisoners Dilemma.pdf",
@@ -992,7 +1081,8 @@
         "tier": "primary",
         "download_url": "/readings/The Prisoners Dilemma.pdf",
         "size_bytes": 79675,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -1001,7 +1091,8 @@
         "tier": "primary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Luban - Torture and the Ticking Bomb.pdf",
@@ -1010,7 +1101,8 @@
         "tier": "secondary",
         "download_url": "/readings/Luban - Torture and the Ticking Bomb.pdf",
         "size_bytes": 70410,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Louis Pojman - A Defense of the Death Penalty.pdf",
@@ -1019,7 +1111,8 @@
         "tier": "secondary",
         "download_url": "/readings/Louis Pojman - A Defense of the Death Penalty.pdf",
         "size_bytes": 56032,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       }
     ]
   },
@@ -1039,7 +1132,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -1048,7 +1142,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -1057,7 +1152,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -1066,7 +1162,8 @@
         "tier": "primary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Luban - Torture and the Ticking Bomb.pdf",
@@ -1075,7 +1172,8 @@
         "tier": "secondary",
         "download_url": "/readings/Luban - Torture and the Ticking Bomb.pdf",
         "size_bytes": 70410,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Peter Singer on Abortion.pdf",
@@ -1084,7 +1182,8 @@
         "tier": "secondary",
         "download_url": "/readings/Peter Singer on Abortion.pdf",
         "size_bytes": 942835,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -1104,7 +1203,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Don Marquis - Why Abotion is Immoral.pdf",
@@ -1113,7 +1213,8 @@
         "tier": "primary",
         "download_url": "/readings/Don Marquis - Why Abotion is Immoral.pdf",
         "size_bytes": 129538,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
@@ -1122,7 +1223,8 @@
         "tier": "primary",
         "download_url": "/readings/Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
         "size_bytes": 122994,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -1142,7 +1244,8 @@
         "tier": "primary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -1151,7 +1254,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "T M Scanlon - Contractualism and Utilitarianism.pdf",
@@ -1160,7 +1264,8 @@
         "tier": "primary",
         "download_url": "/readings/T M Scanlon - Contractualism and Utilitarianism.pdf",
         "size_bytes": 101850,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -1169,7 +1274,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -1189,7 +1295,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -1198,7 +1305,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       },
       {
         "filename": "Chapter 8 - The Law of Limited Competition.pdf",
@@ -1207,7 +1315,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 8 - The Law of Limited Competition.pdf",
         "size_bytes": 8676769,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 29
       },
       {
         "filename": "Humans and Nonhuman Animals.pdf",
@@ -1216,7 +1325,8 @@
         "tier": "secondary",
         "download_url": "/readings/Humans and Nonhuman Animals.pdf",
         "size_bytes": 114008,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       }
     ]
   },
@@ -1236,7 +1346,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -1245,7 +1356,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Ethical Theory - An Anthology.pdf",
@@ -1254,7 +1366,8 @@
         "tier": "primary",
         "download_url": "/readings/Ethical Theory - An Anthology.pdf",
         "size_bytes": 6623070,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 812
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -1263,7 +1376,8 @@
         "tier": "secondary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -1272,7 +1386,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Chapter VCE - On Right and Wrong.pdf",
@@ -1281,7 +1396,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
         "size_bytes": 18249566,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       }
     ]
   },
@@ -1301,7 +1417,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -1310,7 +1427,8 @@
         "tier": "primary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -1319,7 +1437,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
@@ -1328,7 +1447,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -1337,7 +1457,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Rachels 10th - Cultural Relativism.pdf",
@@ -1346,7 +1467,8 @@
         "tier": "secondary",
         "download_url": "/readings/Rachels 10th - Cultural Relativism.pdf",
         "size_bytes": 147640,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 18
       }
     ]
   },
@@ -1366,7 +1488,8 @@
         "tier": "primary",
         "download_url": "/readings/Philippa Foot - Natural Goodness.pdf",
         "size_bytes": 652566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 40
       },
       {
         "filename": "Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
@@ -1375,7 +1498,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
         "size_bytes": 403522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 29
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
@@ -1384,7 +1508,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -1393,7 +1518,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -1402,7 +1528,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Ethical Theory - An Anthology.pdf",
@@ -1411,7 +1538,8 @@
         "tier": "secondary",
         "download_url": "/readings/Ethical Theory - An Anthology.pdf",
         "size_bytes": 6623070,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 812
       }
     ]
   },
@@ -1431,7 +1559,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Cultural Relativism.pdf",
         "size_bytes": 147640,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 18
       },
       {
         "filename": "Mackie - The Subjectivity of Values.pdf",
@@ -1440,7 +1569,8 @@
         "tier": "primary",
         "download_url": "/readings/Mackie - The Subjectivity of Values.pdf",
         "size_bytes": 65595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
@@ -1449,7 +1579,8 @@
         "tier": "primary",
         "download_url": "/readings/03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
         "size_bytes": 99567,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 14
       },
       {
         "filename": "Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
@@ -1458,7 +1589,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
         "size_bytes": 668153,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 76
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -1467,7 +1599,8 @@
         "tier": "secondary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
@@ -1476,7 +1609,8 @@
         "tier": "secondary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       }
     ]
   },
@@ -1496,7 +1630,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Cultural Relativism.pdf",
         "size_bytes": 147640,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 18
       },
       {
         "filename": "03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
@@ -1505,7 +1640,8 @@
         "tier": "primary",
         "download_url": "/readings/03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
         "size_bytes": 99567,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 14
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -1514,7 +1650,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Philippa Foot Interview - the Grammar of Goodness.pdf",
@@ -1523,7 +1660,8 @@
         "tier": "primary",
         "download_url": "/readings/Philippa Foot Interview - the Grammar of Goodness.pdf",
         "size_bytes": 203417,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -1532,7 +1670,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Virginia Held - Caring Relations and Principles of Justice.pdf",
@@ -1541,7 +1680,8 @@
         "tier": "secondary",
         "download_url": "/readings/Virginia Held - Caring Relations and Principles of Justice.pdf",
         "size_bytes": 41351,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       }
     ]
   },
@@ -1561,7 +1701,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
@@ -1570,7 +1711,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -1579,7 +1721,8 @@
         "tier": "primary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Chapter VCE - On Right and Wrong.pdf",
@@ -1588,7 +1731,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
         "size_bytes": 18249566,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       },
       {
         "filename": "Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
@@ -1597,7 +1741,8 @@
         "tier": "secondary",
         "download_url": "/readings/Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
         "size_bytes": 317044,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
@@ -1606,7 +1751,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
         "size_bytes": 668153,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 76
       }
     ]
   },
@@ -1626,7 +1772,8 @@
         "tier": "primary",
         "download_url": "/readings/Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
         "size_bytes": 317044,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Lindstrom - 2022 - Moral Taste and Moral Education.pdf",
@@ -1635,7 +1782,8 @@
         "tier": "primary",
         "download_url": "/readings/Lindstrom - 2022 - Moral Taste and Moral Education.pdf",
         "size_bytes": 85439,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
@@ -1644,7 +1792,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
         "size_bytes": 668153,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 76
       },
       {
         "filename": "Haidt - 2003 - The Moral Emotions.pdf",
@@ -1653,7 +1802,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
         "size_bytes": 5175285,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 19
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -1662,7 +1812,8 @@
         "tier": "secondary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -1671,7 +1822,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       }
     ]
   },
@@ -1691,7 +1843,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - The debate over utilitarianism.pdf",
         "size_bytes": 146897,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "James Rachels textbook - the utilitarian approach.pdf",
@@ -1700,7 +1853,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - the utilitarian approach.pdf",
         "size_bytes": 145239,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.pdf",
@@ -1709,7 +1863,8 @@
         "tier": "primary",
         "download_url": "/readings/Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.pdf",
         "size_bytes": 3725360,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 56
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -1718,7 +1873,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -1727,7 +1883,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Judith Jarvis Thomson - Killing and Letting Die.pdf",
@@ -1736,7 +1893,8 @@
         "tier": "secondary",
         "download_url": "/readings/Judith Jarvis Thomson - Killing and Letting Die.pdf",
         "size_bytes": 75967,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
@@ -1745,7 +1903,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
         "size_bytes": 403522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 29
       }
     ]
   },
@@ -1765,7 +1924,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "03a - Aristotle - The Nature of Moral Virtue.pdf",
@@ -1774,7 +1934,8 @@
         "tier": "primary",
         "download_url": "/readings/03a - Aristotle - The Nature of Moral Virtue.pdf",
         "size_bytes": 94688,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -1783,7 +1944,8 @@
         "tier": "primary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -1792,7 +1954,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -1801,7 +1964,8 @@
         "tier": "secondary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       }
     ]
   },
@@ -1821,7 +1985,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "the Matrix - Fate Freedom foreknowledge.pdf",
@@ -1830,7 +1995,8 @@
         "tier": "primary",
         "download_url": "/readings/the Matrix - Fate Freedom foreknowledge.pdf",
         "size_bytes": 104860,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -1839,7 +2005,8 @@
         "tier": "primary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -1848,7 +2015,8 @@
         "tier": "primary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -1857,7 +2025,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       }
     ]
   },
@@ -1877,7 +2046,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
@@ -1886,7 +2056,8 @@
         "tier": "primary",
         "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
         "size_bytes": 2822412,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -1895,7 +2066,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -1904,7 +2076,8 @@
         "tier": "primary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -1913,7 +2086,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -1922,7 +2096,8 @@
         "tier": "secondary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "the Matrix - Fate Freedom foreknowledge.pdf",
@@ -1931,7 +2106,8 @@
         "tier": "secondary",
         "download_url": "/readings/the Matrix - Fate Freedom foreknowledge.pdf",
         "size_bytes": 104860,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -1951,7 +2127,8 @@
         "tier": "primary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
@@ -1960,7 +2137,8 @@
         "tier": "primary",
         "download_url": "/readings/04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
         "size_bytes": 88397,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "James Rachels textbook - the utilitarian approach.pdf",
@@ -1969,7 +2147,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - the utilitarian approach.pdf",
         "size_bytes": 145239,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "James Rachels textbook - The debate over utilitarianism.pdf",
@@ -1978,7 +2157,8 @@
         "tier": "secondary",
         "download_url": "/readings/James Rachels textbook - The debate over utilitarianism.pdf",
         "size_bytes": 146897,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "02a - Parfit - What Makes Someones Life Go Best.pdf",
@@ -1987,7 +2167,8 @@
         "tier": "secondary",
         "download_url": "/readings/02a - Parfit - What Makes Someones Life Go Best.pdf",
         "size_bytes": 53929,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -1996,7 +2177,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -2005,7 +2187,8 @@
         "tier": "secondary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2025,7 +2208,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
@@ -2034,7 +2218,8 @@
         "tier": "primary",
         "download_url": "/readings/Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
         "size_bytes": 857199,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "Jeff McMahan - Just Cause for War.pdf",
@@ -2043,7 +2228,8 @@
         "tier": "primary",
         "download_url": "/readings/Jeff McMahan - Just Cause for War.pdf",
         "size_bytes": 139847,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -2052,7 +2238,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2061,7 +2248,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2081,7 +2269,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -2090,7 +2279,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
@@ -2099,7 +2289,8 @@
         "tier": "primary",
         "download_url": "/readings/Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
         "size_bytes": 857199,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "Nussbaum - Perception and Revolution1.pdf",
@@ -2108,7 +2299,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - Perception and Revolution1.pdf",
         "size_bytes": 752003,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       },
       {
         "filename": "Luban - Torture and the Ticking Bomb.pdf",
@@ -2117,7 +2309,8 @@
         "tier": "secondary",
         "download_url": "/readings/Luban - Torture and the Ticking Bomb.pdf",
         "size_bytes": 70410,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2126,7 +2319,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2146,7 +2340,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
@@ -2155,7 +2350,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Nussbaum - Perception and Revolution.pdf",
@@ -2164,7 +2360,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - Perception and Revolution.pdf",
         "size_bytes": 3339767,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -2173,7 +2370,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2182,7 +2380,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2202,7 +2401,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -2211,7 +2411,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -2220,7 +2421,8 @@
         "tier": "primary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2229,7 +2431,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2249,7 +2452,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2258,7 +2462,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -2267,7 +2472,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
@@ -2276,7 +2482,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
         "size_bytes": 649234,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 45
       },
       {
         "filename": "Nussbaum - Perception and Revolution.pdf",
@@ -2285,7 +2492,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - Perception and Revolution.pdf",
         "size_bytes": 3339767,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       }
     ]
   },
@@ -2305,7 +2513,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -2314,7 +2523,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Illustrated John Stuart Mill on Free Speech.pdf",
@@ -2323,7 +2533,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Chapter 7 - Moral Issues - Freedom of Speech.pdf",
@@ -2332,7 +2543,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 7 - Moral Issues - Freedom of Speech.pdf",
         "size_bytes": 1105690,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 54
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -2341,7 +2553,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -2350,7 +2563,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       }
     ]
   },
@@ -2370,7 +2584,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
         "size_bytes": 691173,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 47
       },
       {
         "filename": "Jeff McMahan - Just Cause for War.pdf",
@@ -2379,7 +2594,8 @@
         "tier": "primary",
         "download_url": "/readings/Jeff McMahan - Just Cause for War.pdf",
         "size_bytes": 139847,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
@@ -2388,7 +2604,8 @@
         "tier": "primary",
         "download_url": "/readings/Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
         "size_bytes": 857199,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -2397,7 +2614,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2406,7 +2624,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -2415,7 +2634,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -2424,7 +2644,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "T M Scanlon - Contractualism and Utilitarianism.pdf",
@@ -2433,7 +2654,8 @@
         "tier": "secondary",
         "download_url": "/readings/T M Scanlon - Contractualism and Utilitarianism.pdf",
         "size_bytes": 101850,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       }
     ]
   },
@@ -2453,7 +2675,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Chapter VCE - Justice.pdf",
@@ -2462,7 +2685,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Justice.pdf",
         "size_bytes": 15802283,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 6
       },
       {
         "filename": "Kant and Respect for Persons.pdf",
@@ -2471,7 +2695,8 @@
         "tier": "primary",
         "download_url": "/readings/Kant and Respect for Persons.pdf",
         "size_bytes": 151131,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -2480,7 +2705,8 @@
         "tier": "secondary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       }
     ]
   },
@@ -2500,7 +2726,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
@@ -2509,7 +2736,8 @@
         "tier": "primary",
         "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
         "size_bytes": 2822412,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -2518,7 +2746,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -2527,7 +2756,8 @@
         "tier": "primary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -2536,7 +2766,8 @@
         "tier": "secondary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -2545,7 +2776,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Lecture - the Free Will Defense.pdf",
@@ -2554,7 +2786,8 @@
         "tier": "secondary",
         "download_url": "/readings/Lecture - the Free Will Defense.pdf",
         "size_bytes": 1127033,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       }
     ]
   },
@@ -2574,7 +2807,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
@@ -2583,7 +2817,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
@@ -2592,7 +2827,8 @@
         "tier": "primary",
         "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
         "size_bytes": 2822412,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -2601,7 +2837,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -2610,7 +2847,8 @@
         "tier": "secondary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -2619,7 +2857,8 @@
         "tier": "secondary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -2628,7 +2867,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Lecture - the Free Will Defense.pdf",
@@ -2637,7 +2877,8 @@
         "tier": "secondary",
         "download_url": "/readings/Lecture - the Free Will Defense.pdf",
         "size_bytes": 1127033,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       }
     ]
   },
@@ -2657,7 +2898,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -2666,7 +2908,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
@@ -2675,7 +2918,8 @@
         "tier": "primary",
         "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
         "size_bytes": 2822412,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 25
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -2684,7 +2928,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Textbook - Free Will.pdf",
@@ -2693,7 +2938,8 @@
         "tier": "secondary",
         "download_url": "/readings/Textbook - Free Will.pdf",
         "size_bytes": 12391952,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 240
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -2702,7 +2948,8 @@
         "tier": "secondary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Philip K Dick - The Minority Report.pdf",
@@ -2711,7 +2958,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philip K Dick - The Minority Report.pdf",
         "size_bytes": 248954,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "the Matrix - Fate Freedom foreknowledge.pdf",
@@ -2720,7 +2968,8 @@
         "tier": "secondary",
         "download_url": "/readings/the Matrix - Fate Freedom foreknowledge.pdf",
         "size_bytes": 104860,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -2740,7 +2989,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Marx.pdf",
         "size_bytes": 97431,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -2749,7 +2999,8 @@
         "tier": "primary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -2758,7 +3009,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -2767,7 +3019,8 @@
         "tier": "primary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
@@ -2776,7 +3029,8 @@
         "tier": "secondary",
         "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
         "size_bytes": 11913854,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "Nihilism and The Matrix - Dostoevsky Take.pdf",
@@ -2785,7 +3039,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nihilism and The Matrix - Dostoevsky Take.pdf",
         "size_bytes": 106796,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
@@ -2794,7 +3049,8 @@
         "tier": "secondary",
         "download_url": "/readings/Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
         "size_bytes": 108761,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -2814,7 +3070,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Outline - Williams on Expectations and the Self.pdf",
@@ -2823,7 +3080,8 @@
         "tier": "primary",
         "download_url": "/readings/Outline - Williams on Expectations and the Self.pdf",
         "size_bytes": 53431,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Thomas Metzinger - Being No One.pdf",
@@ -2832,7 +3090,8 @@
         "tier": "primary",
         "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
         "size_bytes": 5819485,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 714
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -2841,7 +3100,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Williams Handout - Subjective Experience.pdf",
@@ -2850,7 +3110,8 @@
         "tier": "secondary",
         "download_url": "/readings/Williams Handout - Subjective Experience.pdf",
         "size_bytes": 119312,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -2859,7 +3120,8 @@
         "tier": "secondary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       }
     ]
   },
@@ -2879,7 +3141,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Outline - Williams on Expectations and the Self.pdf",
@@ -2888,7 +3151,8 @@
         "tier": "primary",
         "download_url": "/readings/Outline - Williams on Expectations and the Self.pdf",
         "size_bytes": 53431,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Williams Handout - Subjective Experience.pdf",
@@ -2897,7 +3161,8 @@
         "tier": "primary",
         "download_url": "/readings/Williams Handout - Subjective Experience.pdf",
         "size_bytes": 119312,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -2906,7 +3171,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Thomas Metzinger - Being No One.pdf",
@@ -2915,7 +3181,8 @@
         "tier": "secondary",
         "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
         "size_bytes": 5819485,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 714
       },
       {
         "filename": "Aristotle - The Soul and Life After Death.pdf",
@@ -2924,7 +3191,8 @@
         "tier": "secondary",
         "download_url": "/readings/Aristotle - The Soul and Life After Death.pdf",
         "size_bytes": 101428,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       }
     ]
   },
@@ -2944,7 +3212,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Williams Handout - Subjective Experience.pdf",
@@ -2953,7 +3222,8 @@
         "tier": "primary",
         "download_url": "/readings/Williams Handout - Subjective Experience.pdf",
         "size_bytes": 119312,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -2962,7 +3232,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Thomas Metzinger - Being No One.pdf",
@@ -2971,7 +3242,8 @@
         "tier": "secondary",
         "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
         "size_bytes": 5819485,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 714
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -2980,7 +3252,8 @@
         "tier": "secondary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Aristotle - The Soul and Life After Death.pdf",
@@ -2989,7 +3262,8 @@
         "tier": "secondary",
         "download_url": "/readings/Aristotle - The Soul and Life After Death.pdf",
         "size_bytes": 101428,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -2998,7 +3272,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -3018,7 +3293,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3027,7 +3303,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
@@ -3036,7 +3313,8 @@
         "tier": "primary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Williams Handout - Subjective Experience.pdf",
@@ -3045,7 +3323,8 @@
         "tier": "secondary",
         "download_url": "/readings/Williams Handout - Subjective Experience.pdf",
         "size_bytes": 119312,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -3054,7 +3333,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
@@ -3063,7 +3343,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
         "size_bytes": 759195,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 52
       }
     ]
   },
@@ -3083,7 +3364,8 @@
         "tier": "primary",
         "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
         "size_bytes": 5819485,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 714
       },
       {
         "filename": "Bernard Williams - The Self and the Future.pdf",
@@ -3092,7 +3374,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -3101,7 +3384,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Nagel - What is it like to be a bat.pdf",
@@ -3110,7 +3394,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - What is it like to be a bat.pdf",
         "size_bytes": 106773,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 6
       },
       {
         "filename": "Outline - Williams on Expectations and the Self.pdf",
@@ -3119,7 +3404,8 @@
         "tier": "secondary",
         "download_url": "/readings/Outline - Williams on Expectations and the Self.pdf",
         "size_bytes": 53431,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "SEP - Qualia.pdf",
@@ -3128,7 +3414,8 @@
         "tier": "secondary",
         "download_url": "/readings/SEP - Qualia.pdf",
         "size_bytes": 386678,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 23
       }
     ]
   },
@@ -3148,7 +3435,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3157,7 +3445,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3166,7 +3455,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -3175,7 +3465,8 @@
         "tier": "primary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
@@ -3184,7 +3475,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -3193,7 +3485,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       }
     ]
   },
@@ -3213,7 +3506,8 @@
         "tier": "primary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Simulacra and Simulation Rundown.pdf",
@@ -3222,7 +3516,8 @@
         "tier": "primary",
         "download_url": "/readings/Simulacra and Simulation Rundown.pdf",
         "size_bytes": 33623,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3231,7 +3526,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3240,7 +3536,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -3249,7 +3546,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Bernard Williams - The Self and the Future.pdf",
@@ -3258,7 +3556,8 @@
         "tier": "secondary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       }
     ]
   },
@@ -3278,7 +3577,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3287,7 +3587,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -3296,7 +3597,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Postmodernism a very short introduction - 2002 - Christopher Butler.pdf",
@@ -3305,7 +3607,8 @@
         "tier": "primary",
         "download_url": "/readings/Postmodernism a very short introduction - 2002 - Christopher Butler.pdf",
         "size_bytes": 2466809,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 152
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3314,7 +3617,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Bernard Williams - The Self and the Future.pdf",
@@ -3323,7 +3627,8 @@
         "tier": "secondary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       }
     ]
   },
@@ -3343,7 +3648,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Overview of Each Foundation.pdf",
         "size_bytes": 41191040,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "03a - Aristotle - The Nature of Moral Virtue.pdf",
@@ -3352,7 +3658,8 @@
         "tier": "primary",
         "download_url": "/readings/03a - Aristotle - The Nature of Moral Virtue.pdf",
         "size_bytes": 94688,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "Chapter VCE - Materialism and Idealism.pdf",
@@ -3361,7 +3668,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Materialism and Idealism.pdf",
         "size_bytes": 17662005,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       }
     ]
   },
@@ -3381,7 +3689,8 @@
         "tier": "primary",
         "download_url": "/readings/Aristotle - The Soul and Life After Death.pdf",
         "size_bytes": 101428,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -3390,7 +3699,8 @@
         "tier": "primary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Bernard Williams - The Self and the Future.pdf",
@@ -3399,7 +3709,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3408,7 +3719,8 @@
         "tier": "primary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       },
       {
         "filename": "Nagel - Death.pdf",
@@ -3417,7 +3729,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Chapter VCE - Materialism and Idealism.pdf",
@@ -3426,7 +3739,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - Materialism and Idealism.pdf",
         "size_bytes": 17662005,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -3435,7 +3749,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -3455,7 +3770,8 @@
         "tier": "primary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nagel - Death.pdf",
@@ -3464,7 +3780,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -3473,7 +3790,8 @@
         "tier": "primary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3482,7 +3800,8 @@
         "tier": "primary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       },
       {
         "filename": "Chapter 2 - Moral Issues - Euthanasia.pdf",
@@ -3491,7 +3810,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 2 - Moral Issues - Euthanasia.pdf",
         "size_bytes": 1011026,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 42
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -3500,7 +3820,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -3520,7 +3841,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -3529,7 +3851,8 @@
         "tier": "primary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Scheffler death.pdf",
@@ -3538,7 +3861,8 @@
         "tier": "primary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3547,7 +3871,8 @@
         "tier": "primary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -3556,7 +3881,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Williams Handout - Subjective Experience.pdf",
@@ -3565,7 +3891,8 @@
         "tier": "secondary",
         "download_url": "/readings/Williams Handout - Subjective Experience.pdf",
         "size_bytes": 119312,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       }
     ]
   },
@@ -3585,7 +3912,8 @@
         "tier": "primary",
         "download_url": "/readings/Bernard Williams - The Self and the Future.pdf",
         "size_bytes": 87775,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "Nagel - Death.pdf",
@@ -3594,7 +3922,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "Scheffler death.pdf",
@@ -3603,7 +3932,8 @@
         "tier": "primary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -3612,7 +3942,8 @@
         "tier": "primary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3621,7 +3952,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       }
     ]
   },
@@ -3641,7 +3973,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter Tapper - Reality as a System.pdf",
         "size_bytes": 4015843,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 3
       },
       {
         "filename": "Nagel - Death.pdf",
@@ -3650,7 +3983,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -3659,7 +3993,8 @@
         "tier": "primary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Scheffler death.pdf",
@@ -3668,7 +4003,8 @@
         "tier": "secondary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3677,7 +4013,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       }
     ]
   },
@@ -3697,7 +4034,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3706,7 +4044,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
@@ -3715,7 +4054,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
         "size_bytes": 15365435,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 399
       },
       {
         "filename": "Nihilism and The Matrix - Dostoevsky Take.pdf",
@@ -3724,7 +4064,8 @@
         "tier": "primary",
         "download_url": "/readings/Nihilism and The Matrix - Dostoevsky Take.pdf",
         "size_bytes": 106796,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -3733,7 +4074,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Scheffler death.pdf",
@@ -3742,7 +4084,8 @@
         "tier": "secondary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3751,7 +4094,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       }
     ]
   },
@@ -3771,7 +4115,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XVI.pdf",
@@ -3780,7 +4125,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XVI.pdf",
         "size_bytes": 1600078,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 179
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3789,7 +4135,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Scheffler death.pdf",
@@ -3798,7 +4145,8 @@
         "tier": "secondary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3807,7 +4155,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -3816,7 +4165,8 @@
         "tier": "secondary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nagel - Death.pdf",
@@ -3825,7 +4175,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       }
     ]
   },
@@ -3845,7 +4196,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "de Beauvoir - The Second Sex - Introduction.pdf",
@@ -3854,7 +4206,8 @@
         "tier": "primary",
         "download_url": "/readings/de Beauvoir - The Second Sex - Introduction.pdf",
         "size_bytes": 167612,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Rahel Jaeggi - Alienation (book).pdf",
@@ -3863,7 +4216,8 @@
         "tier": "primary",
         "download_url": "/readings/Rahel Jaeggi - Alienation (book).pdf",
         "size_bytes": 1297973,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 301
       },
       {
         "filename": "Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
@@ -3872,7 +4226,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
         "size_bytes": 759195,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 52
       },
       {
         "filename": "Chapter VCE - Free Will and Determinism.pdf",
@@ -3881,7 +4236,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
         "size_bytes": 12594873,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -3890,7 +4246,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       }
     ]
   },
@@ -3910,7 +4267,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -3919,7 +4277,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -3928,7 +4287,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Simulacra and Simulation Rundown.pdf",
@@ -3937,7 +4297,8 @@
         "tier": "secondary",
         "download_url": "/readings/Simulacra and Simulation Rundown.pdf",
         "size_bytes": 33623,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nihilism and The Matrix - Dostoevsky Take.pdf",
@@ -3946,7 +4307,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nihilism and The Matrix - Dostoevsky Take.pdf",
         "size_bytes": 106796,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
@@ -3955,7 +4317,8 @@
         "tier": "secondary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
         "size_bytes": 15365435,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 399
       },
       {
         "filename": "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
@@ -3964,7 +4327,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
         "size_bytes": 260867,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 8
       }
     ]
   },
@@ -3984,7 +4348,8 @@
         "tier": "primary",
         "download_url": "/readings/5 - James Rachels - Egoism.pdf",
         "size_bytes": 183326,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Selections-From-the-Writings-of-Kierkegaard.pdf",
@@ -3993,7 +4358,8 @@
         "tier": "primary",
         "download_url": "/readings/Selections-From-the-Writings-of-Kierkegaard.pdf",
         "size_bytes": 12434358,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 241
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -4002,7 +4368,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -4011,7 +4378,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4020,7 +4388,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -4040,7 +4409,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Rachels 10th - Moral Subjectivism.pdf",
@@ -4049,7 +4419,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Moral Subjectivism.pdf",
         "size_bytes": 173424,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -4058,7 +4429,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Philippa Foot Interview - the Grammar of Goodness.pdf",
@@ -4067,7 +4439,8 @@
         "tier": "primary",
         "download_url": "/readings/Philippa Foot Interview - the Grammar of Goodness.pdf",
         "size_bytes": 203417,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Rachels 10th - Cultural Relativism.pdf",
@@ -4076,7 +4449,8 @@
         "tier": "secondary",
         "download_url": "/readings/Rachels 10th - Cultural Relativism.pdf",
         "size_bytes": 147640,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 18
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4085,7 +4459,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -4105,7 +4480,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -4114,7 +4490,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -4123,7 +4500,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4132,7 +4510,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
@@ -4141,7 +4520,8 @@
         "tier": "secondary",
         "download_url": "/readings/Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
         "size_bytes": 108761,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -4161,7 +4541,8 @@
         "tier": "primary",
         "download_url": "/readings/5 - James Rachels - Egoism.pdf",
         "size_bytes": 183326,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Chapter VCE - Art.pdf",
@@ -4170,7 +4551,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Virginia Held - Caring Relations and Principles of Justice.pdf",
@@ -4179,7 +4561,8 @@
         "tier": "primary",
         "download_url": "/readings/Virginia Held - Caring Relations and Principles of Justice.pdf",
         "size_bytes": 41351,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "02a - Parfit - What Makes Someones Life Go Best.pdf",
@@ -4188,7 +4571,8 @@
         "tier": "primary",
         "download_url": "/readings/02a - Parfit - What Makes Someones Life Go Best.pdf",
         "size_bytes": 53929,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "The Prisoners Dilemma.pdf",
@@ -4197,7 +4581,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Prisoners Dilemma.pdf",
         "size_bytes": 79675,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Haidt - 2003 - The Moral Emotions.pdf",
@@ -4206,7 +4591,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
         "size_bytes": 5175285,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 19
       }
     ]
   },
@@ -4226,7 +4612,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "02a - Parfit - What Makes Someones Life Go Best.pdf",
@@ -4235,7 +4622,8 @@
         "tier": "primary",
         "download_url": "/readings/02a - Parfit - What Makes Someones Life Go Best.pdf",
         "size_bytes": 53929,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Virginia Held - Caring Relations and Principles of Justice.pdf",
@@ -4244,7 +4632,8 @@
         "tier": "primary",
         "download_url": "/readings/Virginia Held - Caring Relations and Principles of Justice.pdf",
         "size_bytes": 41351,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -4253,7 +4642,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4262,7 +4652,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -4271,7 +4662,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       }
     ]
   },
@@ -4291,7 +4683,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -4300,7 +4693,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -4309,7 +4703,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Haidt - 2003 - The Moral Emotions.pdf",
@@ -4318,7 +4713,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
         "size_bytes": 5175285,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 19
       },
       {
         "filename": "02a - Parfit - What Makes Someones Life Go Best.pdf",
@@ -4327,7 +4723,8 @@
         "tier": "secondary",
         "download_url": "/readings/02a - Parfit - What Makes Someones Life Go Best.pdf",
         "size_bytes": 53929,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       }
     ]
   },
@@ -4347,7 +4744,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "BeingAndNothingness.pdf",
@@ -4356,7 +4754,8 @@
         "tier": "primary",
         "download_url": "/readings/BeingAndNothingness.pdf",
         "size_bytes": 35383138,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 691
       },
       {
         "filename": "Scheffler death.pdf",
@@ -4365,7 +4764,8 @@
         "tier": "primary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -4374,7 +4774,8 @@
         "tier": "secondary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
@@ -4383,7 +4784,8 @@
         "tier": "secondary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
         "size_bytes": 15365435,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 399
       }
     ]
   },
@@ -4403,7 +4805,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "VCE -Art and Moral Knowledge.pdf",
@@ -4412,7 +4815,8 @@
         "tier": "primary",
         "download_url": "/readings/VCE -Art and Moral Knowledge.pdf",
         "size_bytes": 908938,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 6
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -4421,7 +4825,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Freeland - 1997 - Art and Moral Knowledge.pdf",
@@ -4430,7 +4835,8 @@
         "tier": "secondary",
         "download_url": "/readings/Freeland - 1997 - Art and Moral Knowledge.pdf",
         "size_bytes": 2114782,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       }
     ]
   },
@@ -4450,7 +4856,8 @@
         "tier": "primary",
         "download_url": "/readings/de Beauvoir - The Second Sex - Introduction.pdf",
         "size_bytes": 167612,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "1982 - In a Different Voice - Carol Gilligan.pdf",
@@ -4459,7 +4866,8 @@
         "tier": "primary",
         "download_url": "/readings/1982 - In a Different Voice - Carol Gilligan.pdf",
         "size_bytes": 11641801,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 217
       },
       {
         "filename": "Virginia Held - Caring Relations and Principles of Justice.pdf",
@@ -4468,7 +4876,8 @@
         "tier": "primary",
         "download_url": "/readings/Virginia Held - Caring Relations and Principles of Justice.pdf",
         "size_bytes": 41351,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Chapter VCE - Art.pdf",
@@ -4477,7 +4886,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -4486,7 +4896,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       }
     ]
   },
@@ -4506,7 +4917,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       },
       {
         "filename": "Nietzche - Master Morality and Slave Morality.pdf",
@@ -4515,7 +4927,8 @@
         "tier": "primary",
         "download_url": "/readings/Nietzche - Master Morality and Slave Morality.pdf",
         "size_bytes": 30278,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 4
       },
       {
         "filename": "Hick - The Problem of Evil.pdf",
@@ -4524,7 +4937,8 @@
         "tier": "primary",
         "download_url": "/readings/Hick - The Problem of Evil.pdf",
         "size_bytes": 517309,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 4
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -4533,7 +4947,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "VCE Philosopgy 3rd - Y12.pdf",
@@ -4542,7 +4957,8 @@
         "tier": "secondary",
         "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
         "size_bytes": 76831074,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 346
       },
       {
         "filename": "Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf",
@@ -4551,7 +4967,8 @@
         "tier": "secondary",
         "download_url": "/readings/Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf",
         "size_bytes": 1174042,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Philippa Foot - Natural Goodness.pdf",
@@ -4560,7 +4977,8 @@
         "tier": "secondary",
         "download_url": "/readings/Philippa Foot - Natural Goodness.pdf",
         "size_bytes": 652566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 40
       }
     ]
   },
@@ -4580,7 +4998,8 @@
         "tier": "primary",
         "download_url": "/readings/Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf",
         "size_bytes": 1174042,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "3 - Hick - The Problem of Evil.pdf",
@@ -4589,7 +5008,8 @@
         "tier": "primary",
         "download_url": "/readings/3 - Hick - The Problem of Evil.pdf",
         "size_bytes": 513882,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Lecture - the Free Will Defense.pdf",
@@ -4598,7 +5018,8 @@
         "tier": "primary",
         "download_url": "/readings/Lecture - the Free Will Defense.pdf",
         "size_bytes": 1127033,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       },
       {
         "filename": "VCE Philosopgy 3rd - Y12.pdf",
@@ -4607,7 +5028,8 @@
         "tier": "secondary",
         "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
         "size_bytes": 76831074,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 346
       }
     ]
   },
@@ -4627,7 +5049,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - On Knowledge.pdf",
         "size_bytes": 7899102,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 11
       },
       {
         "filename": "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
@@ -4636,7 +5059,8 @@
         "tier": "primary",
         "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
         "size_bytes": 2438693,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 425
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -4645,7 +5069,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -4654,7 +5079,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "2017 - Susanna Siegel - The Rationality of Perception.pdf",
@@ -4663,7 +5089,8 @@
         "tier": "secondary",
         "download_url": "/readings/2017 - Susanna Siegel - The Rationality of Perception.pdf",
         "size_bytes": 1147267,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 248
       }
     ]
   },
@@ -4683,7 +5110,8 @@
         "tier": "primary",
         "download_url": "/readings/Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
         "size_bytes": 108761,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4692,7 +5120,8 @@
         "tier": "primary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -4701,7 +5130,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Matrix - Computers Caves and Oracles.pdf",
@@ -4710,7 +5140,8 @@
         "tier": "primary",
         "download_url": "/readings/Matrix - Computers Caves and Oracles.pdf",
         "size_bytes": 106043,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -4719,7 +5150,8 @@
         "tier": "secondary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The Matrix - Seeing Believing Touching Truth.pdf",
@@ -4728,7 +5160,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix - Seeing Believing Touching Truth.pdf",
         "size_bytes": 109699,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
@@ -4737,7 +5170,8 @@
         "tier": "secondary",
         "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
         "size_bytes": 2438693,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 425
       }
     ]
   },
@@ -4757,7 +5191,8 @@
         "tier": "primary",
         "download_url": "/readings/Nagel - Death.pdf",
         "size_bytes": 2192056,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -4766,7 +5201,8 @@
         "tier": "primary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       },
       {
         "filename": "The Matrix and Existential Authenticity.pdf",
@@ -4775,7 +5211,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix and Existential Authenticity.pdf",
         "size_bytes": 105562,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
@@ -4784,7 +5221,8 @@
         "tier": "secondary",
         "download_url": "/readings/A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
         "size_bytes": 1496654,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 60
       },
       {
         "filename": "Scheffler death.pdf",
@@ -4793,7 +5231,8 @@
         "tier": "secondary",
         "download_url": "/readings/Scheffler death.pdf",
         "size_bytes": 104682,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       }
     ]
   },
@@ -4813,7 +5252,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix - Seeing Believing Touching Truth.pdf",
         "size_bytes": 109699,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -4822,7 +5262,8 @@
         "tier": "primary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -4831,7 +5272,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -4840,7 +5282,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -4849,7 +5292,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       }
     ]
   },
@@ -4869,7 +5313,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix - Seeing Believing Touching Truth.pdf",
         "size_bytes": 109699,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -4878,7 +5323,8 @@
         "tier": "primary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -4887,7 +5333,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
@@ -4896,7 +5343,8 @@
         "tier": "primary",
         "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
         "size_bytes": 2438693,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 425
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -4905,7 +5353,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -4914,7 +5363,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "2017 - Susanna Siegel - The Rationality of Perception.pdf",
@@ -4923,7 +5373,8 @@
         "tier": "secondary",
         "download_url": "/readings/2017 - Susanna Siegel - The Rationality of Perception.pdf",
         "size_bytes": 1147267,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 248
       }
     ]
   },
@@ -4943,7 +5394,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix - Seeing Believing Touching Truth.pdf",
         "size_bytes": 109699,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -4952,7 +5404,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "SEP - Qualia.pdf",
@@ -4961,7 +5414,8 @@
         "tier": "primary",
         "download_url": "/readings/SEP - Qualia.pdf",
         "size_bytes": 386678,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 23
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -4970,7 +5424,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
@@ -4979,7 +5434,8 @@
         "tier": "secondary",
         "download_url": "/readings/Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
         "size_bytes": 497407,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "2017 - Susanna Siegel - The Rationality of Perception.pdf",
@@ -4988,7 +5444,8 @@
         "tier": "secondary",
         "download_url": "/readings/2017 - Susanna Siegel - The Rationality of Perception.pdf",
         "size_bytes": 1147267,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 248
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -4997,7 +5454,8 @@
         "tier": "secondary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -5017,7 +5475,8 @@
         "tier": "primary",
         "download_url": "/readings/Haidt - Righteous Mind - Overview of Each Foundation.pdf",
         "size_bytes": 41191040,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 14
       },
       {
         "filename": "C S Lewis - On Right and Wrong.pdf",
@@ -5026,7 +5485,8 @@
         "tier": "primary",
         "download_url": "/readings/C S Lewis - On Right and Wrong.pdf",
         "size_bytes": 35945,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "03a - Aristotle - The Nature of Moral Virtue.pdf",
@@ -5035,7 +5495,8 @@
         "tier": "primary",
         "download_url": "/readings/03a - Aristotle - The Nature of Moral Virtue.pdf",
         "size_bytes": 94688,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "David Hume - Empiricism.pdf",
@@ -5044,7 +5505,8 @@
         "tier": "primary",
         "download_url": "/readings/David Hume - Empiricism.pdf",
         "size_bytes": 120978,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
@@ -5053,7 +5515,8 @@
         "tier": "secondary",
         "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
         "size_bytes": 6753806,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 9
       }
     ]
   },
@@ -5073,7 +5536,8 @@
         "tier": "primary",
         "download_url": "/readings/2017 - Susanna Siegel - The Rationality of Perception.pdf",
         "size_bytes": 1147267,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 248
       },
       {
         "filename": "Simulacra and Simulation Rundown.pdf",
@@ -5082,7 +5546,8 @@
         "tier": "primary",
         "download_url": "/readings/Simulacra and Simulation Rundown.pdf",
         "size_bytes": 33623,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -5091,7 +5556,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
@@ -5100,7 +5566,8 @@
         "tier": "primary",
         "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
         "size_bytes": 2438693,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 425
       },
       {
         "filename": "The Matrix Simulation Postmodern Age.pdf",
@@ -5109,7 +5576,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Simulation Postmodern Age.pdf",
         "size_bytes": 112588,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -5118,7 +5586,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -5127,7 +5596,8 @@
         "tier": "secondary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       }
     ]
   },
@@ -5147,7 +5617,8 @@
         "tier": "primary",
         "download_url": "/readings/David Hume - Empiricism.pdf",
         "size_bytes": 120978,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
@@ -5156,7 +5627,8 @@
         "tier": "primary",
         "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
         "size_bytes": 8157935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 272
       },
       {
         "filename": "Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
@@ -5165,7 +5637,8 @@
         "tier": "primary",
         "download_url": "/readings/Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
         "size_bytes": 497407,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Chapter VCE - On Knowledge.pdf",
@@ -5174,7 +5647,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - On Knowledge.pdf",
         "size_bytes": 7899102,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 11
       },
       {
         "filename": "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
@@ -5183,7 +5657,8 @@
         "tier": "secondary",
         "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
         "size_bytes": 2438693,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 425
       },
       {
         "filename": "2017 - Susanna Siegel - The Rationality of Perception.pdf",
@@ -5192,7 +5667,8 @@
         "tier": "secondary",
         "download_url": "/readings/2017 - Susanna Siegel - The Rationality of Perception.pdf",
         "size_bytes": 1147267,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 248
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -5201,7 +5677,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       }
     ]
   },
@@ -5221,7 +5698,8 @@
         "tier": "primary",
         "download_url": "/readings/Thomas Hobbes - Leviathan.pdf",
         "size_bytes": 102154,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "Hobbes and Locke.pdf",
@@ -5230,7 +5708,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -5239,7 +5718,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5248,7 +5728,8 @@
         "tier": "primary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
@@ -5257,7 +5738,8 @@
         "tier": "secondary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
         "size_bytes": 20543840,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 296
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5266,7 +5748,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
@@ -5275,7 +5758,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       },
       {
         "filename": "Schweickart - Tired of Capitalism How about Something Better.pdf",
@@ -5284,7 +5768,8 @@
         "tier": "secondary",
         "download_url": "/readings/Schweickart - Tired of Capitalism How about Something Better.pdf",
         "size_bytes": 184736,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       }
     ]
   },
@@ -5304,7 +5789,8 @@
         "tier": "primary",
         "download_url": "/readings/Thomas Hobbes - Leviathan.pdf",
         "size_bytes": 102154,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "Hobbes and Locke.pdf",
@@ -5313,7 +5799,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5322,7 +5809,8 @@
         "tier": "primary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "Illustrated John Stuart Mill on Free Speech.pdf",
@@ -5331,7 +5819,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5340,7 +5829,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Chapter VCE - Human Rights.pdf",
@@ -5349,7 +5839,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - Human Rights.pdf",
         "size_bytes": 2748882,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       }
     ]
   },
@@ -5369,7 +5860,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - the utilitarian approach.pdf",
         "size_bytes": 145239,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "James Rachels textbook - The debate over utilitarianism.pdf",
@@ -5378,7 +5870,8 @@
         "tier": "primary",
         "download_url": "/readings/James Rachels textbook - The debate over utilitarianism.pdf",
         "size_bytes": 146897,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5387,7 +5880,8 @@
         "tier": "primary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "T M Scanlon - Contractualism and Utilitarianism.pdf",
@@ -5396,7 +5890,8 @@
         "tier": "secondary",
         "download_url": "/readings/T M Scanlon - Contractualism and Utilitarianism.pdf",
         "size_bytes": 101850,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5405,7 +5900,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       }
     ]
   },
@@ -5425,7 +5921,8 @@
         "tier": "primary",
         "download_url": "/readings/Thomas Hobbes - Leviathan.pdf",
         "size_bytes": 102154,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "Hobbes and Locke.pdf",
@@ -5434,7 +5931,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5443,7 +5941,8 @@
         "tier": "primary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
@@ -5452,7 +5951,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       },
       {
         "filename": "Schweickart - Tired of Capitalism How about Something Better.pdf",
@@ -5461,7 +5961,8 @@
         "tier": "secondary",
         "download_url": "/readings/Schweickart - Tired of Capitalism How about Something Better.pdf",
         "size_bytes": 184736,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5470,7 +5971,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       }
     ]
   },
@@ -5490,7 +5992,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Hobbes and Locke.pdf",
@@ -5499,7 +6002,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5508,7 +6012,8 @@
         "tier": "primary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -5517,7 +6022,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "A Capitalists Definition of Capitalism.pdf",
@@ -5526,7 +6032,8 @@
         "tier": "secondary",
         "download_url": "/readings/A Capitalists Definition of Capitalism.pdf",
         "size_bytes": 123974,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Schweickart - Tired of Capitalism How about Something Better.pdf",
@@ -5535,7 +6042,8 @@
         "tier": "secondary",
         "download_url": "/readings/Schweickart - Tired of Capitalism How about Something Better.pdf",
         "size_bytes": 184736,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5544,7 +6052,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       }
     ]
   },
@@ -5564,7 +6073,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Hobbes and Locke.pdf",
@@ -5573,7 +6083,8 @@
         "tier": "primary",
         "download_url": "/readings/Hobbes and Locke.pdf",
         "size_bytes": 192017,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 5
       },
       {
         "filename": "Schweickart - Tired of Capitalism How about Something Better.pdf",
@@ -5582,7 +6093,8 @@
         "tier": "primary",
         "download_url": "/readings/Schweickart - Tired of Capitalism How about Something Better.pdf",
         "size_bytes": 184736,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
@@ -5591,7 +6103,8 @@
         "tier": "secondary",
         "download_url": "/readings/An Introduction to Political Philosophy by Jonathan Wolff.pdf",
         "size_bytes": 1117240,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 228
       },
       {
         "filename": "A Capitalists Definition of Capitalism.pdf",
@@ -5600,7 +6113,8 @@
         "tier": "secondary",
         "download_url": "/readings/A Capitalists Definition of Capitalism.pdf",
         "size_bytes": 123974,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5609,7 +6123,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       }
     ]
   },
@@ -5629,7 +6144,8 @@
         "tier": "primary",
         "download_url": "/readings/A Capitalists Definition of Capitalism.pdf",
         "size_bytes": 123974,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "Nussbaum - Creating Capabilities.pdf",
@@ -5638,7 +6154,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - Creating Capabilities.pdf",
         "size_bytes": 938362,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 252
       },
       {
         "filename": "Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
@@ -5647,7 +6164,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
         "size_bytes": 759195,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 52
       },
       {
         "filename": "2016 - Bercic - Genetic Engineering.pdf",
@@ -5656,7 +6174,8 @@
         "tier": "primary",
         "download_url": "/readings/2016 - Bercic - Genetic Engineering.pdf",
         "size_bytes": 124692,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "the Matrix - Fate Freedom foreknowledge.pdf",
@@ -5665,7 +6184,8 @@
         "tier": "secondary",
         "download_url": "/readings/the Matrix - Fate Freedom foreknowledge.pdf",
         "size_bytes": 104860,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "Thomas Hobbes - Leviathan.pdf",
@@ -5674,7 +6194,8 @@
         "tier": "secondary",
         "download_url": "/readings/Thomas Hobbes - Leviathan.pdf",
         "size_bytes": 102154,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       },
       {
         "filename": "01b - Nozick - The Experience Machine.pdf",
@@ -5683,7 +6204,8 @@
         "tier": "secondary",
         "download_url": "/readings/01b - Nozick - The Experience Machine.pdf",
         "size_bytes": 42030,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -5703,7 +6225,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -5712,7 +6235,8 @@
         "tier": "primary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Illustrated John Stuart Mill on Free Speech.pdf",
@@ -5721,7 +6245,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -5730,7 +6255,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5739,7 +6265,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
@@ -5748,7 +6275,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -5757,7 +6285,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       }
     ]
   },
@@ -5777,7 +6306,8 @@
         "tier": "primary",
         "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
         "size_bytes": 57524556,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Chapter 7 - Moral Issues - Freedom of Speech.pdf",
@@ -5786,7 +6316,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter 7 - Moral Issues - Freedom of Speech.pdf",
         "size_bytes": 1105690,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 54
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5795,7 +6326,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "01a - Ch 16 and 17 Brave New World.pdf",
@@ -5804,7 +6336,8 @@
         "tier": "secondary",
         "download_url": "/readings/01a - Ch 16 and 17 Brave New World.pdf",
         "size_bytes": 104024,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
@@ -5813,7 +6346,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
         "size_bytes": 24438844,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 34
       }
     ]
   },
@@ -5833,7 +6367,8 @@
         "tier": "primary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       },
       {
         "filename": "Nussbaum - 2013 - Political Emotions.pdf",
@@ -5842,7 +6377,8 @@
         "tier": "primary",
         "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
         "size_bytes": 2333935,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 469
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -5851,7 +6387,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Nagel - Terrorism (torture).pdf",
@@ -5860,7 +6397,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nagel - Terrorism (torture).pdf",
         "size_bytes": 27674,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   },
@@ -5880,7 +6418,8 @@
         "tier": "primary",
         "download_url": "/readings/de Beauvoir - The Second Sex - Introduction.pdf",
         "size_bytes": 167612,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 10
       },
       {
         "filename": "Virginia Held - Caring Relations and Principles of Justice.pdf",
@@ -5889,7 +6428,8 @@
         "tier": "primary",
         "download_url": "/readings/Virginia Held - Caring Relations and Principles of Justice.pdf",
         "size_bytes": 41351,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 7
       },
       {
         "filename": "Rachels - The Social Contract.pdf",
@@ -5898,7 +6438,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels - The Social Contract.pdf",
         "size_bytes": 178792,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       },
       {
         "filename": "Singer - Practical ethics.pdf",
@@ -5907,7 +6448,8 @@
         "tier": "secondary",
         "download_url": "/readings/Singer - Practical ethics.pdf",
         "size_bytes": 14581157,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 206
       }
     ]
   },
@@ -5927,7 +6469,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - On the Existence and Nature of God.pdf",
         "size_bytes": 8836612,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 12
       },
       {
         "filename": "VCE Philosopgy 3rd - Y12.pdf",
@@ -5936,7 +6479,8 @@
         "tier": "primary",
         "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
         "size_bytes": 76831074,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 346
       },
       {
         "filename": "Hick - The Problem of Evil.pdf",
@@ -5945,7 +6489,8 @@
         "tier": "primary",
         "download_url": "/readings/Hick - The Problem of Evil.pdf",
         "size_bytes": 517309,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 4
       },
       {
         "filename": "Lecture - the Free Will Defense.pdf",
@@ -5954,7 +6499,8 @@
         "tier": "primary",
         "download_url": "/readings/Lecture - the Free Will Defense.pdf",
         "size_bytes": 1127033,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       },
       {
         "filename": "Rachels 10th - Does Morality Depend on Religion.pdf",
@@ -5963,7 +6509,8 @@
         "tier": "secondary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Thee-Discourses.pdf",
@@ -5972,7 +6519,8 @@
         "tier": "secondary",
         "download_url": "/readings/Thee-Discourses.pdf",
         "size_bytes": 5445536,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 124
       }
     ]
   },
@@ -5992,7 +6540,8 @@
         "tier": "primary",
         "download_url": "/readings/Thee-Discourses.pdf",
         "size_bytes": 5445536,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 124
       },
       {
         "filename": "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
@@ -6001,7 +6550,8 @@
         "tier": "primary",
         "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
         "size_bytes": 15365435,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 399
       },
       {
         "filename": "Rachels 10th - Does Morality Depend on Religion.pdf",
@@ -6010,7 +6560,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Chapter VCE - On the Existence and Nature of God.pdf",
@@ -6019,7 +6570,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter VCE - On the Existence and Nature of God.pdf",
         "size_bytes": 8836612,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 12
       },
       {
         "filename": "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
@@ -6028,7 +6580,8 @@
         "tier": "secondary",
         "download_url": "/readings/Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
         "size_bytes": 1750086,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 22
       }
     ]
   },
@@ -6048,7 +6601,8 @@
         "tier": "primary",
         "download_url": "/readings/Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
         "size_bytes": 317044,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 20
       },
       {
         "filename": "Rachels 10th - Does Morality Depend on Religion.pdf",
@@ -6057,7 +6611,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Chapter VCE - On Right and Wrong.pdf",
@@ -6066,7 +6621,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
         "size_bytes": 18249566,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       }
     ]
   },
@@ -6086,7 +6642,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Rachels 10th - Cultural Relativism.pdf",
@@ -6095,7 +6652,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Cultural Relativism.pdf",
         "size_bytes": 147640,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 18
       },
       {
         "filename": "Chapter VCE - Human Rights.pdf",
@@ -6104,7 +6662,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Human Rights.pdf",
         "size_bytes": 2748882,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Are there absolute moral rules.pdf",
@@ -6113,7 +6672,8 @@
         "tier": "primary",
         "download_url": "/readings/Are there absolute moral rules.pdf",
         "size_bytes": 153094,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Chapter 7 - Moral Issues - Freedom of Speech.pdf",
@@ -6122,7 +6682,8 @@
         "tier": "secondary",
         "download_url": "/readings/Chapter 7 - Moral Issues - Freedom of Speech.pdf",
         "size_bytes": 1105690,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 54
       }
     ]
   },
@@ -6142,7 +6703,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Does Morality Depend on Religion.pdf",
         "size_bytes": 138829,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 15
       },
       {
         "filename": "Chapter VCE - On Right and Wrong.pdf",
@@ -6151,7 +6713,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
         "size_bytes": 18249566,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 15
       },
       {
         "filename": "Alasdair Macintyre - Ch 14 - The Nature of the Virtues.pdf",
@@ -6160,7 +6723,8 @@
         "tier": "primary",
         "download_url": "/readings/Alasdair Macintyre - Ch 14 - The Nature of the Virtues.pdf",
         "size_bytes": 1875522,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 23
       },
       {
         "filename": "Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
@@ -6169,7 +6733,8 @@
         "tier": "secondary",
         "download_url": "/readings/Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
         "size_bytes": 643054,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 21
       },
       {
         "filename": "6 - James Rachels - Social Contract.pdf",
@@ -6178,7 +6743,8 @@
         "tier": "secondary",
         "download_url": "/readings/6 - James Rachels - Social Contract.pdf",
         "size_bytes": 178793,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 16
       }
     ]
   },
@@ -6198,7 +6764,8 @@
         "tier": "primary",
         "download_url": "/readings/Chapter VCE - Art.pdf",
         "size_bytes": 18260760,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 16
       },
       {
         "filename": "Rachels 10th - Moral Subjectivism.pdf",
@@ -6207,7 +6774,8 @@
         "tier": "primary",
         "download_url": "/readings/Rachels 10th - Moral Subjectivism.pdf",
         "size_bytes": 173424,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 17
       },
       {
         "filename": "Freeland - 1997 - Art and Moral Knowledge.pdf",
@@ -6216,7 +6784,8 @@
         "tier": "primary",
         "download_url": "/readings/Freeland - 1997 - Art and Moral Knowledge.pdf",
         "size_bytes": 2114782,
-        "text_extracted": true
+        "text_extracted": true,
+        "pages": 27
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -6225,7 +6794,8 @@
         "tier": "secondary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Nussbaum - Perception and Revolution1.pdf",
@@ -6234,7 +6804,8 @@
         "tier": "secondary",
         "download_url": "/readings/Nussbaum - Perception and Revolution1.pdf",
         "size_bytes": 752003,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 25
       }
     ]
   },
@@ -6254,7 +6825,8 @@
         "tier": "primary",
         "download_url": "/readings/The Matrix - Seeing Believing Touching Truth.pdf",
         "size_bytes": 109699,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The Metaphysics of the Matrix.pdf",
@@ -6263,7 +6835,8 @@
         "tier": "primary",
         "download_url": "/readings/The Metaphysics of the Matrix.pdf",
         "size_bytes": 104337,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 11
       },
       {
         "filename": "Robert Nozick - The Experience Machine.pdf",
@@ -6272,7 +6845,8 @@
         "tier": "primary",
         "download_url": "/readings/Robert Nozick - The Experience Machine.pdf",
         "size_bytes": 25566,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Simulacra and Simulation Rundown.pdf",
@@ -6281,7 +6855,8 @@
         "tier": "primary",
         "download_url": "/readings/Simulacra and Simulation Rundown.pdf",
         "size_bytes": 33623,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 3
       },
       {
         "filename": "Skepticism Morality and The Matrix.pdf",
@@ -6290,7 +6865,8 @@
         "tier": "secondary",
         "download_url": "/readings/Skepticism Morality and The Matrix.pdf",
         "size_bytes": 106365,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 12
       },
       {
         "filename": "The Matrix Possibility.pdf",
@@ -6299,7 +6875,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Matrix Possibility.pdf",
         "size_bytes": 106595,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 13
       }
     ]
   },
@@ -6319,7 +6896,8 @@
         "tier": "primary",
         "download_url": "/readings/Judith Jarvis Thomson - Killing and Letting Die.pdf",
         "size_bytes": 75967,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 9
       },
       {
         "filename": "The Prisoners Dilemma.pdf",
@@ -6328,7 +6906,8 @@
         "tier": "secondary",
         "download_url": "/readings/The Prisoners Dilemma.pdf",
         "size_bytes": 79675,
-        "text_extracted": false
+        "text_extracted": false,
+        "pages": 2
       }
     ]
   }
