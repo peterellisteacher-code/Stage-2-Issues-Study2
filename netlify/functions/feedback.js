@@ -10,8 +10,8 @@ import path from "node:path";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Don't shadow the auto-injected __filename/__dirname Netlify's bundler adds.
+const HERE_DIR = path.dirname(fileURLToPath(import.meta.url));
 
 const MODEL = "claude-haiku-4-5-20251001";
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
@@ -23,7 +23,7 @@ const WORK_TIMEOUT_MS = 50_000;
 function loadJsonOnce(name, cacheRef) {
   if (cacheRef.value) return cacheRef.value;
   const candidates = [
-    path.join(__dirname, "..", "..", "data", name),
+    path.join(HERE_DIR, "..", "..", "data", name),
     path.join(process.cwd(), "data", name),
   ];
   let lastErr;
