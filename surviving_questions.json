@@ -1,0 +1,818 @@
+[
+  {
+    "id": "Q001",
+    "text": "Is the death sentence morally justifiable?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "recurring; Tom Burgess and Daisy Wellington (past cohorts)"
+  },
+  {
+    "id": "Q002",
+    "text": "Is it morally justifiable to use animals as a food source?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "James Spurritt"
+  },
+  {
+    "id": "Q003",
+    "text": "Animals should have the same moral worth as humans. Discuss this in relation to various philosophical positions.",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2019,
+    "source": "2019; 640404F"
+  },
+  {
+    "id": "Q004",
+    "text": "Is anthropophagy morally wrong?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "historical exemplar"
+  },
+  {
+    "id": "Q005",
+    "text": "Is abortion morally justifiable?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Georgie Myers"
+  },
+  {
+    "id": "Q006",
+    "text": "Is stem cell research morally justifiable?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Anna Williams"
+  },
+  {
+    "id": "Q007",
+    "text": "Is euthanasia morally justified?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "historical exemplar"
+  },
+  {
+    "id": "Q008",
+    "text": "Should voluntary euthanasia be justified as an option for terminally ill patients?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2022,
+    "source": "2022; Ava Mitchell (270592E)"
+  },
+  {
+    "id": "Q009",
+    "text": "Is germline therapy implemented in the genetic modification of foetus' an ethical practice?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2020,
+    "source": "2020; 856146G"
+  },
+  {
+    "id": "Q010",
+    "text": "Is the rapid development of Artificial Intelligence morally justifiable?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Moderation guide; suggested philosophers: Nick Bostrom, Peter Singer, Thomas Metzinger"
+  },
+  {
+    "id": "Q011",
+    "text": "Should the potential of AI be fully embraced?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2019,
+    "source": "2019; 691331W"
+  },
+  {
+    "id": "Q012",
+    "text": "Should the Australian government seek to have AI in every part of our society?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Master list; suggested: Bentham"
+  },
+  {
+    "id": "Q013",
+    "text": "To what extent does someone's personhood get taken away when modified by technology?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2024,
+    "source": "2024; 616085X"
+  },
+  {
+    "id": "Q014",
+    "text": "Insects should replace poultry as a source of protein and carbohydrates.",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2022,
+    "source": "2022; Riley Kevitt (343535G)"
+  },
+  {
+    "id": "Q015",
+    "text": "Should the intentional infliction of torture on those who have committed or believed to have committed a criminal act be legal?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2020,
+    "source": "2020; 737426X"
+  },
+  {
+    "id": "Q016",
+    "text": "Should mentally ill be allowed to raise children, or whether those children should be taken from them for their own good?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2022,
+    "source": "2022; Ozan Koch (715703T)"
+  },
+  {
+    "id": "Q017",
+    "text": "Should double jeopardy reform be approved?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2023,
+    "source": "2023; 236145F"
+  },
+  {
+    "id": "Q018",
+    "text": "Is government sanctioned population control morally justifiable?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Bryony Hardy"
+  },
+  {
+    "id": "Q019",
+    "text": "Is it ethical to bear children?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Moderation guide; suggested: Benatar, Häyry, Hursthouse, Smilansky, Wasserman"
+  },
+  {
+    "id": "Q020",
+    "text": "Do we have a moral obligation to future generations?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": null,
+    "source": "Moderation guide; intergenerational equity, environmental sustainability, scarce resource distribution"
+  },
+  {
+    "id": "Q021",
+    "text": "What ethical responsibility do we as the human race have to the environment?",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "year": 2024,
+    "source": "2024; Oscar Nugent (938514W)"
+  },
+  {
+    "id": "Q022",
+    "text": "Is the existence of god and religious scripture necessary for humanity's sense of morality?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Jake Stewart"
+  },
+  {
+    "id": "Q023",
+    "text": "To what extent can morality exist in the absence of organised religion?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": 2025,
+    "source": "2025; 438833G; also Max (2025 cohort)"
+  },
+  {
+    "id": "Q024",
+    "text": "Are humans inherently good?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": 2025,
+    "source": "2025; 398564J"
+  },
+  {
+    "id": "Q025",
+    "text": "'Our moral code has no special status, it is merely one among many.' Would the world benefit from adopting normative ethical relativism?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": 2018,
+    "source": "Master list; also 2018, 374308E"
+  },
+  {
+    "id": "Q026",
+    "text": "Do we have an obligation to respect all cultural differences?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Master list"
+  },
+  {
+    "id": "Q027",
+    "text": "Should the teaching of morality replace the teaching of religion?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Master list; suggested: Aristotle, Kant, Hume, Plato, Aquinas"
+  },
+  {
+    "id": "Q028",
+    "text": "Should morality be taught in Australian schools?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": 2019,
+    "source": "2019; 759700W"
+  },
+  {
+    "id": "Q029",
+    "text": "Should the rights of an individual trump the rights of the general population?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Master list; suggested: Ludwig von Mises"
+  },
+  {
+    "id": "Q030",
+    "text": "We, as human beings, are products of our environment. What are the implications of this in reference to an individual's moral responsibility for their actions?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Will Mackenzie"
+  },
+  {
+    "id": "Q031",
+    "text": "To what extent can we be held accountable for our moral actions if our decisions are a product of external factors?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Moderation guide; suggested: Kant, Aristotle"
+  },
+  {
+    "id": "Q032",
+    "text": "How does free-will and determinism shape our view on criminal responsibility?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": 2023,
+    "source": "2023; 844774X (also: Metaphysics)"
+  },
+  {
+    "id": "Q035",
+    "text": "Should humans pursue pleasure at all cost?",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "year": null,
+    "source": "Georgia Middleton"
+  },
+  {
+    "id": "Q037",
+    "text": "Can one nation waging war over another be morally justified?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": null,
+    "source": "Carly Kwaterski"
+  },
+  {
+    "id": "Q038",
+    "text": "Can political violence be ethically justified?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": null,
+    "source": "Moderation guide; suggested: Kant, Walter Benjamin, Simone Weil"
+  },
+  {
+    "id": "Q039",
+    "text": "Should political violence against the state be justified?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": 2019,
+    "source": "2019; 137213G"
+  },
+  {
+    "id": "Q040",
+    "text": "When is violence societally acceptable and when is it morally acceptable?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": null,
+    "source": "Moderation guide; references Aquinas, Plato, Walter Benjamin"
+  },
+  {
+    "id": "Q041",
+    "text": "In the face of the climate crisis, is civil disobedience ethically justified?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": 2022,
+    "source": "2022; Winter Birkett (508978E)"
+  },
+  {
+    "id": "Q042",
+    "text": "In light of the recent mass-protests in Hong Kong, should an individual's social liberty be deemed more important than state control?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": 2019,
+    "source": "2019; 703465G"
+  },
+  {
+    "id": "Q043",
+    "text": "Do nation-states have a moral obligation to intervene in foreign conflicts such as the Russia-Ukraine War?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": 2024,
+    "source": "2024; 728095X"
+  },
+  {
+    "id": "Q044",
+    "text": "Should wealthy nations be obliged to support poor nations?",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "year": 2023,
+    "source": "2023; 907988W"
+  },
+  {
+    "id": "Q045",
+    "text": "Do humans have free will, or are our actions determined prior by causes beyond our control?",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "year": 2025,
+    "source": "2025; Arabella (2025 cohort) and 293680W; suggested: Kant, Spinoza, Sartre"
+  },
+  {
+    "id": "Q046",
+    "text": "How free are we?",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "year": 2025,
+    "source": "recurring; 2025 (Caitlin) and 2023 (985521W); suggested: Sartre, Hume, Kant"
+  },
+  {
+    "id": "Q047",
+    "text": "Is every part of our life determined?",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "year": null,
+    "source": "Kelly Pigot"
+  },
+  {
+    "id": "Q048",
+    "text": "Are we free? Or are we slaves in a modern consumerist society?",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "year": 2018,
+    "source": "Master list; also 2018, 977231R"
+  },
+  {
+    "id": "Q049",
+    "text": "Does personal identity exist, and if so, does it persist through time?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2020,
+    "source": "2020; 211419H"
+  },
+  {
+    "id": "Q050",
+    "text": "How does personal identity persist over time?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": null,
+    "source": "Moderation guide; suggested: Locke, Parfit, Hume"
+  },
+  {
+    "id": "Q051",
+    "text": "What connects someone's personal identity throughout a lifetime?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2021,
+    "source": "Master list; also 2021, 638207W; suggested: Locke, Bernard Williams, Parfit"
+  },
+  {
+    "id": "Q052",
+    "text": "From the environment people are raised in, to the genetics they are born with, there are many influences on an individual's identity. In light of this, what are the factors that shape and influence personal identity?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2020,
+    "source": "2020; 853462H"
+  },
+  {
+    "id": "Q053",
+    "text": "Is the self an illusion?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2025,
+    "source": "2025; Asha O (2025 cohort) and 846315X; suggested: Descartes, Watts, Hume"
+  },
+  {
+    "id": "Q054",
+    "text": "Is personal authenticity essential to the human condition? How does social media impact one's achievement of this?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": null,
+    "source": "Moderation guide; suggested: Hannah Arendt"
+  },
+  {
+    "id": "Q055",
+    "text": "How is the essence of identity and authenticity impacted in the digital age?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": null,
+    "source": "Moderation guide; suggested: Sartre, Hume, Locke"
+  },
+  {
+    "id": "Q056",
+    "text": "The development of the internet and social media in the 21st century has helped individuals establish their identity and sense of self. Discuss.",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2022,
+    "source": "2022; Clare Matijevic (786397W)"
+  },
+  {
+    "id": "Q057",
+    "text": "Are we born a blank slate or veined marble?",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "year": 2022,
+    "source": "2022; Madison Scaffidi-Muta (672152G)"
+  },
+  {
+    "id": "Q058",
+    "text": "Is there an afterlife? Discuss this in relation to various philosophical positions relating to the enduring self.",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2025,
+    "source": "2025; Asha B (2025 cohort) and 790419J; suggested: Plato, Nagarjuna, Socrates, Dalai Lama"
+  },
+  {
+    "id": "Q059",
+    "text": "How does mortality drive decision-making?",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2021,
+    "source": "Master list; also 2021, 819183L; suggested: Buddha, Sartre, Schopenhauer"
+  },
+  {
+    "id": "Q060",
+    "text": "How does mortality affect our own decision making? Should we be scared to die? Is death the end?",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2024,
+    "source": "2024; Toby Merrigan (728161E)"
+  },
+  {
+    "id": "Q061",
+    "text": "The field of cryonics, aimed at preserving human life, is rapidly expanding in the pursuit of immortality. Discuss the metaphysical implications surrounding this concept and the desirability of achieving such a state.",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2023,
+    "source": "2023; 159695H"
+  },
+  {
+    "id": "Q062",
+    "text": "How can one cope with the impermanence of time?",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2022,
+    "source": "2022; Henri Roussos (557946H)"
+  },
+  {
+    "id": "Q063",
+    "text": "Humans have been seeking an answer to the meaning of life for millennia, and wholly our quest has been fruitless. What relevance does absurdism have in reference to the meaning of life?",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": null,
+    "source": "Henry Bruce"
+  },
+  {
+    "id": "Q064",
+    "text": "If people embrace the meaninglessness of life it can be consuming or freeing. Discuss this in relation to philosophical positions on meaning.",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": null,
+    "source": "Master list; suggested: Kierkegaard, Nietzsche"
+  },
+  {
+    "id": "Q065",
+    "text": "Sartre stated that man is condemned to be free. Discuss this with reference to people in the first and third world.",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": null,
+    "source": "Master list; suggested: Sartre, Nietzsche, Heidegger"
+  },
+  {
+    "id": "Q066",
+    "text": "'Nothingness lies coiled at the heart of being — like a worm.' Discuss the relevance of Sartre's statement in relation to modern Australian society.",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": 2018,
+    "source": "Master list; also 2018, 740111R"
+  },
+  {
+    "id": "Q067",
+    "text": "Are the principles of individualism appropriate to live by?",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "year": null,
+    "source": "Master list; suggested: Nietzsche, Hobbes, Marx"
+  },
+  {
+    "id": "Q072",
+    "text": "Is love universal or subjective?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2025,
+    "source": "2025; Farah (2025 cohort) and 107041R"
+  },
+  {
+    "id": "Q073",
+    "text": "What is love?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2020,
+    "source": "2020; 271870J"
+  },
+  {
+    "id": "Q074",
+    "text": "Is love a selfless act, or is it rooted in self-interest?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": null,
+    "source": "Moderation guide"
+  },
+  {
+    "id": "Q075",
+    "text": "Love delivers personal fulfilment. Discuss in relation to various philosophical positions.",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2025,
+    "source": "2025; Millie (2025 cohort) and 474046R; suggested: De Beauvoir"
+  },
+  {
+    "id": "Q076",
+    "text": "Love drives people's actions in many ways, often for the benefit of the individual and society. Discuss various philosophical positions in relation to the impact of love on people's actions.",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2020,
+    "source": "2020; 764070T"
+  },
+  {
+    "id": "Q077",
+    "text": "What role does love play in creating meaning and purpose in our life?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2024,
+    "source": "2024; Emma Venus (649621H); also held in the Examples folder as `venuse issues study.pdf`"
+  },
+  {
+    "id": "Q078",
+    "text": "What role does aesthetics play in our understanding of love?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2023,
+    "source": "2023; 206148J (also: Aesthetics)"
+  },
+  {
+    "id": "Q079",
+    "text": "What is the nature of love within modern gender roles?",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "year": 2023,
+    "source": "2023; 666420L"
+  },
+  {
+    "id": "Q082",
+    "text": "Is evil an entity in itself or a quality of human nature?",
+    "domain": "metaphysics",
+    "subdomain": "The problem of evil",
+    "year": null,
+    "source": "Moderation guide; suggested: Hillel Steiner, Swinburne, Xun Kuang; counterarguments from Calder, Mackie, Mencius"
+  },
+  {
+    "id": "Q083",
+    "text": "Does evil in the world disprove God?",
+    "domain": "metaphysics",
+    "subdomain": "The problem of evil",
+    "year": null,
+    "source": "historical exemplar (also: Philosophy of Religion)"
+  },
+  {
+    "id": "Q084",
+    "text": "Is it possible to make a knowledge claim?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": null,
+    "source": "Master list; suggested: Descartes, William James, Kant"
+  },
+  {
+    "id": "Q085",
+    "text": "Is ignorance bliss? Discuss this in relation to various philosophical positions.",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": 2021,
+    "source": "Master list; also 2021, 540482H; suggested: Descartes, Camus, Rawls, Socrates"
+  },
+  {
+    "id": "Q086",
+    "text": "When presented the option to hold empirical evidence of one's death date, is ignorance bliss?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Eliza Wallace (476498R)"
+  },
+  {
+    "id": "Q087",
+    "text": "Am I awake? A study of Descartes' 'Dream Argument' and counter arguments.",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": null,
+    "source": "Master list"
+  },
+  {
+    "id": "Q088",
+    "text": "Does the nature of dreaming threaten the certainty of our knowledge?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": null,
+    "source": "Master list; suggested: Norman Malcolm"
+  },
+  {
+    "id": "Q089",
+    "text": "To what extent can dreams be considered genuine experiences?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": null,
+    "source": "Moderation guide"
+  },
+  {
+    "id": "Q090",
+    "text": "To what extent does innate knowledge affect an individual's actions?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Jarrod Rashleigh (786229T)"
+  },
+  {
+    "id": "Q091",
+    "text": "What are the epistemic impacts of deepfakes?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Thomas Venus (690698F)"
+  },
+  {
+    "id": "Q092",
+    "text": "Is experience necessary to form a belief?",
+    "domain": "epistemology",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Zandra Martin (136986J)"
+  },
+  {
+    "id": "Q101",
+    "text": "Do we / does society need a structured system of governance? If so, is democracy the most effective / best system?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": null,
+    "source": "Moderation guide; suggested: Hobbes, Rousseau, Socrates"
+  },
+  {
+    "id": "Q102",
+    "text": "To what extent is democracy the most appropriate form of government?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": null,
+    "source": "SACE Annotated Work Sample (A standard)"
+  },
+  {
+    "id": "Q103",
+    "text": "From a utilitarian perspective, should governments use democracy as the foundation for the governance of a nation?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": 2024,
+    "source": "2024; 883937G"
+  },
+  {
+    "id": "Q104",
+    "text": "Is democracy often an ineffective and poor form of government?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": 2024,
+    "source": "2024; Hugo Bailes (971231H); critique-style framing"
+  },
+  {
+    "id": "Q105",
+    "text": "Conservatism vs Liberalism — how would one system be more beneficial to Australia than the other?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": 2019,
+    "source": "Master list and 2019, 691225R; suggested: Hobbes, von Mises, Locke"
+  },
+  {
+    "id": "Q106",
+    "text": "For modern Australian society to prosper, should the government adopt liberalism, communism, democracy, or nationalism?",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "year": 2019,
+    "source": "Master list; also 2019 variant (918343G): \"should the government adopt Marxist Communism, Völkisch Nationalism or A Democratic Republic?\""
+  },
+  {
+    "id": "Q107",
+    "text": "How does wealth affect freedom of the individual?",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "year": null,
+    "source": "Master list"
+  },
+  {
+    "id": "Q108",
+    "text": "Should the government and government-run sectors have a stricter set of rules and a watchdog to make sure that they are always doing the right thing by the people, being that they are public servants?",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "year": 2022,
+    "source": "2022; Hamish Smith (824251R)"
+  },
+  {
+    "id": "Q109",
+    "text": "Is censorship a necessary safeguard for social unity, or a covert mechanism for control and limitation?",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "year": 2024,
+    "source": "2024; 857560G"
+  },
+  {
+    "id": "Q110",
+    "text": "Should the Australian government allow more refugees to enter Australia?",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "year": 2019,
+    "source": "Master list; also 2019, 782125E; suggested: Nietzsche, Mill, Kant, Stevenson"
+  },
+  {
+    "id": "Q111",
+    "text": "How relevant is marriage in modern Australian society?",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "year": 2019,
+    "source": "Master list; also 2019, 581275L; suggested: De Beauvoir, Kierkegaard"
+  },
+  {
+    "id": "Q112",
+    "text": "Arguments for and against the traditional concept of God.",
+    "domain": "religion",
+    "subdomain": null,
+    "year": null,
+    "source": "SACE exemplar; Student 2 (C+)"
+  },
+  {
+    "id": "Q113",
+    "text": "A deity or God provides many people in the world a purpose to life. Discuss this in relation to the role of religion in providing meaning and purpose in the world we live today.",
+    "domain": "religion",
+    "subdomain": null,
+    "year": 2021,
+    "source": "Master list; also 2021, 724393X; suggested: Aquinas, Aristotle, Nietzsche"
+  },
+  {
+    "id": "Q114",
+    "text": "Should religion still be taught in schools?",
+    "domain": "religion",
+    "subdomain": null,
+    "year": 2018,
+    "source": "2018; 950556W"
+  },
+  {
+    "id": "Q115",
+    "text": "To what extent should the United Nations protect human rights breached by religious practices?",
+    "domain": "religion",
+    "subdomain": null,
+    "year": 2023,
+    "source": "2023; 315042W"
+  },
+  {
+    "id": "Q116",
+    "text": "Religious values provide a framework for life. Discuss.",
+    "domain": "religion",
+    "subdomain": null,
+    "year": null,
+    "source": "Master list"
+  },
+  {
+    "id": "Q118",
+    "text": "The issue of the subjectivity of beauty and its significant influence on rates of cosmetic surgery.",
+    "domain": "aesthetics",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Lucy Beamond (710799R)"
+  },
+  {
+    "id": "Q119",
+    "text": "Is the world we live in a simulation?",
+    "domain": "hybrid",
+    "subdomain": null,
+    "year": 2021,
+    "source": "2021; 253853L"
+  },
+  {
+    "id": "Q120",
+    "text": "The Trolley Problem.",
+    "domain": "hybrid",
+    "subdomain": null,
+    "year": 2022,
+    "source": "2022; Toby Cawson (565788E); presented as a topic — see Borderline section for rewording"
+  }
+]

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issues Study Lab — SACE Stage 2 Philosophy</title>
+  <link rel="stylesheet" href="/styles.css?v=2026-05-01-static" />
+</head>
+<body>
+
+<header class="topbar no-print">
+  <a class="brand" href="#welcome">
+    <span class="brand-mark">IS</span>
+    <span class="brand-title">Issues Study Lab</span>
+  </a>
+  <nav class="topnav" aria-label="Main">
+    <a href="#welcome" data-page="welcome">welcome</a>
+    <a href="#task" data-page="task">the task</a>
+    <a href="#bank" data-page="bank">questions</a>
+    <a href="#readings" data-page="readings">readings</a>
+    <a href="#chamber" data-page="chamber">chamber</a>
+    <a href="#drafting" data-page="drafting">drafting</a>
+  </nav>
+  <div class="topright">
+    <span class="status" id="status"></span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ════════════════════════════════════════════════════════════ WELCOME -->
+  <section class="page" id="page-welcome" data-page="welcome">
+    <div class="hero">
+      <h1>What philosophical question is yours to investigate?</h1>
+      <p class="hero-sub">
+        The SACE Issues Study (AT3) asks you to choose a genuine philosophical
+        question, engage with at least three positions on it, weigh objections,
+        and defend your own answer. This workspace is built to walk you through
+        that, one step at a time.
+      </p>
+
+      <form class="welcome-form" id="welcome-form" onsubmit="return false">
+        <label class="field">
+          <span class="field-label">Your name</span>
+          <input id="student-name" type="text" placeholder="e.g. Peter Ellis"
+                 autocomplete="name" maxlength="80" required />
+          <span class="field-hint">Used on your saved drafts and on the PDF you save at the end.</span>
+        </label>
+        <button class="primary-btn" id="begin-btn" type="submit" disabled>
+          Begin <span class="arrow">→</span>
+        </button>
+      </form>
+
+      <div class="callouts">
+        <div class="callout">
+          <h3>1. The task</h3>
+          <p>Read what SACE actually asks for. Compare an A-grade response to a C+ to see what wins marks.</p>
+        </div>
+        <div class="callout">
+          <h3>2. The questions</h3>
+          <p>102 questions across ethics, metaphysics, epistemology, political philosophy, religion and more. Filter and pick one.</p>
+        </div>
+        <div class="callout">
+          <h3>3. The readings</h3>
+          <p>Curated primary and secondary sources for your question, downloadable as PDFs.</p>
+        </div>
+        <div class="callout">
+          <h3>4. The chamber</h3>
+          <p>Build a Socratic starter prompt — the question, dialectic and reading list — and take it into the AI tool of your choice.</p>
+        </div>
+        <div class="callout">
+          <h3>5. The drafting</h3>
+          <p>A focused write space, a feedback prompt that pairs your draft with the SACE rubric and exemplar, and a Save as PDF button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════ THE TASK -->
+  <section class="page" id="page-task" data-page="task">
+    <div class="prose">
+      <p class="eyebrow">Step 1 of 5</p>
+      <h2>The task SACE actually sets</h2>
+
+      <p>
+        <strong>Assessment Type 3 — Issues Study</strong> asks you to investigate one
+        philosophical issue from any of the key areas (Ethics, Epistemology,
+        Metaphysics, or any of their sub-areas — Political Philosophy, Philosophy of
+        Religion, Philosophy of Mind, Aesthetics). You negotiate the question with
+        your teacher.
+      </p>
+
+      <h3>Five things you must address</h3>
+      <ol class="numbered">
+        <li>Why is this a philosophical issue?</li>
+        <li>What positions do various philosophers hold on it?</li>
+        <li>What are their reasons for holding those positions?</li>
+        <li>What objections or counter-examples are relevant to those positions?</li>
+        <li>What is your own position, and how do you defend it?</li>
+      </ol>
+
+      <p>
+        Your response can be written (up to 2,000 words), oral (up to 12 minutes),
+        or multimodal (an equivalent combination). Either way, you're graded on
+        seven criteria: KU1-2, RA1-3, CA1, and C1-2.
+      </p>
+
+      <h3>What separates an A from a C+</h3>
+      <p class="margin-note">
+        The single biggest pattern across SACE-graded exemplars: the A response
+        weaves objections <em>into</em> each position, while the C+ response
+        describes one view at a time and never lets them fight.
+      </p>
+      <ul class="checklist">
+        <li><strong>The A integrates.</strong> Every philosophical position is presented with both its strongest argument and its strongest objection embedded together. Counter-arguments don't sit in a separate section.</li>
+        <li><strong>The A names.</strong> At least four or five philosophers, by name, with their actual reasoning — not "some thinkers argue".</li>
+        <li><strong>The A defends a nuanced own position.</strong> Not "I agree with X" but "I agree with X under condition Y, here's why Z".</li>
+        <li><strong>The A uses primary sources.</strong> Quotes from the philosophers themselves, not just summaries.</li>
+        <li><strong>The C+ describes.</strong> "X believes A. Y believes B. I think B." No critical pressure, no engagement, no conditional commitment.</li>
+      </ul>
+
+      <h3>The seven criteria</h3>
+      <ul class="criteria">
+        <li><strong>KU1</strong> — knowledge and understanding of the philosophical issue</li>
+        <li><strong>KU2</strong> — knowledge of various philosophers' positions and their reasoning</li>
+        <li><strong>RA1</strong> — recognition of the philosophical nature of the issue</li>
+        <li><strong>RA2</strong> — use of logic and evidence in reasoning</li>
+        <li><strong>RA3</strong> — formulation and defence of your own position</li>
+        <li><strong>CA1</strong> — critical analysis of strengths, weaknesses, objections</li>
+        <li><strong>C1, C2</strong> — communication: clarity, precision, references</li>
+      </ul>
+
+      <div class="page-footer">
+        <a class="primary-btn" href="#bank">Browse the questions <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════ QUESTIONS -->
+  <section class="page" id="page-bank" data-page="bank">
+    <div class="prose">
+      <p class="eyebrow">Step 2 of 5</p>
+      <h2>Pick a question</h2>
+      <p>
+        102 questions, filtered against what's been taught in earlier units so
+        you're not repeating yourself. Click any one to read it; click <em>Pick
+        this question</em> when you're ready.
+      </p>
+    </div>
+
+    <div class="filters">
+      <label>
+        <span>Domain</span>
+        <select id="domain-filter">
+          <option value="">all</option>
+          <option value="ethics">ethics</option>
+          <option value="metaphysics">metaphysics</option>
+          <option value="epistemology">epistemology</option>
+          <option value="political">political philosophy</option>
+          <option value="religion">philosophy of religion</option>
+          <option value="aesthetics">aesthetics</option>
+          <option value="hybrid">hybrid / other</option>
+        </select>
+      </label>
+      <span class="filters-count" id="bank-count"></span>
+    </div>
+
+    <ul class="question-list" id="question-list" aria-live="polite"></ul>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════ READINGS -->
+  <section class="page" id="page-readings" data-page="readings">
+    <div class="prose">
+      <p class="eyebrow">Step 3 of 5</p>
+      <h2>The dialectic and your readings</h2>
+      <div class="selected-q" id="selected-q-readings">
+        <em>Pick a question first.</em>
+      </div>
+      <div class="dialectic" id="dialectic-block"></div>
+    </div>
+
+    <h3 class="readings-section-label">Primary readings — start here</h3>
+    <ul class="readings-list" id="readings-primary"></ul>
+
+    <h3 class="readings-section-label">Secondary readings — widen your view</h3>
+    <ul class="readings-list" id="readings-secondary"></ul>
+
+    <div class="page-footer" id="readings-footer">
+      <a class="primary-btn" href="#chamber">Take the chamber to your AI tool <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════ CHAMBER -->
+  <section class="page" id="page-chamber" data-page="chamber">
+    <div class="prose">
+      <p class="eyebrow">Step 4 of 5</p>
+      <h2>The chamber</h2>
+      <div class="selected-q" id="selected-q-chamber">
+        <em>Pick a question first.</em>
+      </div>
+      <p class="chamber-note">
+        The chamber is a Socratic interlocutor — it pushes back, steel-mans
+        weak views, and refuses to write your essay for you. This lab no
+        longer hosts the chat itself; instead it builds a starter prompt
+        that turns any AI tool into the chamber. Copy it, open the tool of
+        your choice, paste, and (for the deepest engagement) upload the
+        reading PDFs from <a href="#readings">Step 3</a>.
+      </p>
+    </div>
+
+    <div class="handoff" id="chamber-handoff">
+      <div class="handoff-actions">
+        <button id="chamber-copy" type="button" class="primary-btn" disabled>
+          Copy prompt
+        </button>
+        <a class="ghost-btn ai-tool-btn" id="chamber-open-claude"
+           href="https://claude.ai/new" target="_blank" rel="noopener">
+          Open in Claude.ai
+        </a>
+        <a class="ghost-btn ai-tool-btn" id="chamber-open-chatgpt"
+           href="https://chat.openai.com/" target="_blank" rel="noopener">
+          Open in ChatGPT
+        </a>
+        <a class="ghost-btn ai-tool-btn" id="chamber-open-gemini"
+           href="https://gemini.google.com/app" target="_blank" rel="noopener">
+          Open in Gemini
+        </a>
+      </div>
+      <label class="handoff-label" for="chamber-prompt">
+        <span>Starter prompt</span>
+        <span class="handoff-meta" id="chamber-prompt-meta"></span>
+      </label>
+      <textarea id="chamber-prompt" class="handoff-textarea" rows="14"
+                spellcheck="false" readonly
+                placeholder="Pick a question first to generate the chamber prompt."></textarea>
+      <details class="suggestions">
+        <summary>How to get the most out of the chamber</summary>
+        <ul>
+          <li>Paste the prompt as your first message — it sets the AI up as a Socratic partner.</li>
+          <li>Upload the primary readings as PDF attachments. Most AI tools will read them directly.</li>
+          <li>Bring partial thoughts, not finished answers. Ask: "Steel-man the view I find weakest." Or: "Where's the most damaging objection to the position I'm leaning toward?"</li>
+          <li>Resist asking it to write paragraphs for you. Ask it to <em>push</em>, then write your own.</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="page-footer">
+      <a class="primary-btn" href="#drafting">Now write your response <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════ DRAFTING -->
+  <section class="page" id="page-drafting" data-page="drafting">
+    <div class="prose">
+      <p class="eyebrow">Step 5 of 5</p>
+      <h2>Your response</h2>
+      <div class="selected-q" id="selected-q-drafting">
+        <em>Pick a question first.</em>
+      </div>
+      <p>
+        Up to 2,000 words. Make sure you address the five prompts: why is it
+        philosophical, what positions, their reasoning, objections, and your own
+        defended position. Auto-saves as you type.
+      </p>
+    </div>
+
+    <textarea id="draft-input"
+              placeholder="Paste or type your full draft response here. Build the feedback prompt once you've passed 200 characters."
+              disabled></textarea>
+
+    <div class="draft-controls">
+      <span id="draft-counter">0 / ~2000 words</span>
+      <span class="autosave-indicator" id="autosave-indicator">not saved</span>
+    </div>
+
+    <div class="action-bar">
+      <button id="feedback-build-btn" type="button" class="primary-btn" disabled>
+        Build feedback prompt
+      </button>
+      <button id="export-pdf-btn" type="button" class="ghost-btn" disabled
+              title="Opens your browser's print dialog. Choose 'Save as PDF' to keep a copy of your name, the question, your draft and the feedback prompt.">
+        Save as PDF
+      </button>
+    </div>
+
+    <div class="handoff" id="feedback-handoff" hidden>
+      <div class="handoff-actions">
+        <button id="feedback-copy" type="button" class="primary-btn">
+          Copy feedback prompt
+        </button>
+        <a class="ghost-btn ai-tool-btn" id="feedback-open-claude"
+           href="https://claude.ai/new" target="_blank" rel="noopener">
+          Open in Claude.ai
+        </a>
+        <a class="ghost-btn ai-tool-btn" id="feedback-open-chatgpt"
+           href="https://chat.openai.com/" target="_blank" rel="noopener">
+          Open in ChatGPT
+        </a>
+        <a class="ghost-btn ai-tool-btn" id="feedback-open-gemini"
+           href="https://gemini.google.com/app" target="_blank" rel="noopener">
+          Open in Gemini
+        </a>
+      </div>
+      <label class="handoff-label" for="feedback-prompt">
+        <span>Feedback prompt</span>
+        <span class="handoff-meta" id="feedback-prompt-meta"></span>
+      </label>
+      <textarea id="feedback-prompt" class="handoff-textarea" rows="16"
+                spellcheck="false" readonly></textarea>
+      <p class="handoff-hint">
+        The prompt embeds your draft, the SACE rubric, and the closest grade-banded
+        exemplar. Paste it as your first message — the AI will return structured,
+        criterion-referenced feedback (KU1-2, RA1-3, CA1, C1-2) and a predicted band.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footnote no-print">
+  <em>Marginalia.</em> SACE Stage 2 Philosophy · Issues Study workspace · 102
+  questions · 14 curated reading clusters.
+</footer>
+
+<!-- ═════════════════════════════════════════════════════════ PRINT VIEW -->
+<!-- Hidden until window.print() is called; populated on demand by script.js. -->
+<aside id="print-view" class="print-only" aria-hidden="true"></aside>
+
+<script src="/script.js?v=2026-05-01-static"></script>
+</body>
+</html>

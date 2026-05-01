@@ -1,0 +1,818 @@
+[
+  {
+    "id": "Q025",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "'Our moral code has no special status, it is merely one among many.' Would the world benefit from adopting normative ethical relativism?"
+  },
+  {
+    "id": "Q003",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Animals should have the same moral worth as humans. Discuss this in relation to various philosophical positions."
+  },
+  {
+    "id": "Q024",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Are humans inherently good?"
+  },
+  {
+    "id": "Q037",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "Can one nation waging war over another be morally justified?"
+  },
+  {
+    "id": "Q038",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "Can political violence be ethically justified?"
+  },
+  {
+    "id": "Q043",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "Do nation-states have a moral obligation to intervene in foreign conflicts such as the Russia-Ukraine War?"
+  },
+  {
+    "id": "Q020",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Do we have a moral obligation to future generations?"
+  },
+  {
+    "id": "Q026",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Do we have an obligation to respect all cultural differences?"
+  },
+  {
+    "id": "Q032",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "How does free-will and determinism shape our view on criminal responsibility?"
+  },
+  {
+    "id": "Q042",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "In light of the recent mass-protests in Hong Kong, should an individual's social liberty be deemed more important than state control?"
+  },
+  {
+    "id": "Q041",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "In the face of the climate crisis, is civil disobedience ethically justified?"
+  },
+  {
+    "id": "Q014",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Insects should replace poultry as a source of protein and carbohydrates."
+  },
+  {
+    "id": "Q005",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is abortion morally justifiable?"
+  },
+  {
+    "id": "Q004",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is anthropophagy morally wrong?"
+  },
+  {
+    "id": "Q007",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is euthanasia morally justified?"
+  },
+  {
+    "id": "Q009",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is germline therapy implemented in the genetic modification of foetus' an ethical practice?"
+  },
+  {
+    "id": "Q018",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is government sanctioned population control morally justifiable?"
+  },
+  {
+    "id": "Q019",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is it ethical to bear children?"
+  },
+  {
+    "id": "Q002",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is it morally justifiable to use animals as a food source?"
+  },
+  {
+    "id": "Q006",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is stem cell research morally justifiable?"
+  },
+  {
+    "id": "Q001",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is the death sentence morally justifiable?"
+  },
+  {
+    "id": "Q022",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Is the existence of god and religious scripture necessary for humanity's sense of morality?"
+  },
+  {
+    "id": "Q010",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Is the rapid development of Artificial Intelligence morally justifiable?"
+  },
+  {
+    "id": "Q017",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should double jeopardy reform be approved?"
+  },
+  {
+    "id": "Q035",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Should humans pursue pleasure at all cost?"
+  },
+  {
+    "id": "Q016",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should mentally ill be allowed to raise children, or whether those children should be taken from them for their own good?"
+  },
+  {
+    "id": "Q028",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Should morality be taught in Australian schools?"
+  },
+  {
+    "id": "Q039",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "Should political violence against the state be justified?"
+  },
+  {
+    "id": "Q012",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should the Australian government seek to have AI in every part of our society?"
+  },
+  {
+    "id": "Q015",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should the intentional infliction of torture on those who have committed or believed to have committed a criminal act be legal?"
+  },
+  {
+    "id": "Q011",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should the potential of AI be fully embraced?"
+  },
+  {
+    "id": "Q029",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Should the rights of an individual trump the rights of the general population?"
+  },
+  {
+    "id": "Q027",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "Should the teaching of morality replace the teaching of religion?"
+  },
+  {
+    "id": "Q008",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "Should voluntary euthanasia be justified as an option for terminally ill patients?"
+  },
+  {
+    "id": "Q044",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "Should wealthy nations be obliged to support poor nations?"
+  },
+  {
+    "id": "Q023",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "To what extent can morality exist in the absence of organised religion?"
+  },
+  {
+    "id": "Q031",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "To what extent can we be held accountable for our moral actions if our decisions are a product of external factors?"
+  },
+  {
+    "id": "Q013",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "To what extent does someone's personhood get taken away when modified by technology?"
+  },
+  {
+    "id": "Q030",
+    "domain": "ethics",
+    "subdomain": "Meta-ethics & moral theory",
+    "cluster_pack": "lab_meta_ethics_moral_theory",
+    "cluster_display_name": "Meta-ethics & moral theory",
+    "text": "We, as human beings, are products of our environment. What are the implications of this in reference to an individual's moral responsibility for their actions?"
+  },
+  {
+    "id": "Q021",
+    "domain": "ethics",
+    "subdomain": "Applied & normative ethics",
+    "cluster_pack": "lab_applied_normative_ethics",
+    "cluster_display_name": "Applied & normative ethics",
+    "text": "What ethical responsibility do we as the human race have to the environment?"
+  },
+  {
+    "id": "Q040",
+    "domain": "ethics",
+    "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "cluster_pack": "lab_war_violence_political_ethics_cross_listed_in_political_philosophy",
+    "cluster_display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+    "text": "When is violence societally acceptable and when is it morally acceptable?"
+  },
+  {
+    "id": "Q066",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "'Nothingness lies coiled at the heart of being — like a worm.' Discuss the relevance of Sartre's statement in relation to modern Australian society."
+  },
+  {
+    "id": "Q067",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "Are the principles of individualism appropriate to live by?"
+  },
+  {
+    "id": "Q057",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "Are we born a blank slate or veined marble?"
+  },
+  {
+    "id": "Q048",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "cluster_pack": "lab_free_will_determinism",
+    "cluster_display_name": "Free will & determinism",
+    "text": "Are we free? Or are we slaves in a modern consumerist society?"
+  },
+  {
+    "id": "Q045",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "cluster_pack": "lab_free_will_determinism",
+    "cluster_display_name": "Free will & determinism",
+    "text": "Do humans have free will, or are our actions determined prior by causes beyond our control?"
+  },
+  {
+    "id": "Q083",
+    "domain": "metaphysics",
+    "subdomain": "The problem of evil",
+    "cluster_pack": "lab_the_problem_of_evil",
+    "cluster_display_name": "The problem of evil",
+    "text": "Does evil in the world disprove God?"
+  },
+  {
+    "id": "Q049",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "Does personal identity exist, and if so, does it persist through time?"
+  },
+  {
+    "id": "Q052",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "From the environment people are raised in, to the genetics they are born with, there are many influences on an individual's identity. In light of this, what are the factors that shape and influence personal identity?"
+  },
+  {
+    "id": "Q062",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "How can one cope with the impermanence of time?"
+  },
+  {
+    "id": "Q060",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "How does mortality affect our own decision making? Should we be scared to die? Is death the end?"
+  },
+  {
+    "id": "Q059",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "How does mortality drive decision-making?"
+  },
+  {
+    "id": "Q050",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "How does personal identity persist over time?"
+  },
+  {
+    "id": "Q046",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "cluster_pack": "lab_free_will_determinism",
+    "cluster_display_name": "Free will & determinism",
+    "text": "How free are we?"
+  },
+  {
+    "id": "Q055",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "How is the essence of identity and authenticity impacted in the digital age?"
+  },
+  {
+    "id": "Q063",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "Humans have been seeking an answer to the meaning of life for millennia, and wholly our quest has been fruitless. What relevance does absurdism have in reference to the meaning of life?"
+  },
+  {
+    "id": "Q064",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "If people embrace the meaninglessness of life it can be consuming or freeing. Discuss this in relation to philosophical positions on meaning."
+  },
+  {
+    "id": "Q047",
+    "domain": "metaphysics",
+    "subdomain": "Free will & determinism",
+    "cluster_pack": "lab_free_will_determinism",
+    "cluster_display_name": "Free will & determinism",
+    "text": "Is every part of our life determined?"
+  },
+  {
+    "id": "Q082",
+    "domain": "metaphysics",
+    "subdomain": "The problem of evil",
+    "cluster_pack": "lab_the_problem_of_evil",
+    "cluster_display_name": "The problem of evil",
+    "text": "Is evil an entity in itself or a quality of human nature?"
+  },
+  {
+    "id": "Q074",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "Is love a selfless act, or is it rooted in self-interest?"
+  },
+  {
+    "id": "Q072",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "Is love universal or subjective?"
+  },
+  {
+    "id": "Q054",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "Is personal authenticity essential to the human condition? How does social media impact one's achievement of this?"
+  },
+  {
+    "id": "Q053",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "Is the self an illusion?"
+  },
+  {
+    "id": "Q058",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "Is there an afterlife? Discuss this in relation to various philosophical positions relating to the enduring self."
+  },
+  {
+    "id": "Q075",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "Love delivers personal fulfilment. Discuss in relation to various philosophical positions."
+  },
+  {
+    "id": "Q076",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "Love drives people's actions in many ways, often for the benefit of the individual and society. Discuss various philosophical positions in relation to the impact of love on people's actions."
+  },
+  {
+    "id": "Q065",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "Sartre stated that man is condemned to be free. Discuss this with reference to people in the first and third world."
+  },
+  {
+    "id": "Q056",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "The development of the internet and social media in the 21st century has helped individuals establish their identity and sense of self. Discuss."
+  },
+  {
+    "id": "Q061",
+    "domain": "metaphysics",
+    "subdomain": "Mortality, time & meaning",
+    "cluster_pack": "lab_mortality_time_meaning",
+    "cluster_display_name": "Mortality, time & meaning",
+    "text": "The field of cryonics, aimed at preserving human life, is rapidly expanding in the pursuit of immortality. Discuss the metaphysical implications surrounding this concept and the desirability of achieving such a state."
+  },
+  {
+    "id": "Q051",
+    "domain": "metaphysics",
+    "subdomain": "Personal identity & the self",
+    "cluster_pack": "lab_personal_identity_the_self",
+    "cluster_display_name": "Personal identity & the self",
+    "text": "What connects someone's personal identity throughout a lifetime?"
+  },
+  {
+    "id": "Q073",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "What is love?"
+  },
+  {
+    "id": "Q079",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "What is the nature of love within modern gender roles?"
+  },
+  {
+    "id": "Q078",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "What role does aesthetics play in our understanding of love?"
+  },
+  {
+    "id": "Q077",
+    "domain": "metaphysics",
+    "subdomain": "Love (metaphysical & existential)",
+    "cluster_pack": "lab_love_metaphysical_existential",
+    "cluster_display_name": "Love (metaphysical & existential)",
+    "text": "What role does love play in creating meaning and purpose in our life?"
+  },
+  {
+    "id": "Q087",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "Am I awake? A study of Descartes' 'Dream Argument' and counter arguments."
+  },
+  {
+    "id": "Q088",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "Does the nature of dreaming threaten the certainty of our knowledge?"
+  },
+  {
+    "id": "Q092",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "Is experience necessary to form a belief?"
+  },
+  {
+    "id": "Q085",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "Is ignorance bliss? Discuss this in relation to various philosophical positions."
+  },
+  {
+    "id": "Q084",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "Is it possible to make a knowledge claim?"
+  },
+  {
+    "id": "Q089",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "To what extent can dreams be considered genuine experiences?"
+  },
+  {
+    "id": "Q090",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "To what extent does innate knowledge affect an individual's actions?"
+  },
+  {
+    "id": "Q091",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "What are the epistemic impacts of deepfakes?"
+  },
+  {
+    "id": "Q086",
+    "domain": "epistemology",
+    "subdomain": "",
+    "cluster_pack": "lab_epistemology_knowledge_skepticism",
+    "cluster_display_name": "Epistemology -- knowledge & skepticism",
+    "text": "When presented the option to hold empirical evidence of one's death date, is ignorance bliss?"
+  },
+  {
+    "id": "Q105",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "Conservatism vs Liberalism — how would one system be more beneficial to Australia than the other?"
+  },
+  {
+    "id": "Q101",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "Do we / does society need a structured system of governance? If so, is democracy the most effective / best system?"
+  },
+  {
+    "id": "Q106",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "For modern Australian society to prosper, should the government adopt liberalism, communism, democracy, or nationalism?"
+  },
+  {
+    "id": "Q103",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "From a utilitarian perspective, should governments use democracy as the foundation for the governance of a nation?"
+  },
+  {
+    "id": "Q107",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "cluster_pack": "lab_civic_responsibility_rights_censorship",
+    "cluster_display_name": "Civic responsibility, rights, censorship",
+    "text": "How does wealth affect freedom of the individual?"
+  },
+  {
+    "id": "Q111",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "cluster_pack": "lab_civic_responsibility_rights_censorship",
+    "cluster_display_name": "Civic responsibility, rights, censorship",
+    "text": "How relevant is marriage in modern Australian society?"
+  },
+  {
+    "id": "Q109",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "cluster_pack": "lab_civic_responsibility_rights_censorship",
+    "cluster_display_name": "Civic responsibility, rights, censorship",
+    "text": "Is censorship a necessary safeguard for social unity, or a covert mechanism for control and limitation?"
+  },
+  {
+    "id": "Q104",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "Is democracy often an ineffective and poor form of government?"
+  },
+  {
+    "id": "Q110",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "cluster_pack": "lab_civic_responsibility_rights_censorship",
+    "cluster_display_name": "Civic responsibility, rights, censorship",
+    "text": "Should the Australian government allow more refugees to enter Australia?"
+  },
+  {
+    "id": "Q108",
+    "domain": "political",
+    "subdomain": "Civic responsibility, rights, censorship",
+    "cluster_pack": "lab_civic_responsibility_rights_censorship",
+    "cluster_display_name": "Civic responsibility, rights, censorship",
+    "text": "Should the government and government-run sectors have a stricter set of rules and a watchdog to make sure that they are always doing the right thing by the people, being that they are public servants?"
+  },
+  {
+    "id": "Q102",
+    "domain": "political",
+    "subdomain": "Forms of government",
+    "cluster_pack": "lab_forms_of_government",
+    "cluster_display_name": "Forms of government",
+    "text": "To what extent is democracy the most appropriate form of government?"
+  },
+  {
+    "id": "Q113",
+    "domain": "religion",
+    "subdomain": "",
+    "cluster_pack": "lab_philosophy_of_religion",
+    "cluster_display_name": "Philosophy of religion",
+    "text": "A deity or God provides many people in the world a purpose to life. Discuss this in relation to the role of religion in providing meaning and purpose in the world we live today."
+  },
+  {
+    "id": "Q112",
+    "domain": "religion",
+    "subdomain": "",
+    "cluster_pack": "lab_philosophy_of_religion",
+    "cluster_display_name": "Philosophy of religion",
+    "text": "Arguments for and against the traditional concept of God."
+  },
+  {
+    "id": "Q116",
+    "domain": "religion",
+    "subdomain": "",
+    "cluster_pack": "lab_philosophy_of_religion",
+    "cluster_display_name": "Philosophy of religion",
+    "text": "Religious values provide a framework for life. Discuss."
+  },
+  {
+    "id": "Q114",
+    "domain": "religion",
+    "subdomain": "",
+    "cluster_pack": "lab_philosophy_of_religion",
+    "cluster_display_name": "Philosophy of religion",
+    "text": "Should religion still be taught in schools?"
+  },
+  {
+    "id": "Q115",
+    "domain": "religion",
+    "subdomain": "",
+    "cluster_pack": "lab_philosophy_of_religion",
+    "cluster_display_name": "Philosophy of religion",
+    "text": "To what extent should the United Nations protect human rights breached by religious practices?"
+  },
+  {
+    "id": "Q118",
+    "domain": "aesthetics",
+    "subdomain": "",
+    "cluster_pack": "lab_aesthetics",
+    "cluster_display_name": "Aesthetics",
+    "text": "The issue of the subjectivity of beauty and its significant influence on rates of cosmetic surgery."
+  },
+  {
+    "id": "Q119",
+    "domain": "hybrid",
+    "subdomain": "",
+    "cluster_pack": "lab_hybrid_other",
+    "cluster_display_name": "Hybrid / other",
+    "text": "Is the world we live in a simulation?"
+  },
+  {
+    "id": "Q120",
+    "domain": "hybrid",
+    "subdomain": "",
+    "cluster_pack": "lab_hybrid_other",
+    "cluster_display_name": "Hybrid / other",
+    "text": "The Trolley Problem."
+  }
+]

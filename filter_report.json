@@ -1,0 +1,1763 @@
+{
+  "kept": [
+    {
+      "id": "Q001",
+      "text": "Is the death sentence morally justifiable?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "recurring; Tom Burgess and Daisy Wellington (past cohorts)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Louis Pojman - A Defense of the Death Penalty.pdf",
+        "Student Charles Jessup - Against the death penalty.pdf",
+        "Claire Finkelstein - A Contractarian Argument Against the Death Penalty.pdf",
+        "Kant and Respect for Persons.pdf"
+      ]
+    },
+    {
+      "id": "Q002",
+      "text": "Is it morally justifiable to use animals as a food source?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "James Spurritt",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Humans and Nonhuman Animals.pdf",
+        "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
+        "Kant and Respect for Persons.pdf"
+      ]
+    },
+    {
+      "id": "Q003",
+      "text": "Animals should have the same moral worth as humans. Discuss this in relation to various philosophical positions.",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2019,
+      "source": "2019; 640404F",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Kant and Respect for Persons.pdf",
+        "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf"
+      ]
+    },
+    {
+      "id": "Q004",
+      "text": "Is anthropophagy morally wrong?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "historical exemplar",
+      "reason": "keep",
+      "primary_filenames": [
+        "Kant and Respect for Persons.pdf",
+        "Haidt - Righteous Mind - Sanctity and Degradation.pdf",
+        "Singer - Practical ethics.pdf",
+        "Don Marquis - Why Abotion is Immoral.pdf"
+      ]
+    },
+    {
+      "id": "Q005",
+      "text": "Is abortion morally justifiable?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Georgie Myers",
+      "reason": "keep",
+      "primary_filenames": [
+        "Judith Jarvis Thomson - A Defense of Abortion.pdf",
+        "Don Marquis - Why Abotion is Immoral.pdf",
+        "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
+        "Peter Singer on Abortion.pdf"
+      ]
+    },
+    {
+      "id": "Q006",
+      "text": "Is stem cell research morally justifiable?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Anna Williams",
+      "reason": "keep",
+      "primary_filenames": [
+        "Embryo Research.pdf",
+        "Don Marquis - Why Abotion is Immoral.pdf",
+        "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
+        "Singer - Practical ethics.pdf"
+      ]
+    },
+    {
+      "id": "Q007",
+      "text": "Is euthanasia morally justified?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "historical exemplar",
+      "reason": "keep",
+      "primary_filenames": [
+        "James Rachels - The Morality of Euthanasia.pdf",
+        "J Gay-William - The Wrongfulness of Euthanasia.pdf",
+        "Chapter 2 - Moral Issues - Euthanasia.pdf"
+      ]
+    },
+    {
+      "id": "Q008",
+      "text": "Should voluntary euthanasia be justified as an option for terminally ill patients?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2022,
+      "source": "2022; Ava Mitchell (270592E)",
+      "reason": "keep",
+      "primary_filenames": [
+        "James Rachels - The Morality of Euthanasia.pdf",
+        "J Gay-William - The Wrongfulness of Euthanasia.pdf",
+        "Kant and Respect for Persons.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf"
+      ]
+    },
+    {
+      "id": "Q009",
+      "text": "Is germline therapy implemented in the genetic modification of foetus' an ethical practice?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2020,
+      "source": "2020; 856146G",
+      "reason": "keep",
+      "primary_filenames": [
+        "Enhancement Genetic Engineering.pdf",
+        "2016 - Bercic - Genetic Engineering.pdf",
+        "Embryo Research.pdf"
+      ]
+    },
+    {
+      "id": "Q010",
+      "text": "Is the rapid development of Artificial Intelligence morally justifiable?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Moderation guide; suggested philosophers: Nick Bostrom, Peter Singer, Thomas Metzinger",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
+        "Floridi - The Ethics of Artificial Intelligence.pdf",
+        "Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf"
+      ]
+    },
+    {
+      "id": "Q011",
+      "text": "Should the potential of AI be fully embraced?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2019,
+      "source": "2019; 691331W",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
+        "Floridi - The Ethics of Artificial Intelligence.pdf",
+        "excerpt.pdf"
+      ]
+    },
+    {
+      "id": "Q012",
+      "text": "Should the Australian government seek to have AI in every part of our society?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Master list; suggested: Bentham",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf",
+        "Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
+        "excerpt.pdf"
+      ]
+    },
+    {
+      "id": "Q013",
+      "text": "To what extent does someone's personhood get taken away when modified by technology?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2024,
+      "source": "2024; 616085X",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
+        "Robert Nozick - The Experience Machine.pdf",
+        "Enhancement Genetic Engineering.pdf"
+      ]
+    },
+    {
+      "id": "Q014",
+      "text": "Insects should replace poultry as a source of protein and carbohydrates.",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2022,
+      "source": "2022; Riley Kevitt (343535G)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Humans and Nonhuman Animals.pdf",
+        "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
+        "Haidt - Righteous Mind - Sanctity and Degradation.pdf"
+      ]
+    },
+    {
+      "id": "Q015",
+      "text": "Should the intentional infliction of torture on those who have committed or believed to have committed a criminal act be legal?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2020,
+      "source": "2020; 737426X",
+      "reason": "keep",
+      "primary_filenames": [
+        "Luban - Torture and the Ticking Bomb.pdf",
+        "Kant and Retribution.pdf",
+        "Are there absolute moral rules.pdf"
+      ]
+    },
+    {
+      "id": "Q016",
+      "text": "Should mentally ill be allowed to raise children, or whether those children should be taken from them for their own good?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2022,
+      "source": "2022; Ozan Koch (715703T)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "1982 - In a Different Voice - Carol Gilligan.pdf",
+        "Are there absolute moral rules.pdf",
+        "Judith Jarvis Thomson - A Defense of Abortion.pdf"
+      ]
+    },
+    {
+      "id": "Q017",
+      "text": "Should double jeopardy reform be approved?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2023,
+      "source": "2023; 236145F",
+      "reason": "keep",
+      "primary_filenames": [
+        "Are there absolute moral rules.pdf",
+        "The Prisoners Dilemma.pdf",
+        "Philip K Dick - The Minority Report.pdf"
+      ]
+    },
+    {
+      "id": "Q018",
+      "text": "Is government sanctioned population control morally justifiable?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Bryony Hardy",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Are there absolute moral rules.pdf",
+        "Rachels - The Social Contract.pdf",
+        "01a - Ch 16 and 17 Brave New World.pdf"
+      ]
+    },
+    {
+      "id": "Q019",
+      "text": "Is it ethical to bear children?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Moderation guide; suggested: Benatar, Häyry, Hursthouse, Smilansky, Wasserman",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Don Marquis - Why Abotion is Immoral.pdf",
+        "Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf"
+      ]
+    },
+    {
+      "id": "Q020",
+      "text": "Do we have a moral obligation to future generations?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": null,
+      "source": "Moderation guide; intergenerational equity, environmental sustainability, scarce resource distribution",
+      "reason": "keep",
+      "primary_filenames": [
+        "Scheffler death.pdf",
+        "Singer - Practical ethics.pdf",
+        "T M Scanlon - Contractualism and Utilitarianism.pdf",
+        "David Gauthier - Why Contractarianism?.pdf"
+      ]
+    },
+    {
+      "id": "Q021",
+      "text": "What ethical responsibility do we as the human race have to the environment?",
+      "domain": "ethics",
+      "subdomain": "Applied & normative ethics",
+      "year": 2024,
+      "source": "2024; Oscar Nugent (938514W)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
+        "Chapter 8 - The Law of Limited Competition.pdf"
+      ]
+    },
+    {
+      "id": "Q022",
+      "text": "Is the existence of god and religious scripture necessary for humanity's sense of morality?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Jake Stewart",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "C S Lewis - On Right and Wrong.pdf",
+        "Ethical Theory - An Anthology.pdf"
+      ]
+    },
+    {
+      "id": "Q023",
+      "text": "To what extent can morality exist in the absence of organised religion?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2025,
+      "source": "2025; 438833G; also Max (2025 cohort)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "6 - James Rachels - Social Contract.pdf",
+        "C S Lewis - On Right and Wrong.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf"
+      ]
+    },
+    {
+      "id": "Q024",
+      "text": "Are humans inherently good?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2025,
+      "source": "2025; 398564J",
+      "reason": "keep",
+      "primary_filenames": [
+        "Philippa Foot - Natural Goodness.pdf",
+        "Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "Kant and Respect for Persons.pdf"
+      ]
+    },
+    {
+      "id": "Q025",
+      "text": "'Our moral code has no special status, it is merely one among many.' Would the world benefit from adopting normative ethical relativism?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2018,
+      "source": "Master list; also 2018, 374308E",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Cultural Relativism.pdf",
+        "Mackie - The Subjectivity of Values.pdf",
+        "03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf"
+      ]
+    },
+    {
+      "id": "Q026",
+      "text": "Do we have an obligation to respect all cultural differences?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Master list",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Cultural Relativism.pdf",
+        "03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
+        "C S Lewis - On Right and Wrong.pdf",
+        "Philippa Foot Interview - the Grammar of Goodness.pdf"
+      ]
+    },
+    {
+      "id": "Q027",
+      "text": "Should the teaching of morality replace the teaching of religion?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Master list; suggested: Aristotle, Kant, Hume, Plato, Aquinas",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "6 - James Rachels - Social Contract.pdf",
+        "Chapter VCE - On Right and Wrong.pdf"
+      ]
+    },
+    {
+      "id": "Q028",
+      "text": "Should morality be taught in Australian schools?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2019,
+      "source": "2019; 759700W",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
+        "Lindstrom - 2022 - Moral Taste and Moral Education.pdf",
+        "Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
+        "Haidt - 2003 - The Moral Emotions.pdf"
+      ]
+    },
+    {
+      "id": "Q029",
+      "text": "Should the rights of an individual trump the rights of the general population?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Master list; suggested: Ludwig von Mises",
+      "reason": "keep",
+      "primary_filenames": [
+        "James Rachels textbook - The debate over utilitarianism.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf",
+        "Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.pdf",
+        "Are there absolute moral rules.pdf"
+      ]
+    },
+    {
+      "id": "Q030",
+      "text": "We, as human beings, are products of our environment. What are the implications of this in reference to an individual's moral responsibility for their actions?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Will Mackenzie",
+      "reason": "keep",
+      "primary_filenames": [
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "6 - James Rachels - Social Contract.pdf"
+      ]
+    },
+    {
+      "id": "Q031",
+      "text": "To what extent can we be held accountable for our moral actions if our decisions are a product of external factors?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Moderation guide; suggested: Kant, Aristotle",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Free Will and Determinism.pdf",
+        "the Matrix - Fate Freedom foreknowledge.pdf",
+        "Textbook - Free Will.pdf",
+        "Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf"
+      ]
+    },
+    {
+      "id": "Q032",
+      "text": "How does free-will and determinism shape our view on criminal responsibility?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2023,
+      "source": "2023; 844774X (also: Metaphysics)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "Chapter VCE - Free Will and Determinism.pdf",
+        "Textbook - Free Will.pdf"
+      ]
+    },
+    {
+      "id": "Q035",
+      "text": "Should humans pursue pleasure at all cost?",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": null,
+      "source": "Georgia Middleton",
+      "reason": "keep",
+      "primary_filenames": [
+        "Robert Nozick - The Experience Machine.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf"
+      ]
+    },
+    {
+      "id": "Q037",
+      "text": "Can one nation waging war over another be morally justified?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": null,
+      "source": "Carly Kwaterski",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
+        "Jeff McMahan - Just Cause for War.pdf",
+        "Nagel - Terrorism (torture).pdf"
+      ]
+    },
+    {
+      "id": "Q038",
+      "text": "Can political violence be ethically justified?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": null,
+      "source": "Moderation guide; suggested: Kant, Walter Benjamin, Simone Weil",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "Nagel - Terrorism (torture).pdf",
+        "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
+        "Nussbaum - Perception and Revolution1.pdf"
+      ]
+    },
+    {
+      "id": "Q039",
+      "text": "Should political violence against the state be justified?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": 2019,
+      "source": "2019; 137213G",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels - The Social Contract.pdf",
+        "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "Nussbaum - Perception and Revolution.pdf"
+      ]
+    },
+    {
+      "id": "Q040",
+      "text": "When is violence societally acceptable and when is it morally acceptable?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": null,
+      "source": "Moderation guide; references Aquinas, Plato, Walter Benjamin",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "Nagel - Terrorism (torture).pdf",
+        "Jeff McMahan - The Ethics of Killing in War.pdf",
+        "6 - James Rachels - Social Contract.pdf"
+      ]
+    },
+    {
+      "id": "Q041",
+      "text": "In the face of the climate crisis, is civil disobedience ethically justified?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": 2022,
+      "source": "2022; Winter Birkett (508978E)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels - The Social Contract.pdf",
+        "Are there absolute moral rules.pdf",
+        "Singer - Practical ethics.pdf",
+        "Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf"
+      ]
+    },
+    {
+      "id": "Q042",
+      "text": "In light of the recent mass-protests in Hong Kong, should an individual's social liberty be deemed more important than state control?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": 2019,
+      "source": "2019; 703465G",
+      "reason": "keep",
+      "primary_filenames": [
+        "Hobbes and Locke.pdf",
+        "Rachels - The Social Contract.pdf",
+        "Illustrated John Stuart Mill on Free Speech.pdf"
+      ]
+    },
+    {
+      "id": "Q043",
+      "text": "Do nation-states have a moral obligation to intervene in foreign conflicts such as the Russia-Ukraine War?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": 2024,
+      "source": "2024; 728095X",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "Jeff McMahan - Just Cause for War.pdf",
+        "Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
+        "Rachels - The Social Contract.pdf"
+      ]
+    },
+    {
+      "id": "Q044",
+      "text": "Should wealthy nations be obliged to support poor nations?",
+      "domain": "ethics",
+      "subdomain": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "year": 2023,
+      "source": "2023; 907988W",
+      "reason": "keep",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Chapter VCE - Justice.pdf",
+        "Kant and Respect for Persons.pdf"
+      ]
+    },
+    {
+      "id": "Q045",
+      "text": "Do humans have free will, or are our actions determined prior by causes beyond our control?",
+      "domain": "metaphysics",
+      "subdomain": "Free will & determinism",
+      "year": 2025,
+      "source": "2025; Arabella (2025 cohort) and 293680W; suggested: Kant, Spinoza, Sartre",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "Chapter VCE - Free Will and Determinism.pdf",
+        "Textbook - Free Will.pdf"
+      ]
+    },
+    {
+      "id": "Q046",
+      "text": "How free are we?",
+      "domain": "metaphysics",
+      "subdomain": "Free will & determinism",
+      "year": 2025,
+      "source": "recurring; 2025 (Caitlin) and 2023 (985521W); suggested: Sartre, Hume, Kant",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "Chapter VCE - Free Will and Determinism.pdf"
+      ]
+    },
+    {
+      "id": "Q047",
+      "text": "Is every part of our life determined?",
+      "domain": "metaphysics",
+      "subdomain": "Free will & determinism",
+      "year": null,
+      "source": "Kelly Pigot",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "BeingAndNothingness.pdf",
+        "Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "Chapter VCE - Free Will and Determinism.pdf"
+      ]
+    },
+    {
+      "id": "Q048",
+      "text": "Are we free? Or are we slaves in a modern consumerist society?",
+      "domain": "metaphysics",
+      "subdomain": "Free will & determinism",
+      "year": 2018,
+      "source": "Master list; also 2018, 977231R",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "The Matrix and Marx.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "Chapter VCE - Free Will and Determinism.pdf",
+        "01a - Ch 16 and 17 Brave New World.pdf"
+      ]
+    },
+    {
+      "id": "Q049",
+      "text": "Does personal identity exist, and if so, does it persist through time?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2020,
+      "source": "2020; 211419H",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Outline - Williams on Expectations and the Self.pdf",
+        "Thomas Metzinger - Being No One.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf"
+      ]
+    },
+    {
+      "id": "Q050",
+      "text": "How does personal identity persist over time?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": null,
+      "source": "Moderation guide; suggested: Locke, Parfit, Hume",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Outline - Williams on Expectations and the Self.pdf",
+        "Williams Handout - Subjective Experience.pdf",
+        "Bernard Williams On Personal Identity Thought Experiments In \"The Self and the Future\".pdf"
+      ]
+    },
+    {
+      "id": "Q051",
+      "text": "What connects someone's personal identity throughout a lifetime?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2021,
+      "source": "Master list; also 2021, 638207W; suggested: Locke, Bernard Williams, Parfit",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Williams Handout - Subjective Experience.pdf",
+        "Bernard Williams On Personal Identity Thought Experiments In \"The Self and the Future\".pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf"
+      ]
+    },
+    {
+      "id": "Q052",
+      "text": "From the environment people are raised in, to the genetics they are born with, there are many influences on an individual's identity. In light of this, what are the factors that shape and influence personal identity?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2020,
+      "source": "2020; 853462H",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "Sapolsky - Determined; Life Without Free Will (introduction to book).pdf"
+      ]
+    },
+    {
+      "id": "Q053",
+      "text": "Is the self an illusion?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2025,
+      "source": "2025; Asha O (2025 cohort) and 846315X; suggested: Descartes, Watts, Hume",
+      "reason": "keep",
+      "primary_filenames": [
+        "Thomas Metzinger - Being No One.pdf",
+        "Bernard Williams - The Self and the Future.pdf",
+        "BeingAndNothingness.pdf",
+        "Nagel - What is it like to be a bat.pdf"
+      ]
+    },
+    {
+      "id": "Q054",
+      "text": "Is personal authenticity essential to the human condition? How does social media impact one's achievement of this?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": null,
+      "source": "Moderation guide; suggested: Hannah Arendt",
+      "reason": "keep",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "The Matrix and Existential Authenticity.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "Robert Nozick - The Experience Machine.pdf"
+      ]
+    },
+    {
+      "id": "Q055",
+      "text": "How is the essence of identity and authenticity impacted in the digital age?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": null,
+      "source": "Moderation guide; suggested: Sartre, Hume, Locke",
+      "reason": "keep",
+      "primary_filenames": [
+        "Robert Nozick - The Experience Machine.pdf",
+        "Simulacra and Simulation Rundown.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "The Matrix and Existential Authenticity.pdf"
+      ]
+    },
+    {
+      "id": "Q056",
+      "text": "The development of the internet and social media in the 21st century has helped individuals establish their identity and sense of self. Discuss.",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2022,
+      "source": "2022; Clare Matijevic (786397W)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "The Matrix Simulation Postmodern Age.pdf",
+        "Postmodernism a very short introduction - 2002 - Christopher Butler.pdf"
+      ]
+    },
+    {
+      "id": "Q057",
+      "text": "Are we born a blank slate or veined marble?",
+      "domain": "metaphysics",
+      "subdomain": "Personal identity & the self",
+      "year": 2022,
+      "source": "2022; Madison Scaffidi-Muta (672152G)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Haidt - Righteous Mind - Overview of Each Foundation.pdf",
+        "03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "Chapter VCE - Materialism and Idealism.pdf"
+      ]
+    },
+    {
+      "id": "Q058",
+      "text": "Is there an afterlife? Discuss this in relation to various philosophical positions relating to the enduring self.",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2025,
+      "source": "2025; Asha B (2025 cohort) and 790419J; suggested: Plato, Nagarjuna, Socrates, Dalai Lama",
+      "reason": "keep",
+      "primary_filenames": [
+        "Aristotle - The Soul and Life After Death.pdf",
+        "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
+        "Bernard Williams - The Self and the Future.pdf",
+        "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf"
+      ]
+    },
+    {
+      "id": "Q059",
+      "text": "How does mortality drive decision-making?",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2021,
+      "source": "Master list; also 2021, 819183L; suggested: Buddha, Sartre, Schopenhauer",
+      "reason": "keep",
+      "primary_filenames": [
+        "Scheffler death.pdf",
+        "Nagel - Death.pdf",
+        "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
+        "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf"
+      ]
+    },
+    {
+      "id": "Q060",
+      "text": "How does mortality affect our own decision making? Should we be scared to die? Is death the end?",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2024,
+      "source": "2024; Toby Merrigan (728161E)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Nagel - Death.pdf",
+        "A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
+        "Scheffler death.pdf",
+        "Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf"
+      ]
+    },
+    {
+      "id": "Q061",
+      "text": "The field of cryonics, aimed at preserving human life, is rapidly expanding in the pursuit of immortality. Discuss the metaphysical implications surrounding this concept and the desirability of achieving such a state.",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2023,
+      "source": "2023; 159695H",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bernard Williams - The Self and the Future.pdf",
+        "Nagel - Death.pdf",
+        "Scheffler death.pdf",
+        "A Psychological and Philosophical Understanding of Death_  An Ana.pdf"
+      ]
+    },
+    {
+      "id": "Q062",
+      "text": "How can one cope with the impermanence of time?",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2022,
+      "source": "2022; Henri Roussos (557946H)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter Tapper - Reality as a System.pdf",
+        "Nagel - Death.pdf",
+        "A Psychological and Philosophical Understanding of Death_  An Ana.pdf"
+      ]
+    },
+    {
+      "id": "Q063",
+      "text": "Humans have been seeking an answer to the meaning of life for millennia, and wholly our quest has been fruitless. What relevance does absurdism have in reference to the meaning of life?",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": null,
+      "source": "Henry Bruce",
+      "reason": "keep",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "The Matrix and Existential Authenticity.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "Nihilism and The Matrix - Dostoevsky Take.pdf"
+      ]
+    },
+    {
+      "id": "Q064",
+      "text": "If people embrace the meaninglessness of life it can be consuming or freeing. Discuss this in relation to philosophical positions on meaning.",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": null,
+      "source": "Master list; suggested: Kierkegaard, Nietzsche",
+      "reason": "keep",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XVI.pdf",
+        "The Matrix and Existential Authenticity.pdf"
+      ]
+    },
+    {
+      "id": "Q065",
+      "text": "Sartre stated that man is condemned to be free. Discuss this with reference to people in the first and third world.",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": null,
+      "source": "Master list; suggested: Sartre, Nietzsche, Heidegger",
+      "reason": "keep",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "de Beauvoir - The Second Sex - Introduction.pdf",
+        "Rahel Jaeggi - Alienation (book).pdf"
+      ]
+    },
+    {
+      "id": "Q066",
+      "text": "'Nothingness lies coiled at the heart of being — like a worm.' Discuss the relevance of Sartre's statement in relation to modern Australian society.",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": 2018,
+      "source": "Master list; also 2018, 740111R",
+      "reason": "keep",
+      "primary_filenames": [
+        "BeingAndNothingness.pdf",
+        "The Matrix and Existential Authenticity.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf"
+      ]
+    },
+    {
+      "id": "Q067",
+      "text": "Are the principles of individualism appropriate to live by?",
+      "domain": "metaphysics",
+      "subdomain": "Mortality, time & meaning",
+      "year": null,
+      "source": "Master list; suggested: Nietzsche, Hobbes, Marx",
+      "reason": "keep",
+      "primary_filenames": [
+        "5 - James Rachels - Egoism.pdf",
+        "Selections-From-the-Writings-of-Kierkegaard.pdf",
+        "Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "Rachels - The Social Contract.pdf"
+      ]
+    },
+    {
+      "id": "Q072",
+      "text": "Is love universal or subjective?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2025,
+      "source": "2025; Farah (2025 cohort) and 107041R",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "Rachels 10th - Moral Subjectivism.pdf",
+        "C S Lewis - On Right and Wrong.pdf",
+        "Philippa Foot Interview - the Grammar of Goodness.pdf"
+      ]
+    },
+    {
+      "id": "Q073",
+      "text": "What is love?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2020,
+      "source": "2020; 271870J",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "BeingAndNothingness.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf"
+      ]
+    },
+    {
+      "id": "Q074",
+      "text": "Is love a selfless act, or is it rooted in self-interest?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": null,
+      "source": "Moderation guide",
+      "reason": "keep",
+      "primary_filenames": [
+        "5 - James Rachels - Egoism.pdf",
+        "Chapter VCE - Art.pdf",
+        "Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "02a - Parfit - What Makes Someones Life Go Best.pdf"
+      ]
+    },
+    {
+      "id": "Q075",
+      "text": "Love delivers personal fulfilment. Discuss in relation to various philosophical positions.",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2025,
+      "source": "2025; Millie (2025 cohort) and 474046R; suggested: De Beauvoir",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "BeingAndNothingness.pdf"
+      ]
+    },
+    {
+      "id": "Q076",
+      "text": "Love drives people's actions in many ways, often for the benefit of the individual and society. Discuss various philosophical positions in relation to the impact of love on people's actions.",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2020,
+      "source": "2020; 764070T",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf",
+        "Haidt - Righteous Mind - Moral Foundations of Politics.pdf"
+      ]
+    },
+    {
+      "id": "Q077",
+      "text": "What role does love play in creating meaning and purpose in our life?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2024,
+      "source": "2024; Emma Venus (649621H); also held in the Examples folder as `venuse issues study.pdf`",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "BeingAndNothingness.pdf",
+        "Scheffler death.pdf"
+      ]
+    },
+    {
+      "id": "Q078",
+      "text": "What role does aesthetics play in our understanding of love?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2023,
+      "source": "2023; 206148J (also: Aesthetics)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "VCE -Art and Moral Knowledge.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf"
+      ]
+    },
+    {
+      "id": "Q079",
+      "text": "What is the nature of love within modern gender roles?",
+      "domain": "metaphysics",
+      "subdomain": "Love (metaphysical & existential)",
+      "year": 2023,
+      "source": "2023; 666420L",
+      "reason": "keep",
+      "primary_filenames": [
+        "de Beauvoir - The Second Sex - Introduction.pdf",
+        "1982 - In a Different Voice - Carol Gilligan.pdf",
+        "Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "Chapter VCE - Art.pdf"
+      ]
+    },
+    {
+      "id": "Q082",
+      "text": "Is evil an entity in itself or a quality of human nature?",
+      "domain": "metaphysics",
+      "subdomain": "The problem of evil",
+      "year": null,
+      "source": "Moderation guide; suggested: Hillel Steiner, Swinburne, Xun Kuang; counterarguments from Calder, Mackie, Mencius",
+      "reason": "keep",
+      "primary_filenames": [
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "Nietzche - Master Morality and Slave Morality.pdf",
+        "Hick - The Problem of Evil.pdf",
+        "C S Lewis - On Right and Wrong.pdf"
+      ]
+    },
+    {
+      "id": "Q083",
+      "text": "Does evil in the world disprove God?",
+      "domain": "metaphysics",
+      "subdomain": "The problem of evil",
+      "year": null,
+      "source": "historical exemplar (also: Philosophy of Religion)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf",
+        "3 - Hick - The Problem of Evil.pdf",
+        "Lecture - the Free Will Defense.pdf"
+      ]
+    },
+    {
+      "id": "Q084",
+      "text": "Is it possible to make a knowledge claim?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": null,
+      "source": "Master list; suggested: Descartes, William James, Kant",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - On Knowledge.pdf",
+        "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "The Matrix Possibility.pdf"
+      ]
+    },
+    {
+      "id": "Q085",
+      "text": "Is ignorance bliss? Discuss this in relation to various philosophical positions.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2021,
+      "source": "Master list; also 2021, 540482H; suggested: Descartes, Camus, Rawls, Socrates",
+      "reason": "keep",
+      "primary_filenames": [
+        "Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "The Matrix and Existential Authenticity.pdf",
+        "Matrix - Computers Caves and Oracles.pdf"
+      ]
+    },
+    {
+      "id": "Q086",
+      "text": "When presented the option to hold empirical evidence of one's death date, is ignorance bliss?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Eliza Wallace (476498R)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Nagel - Death.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "The Matrix and Existential Authenticity.pdf"
+      ]
+    },
+    {
+      "id": "Q087",
+      "text": "Am I awake? A study of Descartes' 'Dream Argument' and counter arguments.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": null,
+      "source": "Master list",
+      "reason": "keep",
+      "primary_filenames": [
+        "The Matrix - Seeing Believing Touching Truth.pdf",
+        "Skepticism Morality and The Matrix.pdf",
+        "The Matrix Simulation Postmodern Age.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf"
+      ]
+    },
+    {
+      "id": "Q088",
+      "text": "Does the nature of dreaming threaten the certainty of our knowledge?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": null,
+      "source": "Master list; suggested: Norman Malcolm",
+      "reason": "keep",
+      "primary_filenames": [
+        "The Matrix - Seeing Believing Touching Truth.pdf",
+        "Skepticism Morality and The Matrix.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf"
+      ]
+    },
+    {
+      "id": "Q089",
+      "text": "To what extent can dreams be considered genuine experiences?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": null,
+      "source": "Moderation guide",
+      "reason": "keep",
+      "primary_filenames": [
+        "The Matrix - Seeing Believing Touching Truth.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "SEP - Qualia.pdf",
+        "The Matrix Simulation Postmodern Age.pdf"
+      ]
+    },
+    {
+      "id": "Q090",
+      "text": "To what extent does innate knowledge affect an individual's actions?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Jarrod Rashleigh (786229T)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Haidt - Righteous Mind - Overview of Each Foundation.pdf",
+        "C S Lewis - On Right and Wrong.pdf",
+        "03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "David Hume - Empiricism.pdf"
+      ]
+    },
+    {
+      "id": "Q091",
+      "text": "What are the epistemic impacts of deepfakes?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Thomas Venus (690698F)",
+      "reason": "keep",
+      "primary_filenames": [
+        "2017 - Susanna Siegel - The Rationality of Perception.pdf",
+        "Simulacra and Simulation Rundown.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf"
+      ]
+    },
+    {
+      "id": "Q092",
+      "text": "Is experience necessary to form a belief?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Zandra Martin (136986J)",
+      "reason": "keep",
+      "primary_filenames": [
+        "David Hume - Empiricism.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "Frank Jackson - 1982 - Epiphenomenal Qualia.pdf"
+      ]
+    },
+    {
+      "id": "Q101",
+      "text": "Do we / does society need a structured system of governance? If so, is democracy the most effective / best system?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": null,
+      "source": "Moderation guide; suggested: Hobbes, Rousseau, Socrates",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Thomas Hobbes - Leviathan.pdf",
+        "Hobbes and Locke.pdf",
+        "Rachels - The Social Contract.pdf",
+        "An Introduction to Political Philosophy by Jonathan Wolff.pdf"
+      ]
+    },
+    {
+      "id": "Q102",
+      "text": "To what extent is democracy the most appropriate form of government?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": null,
+      "source": "SACE Annotated Work Sample (A standard)",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Thomas Hobbes - Leviathan.pdf",
+        "Hobbes and Locke.pdf",
+        "An Introduction to Political Philosophy by Jonathan Wolff.pdf",
+        "Illustrated John Stuart Mill on Free Speech.pdf"
+      ]
+    },
+    {
+      "id": "Q103",
+      "text": "From a utilitarian perspective, should governments use democracy as the foundation for the governance of a nation?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": 2024,
+      "source": "2024; 883937G",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "James Rachels textbook - the utilitarian approach.pdf",
+        "James Rachels textbook - The debate over utilitarianism.pdf",
+        "An Introduction to Political Philosophy by Jonathan Wolff.pdf"
+      ]
+    },
+    {
+      "id": "Q104",
+      "text": "Is democracy often an ineffective and poor form of government?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": 2024,
+      "source": "2024; Hugo Bailes (971231H); critique-style framing",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Thomas Hobbes - Leviathan.pdf",
+        "Hobbes and Locke.pdf",
+        "An Introduction to Political Philosophy by Jonathan Wolff.pdf"
+      ]
+    },
+    {
+      "id": "Q105",
+      "text": "Conservatism vs Liberalism — how would one system be more beneficial to Australia than the other?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": 2019,
+      "source": "Master list and 2019, 691225R; suggested: Hobbes, von Mises, Locke",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Illustrated John Stuart Mill on Free Speech.pdf",
+        "Hobbes and Locke.pdf",
+        "An Introduction to Political Philosophy by Jonathan Wolff.pdf"
+      ]
+    },
+    {
+      "id": "Q106",
+      "text": "For modern Australian society to prosper, should the government adopt liberalism, communism, democracy, or nationalism?",
+      "domain": "political",
+      "subdomain": "Forms of government",
+      "year": 2019,
+      "source": "Master list; also 2019 variant (918343G): \"should the government adopt Marxist Communism, Völkisch Nationalism or A Democratic Republic?\"",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Illustrated John Stuart Mill on Free Speech.pdf",
+        "Hobbes and Locke.pdf",
+        "Schweickart - Tired of Capitalism How about Something Better.pdf"
+      ]
+    },
+    {
+      "id": "Q107",
+      "text": "How does wealth affect freedom of the individual?",
+      "domain": "political",
+      "subdomain": "Civic responsibility, rights, censorship",
+      "year": null,
+      "source": "Master list",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "A Capitalists Definition of Capitalism.pdf",
+        "Nussbaum - Creating Capabilities.pdf",
+        "Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
+        "2016 - Bercic - Genetic Engineering.pdf"
+      ]
+    },
+    {
+      "id": "Q108",
+      "text": "Should the government and government-run sectors have a stricter set of rules and a watchdog to make sure that they are always doing the right thing by the people, being that they are public servants?",
+      "domain": "political",
+      "subdomain": "Civic responsibility, rights, censorship",
+      "year": 2022,
+      "source": "2022; Hamish Smith (824251R)",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Rachels - The Social Contract.pdf",
+        "6 - James Rachels - Social Contract.pdf",
+        "Illustrated John Stuart Mill on Free Speech.pdf",
+        "Are there absolute moral rules.pdf"
+      ]
+    },
+    {
+      "id": "Q109",
+      "text": "Is censorship a necessary safeguard for social unity, or a covert mechanism for control and limitation?",
+      "domain": "political",
+      "subdomain": "Civic responsibility, rights, censorship",
+      "year": 2024,
+      "source": "2024; 857560G",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Illustrated John Stuart Mill on Free Speech.pdf",
+        "Chapter 7 - Moral Issues - Freedom of Speech.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf"
+      ]
+    },
+    {
+      "id": "Q110",
+      "text": "Should the Australian government allow more refugees to enter Australia?",
+      "domain": "political",
+      "subdomain": "Civic responsibility, rights, censorship",
+      "year": 2019,
+      "source": "Master list; also 2019, 782125E; suggested: Nietzsche, Mill, Kant, Stevenson",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "Singer - Practical ethics.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf",
+        "Are there absolute moral rules.pdf"
+      ]
+    },
+    {
+      "id": "Q111",
+      "text": "How relevant is marriage in modern Australian society?",
+      "domain": "political",
+      "subdomain": "Civic responsibility, rights, censorship",
+      "year": 2019,
+      "source": "Master list; also 2019, 581275L; suggested: De Beauvoir, Kierkegaard",
+      "reason": "keep: subdomain on always-keep list",
+      "primary_filenames": [
+        "de Beauvoir - The Second Sex - Introduction.pdf",
+        "Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "Rachels - The Social Contract.pdf"
+      ]
+    },
+    {
+      "id": "Q112",
+      "text": "Arguments for and against the traditional concept of God.",
+      "domain": "religion",
+      "subdomain": null,
+      "year": null,
+      "source": "SACE exemplar; Student 2 (C+)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - On the Existence and Nature of God.pdf",
+        "VCE Philosopgy 3rd - Y12.pdf",
+        "Hick - The Problem of Evil.pdf",
+        "Lecture - the Free Will Defense.pdf"
+      ]
+    },
+    {
+      "id": "Q113",
+      "text": "A deity or God provides many people in the world a purpose to life. Discuss this in relation to the role of religion in providing meaning and purpose in the world we live today.",
+      "domain": "religion",
+      "subdomain": null,
+      "year": 2021,
+      "source": "Master list; also 2021, 724393X; suggested: Aquinas, Aristotle, Nietzsche",
+      "reason": "keep",
+      "primary_filenames": [
+        "Thee-Discourses.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "Rachels 10th - Does Morality Depend on Religion.pdf"
+      ]
+    },
+    {
+      "id": "Q114",
+      "text": "Should religion still be taught in schools?",
+      "domain": "religion",
+      "subdomain": null,
+      "year": 2018,
+      "source": "2018; 950556W",
+      "reason": "keep",
+      "primary_filenames": [
+        "Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "Chapter VCE - On Right and Wrong.pdf"
+      ]
+    },
+    {
+      "id": "Q115",
+      "text": "To what extent should the United Nations protect human rights breached by religious practices?",
+      "domain": "religion",
+      "subdomain": null,
+      "year": 2023,
+      "source": "2023; 315042W",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "Rachels 10th - Cultural Relativism.pdf",
+        "Chapter VCE - Human Rights.pdf",
+        "Are there absolute moral rules.pdf"
+      ]
+    },
+    {
+      "id": "Q116",
+      "text": "Religious values provide a framework for life. Discuss.",
+      "domain": "religion",
+      "subdomain": null,
+      "year": null,
+      "source": "Master list",
+      "reason": "keep",
+      "primary_filenames": [
+        "Rachels 10th - Does Morality Depend on Religion.pdf",
+        "Chapter VCE - On Right and Wrong.pdf",
+        "Alasdair Macintyre - Ch 14 - The Nature of the Virtues.pdf"
+      ]
+    },
+    {
+      "id": "Q118",
+      "text": "The issue of the subjectivity of beauty and its significant influence on rates of cosmetic surgery.",
+      "domain": "aesthetics",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Lucy Beamond (710799R)",
+      "reason": "keep",
+      "primary_filenames": [
+        "Chapter VCE - Art.pdf",
+        "Rachels 10th - Moral Subjectivism.pdf",
+        "Freeland - 1997 - Art and Moral Knowledge.pdf"
+      ]
+    },
+    {
+      "id": "Q119",
+      "text": "Is the world we live in a simulation?",
+      "domain": "hybrid",
+      "subdomain": null,
+      "year": 2021,
+      "source": "2021; 253853L",
+      "reason": "keep",
+      "primary_filenames": [
+        "The Matrix - Seeing Believing Touching Truth.pdf",
+        "The Metaphysics of the Matrix.pdf",
+        "Robert Nozick - The Experience Machine.pdf",
+        "Simulacra and Simulation Rundown.pdf"
+      ]
+    },
+    {
+      "id": "Q120",
+      "text": "The Trolley Problem.",
+      "domain": "hybrid",
+      "subdomain": null,
+      "year": 2022,
+      "source": "2022; Toby Cawson (565788E); presented as a topic — see Borderline section for rewording",
+      "reason": "keep",
+      "primary_filenames": [
+        "Judith Jarvis Thomson - Killing and Letting Die.pdf"
+      ]
+    }
+  ],
+  "dropped": [
+    {
+      "id": "Q033",
+      "text": "Hedonism should be used as a guide to living a good life.",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2022,
+      "source": "2022; 216777F",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf"
+      ]
+    },
+    {
+      "id": "Q034",
+      "text": "Pleasure is the ultimate goal of life.",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2023,
+      "source": "2023; 220652J",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "01b - Nozick - The Experience Machine.pdf"
+      ]
+    },
+    {
+      "id": "Q036",
+      "text": "Modern, western society should encourage men to openly express emotions like grief, joy and pity. Discuss this in relation to Stoicism.",
+      "domain": "ethics",
+      "subdomain": "Meta-ethics & moral theory",
+      "year": 2020,
+      "source": "2020; 919432L",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "Marcus-Aurelius-Meditations.pdf",
+        "Nussbaum - 2013 - Political Emotions.pdf",
+        "VCE - Emotional Knowledge.pdf"
+      ]
+    },
+    {
+      "id": "Q068",
+      "text": "It is often stated that you should strive to live a happy and healthy life. What is the nature of happiness, and how can this be determined?",
+      "domain": "metaphysics",
+      "subdomain": "Happiness",
+      "year": 2021,
+      "source": "Master list; also 2021, 114916T; suggested: Nietzsche, Aristotle, Epicurus",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "James Rachels textbook - the utilitarian approach.pdf"
+      ]
+    },
+    {
+      "id": "Q069",
+      "text": "'Happiness is the meaning and the purpose of life, the whole aim and end of human existence' — Aristotle. Is it possible to be truly happy?",
+      "domain": "metaphysics",
+      "subdomain": "Happiness",
+      "year": 2018,
+      "source": "Master list; also 2018, 768537J",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "01b - Nozick - The Experience Machine.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf"
+      ]
+    },
+    {
+      "id": "Q070",
+      "text": "There is more to life than happiness.",
+      "domain": "metaphysics",
+      "subdomain": "Happiness",
+      "year": 2023,
+      "source": "2023; 964983R",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "01b - Nozick - The Experience Machine.pdf",
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "Immanuel Kant - Groundwork on the Metaphysics of Morals.pdf"
+      ]
+    },
+    {
+      "id": "Q071",
+      "text": "To what extent is happiness important to achieving a purposeful life?",
+      "domain": "metaphysics",
+      "subdomain": "Happiness",
+      "year": 2025,
+      "source": "2025; Edie (2025 cohort) and 388022W; suggested: Nietzsche, Kant, Bentham",
+      "reason": "exclude: text matches good_life_unit",
+      "primary_filenames": [
+        "02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "Robert Nozick - The Experience Machine.pdf",
+        "Immanuel Kant - Groundwork on the Metaphysics of Morals.pdf",
+        "04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf"
+      ]
+    },
+    {
+      "id": "Q080",
+      "text": "Is it possible for philosophical zombies to exist?",
+      "domain": "metaphysics",
+      "subdomain": "The mind–body problem & consciousness",
+      "year": null,
+      "source": "SACE exemplar; Student 3 (B)",
+      "reason": "exclude: text matches mind_and_body_unit",
+      "primary_filenames": [
+        "SEP - Zombies.pdf",
+        "SEP - Dualism.pdf",
+        "Ravenscroft - Philosophy of Mind Beginners Guide (book).pdf"
+      ]
+    },
+    {
+      "id": "Q081",
+      "text": "Humans are just a physical body that only experiences thoughts and emotions as a result of biochemical interactions in the brain. Discuss this statement in relation to various philosophical positions.",
+      "domain": "metaphysics",
+      "subdomain": "The mind–body problem & consciousness",
+      "year": 2020,
+      "source": "2020; 568598T",
+      "reason": "exclude: text matches mind_and_body_unit",
+      "primary_filenames": [
+        "Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
+        "Ravenscroft - The Identity Theory.pdf",
+        "Ian Ravenscroft - Dualism.pdf"
+      ]
+    },
+    {
+      "id": "Q093",
+      "text": "To what extent can perception provide reliable knowledge of the world?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "The Matrix Possibility.pdf",
+        "Nagel - What is it like to be a bat.pdf"
+      ]
+    },
+    {
+      "id": "Q094",
+      "text": "Even when beliefs are shaped by culture, ideology, emotion, or history, we can still rationally judge some claims as more justified than others. Discuss.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "VCE - on Objective Understanding.pdf",
+        "Haidt - 2001 - The Emotional Dog and Its Rational Tail.pdf",
+        "Rachels 10th - Cultural Relativism.pdf",
+        "Philippa Foot Interview - the Grammar of Goodness1.pdf"
+      ]
+    },
+    {
+      "id": "Q095",
+      "text": "Developing our emotional awareness reveals truths about human situations and motives more than it reinforces bias and irrational assumptions.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "VCE - Emotional Knowledge.pdf",
+        "Haidt - 2001 - The Emotional Dog and Its Rational Tail.pdf",
+        "Haidt - Righteous Mind - Elephant and Rider.pdf",
+        "Philippa Foot Interview - the Grammar of Goodness1.pdf"
+      ]
+    },
+    {
+      "id": "Q096",
+      "text": "Using emotions to interpret a situation can produce knowledge.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "VCE - Emotional Knowledge.pdf",
+        "Haidt - 2001 - The Emotional Dog and Its Rational Tail.pdf",
+        "Freeland - 1997 - Art and Moral Knowledge.pdf",
+        "Rachels 10th - Moral Subjectivism.pdf"
+      ]
+    },
+    {
+      "id": "Q097",
+      "text": "What a culture deems 'common sense' is mostly ideology, not knowledge.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "How Propaganda Works.pdf",
+        "Chapter 2 - Enacting a Story.pdf",
+        "VCE - Gender and Culture on Knowledge.pdf",
+        "Bertrand Russell - 1912 - The Problems of Philosophy.pdf"
+      ]
+    },
+    {
+      "id": "Q098",
+      "text": "Group membership makes humans systematically unreliable knowers.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "Haidt - Righteous Mind - The Hive Switch.pdf",
+        "Haidt - Righteous Mind - Why Are We So Groupish.pdf",
+        "An Epistemological Account of the Logic of Propaganda.pdf",
+        "Shirley Jackson - The Lottery.pdf"
+      ]
+    },
+    {
+      "id": "Q099",
+      "text": "Because scientific truth is paradigm-bound, there is no rational basis for claiming scientific progress toward objective truth.",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "Buss - Evolutionary Psychology is a scientific revolution.pdf",
+        "Chapter Tapper - Science and Technology.pdf",
+        "VCE - on Objective Understanding.pdf",
+        "Chapter VCE - Objective Knowledge.pdf"
+      ]
+    },
+    {
+      "id": "Q100",
+      "text": "Can scientific knowledge be objective, or is it inevitably influenced by the assumptions and values of its time?",
+      "domain": "epistemology",
+      "subdomain": null,
+      "year": 2026,
+      "source": "2026 unit planning",
+      "reason": "exclude: text matches epistemology_unit",
+      "primary_filenames": [
+        "Chapter VCE - Objective Knowledge.pdf",
+        "Chapter Tapper - Science and Technology.pdf",
+        "The-complete-works-of-Friedrich-Nietzsche-VOL-XV.pdf",
+        "VCE - Gender and Culture on Knowledge.pdf"
+      ]
+    },
+    {
+      "id": "Q117",
+      "text": "Humans are just a physical body that only experiences thoughts and emotions as a result of biochemical interactions in the brain. Discuss.",
+      "domain": "mind_tech",
+      "subdomain": null,
+      "year": 2020,
+      "source": "2020; 568598T",
+      "reason": "exclude: text matches mind_and_body_unit",
+      "primary_filenames": [
+        "Ravenscroft - The Identity Theory.pdf",
+        "Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
+        "Nagel - What is it like to be a bat.pdf",
+        "Princess Elisabeths response to dualism.pdf"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 120,
+    "kept": 102,
+    "dropped": 18
+  }
+}

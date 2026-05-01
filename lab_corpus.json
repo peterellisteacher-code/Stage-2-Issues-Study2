@@ -1,0 +1,293 @@
+{
+  "_documentation": "Cluster-level pack definitions for the Issues Study Lab. Each pack groups questions sharing a thematic subdomain so storage cost stays low.",
+  "_built_from": "cluster_plan.json (output of filter_and_cluster.py)",
+  "default_model": "gemini-2.5-pro",
+  "default_ttl_seconds": 6048000,
+  "default_system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student working on the Issues Study (AT3 Investigation). Always cite the cached texts when making a claim about a thinker.",
+  "packs": {
+    "lab_applied_normative_ethics": {
+      "display_name": "Applied & normative ethics",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Applied & normative ethics' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\01a - Ch 16 and 17 Brave New World.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\1982_in_a_different_voice_carol_gilligan.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Bioethics\\Genetic Engineering\\2016 - Bercic - Genetic Engineering.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Are there absolute moral rules.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Bernard Williams - The Self and the Future.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\AI\\Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Analyzing Moral Issues\\Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_8_the_law_of_limited_competition.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\AI\\Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\claire_finkelstein_a_contractarian_argument_against_the_death_penalty.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Abortion\\Don Marquis - Why Abotion is Immoral.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Bioethics\\Embryo Research.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Bioethics\\Enhancement Genetic Engineering.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\haidt_righteous_mind_sanctity_and_degradation.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Bioethics\\Humans and Nonhuman Animals.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Euthanasia\\J Gay-William - The Wrongfulness of Euthanasia.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Euthanasia\\James Rachels - The Morality of Euthanasia.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\James Rachels textbook - the utilitarian approach.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Abortion\\Judith Jarvis Thomson - A Defense of Abortion.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Kant and Respect for Persons.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Kant and Retribution.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Death Penalty\\Louis Pojman - A Defense of the Death Penalty.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\War\\Luban - Torture and the Ticking Bomb.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Abortion\\Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Fiction for Study\\Philip K Dick - The Minority Report.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Rachels - The Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Robert Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\Scheffler death.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\singer_practical_ethics.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Death Penalty\\Student Charles Jessup - Against the death penalty.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\T M Scanlon - Contractualism and Utilitarianism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Thought Experiments\\The Prisoners Dilemma.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\AI\\excerpt.pdf"
+      ]
+    },
+    "lab_meta_ethics_moral_theory": {
+      "display_name": "Meta-ethics & moral theory",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Meta-ethics & moral theory' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\6 - James Rachels - Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Are there absolute moral rules.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\beauchamp_and_childress_principles_of_biomedical_ethics_chapter_3_respect_for_au.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\C S Lewis - On Right and Wrong.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_free_will_and_determinism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_on_right_and_wrong.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\haidt_2003_the_moral_emotions.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Haidt - Righteous Mind - Why Are We So Groupish1.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\James Rachels textbook - The debate over utilitarianism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\James Rachels textbook - the utilitarian approach.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\kane_1999_responsiblity_luck_and_chance_free_will_and_indeterminism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Kant and Respect for Persons.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Lindstrom - 2022 - Moral Taste and Moral Education.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Mackie - The Subjectivity of Values.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\miyazono_philosophy_of_psychology_free_will_and_determinism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Virtue Ethics and The Good\\Philippa Foot - Natural Goodness.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Virtue Ethics and The Good\\Philippa Foot Interview - the Grammar of Goodness.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Cultural Relativism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Does Morality Depend on Religion.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Robert Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\sapolsky_determined_life_without_free_will_introduction_to_book.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\textbook_free_will.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\the_complete_works_of_friedrich_nietzsche_vol_xii.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\the Matrix - Fate Freedom foreknowledge.pdf"
+      ]
+    },
+    "lab_war_violence_political_ethics_cross_listed_in_political_philosophy": {
+      "display_name": "War, violence & political ethics (cross-listed in Political Philosophy)",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'War, violence & political ethics (cross-listed in Political Philosophy)' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\6 - James Rachels - Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Are there absolute moral rules.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Analyzing Moral Issues\\Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Analyzing Moral Issues\\Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_justice.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Hobbes and Locke.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\illustrated_john_stuart_mill_on_free_speech.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\War\\Jeff McMahan - 2004 - The Ethics of Killing in War.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\War\\Jeff McMahan - Just Cause for War.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Kant and Respect for Persons.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\War\\Nagel - Terrorism (torture).pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\nussbaum_perception_and_revolution.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Martha Nussbaum\\Nussbaum - Perception and Revolution1.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Rachels - The Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\singer_practical_ethics.text.pdf"
+      ]
+    },
+    "lab_free_will_determinism": {
+      "display_name": "Free will & determinism",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Free will & determinism' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\01a - Ch 16 and 17 Brave New World.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\01b - Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\beingandnothingness.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_free_will_and_determinism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\kane_1999_responsiblity_luck_and_chance_free_will_and_indeterminism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\sapolsky_determined_life_without_free_will_introduction_to_book.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\textbook_free_will.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix and Marx.pdf"
+      ]
+    },
+    "lab_personal_identity_the_self": {
+      "display_name": "Personal identity & the self",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Personal identity & the self' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Virtue Ethics and The Good\\Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\beingandnothingness.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Bernard Williams - The Self and the Future.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_materialism_and_idealism.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\haidt_2022_why_the_past_10_years_of_american_life_have_been_uniquely_stupid_the_.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\haidt_righteous_mind_overview_of_each_foundation.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Nagel - What is it like to be a bat.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Outline - Williams on Expectations and the Self.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\postmodernism_a_very_short_introduction_2002_christopher_butler.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Robert Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\sapolsky_determined_life_without_free_will_introduction_to_book.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metamodernism\\Simulacra and Simulation Rundown.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix Simulation Postmodern Age.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix and Existential Authenticity.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Williams Handout - Subjective Experience.pdf"
+      ]
+    },
+    "lab_mortality_time_meaning": {
+      "display_name": "Mortality, time & meaning",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Mortality, time & meaning' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\5 - James Rachels - Egoism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\A Psychological and Philosophical Understanding of Death_  An Ana.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\Aristotle - The Soul and Life After Death.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Personal Identity\\Bernard Williams - The Self and the Future.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_tapper_reality_as_a_system.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\nagel_death.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\Nihilism and The Matrix - Dostoevsky Take.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Rachels - The Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Political\\Rahel Jaeggi - Alienation (book).pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\Scheffler death.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\selections_from_the_writings_of_kierkegaard.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix and Existential Authenticity.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\the_complete_works_of_friedrich_nietzsche_vol_xiv.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Complete Works of Friedrich Nietzsche\\The-complete-works-of-Friedrich-Nietzsche-VOL-XVI.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Feminist Philosophy\\de Beauvoir - The Second Sex - Introduction.pdf"
+      ]
+    },
+    "lab_love_metaphysical_existential": {
+      "display_name": "Love (metaphysical & existential)",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Love (metaphysical & existential)' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\02a - Parfit - What Makes Someones Life Go Best.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\1982_in_a_different_voice_carol_gilligan.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\5 - James Rachels - Egoism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\beingandnothingness.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\C S Lewis - On Right and Wrong.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_art.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Haidt - Righteous Mind - Moral Foundations of Politics.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\nussbaum_2013_political_emotions.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Virtue Ethics and The Good\\Philippa Foot Interview - the Grammar of Goodness.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Moral Subjectivism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Death\\Scheffler death.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\VCE\\VCE -Art and Moral Knowledge.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Feminist Philosophy\\de Beauvoir - The Second Sex - Introduction.pdf"
+      ]
+    },
+    "lab_the_problem_of_evil": {
+      "display_name": "The problem of evil",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'The problem of evil' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\3 - Hick - The Problem of Evil.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\C S Lewis - On Right and Wrong.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\Hick - The Problem of Evil.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\Lecture - the Free Will Defense.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Nietzche - Master Morality and Slave Morality.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\the_complete_works_of_friedrich_nietzsche_vol_xii.text.pdf"
+      ]
+    },
+    "lab_epistemology_knowledge_skepticism": {
+      "display_name": "Epistemology -- knowledge & skepticism",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Epistemology -- knowledge & skepticism' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\01b - Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Happiness and Wellbeing\\03a - Aristotle - The Nature of Moral Virtue.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\2003_book_epistemology_introduction_to_theory_of_knowledge_nicholas_rescher.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Epistemology\\Perception\\2017 - Susanna Siegel - The Rationality of Perception.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\bertrand_russell_1912_the_problems_of_philosophy.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\C S Lewis - On Right and Wrong.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_on_knowledge.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\David Hume - Empiricism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Mind Watch to Functionalism\\Frank Jackson - 1982 - Epiphenomenal Qualia.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\haidt_righteous_mind_overview_of_each_foundation.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\Matrix - Computers Caves and Oracles.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\nagel_death.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metaphysics\\Qualia\\SEP - Qualia.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metamodernism\\Simulacra and Simulation Rundown.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\Skepticism Morality and The Matrix.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix - Seeing Believing Touching Truth.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix Possibility.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix Simulation Postmodern Age.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix and Existential Authenticity.pdf"
+      ]
+    },
+    "lab_forms_of_government": {
+      "display_name": "Forms of government",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Forms of government' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\An Introduction to Political Philosophy by Jonathan Wolff.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Hobbes and Locke.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\illustrated_john_stuart_mill_on_free_speech.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\James Rachels textbook - The debate over utilitarianism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\James Rachels textbook - the utilitarian approach.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Rachels - The Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Political\\Schweickart - Tired of Capitalism How about Something Better.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Thomas Hobbes - Leviathan.pdf"
+      ]
+    },
+    "lab_civic_responsibility_rights_censorship": {
+      "display_name": "Civic responsibility, rights, censorship",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Civic responsibility, rights, censorship' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Bioethics\\Genetic Engineering\\2016 - Bercic - Genetic Engineering.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\6 - James Rachels - Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Political\\A Capitalists Definition of Capitalism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Are there absolute moral rules.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Analyzing Moral Issues\\Chapter 7 - Moral Issues - Freedom of Speech.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Analyzing Moral Issues\\Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\illustrated_john_stuart_mill_on_free_speech.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\nussbaum_2013_political_emotions.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Martha Nussbaum\\Nussbaum - Creating Capabilities.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\The Social Contract\\Rachels - The Social Contract.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\singer_practical_ethics.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Virginia Held - Caring Relations and Principles of Justice.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Feminist Philosophy\\de Beauvoir - The Second Sex - Introduction.pdf"
+      ]
+    },
+    "lab_philosophy_of_religion": {
+      "display_name": "Philosophy of religion",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Philosophy of religion' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Virtue Ethics and The Good\\Alasdair Macintyre - Ch 14 - The Nature of the Virtues.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Are there absolute moral rules.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Moral Psychology\\Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_human_rights.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_on_right_and_wrong.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_on_the_existence_and_nature_of_god.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\Hick - The Problem of Evil.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Religion\\Lecture - the Free Will Defense.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Cultural Relativism.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Does Morality Depend on Religion.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\the_complete_works_of_friedrich_nietzsche_vol_xiv.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\thee_discourses.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\vce_philosopgy_3rd_y12.text.pdf"
+      ]
+    },
+    "lab_aesthetics": {
+      "display_name": "Aesthetics",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Aesthetics' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\chapter_vce_art.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\2026\\12PHIL - 2026\\Issues Study\\Issues_Study_Lab\\text_packs\\freeland_1997_art_and_moral_knowledge.text.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\James Rachels - Elements of Moral Philosophy 10e in Chapters\\Rachels 10th - Moral Subjectivism.pdf"
+      ]
+    },
+    "lab_hybrid_other": {
+      "display_name": "Hybrid / other",
+      "system_instruction": "You are a Socratic study partner for a SACE Stage 2 Philosophy student investigating a question in the 'Hybrid / other' area for their Issues Study (AT3). Always cite the cached texts when you make a claim about a thinker. If asked about something the cached texts don't support, say so explicitly rather than invent. Year 12 reading level, philosophical terminology with accessible explanations.",
+      "files": [
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Judith Jarvis Thomson - Killing and Letting Die.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Ethics\\Robert Nozick - The Experience Machine.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Metamodernism\\Simulacra and Simulation Rundown.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Matrix - Seeing Believing Touching Truth.pdf",
+        "C:\\Users\\Peter Ellis\\OneDrive\\Teaching\\Philosophy\\Philosophy Texts\\Matrix\\The Metaphysics of the Matrix.pdf"
+      ]
+    }
+  }
+}
