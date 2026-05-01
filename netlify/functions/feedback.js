@@ -6,9 +6,11 @@
 const path = require("path");
 const fs = require("fs");
 
-// Sonnet 4.6 for feedback: criterion-referenced grading rewards the
-// stronger reasoning model. Chat (chamber) stays on Haiku for cost.
-const MODEL = "claude-sonnet-4-6";
+// Sonnet 4.6 would be ideal for criterion-referenced grading (better reasoning),
+// but at ~60 tok/s × 2000-token output it exceeds Netlify's 30s function timeout.
+// Falling back to Haiku 4.5. To switch back to Sonnet, refactor feedback.js as
+// a Netlify background function (15-min timeout) plus a polling endpoint.
+const MODEL = "claude-haiku-4-5-20251001";
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
 const MAX_TOKENS = 2048;
 const MIN_DRAFT_LEN = 200;
@@ -113,14 +115,14 @@ async function callAnthropic({ system, messages }) {
   return data;
 }
 
-// Sonnet 4.6 pricing (USD per million tokens) — sept 2025.
+// Haiku 4.5 pricing (USD per million tokens) — sept 2025.
 function estimateCost(u) {
   if (!u) return 0;
   return (
-    (u.input_tokens || 0) * 3.0 +
-    (u.output_tokens || 0) * 15.0 +
-    (u.cache_creation_input_tokens || 0) * 3.75 +
-    (u.cache_read_input_tokens || 0) * 0.3
+    (u.input_tokens || 0) * 1.0 +
+    (u.output_tokens || 0) * 5.0 +
+    (u.cache_creation_input_tokens || 0) * 1.25 +
+    (u.cache_read_input_tokens || 0) * 0.1
   ) / 1_000_000;
 }
 
