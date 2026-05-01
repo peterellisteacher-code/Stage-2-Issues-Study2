@@ -96,12 +96,24 @@ Domain: ${entry.domain}${subdomain}
 ${dialectic}${attachedLines}${missingLines}`;
 }
 
-function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
+// Build text-source document blocks for the question's curated readings.
+//
+// IMPORTANT: we deliberately do NOT use Anthropic's PDF document blocks here.
+// PDFs are charged at ~1500-2500 tokens per page (text + image rendering),
+// which can balloon unpredictably on image-heavy or scanned files. Plain text
+// extracted via PyMuPDF (data/readings_text.json) is ~4x cheaper per unit of
+// content and predictable: cost is a linear function of character count.
+//
+// Image-only PDFs (e.g. the scanned VCE Philosophy textbook) extract to
+// near-empty text. They go into `missing` rather than falling back to PDF —
+// we'd rather the AI not quote them than risk runaway image-token costs.
+//
+// Budget: 160K estimated tokens of attached content. Text is dense
+// (~0.25 tok/char), so 160K budget = 640K chars ≈ 8 full readings.
+function buildDocumentBlocks(entry, _fileIds, readingsText, _bookChapters) {
   const TOKEN_BUDGET = 160_000;
-  const PER_BOOK_BUDGET = 70_000;
-  const TOKENS_PER_PAGE = 2000;
-  const TOKENS_PER_PDF_BYTE = 0.2;
   const TOKENS_PER_TEXT_CHAR = 0.25;
+  const MIN_USABLE_CHARS = 200;     // image-only PDFs ~100 chars; skip them
 
   const docs = [];
   const attached = [];
@@ -119,56 +131,27 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
     if (!name) continue;
     const titleBase = name.replace(/\.pdf$/i, "");
 
-    const chapters = Array.isArray(bookChapters[name]) ? bookChapters[name] : null;
-    if (chapters && chapters.some(c => c && c.file_id)) {
-      let bookUsed = 0;
-      let attachedAny = false;
-      for (const ch of chapters) {
-        if (!ch || !ch.file_id) continue;
-        const cost = (ch.pages || 0) * TOKENS_PER_PAGE;
-        if (bookUsed + cost > PER_BOOK_BUDGET) break;
-        if (used + cost > TOKEN_BUDGET) break;
-        docs.push({
-          type: "document",
-          source: { type: "file", file_id: ch.file_id },
-          title: `${titleBase} — ${ch.title}`,
-          context: r.why || undefined,
-        });
-        bookUsed += cost; used += cost; attachedAny = true;
-      }
-      if (attachedAny) {
-        attached.push(name);
-      } else if (readingsText[name] && readingsText[name].text) {
-        const text = readingsText[name].text;
-        const cost = text.length * TOKENS_PER_TEXT_CHAR;
-        if (used + cost <= TOKEN_BUDGET) {
-          docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase, context: r.why || undefined });
-          used += cost; attached.push(name);
-        } else { missing.push(name); }
-      } else { missing.push(name); }
+    const rec = readingsText[name];
+    const text = rec && typeof rec.text === "string" ? rec.text : "";
+    if (text.length < MIN_USABLE_CHARS) {
+      missing.push(name);
       continue;
     }
 
-    if (fileIds[name]) {
-      const cost = (r.pages && r.pages > 0)
-        ? r.pages * TOKENS_PER_PAGE
-        : (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
-      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
-      docs.push({ type: "document", source: { type: "file", file_id: fileIds[name] }, title: titleBase, context: r.why || undefined });
-      attached.push(name); used += cost;
+    const cost = text.length * TOKENS_PER_TEXT_CHAR;
+    if (used + cost > TOKEN_BUDGET) {
+      missing.push(name);
       continue;
     }
 
-    if (readingsText[name] && readingsText[name].text) {
-      const text = readingsText[name].text;
-      const cost = text.length * TOKENS_PER_TEXT_CHAR;
-      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
-      docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase, context: r.why || undefined });
-      attached.push(name); used += cost;
-      continue;
-    }
-
-    missing.push(name);
+    docs.push({
+      type: "document",
+      source: { type: "text", media_type: "text/plain", data: text },
+      title: titleBase,
+      context: r.why || undefined,
+    });
+    attached.push(name);
+    used += cost;
   }
 
   if (docs.length > 0) {

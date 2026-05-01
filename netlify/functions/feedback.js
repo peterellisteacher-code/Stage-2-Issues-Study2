@@ -94,16 +94,14 @@ function buildRubricBlock(rubric) {
   return parts.join("\n\n");
 }
 
-// Mirror of chat.js buildDocumentBlocks with a tighter total budget — feedback
-// only needs enough text to fact-check attributions (e.g. catch a student
-// claiming Williams supports a view he attacks). Doesn't need full corpus
-// coverage, so we keep cost bounded.
-function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
+// Text-only attachment of the question's curated readings (see chat.js for
+// the full rationale — tl;dr, PDF docblocks rack up image-token charges).
+// Tighter budget than chat.js: feedback only needs enough text to fact-check
+// attributions, not full corpus depth.
+function buildDocumentBlocks(entry, _fileIds, readingsText, _bookChapters) {
   const TOKEN_BUDGET = 80_000;
-  const PER_BOOK_BUDGET = 35_000;
-  const TOKENS_PER_PAGE = 2000;
-  const TOKENS_PER_PDF_BYTE = 0.2;
   const TOKENS_PER_TEXT_CHAR = 0.25;
+  const MIN_USABLE_CHARS = 200;
 
   const docs = [];
   const attached = [];
@@ -120,56 +118,18 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
     const name = r.filename || "";
     if (!name) continue;
     const titleBase = name.replace(/\.pdf$/i, "");
-
-    const chapters = Array.isArray(bookChapters[name]) ? bookChapters[name] : null;
-    if (chapters && chapters.some(c => c && c.file_id)) {
-      let bookUsed = 0;
-      let attachedAny = false;
-      for (const ch of chapters) {
-        if (!ch || !ch.file_id) continue;
-        const cost = (ch.pages || 0) * TOKENS_PER_PAGE;
-        if (bookUsed + cost > PER_BOOK_BUDGET) break;
-        if (used + cost > TOKEN_BUDGET) break;
-        docs.push({
-          type: "document",
-          source: { type: "file", file_id: ch.file_id },
-          title: `${titleBase} — ${ch.title}`,
-        });
-        bookUsed += cost; used += cost; attachedAny = true;
-      }
-      if (attachedAny) {
-        attached.push(name);
-      } else if (readingsText[name] && readingsText[name].text) {
-        const text = readingsText[name].text;
-        const cost = text.length * TOKENS_PER_TEXT_CHAR;
-        if (used + cost <= TOKEN_BUDGET) {
-          docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase });
-          used += cost; attached.push(name);
-        } else { missing.push(name); }
-      } else { missing.push(name); }
-      continue;
-    }
-
-    if (fileIds[name]) {
-      const cost = (r.pages && r.pages > 0)
-        ? r.pages * TOKENS_PER_PAGE
-        : (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
-      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
-      docs.push({ type: "document", source: { type: "file", file_id: fileIds[name] }, title: titleBase });
-      attached.push(name); used += cost;
-      continue;
-    }
-
-    if (readingsText[name] && readingsText[name].text) {
-      const text = readingsText[name].text;
-      const cost = text.length * TOKENS_PER_TEXT_CHAR;
-      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
-      docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase });
-      attached.push(name); used += cost;
-      continue;
-    }
-
-    missing.push(name);
+    const rec = readingsText[name];
+    const text = rec && typeof rec.text === "string" ? rec.text : "";
+    if (text.length < MIN_USABLE_CHARS) { missing.push(name); continue; }
+    const cost = text.length * TOKENS_PER_TEXT_CHAR;
+    if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
+    docs.push({
+      type: "document",
+      source: { type: "text", media_type: "text/plain", data: text },
+      title: titleBase,
+    });
+    attached.push(name);
+    used += cost;
   }
 
   if (docs.length > 0) {
