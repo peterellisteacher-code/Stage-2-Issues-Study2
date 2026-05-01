@@ -1,103 +1,115 @@
-# Issues Study Lab -- Local launch
+# Issues Study Lab
 
-## What this is
+A web tool for SACE Stage 2 Philosophy students working on the
+Issues Study (AT3 Investigation). The student picks a question, talks
+to a Socratic interlocutor that pushes their thinking, drafts a
+response, and asks for criterion-referenced feedback against the SACE
+rubric and the closest SACE-supplied exemplar.
 
-A local web tool for SACE Stage 2 Philosophy students working on the
-Issues Study (AT3 Investigation). The student picks a question, chats
-with a Vertex-AI-cached library of relevant philosophy texts, drafts
-their response, and asks for criterion-referenced feedback against the
-SACE rubric and the closest SACE-supplied exemplar.
+## Architecture
 
-This is the MVP -- 5 sample questions, runs on `localhost:5050` only,
-single-user. Full bank and deployment notes are in `NEXT_STEPS.md`.
+- **Static frontend** — `index.html`, `script.js`, `styles.css`. Wizard SPA.
+- **Static data** — `data/questions.json`, `data/readings.json`, `data/rubric.json`. Loaded directly by the browser.
+- **Reading PDFs** — `readings/*.pdf` at the repo root, served directly by Netlify's CDN.
+- **Two Netlify Functions** — `netlify/functions/chat.js` and `netlify/functions/feedback.js`. Both call the Anthropic API (Claude Haiku 4.5) with prompt caching.
 
-## Run it
-
-```sh
-cd "C:/Users/Peter Ellis/OneDrive/Teaching/2026/12PHIL - 2026/Issues Study/lab"
-python server.py
+```
+browser ──► /data/*.json                           (static)
+        ──► /readings/*.pdf                        (static)
+        ──► /api/chat        ──► Netlify Function ──► Anthropic (Haiku 4.5)
+        ──► /api/feedback    ──► Netlify Function ──► Anthropic (Haiku 4.5)
 ```
 
-Then open <http://localhost:5050> in Chrome.
+Fully self-hosted. No third-party dependencies beyond Netlify (hosting + functions) and Anthropic (the model).
 
-The server binds to `127.0.0.1:5050` (loopback only). Stop it with
-Ctrl-C.
+## Pages
 
-## What you'll see
+1. **Welcome** — student enters their name, sees what's coming.
+2. **The task** — what SACE actually asks for, A vs C+ patterns, the seven criteria.
+3. **The questions** — 102 questions across ethics / metaphysics / epistemology / political / religion / aesthetics. Filterable. Pick one.
+4. **The readings** — curated primary + secondary sources for the chosen question, plus a dialectic blurb framing the debate.
+5. **The chamber** — Socratic chat with Claude Haiku 4.5. A handoff fallback (copy prompt → open in Claude.ai / ChatGPT / Gemini) is available if the live chat fails.
+6. **The drafting** — write space with autosave, criterion-referenced feedback against the SACE rubric and exemplar, and *Save as PDF* (browser print dialog).
 
-Three panels:
+## Deployment (Netlify)
 
-- **Left** -- pick one of 5 sample questions. The card shows the domain
-  and suggested philosophers; the list below is the curated readings
-  cached against this question (`[txt]` flag means the original PDF
-  was too big and a text-extracted version was cached instead).
+1. Connect the GitHub repo to Netlify (Site settings → Build & deploy → Continuous deployment).
+2. In **Site settings → Environment variables**, add:
+   - `ANTHROPIC_API_KEY` — scoped to **Builds, Functions, Runtime**.
+3. Push to `main`. Netlify auto-deploys: serves the static site and bundles the Functions.
 
-- **Middle** -- chat panel. Send messages to the cached library. The
-  reply cites the cached texts. Useful prompts:
-  - "Walk me through the strongest position."
-  - "What would Kant say in objection?"
-  - "Quote a passage from {filename} that supports …"
-  - "What's the weakest move in Bostrom's argument?"
+No build step. `netlify.toml` declares `command = "echo 'no build step'"`.
 
-- **Right** -- paste a draft (≥ 200 chars). Click *Get feedback*. The
-  server sends the draft + the SACE rubric + the closest exemplar to
-  Gemini Pro and returns structured KU/RA/CA/C feedback with a
-  predicted grade band.
+## Local development
 
-## Sample questions in this MVP
+Install the Netlify CLI:
 
-| ID | Domain | Question |
-|---|---|---|
-| `lab_q001` | Ethics | Is the rapid development of Artificial Intelligence morally justifiable? |
-| `lab_q002` | Metaphysics | Is the self an illusion? |
-| `lab_q003` | Epistemology | What a culture deems "common sense" is mostly ideology, not knowledge. |
-| `lab_q004` | Political | To what extent is democracy the most appropriate form of government? |
-| `lab_q005` | Mind / Tech | Is it possible for philosophical zombies to exist? |
+```sh
+npm install -g netlify-cli
+```
+
+Then run:
+
+```sh
+netlify dev
+```
+
+This serves the static site, runs the Functions locally on the same port, and rewrites `/api/*` to them. The CLI reads `ANTHROPIC_API_KEY` from a local `.env` (git-ignored) — create one with:
+
+```sh
+echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+```
+
+## Costs
+
+Per cohort of ~14 students, single SACE Issues Study cycle:
+
+| Action | ~ Cost per call | Calls per cohort | Cohort total |
+|---|---|---|---|
+| Chamber chat turn (cached) | $0.0005 | ~420 | ~$0.21 |
+| Chamber chat turn (cache miss / first turn) | $0.005 | ~14 | ~$0.07 |
+| Feedback (full draft + rubric + exemplar) | $0.018 | ~70 | ~$1.26 |
+
+Total: well under $5 per cohort. Pricing as of Sept 2025 (Haiku 4.5: $1/Mtok input, $5/Mtok output, $1.25/Mtok cache write, $0.10/Mtok cache read).
+
+## Reading PDFs
+
+The 137 reading PDFs live in `readings/` at the repo root, served directly by Netlify's CDN. The links in `data/readings.json` use plain `/readings/<filename>.pdf` URLs.
+
+To add or replace a reading: drop the PDF into `readings/`, update the corresponding entry in `pack_metadata.json` if it's new, regenerate `data/readings.json` (`python build_static_data.py`), commit, push.
 
 ## Files
 
-`ARCHITECTURE.md` -- design notes, prompt assembly, billing.
-`server.py` -- Flask broker, 4 endpoints.
-`index.html` / `script.js` / `styles.css` -- frontend.
-`lab_corpus.json` -- pack definitions consumed by `cache_unit_pack`.
-`cache_handles.json` -- question → cache_name registry (post-build).
-`pack_metadata.json` -- readings + skipped files per question.
-`extracted_docx/` -- exemplar + rubric plain-text used by feedback.
-`text_packs/` -- text-extracted versions of large PDFs (book-length).
-`server.log` -- JSONL of every request: body, duration, token usage, cost.
-`screenshots/` -- manual end-to-end capture for each question.
-`test_transcripts/` -- automated harness output per question.
-
-## Requirements
-
-- Python 3.10+
-- `flask`, `flask-cors`, `google-genai`, `python-docx`, `PyMuPDF` (`fitz`)
-- Service-account JSON at `~/.mcp-servers/ai-image/service-account.json`
-- Existing context caches built via `cache_unit_pack` (already done in
-  the build session -- handles in `cache_handles.json`)
-
-## Costs (per session)
-
-- Chat call: ~$0.001-0.01 each (cached input at 10%, output at full Pro)
-- Feedback call: ~$0.02-0.05 each (no cache; rubric + exemplar + draft)
-- Cache storage (5 packs, 70-day TTL): ~$0.14/day until they expire
-- Hourly student session of ~30 chats + 3 drafts: well under $1
-
-Run `python server.py` and watch `server.log` to see live token + USD
-estimates per request.
-
-## Stopping for the session
-
-`Ctrl-C` stops the Flask server. The caches stay live on Google's side
-for 70 days regardless. To rebuild a cache earlier (e.g. you edited
-`lab_corpus.json`), call `cache_unit_pack` again in Claude Code with the
-same `pack_name`.
-
-## Troubleshooting
-
-| Symptom | Fix |
+| File | Role |
 |---|---|
-| `service-account.json not found` on startup | Confirm it sits at `~/.mcp-servers/ai-image/service-account.json` |
-| Chat returns "model call failed" with `NOT_FOUND: cached content` | Cache expired (>70 days) -- rerun `cache_unit_pack` for that pack |
-| Feedback blank or short | Draft too short or rubric/exemplar text missing -- check `lab/extracted_docx/` |
-| 5050 already in use | Edit the `app.run(port=…)` line in `server.py` |
+| `index.html`, `script.js`, `styles.css` | Frontend |
+| `data/questions.json` | 102 question records |
+| `data/readings.json` | Per-question dialectic + reading list |
+| `data/rubric.json` | SACE task sheet, rubric, subject outline, three exemplars (A-/B/C+), domain → exemplar map |
+| `netlify/functions/chat.js` | Chamber chat — Haiku 4.5 with prompt caching |
+| `netlify/functions/feedback.js` | Single-shot feedback against rubric + exemplar |
+| `netlify.toml` | Build, redirects, functions config, headers |
+| `package.json` | Pins Node 20+. No runtime deps. |
+| `build_static_data.py` | Script that regenerates `data/*.json` from the source pipeline |
+| `extracted_docx/` | Raw exemplar + rubric source text (input to `build_static_data.py`) |
+| `pack_metadata.json` | Source-of-truth for question → readings mapping (input to `build_static_data.py`) |
+
+## Regenerating `data/*.json`
+
+If you edit `pack_metadata.json` or files in `extracted_docx/`:
+
+```sh
+python build_static_data.py
+```
+
+Commit the regenerated JSONs and push.
+
+## Why Haiku 4.5 (not Vertex)
+
+The previous architecture used Vertex AI's context caching with 70-day cache handles against a clustered corpus of the readings. That broke when access to Vertex was lost. Claude Haiku 4.5 + Anthropic prompt caching fits the same use case without:
+
+- 70-day cache handles to manage (Anthropic's caches are ephemeral, 5-min default, refresh on use).
+- Custom corpus pre-clustering (the readings list is small enough to send per-request).
+- Cloud Run / Flask broker (Netlify Functions handle the API call).
+
+If a student loses access to the live chat (e.g. rate limit, key revoked), the *handoff fallback* on each chamber and feedback panel produces a copy-pasteable prompt for Claude.ai / ChatGPT / Gemini.

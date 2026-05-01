@@ -647,6 +647,106 @@ h3 { font-size: 21px; line-height: 1.3; margin: var(--space-4) 0 var(--space-1);
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Handoff (fallback to external AI tools) ──────────────────── */
+
+.handoff-fallback {
+  margin: var(--space-4) var(--space-5) var(--space-3);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-2);
+}
+.handoff-fallback > summary {
+  cursor: pointer;
+  font: 600 14px/1.4 var(--sans);
+  color: var(--ink-faint);
+  padding: 6px 0;
+  list-style: none;
+}
+.handoff-fallback > summary::-webkit-details-marker { display: none; }
+.handoff-fallback > summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform .15s ease;
+  color: var(--ink-faint);
+}
+.handoff-fallback[open] > summary::before { transform: rotate(90deg); }
+.handoff-fallback > summary:hover { color: var(--ink); }
+
+.handoff {
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+.handoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-2);
+}
+.handoff-actions .ai-tool-btn { padding: 8px 14px; font-size: 14px; }
+.handoff-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font: 600 13px/1.4 var(--sans);
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.handoff-meta {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+}
+.handoff-textarea {
+  width: 100%;
+  font: 14px/1.55 ui-monospace, "SF Mono", Menlo, monospace;
+  padding: 12px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fafafa;
+  color: var(--ink);
+  resize: vertical;
+  box-sizing: border-box;
+}
+.handoff-hint {
+  margin: var(--space-2) 0 0;
+  font-size: 13px;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+
+/* ── Live feedback output ──────────────────────────────────────── */
+
+.feedback-output {
+  margin: var(--space-3) var(--space-5);
+}
+.feedback-output:empty { display: none; }
+.feedback-output h2,
+.feedback-output h3,
+.feedback-output h4 {
+  font-family: var(--sans);
+  margin-top: var(--space-2);
+  margin-bottom: 4px;
+}
+.feedback-output h2:first-child,
+.feedback-output h3:first-child { margin-top: 0; }
+.feedback-output ul, .feedback-output ol { padding-left: 22px; margin: 4px 0 var(--space-1); }
+.feedback-output li { margin-bottom: 4px; }
+.feedback-output p { margin: 6px 0; }
+.feedback-output .chat-meta { margin-bottom: var(--space-2); }
+.feedback-output .message.error {
+  padding: var(--space-2);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #991b1b;
+}
+
 /* ── Footer ────────────────────────────────────────────────────── */
 
 .footnote {
@@ -657,4 +757,63 @@ h3 { font-size: 21px; line-height: 1.3; margin: var(--space-4) 0 var(--space-1);
   text-align: center;
   font-style: italic;
   background: var(--paper);
+}
+
+/* ── Print mode (Save as PDF) ──────────────────────────────────── */
+
+.print-only { display: none; }
+
+@media print {
+  body { background: #fff; }
+  .no-print, main, footer { display: none !important; }
+  .print-only { display: block; }
+
+  #print-view {
+    font-family: var(--serif);
+    color: #000;
+    line-height: 1.5;
+    font-size: 11pt;
+    padding: 0;
+  }
+  #print-view .print-header {
+    border-bottom: 1px solid #000;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  #print-view .print-header h1 {
+    font-size: 16pt;
+    margin: 0 0 4pt;
+  }
+  #print-view .print-meta {
+    font-size: 10pt;
+    color: #444;
+    margin: 0;
+  }
+  #print-view section {
+    margin-bottom: 14pt;
+    page-break-inside: avoid;
+  }
+  #print-view h2 {
+    font-size: 13pt;
+    margin: 12pt 0 4pt;
+    border-bottom: 1px solid #999;
+    padding-bottom: 2pt;
+  }
+  #print-view h3 { font-size: 11pt; margin: 8pt 0 2pt; }
+  #print-view .print-question { font-size: 12pt; margin: 0; }
+  #print-view .print-draft p,
+  #print-view .print-feedback p { margin: 6pt 0; }
+  #print-view .print-turn {
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+  }
+  #print-view .print-turn-role {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #444;
+    margin-bottom: 2pt;
+  }
+  #print-view ul, #print-view ol { padding-left: 18pt; }
+  #print-view a { color: #000; text-decoration: none; }
+  @page { margin: 18mm 16mm; }
 }

@@ -1,10 +1,11 @@
+# Local secrets (e.g. ANTHROPIC_API_KEY for `netlify dev`)
+.env
+.env.local
+.env.*.local
+
 # Runtime
-server.log
 __pycache__/
 *.pyc
-
-# Local-only secrets (sit outside this repo at ~/.mcp-servers/ai-image/)
-service-account.json
 
 # OS / editor
 .DS_Store
@@ -15,3 +16,4 @@ Thumbs.db
 .pytest_cache/
 .venv/
 venv/
+node_modules/
