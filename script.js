@@ -154,14 +154,56 @@ function renderMarkdown(md) {
 }
 
 // ── API helpers ────────────────────────────────────────────────
+// Handles both:
+//   - Plain JSON responses (static /data/*.json, error responses)
+//   - SSE streaming responses from /api/* (heartbeat comments + a final
+//     `event: result\ndata: <json>` event). The SSE stream defeats Akamai's
+//     30s idle-timeout while we wait on Anthropic for a heavy first turn.
 async function fetchJson(url, body) {
   const opts = body
     ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
     : { method: "GET" };
   const res = await fetch(url, opts);
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
-  return data;
+
+  const ctype = (res.headers.get("Content-Type") || "").toLowerCase();
+  if (!ctype.startsWith("text/event-stream")) {
+    // Plain JSON path (static files or short-circuit error)
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+    return data;
+  }
+
+  // SSE path: read until we see `event: result\ndata: <json>\n\n`.
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buf = "";
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += decoder.decode(value, { stream: true });
+    let sep;
+    while ((sep = buf.indexOf("\n\n")) !== -1) {
+      const block = buf.slice(0, sep);
+      buf = buf.slice(sep + 2);
+      // Ignore comment lines (heartbeats) and unrelated events
+      if (!block || block.startsWith(":")) continue;
+      const lines = block.split("\n");
+      let eventName = "message";
+      let dataLine = null;
+      for (const line of lines) {
+        if (line.startsWith("event: ")) eventName = line.slice(7).trim();
+        else if (line.startsWith("data: ")) dataLine = line.slice(6);
+      }
+      if (eventName === "result" && dataLine != null) {
+        let payload;
+        try { payload = JSON.parse(dataLine); }
+        catch (e) { throw new Error(`Bad SSE payload: ${e.message}`); }
+        if (payload && payload.error) throw new Error(payload.error);
+        return payload;
+      }
+    }
+  }
+  throw new Error("Stream closed without a result event");
 }
 
 function setStatus(text, cls = "") { els.status.textContent = text; els.status.className = "status " + cls; }

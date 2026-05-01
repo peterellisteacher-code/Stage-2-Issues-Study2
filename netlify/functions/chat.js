@@ -1,25 +1,30 @@
 // netlify/functions/chat.js
 // POST /api/chat -> Claude Haiku 4.5 with prompt caching.
 // Body: { question_id, history: [{role, text}], message }
-// Returns: { text, duration_ms, estimated_cost_usd, usage }
 //
-// Grounding strategy:
-//   - data/readings.json gives the question's curated readings list.
-//   - data/file_ids.json maps reading filenames -> Anthropic Files API IDs.
-//     Readings ≤32 MB AND ≤100 pages are uploaded once via tools/upload_readings.py
-//     and referenced as document blocks (file source).
-//   - data/readings_text.json holds extracted plain text (capped at ~80K chars)
-//     for big book-length sources that exceed the Files API caps. Inlined as
-//     document blocks (text source).
-//   - Whatever can't be grounded falls back to title + dialectic only.
+// Streaming response (SSE):
+//   :heartbeat\n\n           — sent every 5s while waiting on Anthropic, so Akamai's
+//                              30s "Inactivity Timeout" never fires (no 504s on
+//                              heavy first-turn calls). Clients ignore comment lines.
+//   data: {...JSON...}\n\n  — the final result payload (same shape as before).
+//
+// Three-tier reading source:
+//   1. book_chapters.json  — split-and-uploaded chapter PDFs (preferred for big books)
+//   2. file_ids.json       — single PDFs uploaded as-is
+//   3. readings_text.json  — inline text excerpt fallback
 
-const path = require("path");
-const fs = require("fs");
+import path from "node:path";
+import fs from "node:fs";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const MODEL = "claude-haiku-4-5-20251001";
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
 const MAX_TOKENS = 1024;
 const MAX_HISTORY_TURNS = 30;
+const HEARTBEAT_MS = 5000;
 
 function loadJsonOnce(filename, cacheRef) {
   if (cacheRef.value) return cacheRef.value;
@@ -32,9 +37,7 @@ function loadJsonOnce(filename, cacheRef) {
     try {
       cacheRef.value = JSON.parse(fs.readFileSync(p, "utf8"));
       return cacheRef.value;
-    } catch (e) {
-      lastErr = e;
-    }
+    } catch (e) { lastErr = e; }
   }
   throw new Error(`Could not load data/${filename}: ${lastErr && lastErr.message}`);
 }
@@ -73,7 +76,6 @@ Tone: warm, precise, intellectually serious. You are a senior reader who has tho
 function buildQuestionContext(entry, attachedNames, missingNames) {
   const subdomain = entry.subdomain ? ` · ${entry.subdomain}` : "";
   const dialectic = entry.dialectic || "(no dialectic blurb on file)";
-
   let attachedLines = "";
   if (attachedNames.length) {
     attachedLines = "\n\n# Readings attached as documents (you can quote these directly)\n" +
@@ -84,7 +86,6 @@ function buildQuestionContext(entry, attachedNames, missingNames) {
     missingLines = "\n\n# Readings on the student's list but NOT attached (refer to them by title only; do not invent quotes)\n" +
       missingNames.map(n => `- ${n.replace(/\.pdf$/i, "")}`).join("\n");
   }
-
   return `# The student's question
 ${entry.question_text}
 
@@ -94,26 +95,6 @@ Domain: ${entry.domain}${subdomain}
 ${dialectic}${attachedLines}${missingLines}`;
 }
 
-// Build document content blocks for the question's readings, with three
-// data sources in priority order:
-//   1. book_chapters.json — book pre-split into chapter PDFs (each uploaded
-//      separately to Files API). Most efficient for long books: students get
-//      multiple chapters of one book without blowing the context window.
-//   2. file_ids.json — single PDFs uploaded as-is to Files API.
-//   3. readings_text.json — text excerpts (fallback for over-cap PDFs that
-//      couldn't be cleanly split into chapters).
-//
-// Token budget logic:
-//   - Total budget: 250K estimated tokens (Tier 2 has 450K ITPM, leaving
-//     ~200K headroom for system + history + output).
-//   - Per-book budget: 80K tokens for chapter-split books (so a single
-//     chapter-rich book can't crowd out other readings).
-//   - Cost estimates (deliberately slightly conservative):
-//       chapter PDFs: pages * 2000 tok/page (pages known from book_chapters)
-//       standalone PDFs: size_bytes * 0.2 tok/byte
-//       text excerpts: chars * 0.25 tok/char
-//   - Primary-tier readings get budget first; anything that doesn't fit
-//     goes into `missing` so the AI knows the title but won't invent quotes.
 function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
   const TOKEN_BUDGET = 160_000;
   const PER_BOOK_BUDGET = 70_000;
@@ -137,7 +118,6 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
     if (!name) continue;
     const titleBase = name.replace(/\.pdf$/i, "");
 
-    // 1. Chapter-split book?
     const chapters = Array.isArray(bookChapters[name]) ? bookChapters[name] : null;
     if (chapters && chapters.some(c => c && c.file_id)) {
       let bookUsed = 0;
@@ -153,73 +133,37 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
           title: `${titleBase} — ${ch.title}`,
           context: r.why || undefined,
         });
-        bookUsed += cost;
-        used += cost;
-        attachedAny = true;
+        bookUsed += cost; used += cost; attachedAny = true;
       }
       if (attachedAny) {
         attached.push(name);
       } else if (readingsText[name] && readingsText[name].text) {
-        // Fall back to text excerpt if no chapters fit
         const text = readingsText[name].text;
         const cost = text.length * TOKENS_PER_TEXT_CHAR;
         if (used + cost <= TOKEN_BUDGET) {
-          docs.push({
-            type: "document",
-            source: { type: "text", media_type: "text/plain", data: text },
-            title: titleBase,
-            context: r.why || undefined,
-          });
-          used += cost;
-          attached.push(name);
-        } else {
-          missing.push(name);
-        }
-      } else {
-        missing.push(name);
-      }
+          docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase, context: r.why || undefined });
+          used += cost; attached.push(name);
+        } else { missing.push(name); }
+      } else { missing.push(name); }
       continue;
     }
 
-    // 2. Single Files-API PDF?
     if (fileIds[name]) {
-      // Prefer page-based estimate (2000 tok/page) when known — accurate
-      // for image-heavy PDFs where size_bytes wildly over-estimates tokens.
-      // Fall back to size-based estimate if pages aren't recorded.
       const cost = (r.pages && r.pages > 0)
         ? r.pages * TOKENS_PER_PAGE
         : (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
-      if (used + cost > TOKEN_BUDGET) {
-        missing.push(name);
-        continue;
-      }
-      docs.push({
-        type: "document",
-        source: { type: "file", file_id: fileIds[name] },
-        title: titleBase,
-        context: r.why || undefined,
-      });
-      attached.push(name);
-      used += cost;
+      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
+      docs.push({ type: "document", source: { type: "file", file_id: fileIds[name] }, title: titleBase, context: r.why || undefined });
+      attached.push(name); used += cost;
       continue;
     }
 
-    // 3. Text excerpt?
     if (readingsText[name] && readingsText[name].text) {
       const text = readingsText[name].text;
       const cost = text.length * TOKENS_PER_TEXT_CHAR;
-      if (used + cost > TOKEN_BUDGET) {
-        missing.push(name);
-        continue;
-      }
-      docs.push({
-        type: "document",
-        source: { type: "text", media_type: "text/plain", data: text },
-        title: titleBase,
-        context: r.why || undefined,
-      });
-      attached.push(name);
-      used += cost;
+      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
+      docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase, context: r.why || undefined });
+      attached.push(name); used += cost;
       continue;
     }
 
@@ -232,7 +176,78 @@ function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
   return { docs, attached, missing };
 }
 
-async function callAnthropic({ system, messages, useFilesBeta }) {
+function estimateCost(u) {
+  if (!u) return 0;
+  return ((u.input_tokens || 0) * 1.0
+        + (u.output_tokens || 0) * 5.0
+        + (u.cache_creation_input_tokens || 0) * 1.25
+        + (u.cache_read_input_tokens || 0) * 0.1) / 1_000_000;
+}
+
+// Build a streaming Response: one heartbeat (": ...") every HEARTBEAT_MS while
+// the upstream Anthropic call is in flight, then a single SSE `result` event
+// with the JSON payload, then close. Heartbeats keep Akamai/Netlify from
+// timing out the connection when first-turn cache-creation takes 25-40s.
+//
+// `clientSignal` (req.signal) is wired into the upstream fetch so a closed
+// browser tab cancels the Anthropic call instead of running it to completion
+// on our dime. A hard `WORK_TIMEOUT_MS` cap is applied so a hung upstream
+// can't burn the function's wall-clock limit silently.
+const WORK_TIMEOUT_MS = 50_000;
+
+function streamingResponse(workFn, clientSignal) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    async start(controller) {
+      let interval = null;
+      const safeEnqueue = (s) => { try { controller.enqueue(encoder.encode(s)); } catch (_) {} };
+      const writeEvent = (name, payload) =>
+        safeEnqueue(`event: ${name}\ndata: ${JSON.stringify(payload)}\n\n`);
+
+      // Initial heartbeat forces the response headers + first byte out
+      // immediately so the proxy sees activity before the upstream call starts.
+      safeEnqueue(": waking\n\n");
+      interval = setInterval(() => safeEnqueue(": heartbeat\n\n"), HEARTBEAT_MS);
+
+      // Hard timeout cap on the unit of work itself.
+      let timeoutId;
+      const timeoutPromise = new Promise((_, reject) => {
+        timeoutId = setTimeout(
+          () => reject(new Error(`Upstream call exceeded ${WORK_TIMEOUT_MS}ms`)),
+          WORK_TIMEOUT_MS,
+        );
+      });
+
+      try {
+        const payload = await Promise.race([workFn(), timeoutPromise]);
+        writeEvent("result", payload);
+      } catch (e) {
+        const msg = e && e.message ? e.message : String(e);
+        writeEvent("result", { error: msg });
+      } finally {
+        if (interval) clearInterval(interval);
+        if (timeoutId) clearTimeout(timeoutId);
+        try { controller.close(); } catch (_) {}
+      }
+    },
+    cancel() {
+      // Browser disconnected — nothing else to do; the AbortController on
+      // `clientSignal` (passed into `fetch` by the worker) will tear down
+      // the upstream Anthropic request.
+    },
+  });
+  return new Response(stream, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/event-stream",
+      "Cache-Control": "no-cache, no-transform",
+      "Connection": "keep-alive",
+      "X-Accel-Buffering": "no",
+    },
+  });
+}
+
+async function callAnthropic({ system, messages, useFilesBeta, signal }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY env var is not set");
   const headers = {
@@ -240,22 +255,19 @@ async function callAnthropic({ system, messages, useFilesBeta }) {
     "anthropic-version": "2023-06-01",
     "content-type": "application/json",
   };
-  if (useFilesBeta) {
-    headers["anthropic-beta"] = "files-api-2025-04-14";
-  }
+  if (useFilesBeta) headers["anthropic-beta"] = "files-api-2025-04-14";
   const res = await fetch(ANTHROPIC_URL, {
     method: "POST",
     headers,
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: MAX_TOKENS,
-      system,
-      messages,
-    }),
+    body: JSON.stringify({ model: MODEL, max_tokens: MAX_TOKENS, system, messages }),
+    signal,
   });
-  const data = await res.json().catch(() => ({}));
+  const rawBody = await res.text();
+  let data = {};
+  try { data = JSON.parse(rawBody); } catch { /* leave as {} */ }
   if (!res.ok) {
-    const msg = (data && data.error && data.error.message) || `HTTP ${res.status}`;
+    const msg = (data && data.error && data.error.message)
+      || (rawBody ? rawBody.slice(0, 200) : `HTTP ${res.status}`);
     const err = new Error(`Anthropic API: ${msg}`);
     err.status = res.status;
     throw err;
@@ -263,34 +275,23 @@ async function callAnthropic({ system, messages, useFilesBeta }) {
   return data;
 }
 
-// Haiku 4.5 pricing (USD per million tokens) — sept 2025.
-function estimateCost(u) {
-  if (!u) return 0;
-  return (
-    (u.input_tokens || 0) * 1.0 +
-    (u.output_tokens || 0) * 5.0 +
-    (u.cache_creation_input_tokens || 0) * 1.25 +
-    (u.cache_read_input_tokens || 0) * 0.1
-  ) / 1_000_000;
-}
-
-exports.handler = async (event) => {
+export default async (req) => {
   const startedAt = Date.now();
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: JSON.stringify({ error: "POST only" }) };
+  if (req.method !== "POST") {
+    return new Response(JSON.stringify({ error: "POST only" }), {
+      status: 405, headers: { "Content-Type": "application/json" },
+    });
   }
-
   let payload;
-  try {
-    payload = JSON.parse(event.body || "{}");
-  } catch (e) {
-    return { statusCode: 400, body: JSON.stringify({ error: "Invalid JSON" }) };
-  }
+  try { payload = await req.json(); }
+  catch { return new Response(JSON.stringify({ error: "Invalid JSON" }), { status: 400, headers: { "Content-Type": "application/json" } }); }
 
-  const { question_id, history, message } = payload;
+  const { question_id, history, message } = payload || {};
   const userMessage = typeof message === "string" ? message.trim() : "";
   if (!question_id || !userMessage) {
-    return { statusCode: 400, body: JSON.stringify({ error: "question_id and non-empty message required" }) };
+    return new Response(JSON.stringify({ error: "question_id and non-empty message required" }), {
+      status: 400, headers: { "Content-Type": "application/json" },
+    });
   }
 
   let entry, fileIds, readingsText, bookChapters;
@@ -300,22 +301,19 @@ exports.handler = async (event) => {
     readingsText = loadReadingsText();
     bookChapters = loadBookChapters();
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: { "Content-Type": "application/json" } });
   }
   if (!entry) {
-    return { statusCode: 404, body: JSON.stringify({ error: `Unknown question ${question_id}` }) };
+    return new Response(JSON.stringify({ error: `Unknown question ${question_id}` }), { status: 404, headers: { "Content-Type": "application/json" } });
   }
 
   const { docs, attached, missing } = buildDocumentBlocks(entry, fileIds, readingsText, bookChapters);
   const usingFiles = docs.some(d => d.source && d.source.type === "file");
-
   const system = [
     { type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
     { type: "text", text: buildQuestionContext(entry, attached, missing), cache_control: { type: "ephemeral" } },
   ];
 
-  // Map prior turns to API format. Skip any empty-text turns defensively
-  // — empty text content blocks are rejected by the API.
   const histList = Array.isArray(history) ? history.slice(-MAX_HISTORY_TURNS) : [];
   const messages = [];
   for (const turn of histList) {
@@ -329,50 +327,27 @@ exports.handler = async (event) => {
   }
   messages.push({ role: "user", content: userMessage });
 
-  // Attach document blocks to the FIRST user message of the conversation.
-  // They stay there across turns (Anthropic cache reads them on every
-  // subsequent call within ~5 min for cheap grounding).
   if (docs.length > 0) {
     const firstUserIdx = messages.findIndex(m => m.role === "user");
     if (firstUserIdx >= 0) {
-      const firstText = typeof messages[firstUserIdx].content === "string"
-        ? messages[firstUserIdx].content
-        : "";
-      messages[firstUserIdx] = {
-        role: "user",
-        content: [
-          ...docs,
-          { type: "text", text: firstText },
-        ],
-      };
+      const firstText = typeof messages[firstUserIdx].content === "string" ? messages[firstUserIdx].content : "";
+      messages[firstUserIdx] = { role: "user", content: [...docs, { type: "text", text: firstText }] };
     }
   }
 
-  let data;
-  try {
-    data = await callAnthropic({ system, messages, useFilesBeta: usingFiles });
-  } catch (e) {
+  return streamingResponse(async () => {
+    const data = await callAnthropic({ system, messages, useFilesBeta: usingFiles, signal: req.signal });
+    const text = (data.content || [])
+      .filter(b => b && b.type === "text" && typeof b.text === "string")
+      .map(b => b.text)
+      .join("\n")
+      .trim();
     return {
-      statusCode: e.status && e.status >= 400 && e.status < 500 ? e.status : 502,
-      body: JSON.stringify({ error: e.message }),
-    };
-  }
-
-  const text = (data.content || [])
-    .filter(b => b && b.type === "text" && typeof b.text === "string")
-    .map(b => b.text)
-    .join("\n")
-    .trim();
-
-  return {
-    statusCode: 200,
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({
       text: text || "(no reply)",
       duration_ms: Date.now() - startedAt,
       estimated_cost_usd: estimateCost(data.usage),
       usage: data.usage || null,
       grounded: { attached, missing },
-    }),
-  };
+    };
+  });
 };
