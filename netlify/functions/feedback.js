@@ -37,8 +37,23 @@ function loadJsonOnce(name, cacheRef) {
 }
 const _readingsCache = { value: null };
 const _rubricCache = { value: null };
+const _fileIdsCache = { value: null };
+const _readingsTextCache = { value: null };
+const _bookChaptersCache = { value: null };
 const loadReadings = () => loadJsonOnce("readings.json", _readingsCache);
 const loadRubric = () => loadJsonOnce("rubric.json", _rubricCache);
+const loadFileIds = () => {
+  try { return loadJsonOnce("file_ids.json", _fileIdsCache); }
+  catch { _fileIdsCache.value = {}; return _fileIdsCache.value; }
+};
+const loadReadingsText = () => {
+  try { return loadJsonOnce("readings_text.json", _readingsTextCache); }
+  catch { _readingsTextCache.value = {}; return _readingsTextCache.value; }
+};
+const loadBookChapters = () => {
+  try { return loadJsonOnce("book_chapters.json", _bookChaptersCache); }
+  catch { _bookChaptersCache.value = {}; return _bookChaptersCache.value; }
+};
 
 const SYSTEM_PROMPT = `You are a SACE Stage 2 Philosophy moderator giving formative feedback on a student's Issues Study (AT3) draft. The student must investigate one philosophical issue, present multiple positions with their reasoning, raise objections, and defend their own answer.
 
@@ -46,8 +61,11 @@ You will be given:
 1. The full SACE rubric and assessment design criteria.
 2. A grade-banded exemplar at a specific level, for calibration.
 3. The student's question and current draft.
+4. The curated readings the student has been given access to, attached as documents.
 
 Your job is to return structured, criterion-referenced feedback in markdown. Be honest, concrete, and constructive. The student needs to know what's working, what's missing, and what to do next.
+
+When the student attributes a position or quotation to a philosopher, check it against the attached readings. If the attribution is inaccurate (for example, treating a critic of a view as one of its defenders, or quoting a passage the philosopher did not write), flag it under **KU2** and quote the relevant passage from the actual reading. Do not use the readings to evaluate prose style, structure, or referencing — those are matters for C1/C2 and the rubric. Use the readings only to verify philosophers' positions, arguments, and quotations.
 
 Return EXACTLY this structure:
 
@@ -76,6 +94,90 @@ function buildRubricBlock(rubric) {
   return parts.join("\n\n");
 }
 
+// Mirror of chat.js buildDocumentBlocks with a tighter total budget — feedback
+// only needs enough text to fact-check attributions (e.g. catch a student
+// claiming Williams supports a view he attacks). Doesn't need full corpus
+// coverage, so we keep cost bounded.
+function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
+  const TOKEN_BUDGET = 80_000;
+  const PER_BOOK_BUDGET = 35_000;
+  const TOKENS_PER_PAGE = 2000;
+  const TOKENS_PER_PDF_BYTE = 0.2;
+  const TOKENS_PER_TEXT_CHAR = 0.25;
+
+  const docs = [];
+  const attached = [];
+  const missing = [];
+  let used = 0;
+
+  const ordered = [...(entry.readings || [])].sort((a, b) => {
+    const ta = (a && a.tier) === "primary" ? 0 : 1;
+    const tb = (b && b.tier) === "primary" ? 0 : 1;
+    return ta - tb;
+  });
+
+  for (const r of ordered) {
+    const name = r.filename || "";
+    if (!name) continue;
+    const titleBase = name.replace(/\.pdf$/i, "");
+
+    const chapters = Array.isArray(bookChapters[name]) ? bookChapters[name] : null;
+    if (chapters && chapters.some(c => c && c.file_id)) {
+      let bookUsed = 0;
+      let attachedAny = false;
+      for (const ch of chapters) {
+        if (!ch || !ch.file_id) continue;
+        const cost = (ch.pages || 0) * TOKENS_PER_PAGE;
+        if (bookUsed + cost > PER_BOOK_BUDGET) break;
+        if (used + cost > TOKEN_BUDGET) break;
+        docs.push({
+          type: "document",
+          source: { type: "file", file_id: ch.file_id },
+          title: `${titleBase} — ${ch.title}`,
+        });
+        bookUsed += cost; used += cost; attachedAny = true;
+      }
+      if (attachedAny) {
+        attached.push(name);
+      } else if (readingsText[name] && readingsText[name].text) {
+        const text = readingsText[name].text;
+        const cost = text.length * TOKENS_PER_TEXT_CHAR;
+        if (used + cost <= TOKEN_BUDGET) {
+          docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase });
+          used += cost; attached.push(name);
+        } else { missing.push(name); }
+      } else { missing.push(name); }
+      continue;
+    }
+
+    if (fileIds[name]) {
+      const cost = (r.pages && r.pages > 0)
+        ? r.pages * TOKENS_PER_PAGE
+        : (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
+      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
+      docs.push({ type: "document", source: { type: "file", file_id: fileIds[name] }, title: titleBase });
+      attached.push(name); used += cost;
+      continue;
+    }
+
+    if (readingsText[name] && readingsText[name].text) {
+      const text = readingsText[name].text;
+      const cost = text.length * TOKENS_PER_TEXT_CHAR;
+      if (used + cost > TOKEN_BUDGET) { missing.push(name); continue; }
+      docs.push({ type: "document", source: { type: "text", media_type: "text/plain", data: text }, title: titleBase });
+      attached.push(name); used += cost;
+      continue;
+    }
+
+    missing.push(name);
+  }
+
+  if (docs.length > 0) {
+    docs[docs.length - 1].cache_control = { type: "ephemeral" };
+  }
+  return { docs, attached, missing };
+}
+
 function pickExemplar(rubric, domain) {
   const map = rubric.exemplar_for_domain || {};
   const tier = map[domain] || "A-";
@@ -88,16 +190,19 @@ function pickExemplar(rubric, domain) {
   return { tier, text };
 }
 
-async function callAnthropic({ system, messages, signal }) {
+async function callAnthropic({ system, messages, useFilesBeta, signal }) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY env var is not set");
+  const headers = {
+    "x-api-key": apiKey,
+    "anthropic-version": "2023-06-01",
+    "content-type": "application/json",
+  };
+  // Without this header, file-source document blocks return HTTP 400.
+  if (useFilesBeta) headers["anthropic-beta"] = "files-api-2025-04-14";
   const res = await fetch(ANTHROPIC_URL, {
     method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
+    headers,
     body: JSON.stringify({ model: MODEL, max_tokens: MAX_TOKENS, system, messages }),
     signal,
   });
@@ -186,10 +291,13 @@ export default async (req) => {
     );
   }
 
-  let entry, rubric;
+  let entry, rubric, fileIds, readingsText, bookChapters;
   try {
     entry = loadReadings()[question_id];
     rubric = loadRubric();
+    fileIds = loadFileIds();
+    readingsText = loadReadingsText();
+    bookChapters = loadBookChapters();
   } catch (e) {
     return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: { "Content-Type": "application/json" } });
   }
@@ -199,6 +307,8 @@ export default async (req) => {
 
   const exemplar = pickExemplar(rubric, entry.domain);
   const rubricBlock = buildRubricBlock(rubric);
+  const { docs, attached, missing } = buildDocumentBlocks(entry, fileIds, readingsText, bookChapters);
+  const usingFiles = docs.some(d => d.source && d.source.type === "file");
 
   const system = [
     { type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
@@ -210,7 +320,7 @@ export default async (req) => {
     },
   ];
 
-  const userContent = `# The student's question
+  const userText = `# The student's question
 ${entry.question_text}
 
 Domain: ${entry.domain}${entry.subdomain ? " · " + entry.subdomain : ""}
@@ -221,10 +331,18 @@ ${draft}
 
 Now produce the feedback in the exact structure described in your instructions.`;
 
+  // Documents go in the user message (same pattern as chat.js). Cache_control
+  // on the last doc lets the prefix cache hit if the same draft is resubmitted
+  // within ~5 min (rare but cheap when it happens).
+  const userContent = docs.length > 0
+    ? [...docs, { type: "text", text: userText }]
+    : userText;
+
   return streamingResponse(async () => {
     const data = await callAnthropic({
       system,
       messages: [{ role: "user", content: userContent }],
+      useFilesBeta: usingFiles,
       signal: req.signal,
     });
     const feedbackMd = (data.content || [])
@@ -238,6 +356,7 @@ Now produce the feedback in the exact structure described in your instructions.`
       duration_ms: Date.now() - startedAt,
       estimated_cost_usd: estimateCost(data.usage),
       usage: data.usage || null,
+      grounded: { attached, missing },
     };
   });
 };
