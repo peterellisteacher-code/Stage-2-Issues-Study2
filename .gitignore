@@ -17,3 +17,6 @@ Thumbs.db
 .venv/
 venv/
 node_modules/
+
+# Derivative chapter PDFs (regenerate with `python tools/split_long_readings.py`)
+readings/_chapters/

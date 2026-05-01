@@ -1,26 +1,29 @@
 #!/usr/bin/env python3
 """
-Upload the small reading PDFs (≤32 MB AND ≤100 pages) to Anthropic's Files API.
+Upload reading PDFs to Anthropic's Files API in two passes:
 
-Big books are handled separately by `tools/extract_long_readings.py`, which
-produces `data/readings_text.json` with truncated text excerpts.
+  1. Top-level `readings/*.pdf` — the 114 small standalone PDFs (the
+     ones that fit Anthropic's caps of 32 MB and 100 pages). The mapping
+     filename -> file_id lives in `data/file_ids.json`.
+
+  2. `readings/_chapters/<book>/*.pdf` — chapter pieces produced by
+     `tools/split_long_readings.py` from the 23 over-cap books.
+     Each piece's file_id is written into `data/book_chapters.json`
+     alongside its title and page range.
+
+Both outputs are written incrementally after each upload so Ctrl-C
+doesn't lose progress. Re-running the script skips anything already
+uploaded.
 
 Usage:
     pip install anthropic pymupdf
     export ANTHROPIC_API_KEY=sk-ant-...
     python tools/upload_readings.py
-
-Outputs:
-    data/file_ids.json   { "filename.pdf": "file_abc123", ... }
-
-The script is idempotent: it reads the existing data/file_ids.json (if any)
-and skips files already uploaded. Re-run after adding new PDFs to readings/.
 """
 
 import os
 import json
 import sys
-import glob
 from pathlib import Path
 
 try:
@@ -38,96 +41,133 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 READINGS_DIR = REPO_ROOT / "readings"
+CHAPTERS_DIR = READINGS_DIR / "_chapters"
 FILE_IDS_PATH = REPO_ROOT / "data" / "file_ids.json"
+BOOK_CHAPTERS_PATH = REPO_ROOT / "data" / "book_chapters.json"
 
-# Anthropic Files API limits as of Sept 2025
 MAX_BYTES = 32 * 1024 * 1024
 MAX_PAGES = 100
 
 
-def load_existing() -> dict:
-    if FILE_IDS_PATH.exists():
-        with open(FILE_IDS_PATH, "r", encoding="utf-8") as f:
+def load_json(path: Path, default):
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {}
+    return default
 
 
-def save(file_ids: dict) -> None:
-    FILE_IDS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(FILE_IDS_PATH, "w", encoding="utf-8") as f:
-        json.dump(file_ids, f, ensure_ascii=False, indent=2, sort_keys=True)
+def save_json(path: Path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2, sort_keys=isinstance(obj, dict) and all(not isinstance(v, list) for v in obj.values()))
 
 
 def page_count(path: Path) -> int:
     try:
-        doc = fitz.open(str(path))
-        n = doc.page_count
-        doc.close()
-        return n
+        with fitz.open(str(path)) as doc:
+            return doc.page_count
     except Exception:
         return -1
+
+
+def upload_one(client, path: Path, label: str) -> str | None:
+    try:
+        with open(path, "rb") as fh:
+            result = client.beta.files.upload(
+                file=(path.name, fh, "application/pdf"),
+            )
+        print(f"  OK    [{result.id}]  {label}")
+        return result.id
+    except Exception as e:
+        print(f"  FAIL  ({e}): {label}")
+        return None
+
+
+def upload_top_level(client) -> tuple[int, int, int, int]:
+    """Returns (uploaded, skip_size, skip_pages, failed)."""
+    file_ids = load_json(FILE_IDS_PATH, {})
+    pdfs = sorted(READINGS_DIR.glob("*.pdf"))
+    print(f"=== Top-level readings ({len(pdfs)} found, {len(file_ids)} already uploaded) ===")
+
+    uploaded = skipped_size = skipped_pages = failed = 0
+    for path in pdfs:
+        name = path.name
+        if name in file_ids:
+            continue
+        size = path.stat().st_size
+        if size > MAX_BYTES:
+            print(f"  SKIP (too large, {size/1e6:.1f} MB > 32 MB): {name}")
+            skipped_size += 1
+            continue
+        pages = page_count(path)
+        if pages > MAX_PAGES:
+            print(f"  SKIP (too many pages, {pages} > 100): {name}")
+            skipped_pages += 1
+            continue
+        fid = upload_one(client, path, name)
+        if fid:
+            file_ids[name] = fid
+            save_json(FILE_IDS_PATH, file_ids)
+            uploaded += 1
+        else:
+            failed += 1
+    return uploaded, skipped_size, skipped_pages, failed
+
+
+def upload_chapters(client) -> tuple[int, int]:
+    """Returns (uploaded, failed)."""
+    if not BOOK_CHAPTERS_PATH.exists():
+        print(f"=== Chapters: {BOOK_CHAPTERS_PATH} not found, skipping. Run tools/split_long_readings.py first. ===")
+        return 0, 0
+    book_chapters = load_json(BOOK_CHAPTERS_PATH, {})
+    total = sum(len(v) for v in book_chapters.values())
+    already = sum(1 for v in book_chapters.values() for r in v if r.get("file_id"))
+    print(f"\n=== Chapter pieces ({total} found, {already} already uploaded) ===")
+
+    uploaded = failed = 0
+    for book_name, pieces in book_chapters.items():
+        for piece in pieces:
+            if piece.get("file_id"):
+                continue
+            rel = piece.get("rel_path") or ""
+            piece_path = REPO_ROOT / rel
+            if not piece_path.is_file():
+                print(f"  MISSING: {rel}")
+                failed += 1
+                continue
+            label = f"{book_name} :: {piece.get('title', rel)}"
+            fid = upload_one(client, piece_path, label)
+            if fid:
+                piece["file_id"] = fid
+                save_json(BOOK_CHAPTERS_PATH, book_chapters)
+                uploaded += 1
+            else:
+                failed += 1
+    return uploaded, failed
 
 
 def main() -> int:
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("ERROR: ANTHROPIC_API_KEY env var is not set", file=sys.stderr)
         return 1
-
     if not READINGS_DIR.is_dir():
         print(f"ERROR: {READINGS_DIR} not found. Run from repo root.", file=sys.stderr)
         return 1
 
     client = anthropic.Anthropic()
-    file_ids = load_existing()
 
-    pdfs = sorted(READINGS_DIR.glob("*.pdf"))
-    print(f"Found {len(pdfs)} PDFs in {READINGS_DIR}")
-    print(f"Already uploaded: {len(file_ids)}")
-    print()
-
-    uploaded = 0
-    skipped_size = 0
-    skipped_pages = 0
-    failed = 0
-
-    for path in pdfs:
-        name = path.name
-        if name in file_ids:
-            continue
-
-        size = path.stat().st_size
-        if size > MAX_BYTES:
-            print(f"  SKIP (too large, {size/1e6:.1f} MB > 32 MB): {name}")
-            skipped_size += 1
-            continue
-
-        pages = page_count(path)
-        if pages > MAX_PAGES:
-            print(f"  SKIP (too many pages, {pages} > 100): {name}")
-            skipped_pages += 1
-            continue
-
-        try:
-            with open(path, "rb") as fh:
-                result = client.beta.files.upload(
-                    file=(name, fh, "application/pdf"),
-                )
-            file_ids[name] = result.id
-            uploaded += 1
-            print(f"  OK    [{result.id}]  {name}")
-            # Save after every upload so we don't lose progress on Ctrl-C
-            save(file_ids)
-        except Exception as e:
-            failed += 1
-            print(f"  FAIL  ({e}): {name}")
+    top_up, top_size, top_pages, top_fail = upload_top_level(client)
+    ch_up, ch_fail = upload_chapters(client)
 
     print()
-    print(f"Uploaded this run: {uploaded}")
-    print(f"Skipped (too large): {skipped_size}")
-    print(f"Skipped (too many pages): {skipped_pages}")
-    print(f"Failed: {failed}")
-    print(f"Total in {FILE_IDS_PATH}: {len(file_ids)}")
-    return 0 if failed == 0 else 2
+    print("=== Summary ===")
+    print(f"Top-level uploaded:  {top_up}")
+    print(f"Top-level skipped (too large): {top_size}")
+    print(f"Top-level skipped (too many pages): {top_pages}")
+    print(f"Top-level failed:    {top_fail}")
+    print(f"Chapters uploaded:   {ch_up}")
+    print(f"Chapters failed:     {ch_fail}")
+    return 0 if (top_fail + ch_fail) == 0 else 2
 
 
 if __name__ == "__main__":

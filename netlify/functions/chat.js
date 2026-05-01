@@ -41,6 +41,7 @@ function loadJsonOnce(filename, cacheRef) {
 const _readingsCache = { value: null };
 const _fileIdsCache = { value: null };
 const _readingsTextCache = { value: null };
+const _bookChaptersCache = { value: null };
 const loadReadings = () => loadJsonOnce("readings.json", _readingsCache);
 const loadFileIds = () => {
   try { return loadJsonOnce("file_ids.json", _fileIdsCache); }
@@ -49,6 +50,10 @@ const loadFileIds = () => {
 const loadReadingsText = () => {
   try { return loadJsonOnce("readings_text.json", _readingsTextCache); }
   catch { _readingsTextCache.value = {}; return _readingsTextCache.value; }
+};
+const loadBookChapters = () => {
+  try { return loadJsonOnce("book_chapters.json", _bookChaptersCache); }
+  catch { _bookChaptersCache.value = {}; return _bookChaptersCache.value; }
 };
 
 const SYSTEM_PROMPT = `You are the Library — a Socratic interlocutor in the Issues Study Lab, a workspace for SACE Stage 2 Philosophy students working on their Issues Study assessment (AT3). The student must investigate one philosophical question, present multiple positions on it with their reasoning, raise objections, and defend their own answer.
@@ -89,31 +94,38 @@ Domain: ${entry.domain}${subdomain}
 ${dialectic}${attachedLines}${missingLines}`;
 }
 
-// Build document content blocks (file sources + inline text excerpts) for the question's readings.
-// Caps the total estimated token cost of attached docs so we don't blow Claude's 200K context.
-//   PDF estimate:  ~50 tokens/KB (Anthropic charges PDF pages ~1500-2500 tokens each).
-//   Text estimate: ~0.25 tokens/char (4 chars/token).
-// Primary-tier readings are attached first; anything that would push us over budget
-// goes into `missing` so the AI knows the title but is told not to invent quotes.
-function buildDocumentBlocks(entry, fileIds, readingsText) {
-  // Doc budget. Tuned for Anthropic Tier 2 (100K input tokens/min, excluding
-  // cache reads). First turn: ~80K docs + ~1K system + ~1K context = ~82K,
-  // under the 100K limit. Subsequent turns: docs cache and don't count
-  // toward ITPM at all (Tier 2 limit explicitly excludes cache reads).
-  const TOKEN_BUDGET = 80_000;
-  // Empirical: Anthropic charges PDFs ~1500-2500 tokens per page. For our
-  // academic articles that works out to ~165 tokens/KB of file size — a 56KB
-  // Pojman PDF cost ~9.4K tokens in a real call. Use 0.2 tok/byte (200/KB)
-  // as a slightly conservative estimate so the budget never overshoots.
+// Build document content blocks for the question's readings, with three
+// data sources in priority order:
+//   1. book_chapters.json — book pre-split into chapter PDFs (each uploaded
+//      separately to Files API). Most efficient for long books: students get
+//      multiple chapters of one book without blowing the context window.
+//   2. file_ids.json — single PDFs uploaded as-is to Files API.
+//   3. readings_text.json — text excerpts (fallback for over-cap PDFs that
+//      couldn't be cleanly split into chapters).
+//
+// Token budget logic:
+//   - Total budget: 250K estimated tokens (Tier 2 has 450K ITPM, leaving
+//     ~200K headroom for system + history + output).
+//   - Per-book budget: 80K tokens for chapter-split books (so a single
+//     chapter-rich book can't crowd out other readings).
+//   - Cost estimates (deliberately slightly conservative):
+//       chapter PDFs: pages * 2000 tok/page (pages known from book_chapters)
+//       standalone PDFs: size_bytes * 0.2 tok/byte
+//       text excerpts: chars * 0.25 tok/char
+//   - Primary-tier readings get budget first; anything that doesn't fit
+//     goes into `missing` so the AI knows the title but won't invent quotes.
+function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
+  const TOKEN_BUDGET = 250_000;
+  const PER_BOOK_BUDGET = 80_000;
+  const TOKENS_PER_PAGE = 2000;
   const TOKENS_PER_PDF_BYTE = 0.2;
-  const TOKENS_PER_TEXT_CHAR = 0.25;   // 4 chars/token
+  const TOKENS_PER_TEXT_CHAR = 0.25;
 
   const docs = [];
   const attached = [];
   const missing = [];
   let used = 0;
 
-  // Primary readings first, then secondary.
   const ordered = [...(entry.readings || [])].sort((a, b) => {
     const ta = (a && a.tier) === "primary" ? 0 : 1;
     const tb = (b && b.tier) === "primary" ? 0 : 1;
@@ -123,7 +135,53 @@ function buildDocumentBlocks(entry, fileIds, readingsText) {
   for (const r of ordered) {
     const name = r.filename || "";
     if (!name) continue;
+    const titleBase = name.replace(/\.pdf$/i, "");
 
+    // 1. Chapter-split book?
+    const chapters = Array.isArray(bookChapters[name]) ? bookChapters[name] : null;
+    if (chapters && chapters.some(c => c && c.file_id)) {
+      let bookUsed = 0;
+      let attachedAny = false;
+      for (const ch of chapters) {
+        if (!ch || !ch.file_id) continue;
+        const cost = (ch.pages || 0) * TOKENS_PER_PAGE;
+        if (bookUsed + cost > PER_BOOK_BUDGET) break;
+        if (used + cost > TOKEN_BUDGET) break;
+        docs.push({
+          type: "document",
+          source: { type: "file", file_id: ch.file_id },
+          title: `${titleBase} — ${ch.title}`,
+          context: r.why || undefined,
+        });
+        bookUsed += cost;
+        used += cost;
+        attachedAny = true;
+      }
+      if (attachedAny) {
+        attached.push(name);
+      } else if (readingsText[name] && readingsText[name].text) {
+        // Fall back to text excerpt if no chapters fit
+        const text = readingsText[name].text;
+        const cost = text.length * TOKENS_PER_TEXT_CHAR;
+        if (used + cost <= TOKEN_BUDGET) {
+          docs.push({
+            type: "document",
+            source: { type: "text", media_type: "text/plain", data: text },
+            title: titleBase,
+            context: r.why || undefined,
+          });
+          used += cost;
+          attached.push(name);
+        } else {
+          missing.push(name);
+        }
+      } else {
+        missing.push(name);
+      }
+      continue;
+    }
+
+    // 2. Single Files-API PDF?
     if (fileIds[name]) {
       const cost = (r.size_bytes || 0) * TOKENS_PER_PDF_BYTE;
       if (used + cost > TOKEN_BUDGET) {
@@ -133,12 +191,16 @@ function buildDocumentBlocks(entry, fileIds, readingsText) {
       docs.push({
         type: "document",
         source: { type: "file", file_id: fileIds[name] },
-        title: name.replace(/\.pdf$/i, ""),
+        title: titleBase,
         context: r.why || undefined,
       });
       attached.push(name);
       used += cost;
-    } else if (readingsText[name] && readingsText[name].text) {
+      continue;
+    }
+
+    // 3. Text excerpt?
+    if (readingsText[name] && readingsText[name].text) {
       const text = readingsText[name].text;
       const cost = text.length * TOKENS_PER_TEXT_CHAR;
       if (used + cost > TOKEN_BUDGET) {
@@ -148,17 +210,17 @@ function buildDocumentBlocks(entry, fileIds, readingsText) {
       docs.push({
         type: "document",
         source: { type: "text", media_type: "text/plain", data: text },
-        title: name.replace(/\.pdf$/i, ""),
+        title: titleBase,
         context: r.why || undefined,
       });
       attached.push(name);
       used += cost;
-    } else {
-      missing.push(name);
+      continue;
     }
+
+    missing.push(name);
   }
 
-  // Cache breakpoint on the last doc so the whole reading set caches as one prefix.
   if (docs.length > 0) {
     docs[docs.length - 1].cache_control = { type: "ephemeral" };
   }
@@ -226,11 +288,12 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: "question_id and non-empty message required" }) };
   }
 
-  let entry, fileIds, readingsText;
+  let entry, fileIds, readingsText, bookChapters;
   try {
     entry = loadReadings()[question_id];
     fileIds = loadFileIds();
     readingsText = loadReadingsText();
+    bookChapters = loadBookChapters();
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -238,7 +301,7 @@ exports.handler = async (event) => {
     return { statusCode: 404, body: JSON.stringify({ error: `Unknown question ${question_id}` }) };
   }
 
-  const { docs, attached, missing } = buildDocumentBlocks(entry, fileIds, readingsText);
+  const { docs, attached, missing } = buildDocumentBlocks(entry, fileIds, readingsText, bookChapters);
   const usingFiles = docs.some(d => d.source && d.source.type === "file");
 
   const system = [
