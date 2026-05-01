@@ -226,10 +226,16 @@ function navigate(page, push = true) {
   }
   els.navLinks.forEach(a => {
     a.classList.toggle("active", a.dataset.page === page);
-    a.classList.toggle("locked", NEEDS_QUESTION.has(a.dataset.page) && !state.questionId);
+    const locked = NEEDS_QUESTION.has(a.dataset.page) && !state.questionId;
+    a.classList.toggle("locked", locked);
+    if (locked) a.setAttribute("title", "Pick a question first to unlock this step");
+    else a.removeAttribute("title");
   });
 
-  if (push && location.hash !== "#" + page) {
+  // Always reconcile the URL with the page actually shown — covers the
+  // lock-redirect case where the user clicked a locked link, the hashchange
+  // fired with push=false, but we redirected to "bank".
+  if (location.hash !== "#" + page) {
     history.replaceState(null, "", "#" + page);
   }
   window.scrollTo(0, 0);
@@ -259,7 +265,10 @@ function refreshControls() {
   if (els.chamberCopy) els.chamberCopy.disabled = !hasQ;
 
   els.navLinks.forEach(a => {
-    a.classList.toggle("locked", NEEDS_QUESTION.has(a.dataset.page) && !state.questionId);
+    const locked = NEEDS_QUESTION.has(a.dataset.page) && !state.questionId;
+    a.classList.toggle("locked", locked);
+    if (locked) a.setAttribute("title", "Pick a question first to unlock this step");
+    else a.removeAttribute("title");
   });
 }
 
