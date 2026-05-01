@@ -115,8 +115,8 @@ ${dialectic}${attachedLines}${missingLines}`;
 //   - Primary-tier readings get budget first; anything that doesn't fit
 //     goes into `missing` so the AI knows the title but won't invent quotes.
 function buildDocumentBlocks(entry, fileIds, readingsText, bookChapters) {
-  const TOKEN_BUDGET = 250_000;
-  const PER_BOOK_BUDGET = 80_000;
+  const TOKEN_BUDGET = 160_000;
+  const PER_BOOK_BUDGET = 70_000;
   const TOKENS_PER_PAGE = 2000;
   const TOKENS_PER_PDF_BYTE = 0.2;
   const TOKENS_PER_TEXT_CHAR = 0.25;
