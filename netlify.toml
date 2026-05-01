@@ -20,14 +20,8 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-# /readings/* -> Google Cloud Storage bucket. The bucket holds the
-# 137 reading PDFs. Re-enable allUsers:objectViewer on the bucket
-# if students get 403s, or migrate to another host and update this URL.
-[[redirects]]
-  from = "/readings/*"
-  to = "https://storage.googleapis.com/issues-study-lab-readings/:splat"
-  status = 200
-  force = true
+# Reading PDFs (the readings/ folder at the repo root) are served
+# directly by Netlify's CDN as static assets. No redirect needed.
 
 [[headers]]
   for = "/readings/*"

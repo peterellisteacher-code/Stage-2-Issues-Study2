@@ -10,15 +10,17 @@ rubric and the closest SACE-supplied exemplar.
 
 - **Static frontend** — `index.html`, `script.js`, `styles.css`. Wizard SPA.
 - **Static data** — `data/questions.json`, `data/readings.json`, `data/rubric.json`. Loaded directly by the browser.
+- **Reading PDFs** — `readings/*.pdf` at the repo root, served directly by Netlify's CDN.
 - **Two Netlify Functions** — `netlify/functions/chat.js` and `netlify/functions/feedback.js`. Both call the Anthropic API (Claude Haiku 4.5) with prompt caching.
-- **Reading PDFs** — proxied from the Google Cloud Storage bucket via `/readings/*` (configured in `netlify.toml`).
 
 ```
 browser ──► /data/*.json                           (static)
-        └─► /api/chat        ──► Netlify Function ──► Anthropic (Haiku 4.5)
-        └─► /api/feedback    ──► Netlify Function ──► Anthropic (Haiku 4.5)
-        └─► /readings/*.pdf  ──► GCS bucket
+        ──► /readings/*.pdf                        (static)
+        ──► /api/chat        ──► Netlify Function ──► Anthropic (Haiku 4.5)
+        ──► /api/feedback    ──► Netlify Function ──► Anthropic (Haiku 4.5)
 ```
+
+Fully self-hosted. No third-party dependencies beyond Netlify (hosting + functions) and Anthropic (the model).
 
 ## Pages
 
@@ -72,7 +74,9 @@ Total: well under $5 per cohort. Pricing as of Sept 2025 (Haiku 4.5: $1/Mtok inp
 
 ## Reading PDFs
 
-The 137 reading PDFs sit in the GCS bucket `gs://issues-study-lab-readings`. The Netlify `/readings/*` redirect proxies to it. If students get 403s, re-enable `allUsers:objectViewer` on the bucket — or migrate the PDFs elsewhere (e.g. into the repo, Internet Archive, a Drive folder) and update the redirect target in `netlify.toml`.
+The 137 reading PDFs live in `readings/` at the repo root, served directly by Netlify's CDN. The links in `data/readings.json` use plain `/readings/<filename>.pdf` URLs.
+
+To add or replace a reading: drop the PDF into `readings/`, update the corresponding entry in `pack_metadata.json` if it's new, regenerate `data/readings.json` (`python build_static_data.py`), commit, push.
 
 ## Files
 
