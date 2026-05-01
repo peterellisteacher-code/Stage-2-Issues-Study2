@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Issues Study Lab — SACE Stage 2 Philosophy</title>
-  <link rel="stylesheet" href="/styles.css?v=2026-05-01-static" />
+  <link rel="stylesheet" href="/styles.css?v=2026-05-01-haiku" />
 </head>
 <body>
 
@@ -66,11 +66,11 @@
         </div>
         <div class="callout">
           <h3>4. The chamber</h3>
-          <p>Build a Socratic starter prompt — the question, dialectic and reading list — and take it into the AI tool of your choice.</p>
+          <p>A Socratic interlocutor that pushes back on your thinking, steel-mans weak views, and refuses to write your essay for you.</p>
         </div>
         <div class="callout">
           <h3>5. The drafting</h3>
-          <p>A focused write space, a feedback prompt that pairs your draft with the SACE rubric and exemplar, and a Save as PDF button.</p>
+          <p>A focused write space with autosave, criterion-referenced feedback against the SACE rubric, and a Save as PDF button.</p>
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@
     <ul class="readings-list" id="readings-secondary"></ul>
 
     <div class="page-footer" id="readings-footer">
-      <a class="primary-btn" href="#chamber">Take the chamber to your AI tool <span class="arrow">→</span></a>
+      <a class="primary-btn" href="#chamber">Continue to the chamber <span class="arrow">→</span></a>
     </div>
   </section>
 
@@ -200,49 +200,65 @@
       </div>
       <p class="chamber-note">
         The chamber is a Socratic interlocutor — it pushes back, steel-mans
-        weak views, and refuses to write your essay for you. This lab no
-        longer hosts the chat itself; instead it builds a starter prompt
-        that turns any AI tool into the chamber. Copy it, open the tool of
-        your choice, paste, and (for the deepest engagement) upload the
-        reading PDFs from <a href="#readings">Step 3</a>.
+        weak views, and refuses to write your essay for you. Bring partial
+        thoughts, not finished answers. Ask it to push hardest on the
+        position you're leaning toward, then write your own response in
+        <a href="#drafting">Step 5</a>.
       </p>
     </div>
 
-    <div class="handoff" id="chamber-handoff">
-      <div class="handoff-actions">
-        <button id="chamber-copy" type="button" class="primary-btn" disabled>
-          Copy prompt
-        </button>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-claude"
-           href="https://claude.ai/new" target="_blank" rel="noopener">
-          Open in Claude.ai
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-chatgpt"
-           href="https://chat.openai.com/" target="_blank" rel="noopener">
-          Open in ChatGPT
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="chamber-open-gemini"
-           href="https://gemini.google.com/app" target="_blank" rel="noopener">
-          Open in Gemini
-        </a>
-      </div>
-      <label class="handoff-label" for="chamber-prompt">
-        <span>Starter prompt</span>
-        <span class="handoff-meta" id="chamber-prompt-meta"></span>
-      </label>
-      <textarea id="chamber-prompt" class="handoff-textarea" rows="14"
-                spellcheck="false" readonly
-                placeholder="Pick a question first to generate the chamber prompt."></textarea>
-      <details class="suggestions">
-        <summary>How to get the most out of the chamber</summary>
-        <ul>
-          <li>Paste the prompt as your first message — it sets the AI up as a Socratic partner.</li>
-          <li>Upload the primary readings as PDF attachments. Most AI tools will read them directly.</li>
-          <li>Bring partial thoughts, not finished answers. Ask: "Steel-man the view I find weakest." Or: "Where's the most damaging objection to the position I'm leaning toward?"</li>
-          <li>Resist asking it to write paragraphs for you. Ask it to <em>push</em>, then write your own.</li>
-        </ul>
-      </details>
+    <div class="chat-window" id="chat-window" aria-live="polite">
+      <p class="chat-empty" id="chat-empty">
+        Say what you're thinking. Try: <em>"Steel-man the position I find
+        weakest"</em> or <em>"Where's the most damaging objection to the
+        view I'm leaning toward?"</em>
+      </p>
     </div>
+
+    <form class="chat-form" id="chat-form" autocomplete="off">
+      <textarea id="chat-input" rows="3"
+                placeholder="Pick a question first."
+                disabled></textarea>
+      <button id="chat-send" type="submit" class="primary-btn" disabled>
+        Send
+      </button>
+    </form>
+    <div class="chat-meta" id="chat-meta"></div>
+
+    <details class="handoff-fallback">
+      <summary>Or take it to your own AI tool (Claude, ChatGPT, Gemini)</summary>
+      <div class="handoff" id="chamber-handoff">
+        <div class="handoff-actions">
+          <button id="chamber-copy" type="button" class="primary-btn" disabled>
+            Copy prompt
+          </button>
+          <a class="ghost-btn ai-tool-btn" id="chamber-open-claude"
+             href="https://claude.ai/new" target="_blank" rel="noopener">
+            Open in Claude.ai
+          </a>
+          <a class="ghost-btn ai-tool-btn" id="chamber-open-chatgpt"
+             href="https://chat.openai.com/" target="_blank" rel="noopener">
+            Open in ChatGPT
+          </a>
+          <a class="ghost-btn ai-tool-btn" id="chamber-open-gemini"
+             href="https://gemini.google.com/app" target="_blank" rel="noopener">
+            Open in Gemini
+          </a>
+        </div>
+        <label class="handoff-label" for="chamber-prompt">
+          <span>Starter prompt</span>
+          <span class="handoff-meta" id="chamber-prompt-meta"></span>
+        </label>
+        <textarea id="chamber-prompt" class="handoff-textarea" rows="14"
+                  spellcheck="false" readonly
+                  placeholder="Pick a question first to generate the chamber prompt."></textarea>
+        <p class="handoff-hint">
+          Paste it as your first message in your AI tool, and (for the
+          deepest engagement) upload the reading PDFs from
+          <a href="#readings">Step 3</a> as attachments.
+        </p>
+      </div>
+    </details>
 
     <div class="page-footer">
       <a class="primary-btn" href="#drafting">Now write your response <span class="arrow">→</span></a>
@@ -274,45 +290,51 @@
     </div>
 
     <div class="action-bar">
-      <button id="feedback-build-btn" type="button" class="primary-btn" disabled>
-        Build feedback prompt
+      <button id="feedback-btn" type="button" class="primary-btn" disabled>
+        Get feedback
       </button>
       <button id="export-pdf-btn" type="button" class="ghost-btn" disabled
-              title="Opens your browser's print dialog. Choose 'Save as PDF' to keep a copy of your name, the question, your draft and the feedback prompt.">
+              title="Opens your browser's print dialog. Choose 'Save as PDF' to keep a copy of your name, the question, your draft and the feedback.">
         Save as PDF
       </button>
     </div>
 
-    <div class="handoff" id="feedback-handoff" hidden>
-      <div class="handoff-actions">
-        <button id="feedback-copy" type="button" class="primary-btn">
-          Copy feedback prompt
-        </button>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-claude"
-           href="https://claude.ai/new" target="_blank" rel="noopener">
-          Open in Claude.ai
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-chatgpt"
-           href="https://chat.openai.com/" target="_blank" rel="noopener">
-          Open in ChatGPT
-        </a>
-        <a class="ghost-btn ai-tool-btn" id="feedback-open-gemini"
-           href="https://gemini.google.com/app" target="_blank" rel="noopener">
-          Open in Gemini
-        </a>
+    <div id="feedback-output" class="feedback-output"></div>
+
+    <details class="handoff-fallback">
+      <summary>Or build a feedback prompt for your own AI tool</summary>
+      <div class="handoff" id="feedback-handoff">
+        <div class="handoff-actions">
+          <button id="feedback-copy" type="button" class="primary-btn" disabled>
+            Copy feedback prompt
+          </button>
+          <a class="ghost-btn ai-tool-btn" id="feedback-open-claude"
+             href="https://claude.ai/new" target="_blank" rel="noopener">
+            Open in Claude.ai
+          </a>
+          <a class="ghost-btn ai-tool-btn" id="feedback-open-chatgpt"
+             href="https://chat.openai.com/" target="_blank" rel="noopener">
+            Open in ChatGPT
+          </a>
+          <a class="ghost-btn ai-tool-btn" id="feedback-open-gemini"
+             href="https://gemini.google.com/app" target="_blank" rel="noopener">
+            Open in Gemini
+          </a>
+        </div>
+        <label class="handoff-label" for="feedback-prompt">
+          <span>Feedback prompt</span>
+          <span class="handoff-meta" id="feedback-prompt-meta"></span>
+        </label>
+        <textarea id="feedback-prompt" class="handoff-textarea" rows="16"
+                  spellcheck="false" readonly
+                  placeholder="Write at least 200 characters in your draft to enable this."></textarea>
+        <p class="handoff-hint">
+          The prompt embeds your draft, the SACE rubric, and the closest grade-banded
+          exemplar. Paste it as your first message — the AI will return structured,
+          criterion-referenced feedback (KU1-2, RA1-3, CA1, C1-2) and a predicted band.
+        </p>
       </div>
-      <label class="handoff-label" for="feedback-prompt">
-        <span>Feedback prompt</span>
-        <span class="handoff-meta" id="feedback-prompt-meta"></span>
-      </label>
-      <textarea id="feedback-prompt" class="handoff-textarea" rows="16"
-                spellcheck="false" readonly></textarea>
-      <p class="handoff-hint">
-        The prompt embeds your draft, the SACE rubric, and the closest grade-banded
-        exemplar. Paste it as your first message — the AI will return structured,
-        criterion-referenced feedback (KU1-2, RA1-3, CA1, C1-2) and a predicted band.
-      </p>
-    </div>
+    </details>
   </section>
 
 </main>
@@ -326,6 +348,6 @@
 <!-- Hidden until window.print() is called; populated on demand by script.js. -->
 <aside id="print-view" class="print-only" aria-hidden="true"></aside>
 
-<script src="/script.js?v=2026-05-01-static"></script>
+<script src="/script.js?v=2026-05-01-haiku"></script>
 </body>
 </html>
