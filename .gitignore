@@ -20,3 +20,7 @@ node_modules/
 
 # Derivative chapter PDFs (regenerate with `python tools/split_long_readings.py`)
 readings/_chapters/
+
+# Sub-agent scratch artifacts
+tools/_*
+tools/budget_audit.py
