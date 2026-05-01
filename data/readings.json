@@ -31,7 +31,7 @@
         "folder": "Death Penalty",
         "why": "Uses contractarianism to argue against the death penalty. A more complex, academic take.",
         "tier": "primary",
-        "download_url": "/readings/Claire Finkelstein - A Contractarian Argument Against the Death Penalty.pdf",
+        "download_url": "/text_packs/Claire Finkelstein - A Contractarian Argument Against the Death Penalty.txt",
         "size_bytes": 3241746,
         "text_extracted": true
       },
@@ -69,7 +69,7 @@
         "folder": "Ethics",
         "why": "Singer's starting point. Argues from a utilitarian view that an animal's capacity to suffer is what grants it moral consideration.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -105,7 +105,7 @@
         "folder": "Moral Psychology",
         "why": "A psychological take. Explains how gut feelings about purity and disgust shape our moral judgments about eating meat.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
+        "download_url": "/text_packs/Haidt - Righteous Mind - Sanctity and Degradation.txt",
         "size_bytes": 11765500,
         "text_extracted": true
       }
@@ -125,7 +125,7 @@
         "folder": "Ethics",
         "why": "Singer's foundational utilitarian text. Argues that an animal's capacity to suffer means its interests must be considered equally.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -181,7 +181,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt shows why we feel disgust. Cannibalism violates our 'sanctity' foundation, feeling wrong even when no one is harmed.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
+        "download_url": "/text_packs/Haidt - Righteous Mind - Sanctity and Degradation.txt",
         "size_bytes": 11765500,
         "text_extracted": true
       },
@@ -190,7 +190,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism forces the question: is it wrong if no one suffers? This is the core challenge with a corpse.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -338,7 +338,7 @@
         "folder": "Ethics",
         "why": "Singer gives you the utilitarian calculus. Weigh the immense research benefits against the embryo's low moral status.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -486,7 +486,7 @@
         "folder": "Ethics",
         "why": "Shows how to apply utilitarianism to euthanasia. It's a model for building a philosophical argument.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       }
@@ -533,7 +533,7 @@
         "folder": "Ethics",
         "why": "Singer applies utilitarianism to bioethics. Use this to weigh the consequences of germline therapy.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -571,7 +571,7 @@
         "folder": "AI",
         "why": "Floridi gives you five principles. Use them as a framework to evaluate AI development.",
         "tier": "primary",
-        "download_url": "/readings/Floridi - The Ethics of Artificial Intelligence.pdf",
+        "download_url": "/text_packs/Floridi - The Ethics of Artificial Intelligence.txt",
         "size_bytes": 5177098,
         "text_extracted": true
       },
@@ -598,7 +598,7 @@
         "folder": "Ethics",
         "why": "Singer's work on moral status gives you the tools to analyze the rights of new beings.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       }
@@ -627,7 +627,7 @@
         "folder": "AI",
         "why": "Floridi gives an ethical framework to govern AI. Use it to argue for cautious development.",
         "tier": "primary",
-        "download_url": "/readings/Floridi - The Ethics of Artificial Intelligence.pdf",
+        "download_url": "/text_packs/Floridi - The Ethics of Artificial Intelligence.txt",
         "size_bytes": 5177098,
         "text_extracted": true
       },
@@ -663,7 +663,7 @@
         "folder": "Textbooks",
         "why": "Explores what human agency we might lose by giving decisions to machines. A classic free will vs. determinism debate.",
         "tier": "secondary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       }
@@ -728,7 +728,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism is a clear method for tackling big social questions. Apply it.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       }
@@ -804,7 +804,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism is the starting point. It forces you to compare the suffering of a chicken to that of an insect.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -831,7 +831,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt explains the 'yuck factor'. He shows why people's disgust with eating insects isn't a rational argument, but a gut feeling.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - Righteous Mind - Sanctity and Degradation.pdf",
+        "download_url": "/text_packs/Haidt - Righteous Mind - Sanctity and Degradation.txt",
         "size_bytes": 11765500,
         "text_extracted": true
       },
@@ -840,7 +840,7 @@
         "folder": "Ishmael Chapters",
         "why": "Argues our entire food system violates natural law. This ecological view supports shifting to sustainable proteins like insects.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter 8 - The Law of Limited Competition.pdf",
+        "download_url": "/text_packs/Chapter 8 - The Law of Limited Competition.txt",
         "size_bytes": 8676769,
         "text_extracted": true
       }
@@ -925,7 +925,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism forces you to calculate the greatest good. Whose happiness matters more--the parent's or the child's?",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -934,7 +934,7 @@
         "folder": "Moral Psychology",
         "why": "Gilligan's ethics of care shifts focus from abstract rights to the actual parent-child relationship and its duties.",
         "tier": "primary",
-        "download_url": "/readings/1982 - In a Different Voice - Carol Gilligan.pdf",
+        "download_url": "/text_packs/1982 - In a Different Voice - Carol Gilligan.txt",
         "size_bytes": 11641801,
         "text_extracted": true
       },
@@ -1037,7 +1037,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism justifies population control if it reduces suffering. The greatest good for the greatest number is what matters.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -1102,7 +1102,7 @@
         "folder": "Ethics",
         "why": "Singer applies utilitarianism to the issue. It's a framework for weighing the potential happiness and suffering of a new life.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -1149,7 +1149,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism is the classic argument for extending moral concern to future generations. You have to read it.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -1187,7 +1187,7 @@
         "folder": "Ethics",
         "why": "Singer applies utilitarianism to the environment. It's the starting point for the moral status of non-human entities.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -1205,7 +1205,7 @@
         "folder": "Ishmael Chapters",
         "why": "Argues humanity violates a natural law of ecological stability that all other species follow. A different way to frame the problem.",
         "tier": "primary",
-        "download_url": "/readings/Chapter 8 - The Law of Limited Competition.pdf",
+        "download_url": "/text_packs/Chapter 8 - The Law of Limited Competition.txt",
         "size_bytes": 8676769,
         "text_extracted": true
       },
@@ -1252,7 +1252,7 @@
         "folder": "Ethics",
         "why": "Contains the key primary texts on divine command theory and its alternatives. Read the sources directly.",
         "tier": "primary",
-        "download_url": "/readings/Ethical Theory - An Anthology.pdf",
+        "download_url": "/text_packs/Ethical Theory - An Anthology.txt",
         "size_bytes": 6623070,
         "text_extracted": true
       },
@@ -1279,7 +1279,7 @@
         "folder": "VCE",
         "why": "Puts religious ethics next to secular theories like consequentialism, letting you compare them.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Right and Wrong.txt",
         "size_bytes": 18249566,
         "text_extracted": true
       }
@@ -1326,7 +1326,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche attacks religious morality as a 'slave' system. He forces us to imagine what morality looks like after 'God is dead'.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       },
@@ -1382,7 +1382,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche blows up the question. 'Good' isn't inherent; it's a weapon forged in power struggles.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       },
@@ -1409,7 +1409,7 @@
         "folder": "Ethics",
         "why": "Contains texts on psychological egoism--the view that humans are always self-interested. The classic counterargument.",
         "tier": "secondary",
-        "download_url": "/readings/Ethical Theory - An Anthology.pdf",
+        "download_url": "/text_packs/Ethical Theory - An Anthology.txt",
         "size_bytes": 6623070,
         "text_extracted": true
       }
@@ -1474,7 +1474,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Forget 'one among many'. Nietzsche argues morality is just a tool--an instrument of power used by the weak.",
         "tier": "secondary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       }
@@ -1568,7 +1568,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche calls religious morality 'slave morality'. He says we must replace its life-denying rules with a new, life-affirming ethics.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       },
@@ -1586,7 +1586,7 @@
         "folder": "VCE",
         "why": "Introduces secular ethics like consequentialism and deontology. Directly questions religious authority as a moral source.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Right and Wrong.txt",
         "size_bytes": 18249566,
         "text_extracted": true
       },
@@ -1651,7 +1651,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt argues that emotion, not reason, is central to our moral lives. This challenges the entire rationalist project in schools.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
+        "download_url": "/text_packs/Haidt - 2003 - The Moral Emotions.txt",
         "size_bytes": 5175285,
         "text_extracted": true
       },
@@ -1669,7 +1669,7 @@
         "folder": "Ethics",
         "why": "Singer shows how to apply a framework (utilitarianism) to real issues. This models the critical thinking we're meant to be teaching.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       }
@@ -1707,7 +1707,7 @@
         "folder": "Bioethics",
         "why": "Defines individual autonomy. It also asks when, and why, we should be allowed to limit it.",
         "tier": "primary",
-        "download_url": "/readings/Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.pdf",
+        "download_url": "/text_packs/Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.txt",
         "size_bytes": 3725360,
         "text_extracted": true
       },
@@ -1725,7 +1725,7 @@
         "folder": "Ethics",
         "why": "Singer applies utilitarianism to real problems, showing how the collective good can outweigh individual interests.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -1763,7 +1763,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky argues all actions are determined by prior causes. Free will--and with it, moral responsibility--is an illusion.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -1819,7 +1819,7 @@
         "folder": "VCE",
         "why": "Introduces the core conflict: free will vs determinism. This is your starting point for moral responsibility.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -1837,7 +1837,7 @@
         "folder": "Textbooks",
         "why": "Outlines the key positions--determinism, compatibilism, libertarianism--and introduces thinkers like Strawson and Pereboom.",
         "tier": "primary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       },
@@ -1846,7 +1846,7 @@
         "folder": "Free will and Determinism",
         "why": "Connects philosophy to modern neuroscience. It directly asks how unconscious factors limit free will.",
         "tier": "primary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -1875,7 +1875,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky argues for hard determinism. This kills traditional criminal responsibility.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -1884,7 +1884,7 @@
         "folder": "(root)",
         "why": "Kane defends libertarian free will. He claims indeterminism is necessary for genuine responsibility.",
         "tier": "primary",
-        "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "download_url": "/text_packs/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.txt",
         "size_bytes": 2822412,
         "text_extracted": true
       },
@@ -1893,7 +1893,7 @@
         "folder": "VCE",
         "why": "Introduces compatibilism and the Principle of Alternate Possibilities--core ideas for moral responsibility.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -1902,7 +1902,7 @@
         "folder": "Textbooks",
         "why": "This is your overview of the main positions. It covers the entire contemporary debate.",
         "tier": "primary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       },
@@ -1920,7 +1920,7 @@
         "folder": "Free will and Determinism",
         "why": "Examines the neuroscientific case for determinism. Asks if the evidence really kills free will.",
         "tier": "secondary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -2162,7 +2162,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum questions if revolutionary violence even works. She argues for patient, gradual reform instead of bloodshed.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - Perception and Revolution.pdf",
+        "download_url": "/text_packs/Nussbaum - Perception and Revolution.txt",
         "size_bytes": 3339767,
         "text_extracted": true
       },
@@ -2265,7 +2265,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism argues that the immense suffering from climate change justifies radical action. It's a simple calculation.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -2283,7 +2283,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum contrasts revolution with gradual change. Is disruptive disobedience a virtue, or just impatience?",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - Perception and Revolution.pdf",
+        "download_url": "/text_packs/Nussbaum - Perception and Revolution.txt",
         "size_bytes": 3339767,
         "text_extracted": true
       }
@@ -2321,7 +2321,7 @@
         "folder": "Illustrated",
         "why": "Mill argues free speech is non-negotiable for social progress. A direct challenge to state control.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -2339,7 +2339,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum shows how states manipulate emotion to maintain stability, a subtle form of control beyond force.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -2422,7 +2422,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism argues wealthy nations must prevent suffering everywhere--including in foreign wars.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -2451,7 +2451,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism gives us the core argument: wealthy nations have a strong moral obligation to give aid. Start here.",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -2460,7 +2460,7 @@
         "folder": "VCE",
         "why": "Contrasts Nozick's entitlement theory with Rawls's justice. Use these to frame the global property rights debate.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Justice.pdf",
+        "download_url": "/text_packs/Chapter VCE - Justice.txt",
         "size_bytes": 15802283,
         "text_extracted": true
       },
@@ -2498,7 +2498,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky argues for hard determinism. He grounds the entire position in modern neuroscience and biology.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -2507,7 +2507,7 @@
         "folder": "(root)",
         "why": "Defends libertarianism. Kane directly confronts the objection that undetermined actions are just luck.",
         "tier": "primary",
-        "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "download_url": "/text_packs/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.txt",
         "size_bytes": 2822412,
         "text_extracted": true
       },
@@ -2516,7 +2516,7 @@
         "folder": "VCE",
         "why": "Introduces libertarianism and compatibilism using foundational thinkers like Hobbes and Frankfurt. A clear starting point.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -2525,7 +2525,7 @@
         "folder": "Textbooks",
         "why": "Outlines the main positions--determinism, compatibilism, and incompatibilism--and introduces key contemporary names.",
         "tier": "primary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       },
@@ -2534,7 +2534,7 @@
         "folder": "Free will and Determinism",
         "why": "Explores how modern psychology limits free will more than we assume. Read this to challenge your intuitions.",
         "tier": "secondary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -2572,7 +2572,7 @@
         "folder": "Sartre",
         "why": "Sartre's existentialism. We are radically free, condemned to define ourselves through choice alone.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -2581,7 +2581,7 @@
         "folder": "Free will and Determinism",
         "why": "Argues for hard determinism from science. Free will is an illusion.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -2590,7 +2590,7 @@
         "folder": "(root)",
         "why": "Defends libertarian free will. Directly confronts the 'luck objection' for incompatibilists.",
         "tier": "primary",
-        "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "download_url": "/text_packs/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.txt",
         "size_bytes": 2822412,
         "text_extracted": true
       },
@@ -2599,7 +2599,7 @@
         "folder": "VCE",
         "why": "Explains Frankfurt's compatibilism. His challenge to the Principle of Alternate Possibilities is key.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -2608,7 +2608,7 @@
         "folder": "Textbooks",
         "why": "A solid overview of the whole debate. Defines compatibilism, incompatibilism, and libertarianism.",
         "tier": "secondary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       },
@@ -2617,7 +2617,7 @@
         "folder": "Free will and Determinism",
         "why": "Links the philosophy to neuroscience. Questions how much conscious control we really have.",
         "tier": "secondary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -2655,7 +2655,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky gives the modern, scientific argument for hard determinism. All your actions have prior causes; free will is an illusion.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -2664,7 +2664,7 @@
         "folder": "Sartre",
         "why": "Sartre's existentialist counter-argument: you possess radical freedom. You are wholly responsible for defining your own existence.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -2673,7 +2673,7 @@
         "folder": "(root)",
         "why": "Argues for libertarian free will. He tackles the objection that undetermined actions are just random luck.",
         "tier": "primary",
-        "download_url": "/readings/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf",
+        "download_url": "/text_packs/Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.txt",
         "size_bytes": 2822412,
         "text_extracted": true
       },
@@ -2682,7 +2682,7 @@
         "folder": "VCE",
         "why": "Introduces the core conflict between feeling free and scientific determinism. Outlines key positions like compatibilism and libertarianism.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -2691,7 +2691,7 @@
         "folder": "Textbooks",
         "why": "Explains the basic terms of the debate--compatibilism, incompatibilism--and connects them to modern science.",
         "tier": "secondary",
-        "download_url": "/readings/Textbook - Free Will.pdf",
+        "download_url": "/text_packs/Textbook - Free Will.txt",
         "size_bytes": 12391952,
         "text_extracted": true
       },
@@ -2700,7 +2700,7 @@
         "folder": "Free will and Determinism",
         "why": "Explores the middle ground. Neuroscience suggests your free will is more limited than you think.",
         "tier": "secondary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -2756,7 +2756,7 @@
         "folder": "VCE",
         "why": "Defines the core metaphysical debate. You can't argue about 'being free' if you don't know what it means.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -2774,7 +2774,7 @@
         "folder": "Free will and Determinism",
         "why": "Introduces scientific challenges from neuroscience to your sense of free will. It adds an empirical layer to the debate.",
         "tier": "secondary",
-        "download_url": "/readings/Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Miyazono - Philosophy of Psychology - Free Will and Determinism.txt",
         "size_bytes": 11913854,
         "text_extracted": true
       },
@@ -2830,7 +2830,7 @@
         "folder": "Personal Identity",
         "why": "Metzinger argues the self doesn't exist. It's just a useful, dynamic model created by the brain.",
         "tier": "primary",
-        "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
+        "download_url": "/text_packs/Thomas Metzinger - Being No One.txt",
         "size_bytes": 5819485,
         "text_extracted": true
       },
@@ -2857,7 +2857,7 @@
         "folder": "Sartre",
         "why": "Sartre's existentialist view is a challenge. The self is not a thing; it's radically free and constantly recreated by choice.",
         "tier": "secondary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       }
@@ -2913,7 +2913,7 @@
         "folder": "Personal Identity",
         "why": "Argues from neuroscience that the 'self' isn't a real thing. It's just a useful model created by the brain.",
         "tier": "secondary",
-        "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
+        "download_url": "/text_packs/Thomas Metzinger - Being No One.txt",
         "size_bytes": 5819485,
         "text_extracted": true
       },
@@ -2969,7 +2969,7 @@
         "folder": "Personal Identity",
         "why": "Argues the 'self' is not a real thing. It's just a dynamic model your brain creates to navigate the world.",
         "tier": "secondary",
-        "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
+        "download_url": "/text_packs/Thomas Metzinger - Being No One.txt",
         "size_bytes": 5819485,
         "text_extracted": true
       },
@@ -2978,7 +2978,7 @@
         "folder": "Sartre",
         "why": "Sartre claims identity isn't found, it's made. You are nothing but the sum of your choices--your radical freedom.",
         "tier": "secondary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3034,7 +3034,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky makes the scientific case for determinism. Your genetics and environment--antecedent causes--dictate who you become.",
         "tier": "primary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       },
@@ -3081,7 +3081,7 @@
         "folder": "Personal Identity",
         "why": "Metzinger argues the self is an illusion--a representational construct your brain generates. You are no one.",
         "tier": "primary",
-        "download_url": "/readings/Thomas Metzinger - Being No One.pdf",
+        "download_url": "/text_packs/Thomas Metzinger - Being No One.txt",
         "size_bytes": 5819485,
         "text_extracted": true
       },
@@ -3099,7 +3099,7 @@
         "folder": "Sartre",
         "why": "Sartre claims the self is not a fixed thing. It's a 'nothingness' you must create through choice.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3146,7 +3146,7 @@
         "folder": "Sartre",
         "why": "Sartre introduces radical freedom, self-creation, and 'bad faith'--the absolute starting point for any discussion on authenticity.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3182,7 +3182,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt explains how social media amplifies performative behaviour. It directly addresses the second part of the question.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       },
@@ -3276,7 +3276,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt shows how social media fractures society. It destroys the conditions you need for a stable identity.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       },
@@ -3303,7 +3303,7 @@
         "folder": "Modernism Postmodernism and Metamodernism",
         "why": "Explains postmodern identity fragmentation. This is the background for the 'decentered' self social media creates.",
         "tier": "primary",
-        "download_url": "/readings/Postmodernism a very short introduction - 2002 - Christopher Butler.pdf",
+        "download_url": "/text_packs/Postmodernism a very short introduction - 2002 - Christopher Butler.txt",
         "size_bytes": 2466809,
         "text_extracted": true
       },
@@ -3341,7 +3341,7 @@
         "folder": "Moral Psychology",
         "why": "Presents the modern 'veined marble' case. Innate psychological foundations shape our morality.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - Righteous Mind - Overview of Each Foundation.pdf",
+        "download_url": "/text_packs/Haidt - Righteous Mind - Overview of Each Foundation.txt",
         "size_bytes": 41191040,
         "text_extracted": true
       },
@@ -3359,7 +3359,7 @@
         "folder": "VCE",
         "why": "Introduces the core metaphysical clash. Plato's innate Forms versus the materialists.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Materialism and Idealism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Materialism and Idealism.txt",
         "size_bytes": 17662005,
         "text_extracted": true
       }
@@ -3415,7 +3415,7 @@
         "folder": "Death",
         "why": "Nagel's deprivation account shows why death is bad even if you don't experience it. It robs you of future life.",
         "tier": "secondary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -3424,7 +3424,7 @@
         "folder": "VCE",
         "why": "Explains the core metaphysical split. Materialism vs. Idealism underpins every argument about whether a non-physical soul can even exist.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - Materialism and Idealism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Materialism and Idealism.txt",
         "size_bytes": 17662005,
         "text_extracted": true
       },
@@ -3462,7 +3462,7 @@
         "folder": "Death",
         "why": "Introduces the deprivation argument. You don't fear death itself, you fear losing the good things in life.",
         "tier": "primary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -3518,7 +3518,7 @@
         "folder": "Death",
         "why": "Nagel argues death is bad because it deprives us of life's goods. This is the core 'deprivation' account of death's harm.",
         "tier": "primary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -3592,7 +3592,7 @@
         "folder": "Death",
         "why": "Nagel's deprivation account explains the desire for cryonics. Death is bad because it robs you of life's potential goods.",
         "tier": "primary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -3639,7 +3639,7 @@
         "folder": "VCE",
         "why": "Introduces Heraclitus's idea of constant flux. This is the metaphysical starting point for seeing impermanence as the nature of reality.",
         "tier": "primary",
-        "download_url": "/readings/Chapter Tapper - Reality as a System.pdf",
+        "download_url": "/text_packs/Chapter Tapper - Reality as a System.txt",
         "size_bytes": 4015843,
         "text_extracted": true
       },
@@ -3648,7 +3648,7 @@
         "folder": "Death",
         "why": "Nagel argues death is bad because it deprives us of life's goods. This frames the core problem of finitude.",
         "tier": "primary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -3695,7 +3695,7 @@
         "folder": "Sartre",
         "why": "Sartre argues for radical freedom and self-creation in a meaningless universe. It's the core framework for absurdism.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3713,7 +3713,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche's 'death of God' diagnosis explains the nihilism that makes absurdism a necessary response.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.txt",
         "size_bytes": 15365435,
         "text_extracted": true
       },
@@ -3769,7 +3769,7 @@
         "folder": "Sartre",
         "why": "Sartre argues our consciousness is 'nothingness'. This void is the source of our radical freedom and total responsibility.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3823,7 +3823,7 @@
         "folder": "Death",
         "why": "Frames the 'consuming' side of meaninglessness. Non-existence is bad because it deprives us of the good things in life.",
         "tier": "secondary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       }
@@ -3843,7 +3843,7 @@
         "folder": "Sartre",
         "why": "Sartre's core text. It outlines the radical freedom, responsibility, and bad faith you must understand for this question.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3879,7 +3879,7 @@
         "folder": "VCE",
         "why": "Situates Sartre's specific claims within the broader free will vs. determinism debate. Don't ignore the context.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - Free Will and Determinism.pdf",
+        "download_url": "/text_packs/Chapter VCE - Free Will and Determinism.txt",
         "size_bytes": 12594873,
         "text_extracted": true
       },
@@ -3908,7 +3908,7 @@
         "folder": "Sartre",
         "why": "This is the source text. You can't discuss Sartre's quote without understanding his core concepts of nothingness, freedom, and bad faith.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -3953,7 +3953,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche diagnoses nihilism as modernity's core problem. Compare his argument directly to Sartre's 'nothingness'.",
         "tier": "secondary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.txt",
         "size_bytes": 15365435,
         "text_extracted": true
       },
@@ -3991,7 +3991,7 @@
         "folder": "Kierkegaard",
         "why": "Kierkegaard argues for radical individual responsibility. Living authentically means choosing your own subjective truth.",
         "tier": "primary",
-        "download_url": "/readings/Selections-From-the-Writings-of-Kierkegaard.pdf",
+        "download_url": "/text_packs/Selections-From-the-Writings-of-Kierkegaard.txt",
         "size_bytes": 12434358,
         "text_extracted": true
       },
@@ -4038,7 +4038,7 @@
         "folder": "VCE",
         "why": "Plato argues love is a universal force. It moves us from subjective beauty to the objective Form of Beauty.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4103,7 +4103,7 @@
         "folder": "VCE",
         "why": "Explains Platonic love (eros). Shows how appreciating beauty can lead to understanding the Forms.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4112,7 +4112,7 @@
         "folder": "Sartre",
         "why": "Sartre reads love as a conflict. We want to possess the other's freedom--an impossible project.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -4121,7 +4121,7 @@
         "folder": "Martha Nussbaum",
         "why": "Argues love is a political emotion. A just liberal society needs it for stability.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -4168,7 +4168,7 @@
         "folder": "VCE",
         "why": "Plato's Symposium argues love for a person is a step toward a higher, selfless, universal Form of Beauty.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4204,7 +4204,7 @@
         "folder": "Moral Psychology",
         "why": "Shows that emotions like love are central to our moral lives, challenging purely rational or egoistic explanations.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
+        "download_url": "/text_packs/Haidt - 2003 - The Moral Emotions.txt",
         "size_bytes": 5175285,
         "text_extracted": true
       }
@@ -4224,7 +4224,7 @@
         "folder": "VCE",
         "why": "Plato's Eros links love to fulfilment. It's a ladder from desiring one person to grasping the universal Form of Beauty.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4251,7 +4251,7 @@
         "folder": "Sartre",
         "why": "Sartre presents the counterargument. Love is a conflict to possess another's freedom, leading to bad faith, not fulfilment.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -4289,7 +4289,7 @@
         "folder": "VCE",
         "why": "Plato argues love of beauty--Eros--drives us up the ladder, from physical attraction to the abstract Form of the Good.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4298,7 +4298,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum shows why love and compassion aren't just private feelings. They are political tools needed for a just society.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -4316,7 +4316,7 @@
         "folder": "Moral Psychology",
         "why": "This places love within a suite of 'moral emotions'. Such passions, he argues, often dictate action over pure reason.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2003 - The Moral Emotions.pdf",
+        "download_url": "/text_packs/Haidt - 2003 - The Moral Emotions.txt",
         "size_bytes": 5175285,
         "text_extracted": true
       },
@@ -4345,7 +4345,7 @@
         "folder": "VCE",
         "why": "Plato's ladder of love. Eros climbs from loving a person to understanding the Form of Beauty, giving life a metaphysical purpose.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4354,7 +4354,7 @@
         "folder": "Sartre",
         "why": "Sartre shows how love threatens freedom. The 'Look' of the other turns you into an object, complicating meaning.",
         "tier": "primary",
-        "download_url": "/readings/BeingAndNothingness.pdf",
+        "download_url": "/text_packs/BeingAndNothingness.txt",
         "size_bytes": 35383138,
         "text_extracted": true
       },
@@ -4381,7 +4381,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche reads love as a raw manifestation of the Will to Power. This guts any sentimental or altruistic account.",
         "tier": "secondary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.txt",
         "size_bytes": 15365435,
         "text_extracted": true
       }
@@ -4401,7 +4401,7 @@
         "folder": "VCE",
         "why": "Start here for Plato's ladder. Love begins with physical beauty, then climbs to the abstract Form of Beauty.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4419,7 +4419,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum argues love isn't just private. Art and culture cultivate it for political ends, like love for a nation.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -4428,7 +4428,7 @@
         "folder": "Moral Psychology",
         "why": "Art provides knowledge without argument. Apply this to how aesthetics gives us direct insight into the nature of love.",
         "tier": "secondary",
-        "download_url": "/readings/Freeland - 1997 - Art and Moral Knowledge.pdf",
+        "download_url": "/text_packs/Freeland - 1997 - Art and Moral Knowledge.txt",
         "size_bytes": 2114782,
         "text_extracted": true
       }
@@ -4457,7 +4457,7 @@
         "folder": "Moral Psychology",
         "why": "Gilligan's 'ethic of care' links love to a gendered morality. It directly challenges abstract, male-centric models of ethics.",
         "tier": "primary",
-        "download_url": "/readings/1982 - In a Different Voice - Carol Gilligan.pdf",
+        "download_url": "/text_packs/1982 - In a Different Voice - Carol Gilligan.txt",
         "size_bytes": 11641801,
         "text_extracted": true
       },
@@ -4475,7 +4475,7 @@
         "folder": "VCE",
         "why": "Plato's theory gives a classical, non-gendered ideal of love. It's a necessary counterpoint to modern, socially constructed views.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -4504,7 +4504,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche argues 'evil' isn't an entity. It's a value judgment created by slave morality to weaken the strong.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       },
@@ -4540,7 +4540,7 @@
         "folder": "(root)",
         "why": "Explains the 'Problem of Evil' debate. This frames the entire theological discussion about evil's source.",
         "tier": "secondary",
-        "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
+        "download_url": "/text_packs/VCE Philosopgy 3rd - Y12.txt",
         "size_bytes": 76831074,
         "text_extracted": true
       },
@@ -4605,7 +4605,7 @@
         "folder": "(root)",
         "why": "This is your overview. It defines the terms and introduces the key thinkers in the debate.",
         "tier": "secondary",
-        "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
+        "download_url": "/text_packs/VCE Philosopgy 3rd - Y12.txt",
         "size_bytes": 76831074,
         "text_extracted": true
       }
@@ -4625,7 +4625,7 @@
         "folder": "VCE",
         "why": "Defines the core concepts. You can't answer the question without knowing what belief, truth, and justification are.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - On Knowledge.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Knowledge.txt",
         "size_bytes": 7899102,
         "text_extracted": true
       },
@@ -4634,7 +4634,7 @@
         "folder": "Epistemology",
         "why": "Directly confronts skepticism. Explores foundationalism and coherentism as possible ways to justify our knowledge claims.",
         "tier": "primary",
-        "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "download_url": "/text_packs/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.txt",
         "size_bytes": 2438693,
         "text_extracted": true
       },
@@ -4643,7 +4643,7 @@
         "folder": "General",
         "why": "Russell questions if we can be certain about the external world. This is a classic challenge to making any knowledge claim.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -4735,7 +4735,7 @@
         "folder": "Epistemology",
         "why": "Explains why philosophers value truth and objectivity--the core argument against blissful ignorance.",
         "tier": "secondary",
-        "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "download_url": "/text_packs/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.txt",
         "size_bytes": 2438693,
         "text_extracted": true
       }
@@ -4755,7 +4755,7 @@
         "folder": "Death",
         "why": "Nagel's deprivation account. Death is bad because it deprives you of life's goods. Knowing the date makes this deprivation concrete.",
         "tier": "primary",
-        "download_url": "/readings/Nagel - Death.pdf",
+        "download_url": "/text_packs/Nagel - Death.txt",
         "size_bytes": 2192056,
         "text_extracted": true
       },
@@ -4838,7 +4838,7 @@
         "folder": "General",
         "why": "Russell explores the core problem--the distinction between appearance and reality--that underpins Descartes' entire project.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -4885,7 +4885,7 @@
         "folder": "General",
         "why": "Russell introduces the core problem--how to tell appearance from reality. This is the foundation of the dreaming argument.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -4894,7 +4894,7 @@
         "folder": "Epistemology",
         "why": "Gives you the jargon. Skepticism, justification, knowledge--you need these terms to answer the question properly.",
         "tier": "primary",
-        "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "download_url": "/text_packs/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.txt",
         "size_bytes": 2438693,
         "text_extracted": true
       },
@@ -4950,7 +4950,7 @@
         "folder": "General",
         "why": "Russell draws the line between appearance and reality. Use this framework to define a 'genuine' experience.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -5015,7 +5015,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt argues innate psychological foundations are the primary drivers of our moral actions. It's a contemporary take on innate knowledge.",
         "tier": "primary",
-        "download_url": "/readings/Haidt - Righteous Mind - Overview of Each Foundation.pdf",
+        "download_url": "/text_packs/Haidt - Righteous Mind - Overview of Each Foundation.txt",
         "size_bytes": 41191040,
         "text_extracted": true
       },
@@ -5051,7 +5051,7 @@
         "folder": "Free will and Determinism",
         "why": "Sapolsky's modern scientific view. Actions are determined by prior causes, including our innate biology and genetics.",
         "tier": "secondary",
-        "download_url": "/readings/Sapolsky - Determined; Life Without Free Will (introduction to book).pdf",
+        "download_url": "/text_packs/Sapolsky - Determined; Life Without Free Will (introduction to book).txt",
         "size_bytes": 6753806,
         "text_extracted": true
       }
@@ -5089,7 +5089,7 @@
         "folder": "General",
         "why": "Russell's distinction between appearance and reality is the classical starting point. Deepfakes just amplify this old problem.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -5098,7 +5098,7 @@
         "folder": "Epistemology",
         "why": "Covers the core concepts--justification, skepticism, fallibilism. You need these tools to assess deepfakes' impact on knowledge.",
         "tier": "primary",
-        "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "download_url": "/text_packs/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.txt",
         "size_bytes": 2438693,
         "text_extracted": true
       },
@@ -5154,7 +5154,7 @@
         "folder": "General",
         "why": "Distinguishes knowledge from experience (acquaintance) and knowledge from reason (description). A core distinction you have to get.",
         "tier": "primary",
-        "download_url": "/readings/Bertrand Russell - 1912 - The Problems of Philosophy.pdf",
+        "download_url": "/text_packs/Bertrand Russell - 1912 - The Problems of Philosophy.txt",
         "size_bytes": 8157935,
         "text_extracted": true
       },
@@ -5172,7 +5172,7 @@
         "folder": "VCE",
         "why": "This is your starting point. It lays out the basic difference between knowledge, belief, and justification. Don't skip it.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - On Knowledge.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Knowledge.txt",
         "size_bytes": 7899102,
         "text_extracted": true
       },
@@ -5181,7 +5181,7 @@
         "folder": "Epistemology",
         "why": "Explains how beliefs are justified. Are they built on experience (foundationalism) or just on each other (coherentism)?",
         "tier": "secondary",
-        "download_url": "/readings/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf",
+        "download_url": "/text_packs/2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.txt",
         "size_bytes": 2438693,
         "text_extracted": true
       },
@@ -5255,7 +5255,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche attacks democracy. He argues for an aristocracy based on the 'will to power'.",
         "tier": "secondary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XII.txt",
         "size_bytes": 20543840,
         "text_extracted": true
       },
@@ -5264,7 +5264,7 @@
         "folder": "Martha Nussbaum",
         "why": "Argues liberal democracies need emotions like compassion to be stable and just. A modern angle.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -5273,7 +5273,7 @@
         "folder": "Moral Psychology",
         "why": "Shows how social media is breaking democratic institutions. A contemporary problem.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       },
@@ -5329,7 +5329,7 @@
         "folder": "Illustrated",
         "why": "Mill defends free speech but warns against the 'tyranny of the majority'. Democracy's weakness is the mob.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -5338,7 +5338,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum argues liberal democracy needs emotions like compassion to work. Without them, it fails.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -5347,7 +5347,7 @@
         "folder": "VCE",
         "why": "Connects government to purpose. It explores the philosophical basis of human rights and the state's job to protect them.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - Human Rights.pdf",
+        "download_url": "/text_packs/Chapter VCE - Human Rights.txt",
         "size_bytes": 2748882,
         "text_extracted": true
       }
@@ -5403,7 +5403,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum shows what a stable, Millian democracy needs. This adds nuance to your utilitarian analysis.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       }
@@ -5450,7 +5450,7 @@
         "folder": "Moral Psychology",
         "why": "A modern case study on democratic failure. Argues social media has wrecked the trust needed for democracy to work.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       },
@@ -5468,7 +5468,7 @@
         "folder": "Martha Nussbaum",
         "why": "Democracy isn't just rules. Nussbaum argues it needs cultivated emotions like compassion to be just and stable.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       }
@@ -5488,7 +5488,7 @@
         "folder": "Illustrated",
         "why": "Mill argues free speech is non-negotiable for progress and truth. This is a core liberal idea.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -5542,7 +5542,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum gives a modern liberal take on the emotions needed to sustain a stable democracy.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       }
@@ -5562,7 +5562,7 @@
         "folder": "Illustrated",
         "why": "Mill's argument for free speech is the bedrock of liberalism. You can't argue for the ideology without it.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -5607,7 +5607,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum shows how liberal democracies use emotions to maintain stability. It's about how the system actually works in practice.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       }
@@ -5719,7 +5719,7 @@
         "folder": "Illustrated",
         "why": "Mill's argument is the starting point for limiting government power. Accountability requires open criticism and fierce debate.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -5737,7 +5737,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum argues a government can--and should--actively build a public culture of justice and stability through emotion.",
         "tier": "secondary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -5746,7 +5746,7 @@
         "folder": "Moral Psychology",
         "why": "Haidt's analysis shows why trust in institutions is collapsing. This explains the public demand for stricter government oversight.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       },
@@ -5775,7 +5775,7 @@
         "folder": "Illustrated",
         "why": "Mill's classic liberal argument. Free expression is the only way to find truth.",
         "tier": "primary",
-        "download_url": "/readings/Illustrated John Stuart Mill on Free Speech.pdf",
+        "download_url": "/text_packs/Illustrated John Stuart Mill on Free Speech.txt",
         "size_bytes": 57524556,
         "text_extracted": true
       },
@@ -5793,7 +5793,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum argues democracies must shape some emotions and contain others for social unity and justice.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -5811,7 +5811,7 @@
         "folder": "Moral Psychology",
         "why": "Argues unregulated speech on social media is destroying social unity, questioning if new safeguards are needed.",
         "tier": "secondary",
-        "download_url": "/readings/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf",
+        "download_url": "/text_packs/Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.txt",
         "size_bytes": 24438844,
         "text_extracted": true
       }
@@ -5831,7 +5831,7 @@
         "folder": "Ethics",
         "why": "Singer's utilitarianism forces the question: what is our real obligation to suffering people, regardless of where they are?",
         "tier": "primary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       },
@@ -5840,7 +5840,7 @@
         "folder": "Martha Nussbaum",
         "why": "Nussbaum explains how a just democracy requires cultivating compassion for outsiders. It's not just a feeling; it's a political necessity.",
         "tier": "primary",
-        "download_url": "/readings/Nussbaum - 2013 - Political Emotions.pdf",
+        "download_url": "/text_packs/Nussbaum - 2013 - Political Emotions.txt",
         "size_bytes": 2333935,
         "text_extracted": true
       },
@@ -5905,7 +5905,7 @@
         "folder": "Ethics",
         "why": "Singer's applied ethics gives us a model. We can use it to analyse the moral status of marriage now.",
         "tier": "secondary",
-        "download_url": "/readings/Singer - Practical ethics.pdf",
+        "download_url": "/text_packs/Singer - Practical ethics.txt",
         "size_bytes": 14581157,
         "text_extracted": true
       }
@@ -5925,7 +5925,7 @@
         "folder": "VCE",
         "why": "Defines the traditional concept of God and its attributes. This is the starting point.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - On the Existence and Nature of God.pdf",
+        "download_url": "/text_packs/Chapter VCE - On the Existence and Nature of God.txt",
         "size_bytes": 8836612,
         "text_extracted": true
       },
@@ -5934,7 +5934,7 @@
         "folder": "(root)",
         "why": "Covers the Problem of Evil. It's the biggest argument against the traditional God.",
         "tier": "primary",
-        "download_url": "/readings/VCE Philosopgy 3rd - Y12.pdf",
+        "download_url": "/text_packs/VCE Philosopgy 3rd - Y12.txt",
         "size_bytes": 76831074,
         "text_extracted": true
       },
@@ -5970,7 +5970,7 @@
         "folder": "Kierkegaard",
         "why": "Kierkegaard argues for subjective faith over rational, philosophical proofs for God's existence.",
         "tier": "secondary",
-        "download_url": "/readings/Thee-Discourses.pdf",
+        "download_url": "/text_packs/Thee-Discourses.txt",
         "size_bytes": 5445536,
         "text_extracted": true
       }
@@ -5990,7 +5990,7 @@
         "folder": "Kierkegaard",
         "why": "Kierkegaard argues a personal God gives life meaning. This meaning is both a gift and a task.",
         "tier": "primary",
-        "download_url": "/readings/Thee-Discourses.pdf",
+        "download_url": "/text_packs/Thee-Discourses.txt",
         "size_bytes": 5445536,
         "text_extracted": true
       },
@@ -5999,7 +5999,7 @@
         "folder": "Complete Works of Friedrich Nietzsche",
         "why": "Nietzsche's classic counter-argument. He critiques religion and challenges us to create meaning after the 'death of God'.",
         "tier": "primary",
-        "download_url": "/readings/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf",
+        "download_url": "/text_packs/The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.txt",
         "size_bytes": 15365435,
         "text_extracted": true
       },
@@ -6017,7 +6017,7 @@
         "folder": "VCE",
         "why": "Outlines the classical Western concept of God. This is the God that Kierkegaard and Nietzsche are responding to.",
         "tier": "secondary",
-        "download_url": "/readings/Chapter VCE - On the Existence and Nature of God.pdf",
+        "download_url": "/text_packs/Chapter VCE - On the Existence and Nature of God.txt",
         "size_bytes": 8836612,
         "text_extracted": true
       },
@@ -6064,7 +6064,7 @@
         "folder": "VCE",
         "why": "Pits secular ethics like consequentialism directly against religious authority. Which one gives us our moral rules? Why?",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Right and Wrong.txt",
         "size_bytes": 18249566,
         "text_extracted": true
       }
@@ -6102,7 +6102,7 @@
         "folder": "VCE",
         "why": "This is the philosophical starting point. It explains what human rights are--with thinkers like Locke--before you can argue about protecting them.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Human Rights.pdf",
+        "download_url": "/text_packs/Chapter VCE - Human Rights.txt",
         "size_bytes": 2748882,
         "text_extracted": true
       },
@@ -6149,7 +6149,7 @@
         "folder": "VCE",
         "why": "Contrasts religious authority against secular ethics like consequentialism. Shows the core conflict.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - On Right and Wrong.pdf",
+        "download_url": "/text_packs/Chapter VCE - On Right and Wrong.txt",
         "size_bytes": 18249566,
         "text_extracted": true
       },
@@ -6196,7 +6196,7 @@
         "folder": "VCE",
         "why": "Plato argues for objective beauty. This is the classical counterpoint to modern subjectivism.",
         "tier": "primary",
-        "download_url": "/readings/Chapter VCE - Art.pdf",
+        "download_url": "/text_packs/Chapter VCE - Art.txt",
         "size_bytes": 18260760,
         "text_extracted": true
       },
@@ -6214,7 +6214,7 @@
         "folder": "Moral Psychology",
         "why": "Freeland connects aesthetic experience to action, showing how beauty shapes our values.",
         "tier": "primary",
-        "download_url": "/readings/Freeland - 1997 - Art and Moral Knowledge.pdf",
+        "download_url": "/text_packs/Freeland - 1997 - Art and Moral Knowledge.txt",
         "size_bytes": 2114782,
         "text_extracted": true
       },

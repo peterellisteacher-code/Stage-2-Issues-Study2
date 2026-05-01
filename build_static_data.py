@@ -1,15 +1,12 @@
-"""Build the static /data/*.json bundles consumed by the (now backend-less) UI.
+"""Build the static /data/*.json bundles consumed by the browser UI.
 
-After Vertex AI access ended (April 2026) the lab moved to a fully static
-delivery model: all questions, readings, rubric and exemplar text are
-shipped as JSON the browser fetches directly. The Chamber and Feedback
-panels build prompts client-side and hand them off to the student's own
-AI tool.
+The 102 questions, per-question readings + dialectic, and the rubric +
+exemplars are all sourced from `pack_metadata.json` and `extracted_docx/`.
 
 Run:
     python build_static_data.py
 
-Inputs (committed):  pack_metadata.json, cache_handles.json, extracted_docx/
+Inputs (committed):  pack_metadata.json, extracted_docx/
 Outputs (committed): data/questions.json, data/readings.json, data/rubric.json
 """
 
@@ -23,7 +20,6 @@ DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
 
 PACK_META = json.loads((ROOT / "pack_metadata.json").read_text(encoding="utf-8"))
-CACHE_HANDLES = json.loads((ROOT / "cache_handles.json").read_text(encoding="utf-8"))
 EXTRACTED = ROOT / "extracted_docx"
 
 DOMAIN_ORDER = {
@@ -43,7 +39,7 @@ EXEMPLAR_FOR_DOMAIN = {
 
 def build_questions() -> list[dict]:
     items = []
-    for qid, info in CACHE_HANDLES["questions"].items():
+    for qid, info in PACK_META.items():
         items.append({
             "id": qid,
             "domain": info["domain"],
@@ -59,19 +55,29 @@ def build_questions() -> list[dict]:
 def build_readings() -> dict[str, dict]:
     """Per-question readings + dialectic. Keyed by question id.
 
-    Each reading's `download_url` points at /readings/<basename>; the Netlify
-    redirect rewrites that to the GCS bucket so PDFs continue to work.
+    `download_url` resolves to either:
+      - `/readings/<basename>.pdf` when the reading is committed as a PDF
+        (`text_extracted: false`), or
+      - `/text_packs/<stem>.txt` when only pre-extracted text was committed
+        (`text_extracted: true`) — these are the readings too large to ship
+        as PDFs in the previous Vertex pipeline; we keep that compromise.
     """
     out: dict[str, dict] = {}
     for qid, meta in PACK_META.items():
         readings = []
         for r in meta.get("readings", []):
+            basename = r["readings_basename"]
+            if r.get("text_extracted"):
+                stem = basename.rsplit(".", 1)[0]
+                download_url = f"/text_packs/{stem}.txt"
+            else:
+                download_url = f"/readings/{basename}"
             readings.append({
                 "filename": r["filename"],
                 "folder": r.get("folder", ""),
                 "why": r.get("why", ""),
                 "tier": r.get("tier", "primary"),
-                "download_url": f"/readings/{r['readings_basename']}",
+                "download_url": download_url,
                 "size_bytes": r.get("size_bytes", 0),
                 "text_extracted": r.get("text_extracted", False),
             })
