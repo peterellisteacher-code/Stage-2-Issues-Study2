@@ -1,0 +1,208 @@
+Issues Study Lab — readings manifest (Lean push)
+
+This list is generated from pack_metadata.json. Two groups:
+  A. The 98 'small' PDFs (under ~3 MB each) — push into ./readings/
+  B. The 39 'big' PDFs that already had text-extracted versions —
+     copy ./text_packs/<basename>.txt instead. Don't push the PDFs.
+
+Totals: small=98 (34.9 MB), big-as-text=39 (push from text_packs/, ~few MB after extraction).
+
+════════════════════════════════════════════════════════════════════════
+A. SMALL PDFs — copy these from your library into ./readings/
+════════════════════════════════════════════════════════════════════════
+
+-- (root) --
+     121 KB  David Hume - Empiricism.pdf
+-- AI --
+     222 KB  Bostrom and Yudkowsky - The Ethics of Artificial Intelligence.pdf
+     221 KB  Chapters 4 and 5 - Floridi - The Ethics of Artificial Intelligence.pdf
+      48 KB  excerpt.pdf
+-- Abortion --
+     130 KB  Don Marquis - Why Abotion is Immoral.pdf
+     134 KB  Judith Jarvis Thomson - A Defense of Abortion.pdf
+     123 KB  Mary Anne Warren - On the Moral and Legal Status of Abortion and Postscript on Infanticide.pdf
+     943 KB  Peter Singer on Abortion.pdf
+-- Analyzing Moral Issues --
+     649 KB  Chapter 10 - Moral Issues - Animal Rights and Environmental Ethics.pdf
+    1011 KB  Chapter 2 - Moral Issues - Euthanasia.pdf
+    1106 KB  Chapter 7 - Moral Issues - Freedom of Speech.pdf
+     759 KB  Chapter 8 - Moral Issues - Racism Economic Inequality and Global Justice.pdf
+     691 KB  Chapter 9 - Moral Issues - War Weapons and Terrorism.pdf
+-- Bioethics --
+     231 KB  Embryo Research.pdf
+     764 KB  Enhancement Genetic Engineering.pdf
+     114 KB  Humans and Nonhuman Animals.pdf
+-- Complete Works of Friedrich Nietzsche --
+    1600 KB  The-complete-works-of-Friedrich-Nietzsche-VOL-XVI.pdf
+-- Death --
+    1497 KB  A Psychological and Philosophical Understanding of Death_  An Ana.pdf
+     101 KB  Aristotle - The Soul and Life After Death.pdf
+     261 KB  Nikos Kokosalakis - Reflections on Death in the Philosophical-Existential Context.pdf
+     105 KB  Scheffler death.pdf
+-- Death Penalty --
+      56 KB  Louis Pojman - A Defense of the Death Penalty.pdf
+     470 KB  Student Charles Jessup - Against the death penalty.pdf
+-- Ethics --
+    1117 KB  An Introduction to Political Philosophy by Jonathan Wolff.pdf
+      36 KB  C S Lewis - On Right and Wrong.pdf
+      76 KB  Judith Jarvis Thomson - Killing and Letting Die.pdf
+     119 KB  Kant and Retribution.pdf
+      66 KB  Mackie - The Subjectivity of Values.pdf
+      30 KB  Nietzche - Master Morality and Slave Morality.pdf
+      26 KB  Robert Nozick - The Experience Machine.pdf
+      41 KB  Virginia Held - Caring Relations and Principles of Justice.pdf
+-- Euthanasia --
+      48 KB  J Gay-William - The Wrongfulness of Euthanasia.pdf
+      51 KB  James Rachels - The Morality of Euthanasia.pdf
+-- Feminist Philosophy --
+     168 KB  de Beauvoir - The Second Sex - Introduction.pdf
+-- Fiction for Study --
+     249 KB  Philip K Dick - The Minority Report.pdf
+-- Genetic Engineering --
+     125 KB  2016 - Bercic - Genetic Engineering.pdf
+-- Happiness and Wellbeing --
+     104 KB  01a - Ch 16 and 17 Brave New World.pdf
+      42 KB  01b - Nozick - The Experience Machine.pdf
+      54 KB  02a - Parfit - What Makes Someones Life Go Best.pdf
+      95 KB  03a - Aristotle - The Nature of Moral Virtue.pdf
+     100 KB  03a - Nussbaum - Non-Relative Virtues an Aristotelian Approach.pdf
+      88 KB  04b - Fred Feldman - The Good Life a Defence of Hedonism.pdf
+-- James Rachels - Elements of Moral Philosophy 10e in Chapters --
+     183 KB  5 - James Rachels - Egoism.pdf
+     179 KB  6 - James Rachels - Social Contract.pdf
+     153 KB  Are there absolute moral rules.pdf
+     147 KB  James Rachels textbook - The debate over utilitarianism.pdf
+     145 KB  James Rachels textbook - the utilitarian approach.pdf
+     151 KB  Kant and Respect for Persons.pdf
+     148 KB  Rachels 10th - Cultural Relativism.pdf
+     139 KB  Rachels 10th - Does Morality Depend on Religion.pdf
+     173 KB  Rachels 10th - Moral Subjectivism.pdf
+-- Martha Nussbaum --
+     938 KB  Nussbaum - Creating Capabilities.pdf
+     752 KB  Nussbaum - Perception and Revolution1.pdf
+-- Matrix --
+     106 KB  Matrix - Computers Caves and Oracles.pdf
+     109 KB  Matrix - Happiness and Cyphers choice - Is Ignorance Bliss.pdf
+     107 KB  Nihilism and The Matrix - Dostoevsky Take.pdf
+     106 KB  Skepticism Morality and The Matrix.pdf
+     110 KB  The Matrix - Seeing Believing Touching Truth.pdf
+     107 KB  The Matrix Possibility.pdf
+     113 KB  The Matrix Simulation Postmodern Age.pdf
+     106 KB  The Matrix and Existential Authenticity.pdf
+      97 KB  The Matrix and Marx.pdf
+     104 KB  The Metaphysics of the Matrix.pdf
+     105 KB  the Matrix - Fate Freedom foreknowledge.pdf
+-- Metamodernism --
+      34 KB  Simulacra and Simulation Rundown.pdf
+-- Mind Watch to Functionalism --
+     497 KB  Frank Jackson - 1982 - Epiphenomenal Qualia.pdf
+-- Moral Psychology --
+     317 KB  Bezalel - 2020 - Moral Foundations Theory for the classroom.pdf
+     643 KB  Haidt - Righteous Mind - Moral Foundations of Politics.pdf
+     404 KB  Haidt - Righteous Mind - Why Are We So Groupish1.pdf
+     668 KB  Haidt et al - 2013 - Moral Foundations Theory The Pragmatic Validity of Moral Pluralism.pdf
+      85 KB  Lindstrom - 2022 - Moral Taste and Moral Education.pdf
+-- Perception --
+    1147 KB  2017 - Susanna Siegel - The Rationality of Perception.pdf
+-- Personal Identity --
+      88 KB  Bernard Williams - The Self and the Future.pdf
+     107 KB  Nagel - What is it like to be a bat.pdf
+      53 KB  Outline - Williams on Expectations and the Self.pdf
+     119 KB  Williams Handout - Subjective Experience.pdf
+-- Political --
+     124 KB  A Capitalists Definition of Capitalism.pdf
+    1298 KB  Rahel Jaeggi - Alienation (book).pdf
+     185 KB  Schweickart - Tired of Capitalism How about Something Better.pdf
+-- Qualia --
+     387 KB  SEP - Qualia.pdf
+-- Religion --
+     514 KB  3 - Hick - The Problem of Evil.pdf
+    1174 KB  Daniel Howard-Snyder - The Logical Problem of Evil Mackie and Plantinga.pdf
+     517 KB  Hick - The Problem of Evil.pdf
+    1127 KB  Lecture - the Free Will Defense.pdf
+-- The Social Contract --
+     192 KB  Hobbes and Locke.pdf
+     179 KB  Rachels - The Social Contract.pdf
+     102 KB  T M Scanlon - Contractualism and Utilitarianism.pdf
+     102 KB  Thomas Hobbes - Leviathan.pdf
+-- Thought Experiments --
+      80 KB  The Prisoners Dilemma.pdf
+-- VCE --
+     909 KB  VCE -Art and Moral Knowledge.pdf
+-- Virtue Ethics and The Good --
+    1876 KB  Alasdair Macintyre - Ch 14 - The Nature of the Virtues.pdf
+    1750 KB  Alasdair Macintyre - Ch 15 - The Nature of Human Life.pdf
+     653 KB  Philippa Foot - Natural Goodness.pdf
+     203 KB  Philippa Foot Interview - the Grammar of Goodness.pdf
+-- War --
+     857 KB  Jeff McMahan - 2004 - The Ethics of Killing in War.pdf
+     140 KB  Jeff McMahan - Just Cause for War.pdf
+      70 KB  Luban - Torture and the Ticking Bomb.pdf
+      28 KB  Nagel - Terrorism (torture).pdf
+
+════════════════════════════════════════════════════════════════════════
+B. BIG READINGS — copy text_packs/<basename>.txt instead of the PDF
+════════════════════════════════════════════════════════════════════════
+
+(For each filename below, your text_packs/ folder should already contain a
+ <same-basename>.txt next to it. Copy the .txt, not the PDF.)
+
+-- (root) --
+     2.8 MB  Kane - 1999 - Responsiblity luck and chance - free will and indeterminism.pdf
+    76.8 MB  VCE Philosopgy 3rd - Y12.pdf
+-- AI --
+     5.2 MB  Floridi - The Ethics of Artificial Intelligence.pdf
+-- Bioethics --
+     3.7 MB  Beauchamp and Childress - Principles of Biomedical Ethics - Chapter 3 - Respect for Autonomy.pdf
+-- Complete Works of Friedrich Nietzsche --
+    20.5 MB  The-complete-works-of-Friedrich-Nietzsche-VOL-XII.pdf
+    15.4 MB  The-complete-works-of-Friedrich-Nietzsche-VOL-XIV.pdf
+-- Death --
+     2.2 MB  Nagel - Death.pdf
+-- Death Penalty --
+     3.2 MB  Claire Finkelstein - A Contractarian Argument Against the Death Penalty.pdf
+-- Epistemology --
+     2.4 MB  2003 - Book - Epistemology Introduction to Theory of Knowledge - Nicholas Rescher.pdf
+-- Ethics --
+     6.6 MB  Ethical Theory - An Anthology.pdf
+    14.6 MB  Singer - Practical ethics.pdf
+-- Free will and Determinism --
+    11.9 MB  Miyazono - Philosophy of Psychology - Free Will and Determinism.pdf
+     6.8 MB  Sapolsky - Determined; Life Without Free Will (introduction to book).pdf
+-- General --
+     8.2 MB  Bertrand Russell - 1912 - The Problems of Philosophy.pdf
+-- Illustrated --
+    57.5 MB  Illustrated John Stuart Mill on Free Speech.pdf
+-- Ishmael Chapters --
+     8.7 MB  Chapter 8 - The Law of Limited Competition.pdf
+-- Kierkegaard --
+    12.4 MB  Selections-From-the-Writings-of-Kierkegaard.pdf
+     5.4 MB  Thee-Discourses.pdf
+-- Martha Nussbaum --
+     2.3 MB  Nussbaum - 2013 - Political Emotions.pdf
+     3.3 MB  Nussbaum - Perception and Revolution.pdf
+-- Modernism Postmodernism and Metamodernism --
+     2.5 MB  Postmodernism a very short introduction - 2002 - Christopher Butler.pdf
+-- Moral Psychology --
+    11.6 MB  1982 - In a Different Voice - Carol Gilligan.pdf
+     2.1 MB  Freeland - 1997 - Art and Moral Knowledge.pdf
+     5.2 MB  Haidt - 2003 - The Moral Emotions.pdf
+    24.4 MB  Haidt - 2022 - Why the Past 10 Years of American Life Have Been Uniquely Stupid - The Atlantic.pdf
+    41.2 MB  Haidt - Righteous Mind - Overview of Each Foundation.pdf
+    11.8 MB  Haidt - Righteous Mind - Sanctity and Degradation.pdf
+-- Personal Identity --
+     5.8 MB  Thomas Metzinger - Being No One.pdf
+-- Sartre --
+    35.4 MB  BeingAndNothingness.pdf
+-- Textbooks --
+    12.4 MB  Textbook - Free Will.pdf
+-- VCE --
+     4.0 MB  Chapter Tapper - Reality as a System.pdf
+    18.3 MB  Chapter VCE - Art.pdf
+    12.6 MB  Chapter VCE - Free Will and Determinism.pdf
+     2.7 MB  Chapter VCE - Human Rights.pdf
+    15.8 MB  Chapter VCE - Justice.pdf
+    17.7 MB  Chapter VCE - Materialism and Idealism.pdf
+     7.9 MB  Chapter VCE - On Knowledge.pdf
+    18.2 MB  Chapter VCE - On Right and Wrong.pdf
+     8.8 MB  Chapter VCE - On the Existence and Nature of God.pdf

@@ -1,186 +1,196 @@
-# Issues Study Lab -- Architecture
+# Issues Study Lab — Architecture
 
-**Status:** MVP, first session, 2026-04-27
-**Scope:** 5 sample questions, single user, localhost only
+**Status:** Post-Vertex rebuild, May 2026
+**Scope:** 102 questions, 14 cluster packs, classroom multi-user
 
-## Why a local Flask server (not the MCP server, not Cloud Run)
+## What changed and why
 
-The MCP server (`~/.mcp-servers/ai-image/server.py`) only speaks the MCP
-protocol over stdio inside Claude Code. A browser cannot call it. We need
-the Lab UI to run in Chrome, hitting an HTTP API that brokers calls to
-Vertex AI.
+The original architecture (April 2026) used a Flask broker on Cloud Run
+calling Vertex AI's `gemini-2.5-pro` with `cached_content=` for the
+Chamber, plus a service-account-scoped GCS bucket for the readings PDFs.
+That whole stack was retired when Vertex access ended.
 
-I looked at three options:
+The replacement keeps the same student experience (5-step wizard,
+in-app Chamber chat, rubric-referenced feedback, per-question
+autosave) but moves every server-side dependency:
 
-| Option | Pros | Cons | Chosen? |
-|---|---|---|---|
-| Use MCP via Claude Code | Already exists, no new code | Browser can't call MCP; UX would be a chat box not a study tool | ✗ |
-| Local Flask broker | Same SDK + auth as MCP; full control of prompt assembly; runs offline; no deployment overhead | One more server to keep running; not multi-user | ✓ for MVP |
-| Cloud Run + IAP | Multi-user; persistent; no localhost dependency | Significant deployment work; auth setup; cost; out of scope for MVP | Deferred |
-
-The Flask broker shares both the auth path (service-account JSON at
-`~/.mcp-servers/ai-image/service-account.json`) and the model client
-(`google.genai` Vertex Full mode) with the MCP server. So a question that
-works through `chat_with_unit_pack` in Claude Code will produce equivalent
-output through `/api/chat` in the Lab.
-
-If a future session needs multi-user / off-laptop access, Cloud Run is
-the natural next step -- the Flask app translates cleanly because it
-already isolates env-driven config from request handling.
+| | Before | Now |
+|---|---|---|
+| AI provider | Vertex AI (`gemini-2.5-pro`) | Anthropic API (`claude-haiku-4-5`) |
+| Chamber backend | Cloud Run + Flask | Netlify Functions (Node.js) |
+| Caching strategy | Vertex `cached_content`, 70-day TTL, manually built | Anthropic prompt caching, 5-min ephemeral, auto-renews on hit |
+| Auth surface | GCP service-account JSON | Anthropic API key in Netlify env var |
+| Readings hosting | GCS bucket via Netlify reverse-proxy | Static commit, Netlify CDN |
+| PDF export | Server-rendered with PyMuPDF | `window.print()` against an injected print-only view |
+| Deploy | GitHub Actions → Cloud Run + Netlify | Netlify auto-deploy on push |
 
 ## Components
 
 ```
-┌────────────────────────────────────────────┐
-│  Chrome (localhost:5050)                   │
-│  index.html · script.js · styles.css       │
-│  ┌─────────┬───────────┬──────────────┐    │
-│  │ Question │   Chat    │   Draft +   │    │
-│  │ selector │  panel    │  Feedback   │    │
-│  └─────────┴───────────┴──────────────┘    │
-└──────────────┬─────────────────────────────┘
-               │ fetch() -- JSON over HTTP
+┌──────────────────────────────────────────────────────┐
+│  Browser                                             │
+│  index.html · script.js · styles.css                 │
+│  • welcome → task → bank → readings → chamber → drafting │
+│  • localStorage persistence per question             │
+│  • client-side print → Save as PDF                   │
+└──────────────┬───────────────────────────────────────┘
+               │
+       static  │  /data/questions.json     (102 questions)
+       fetch   │  /data/readings.json      (per-Q readings + dialectic)
+               │  /readings/<basename>.pdf (committed PDFs)
+               │
+       function│  POST /api/chat      → /.netlify/functions/chat
+       call    │  POST /api/feedback  → /.netlify/functions/feedback
                ▼
-┌────────────────────────────────────────────┐
-│  Flask: lab/server.py (localhost:5050)     │
-│  ┌──────────────────────────────────────┐  │
-│  │ GET  /                -- index.html   │  │
-│  │ GET  /<file>          -- static       │  │
-│  │ GET  /api/questions   -- bank list    │  │
-│  │ POST /api/readings    -- pack contents│  │
-│  │ POST /api/chat        -- cached gen   │  │
-│  │ POST /api/feedback    -- rubric grade │  │
-│  └──────────────────────────────────────┘  │
-└──────────────┬─────────────────────────────┘
-               │ google.genai (Vertex Full)
+┌──────────────────────────────────────────────────────┐
+│  Netlify Functions (Node 20, ESM)                    │
+│  netlify/functions/chat.js                           │
+│  netlify/functions/feedback.js                       │
+│  netlify/functions/_shared/lab.js                    │
+│    • loadClusterPack(): reads data/packs/<id>.txt    │
+│    • buildChamberMessages(): system prompt + corpus  │
+│    • buildFeedbackPrompt(): rubric + exemplar + draft│
+│    • rateLimitOk(): per-IP soft cap                  │
+│    • estimateCostUsd(): Haiku 4.5 pricing            │
+└──────────────┬───────────────────────────────────────┘
+               │ Anthropic SDK over HTTPS
                ▼
-┌────────────────────────────────────────────┐
-│  Google Vertex AI (us-central1)            │
-│  · gemini-2.5-pro with cached_content for  │
-│    /api/chat (90% input-token discount)    │
-│  · gemini-2.5-pro plain for /api/feedback  │
-│  Project: gen-lang-client-0274569601       │
-└────────────────────────────────────────────┘
-```
-
-## Files
-
-```
-lab/
-├── server.py              Flask broker: 4 endpoints + static
-├── index.html             Single-page UI (3 panels)
-├── script.js              Vanilla JS: fetch wrappers + DOM
-├── styles.css             Minimal layout + token-friendly type scale
-├── lab_corpus.json        Pack definitions consumed by cache_unit_pack
-├── pack_metadata.json     Per-question display metadata + reading lists
-├── cache_handles.json     question_id → cache_name registry (post-build)
-├── unit_corpus_state.json Source of truth for cache handles (MCP writes)
-├── extracted_docx/        Plain-text exemplars + rubric for feedback
-│   ├── exemplar_a_minus.txt
-│   ├── exemplar_b.txt
-│   ├── exemplar_c_plus.txt
-│   ├── assessment_advice.txt
-│   ├── subject_outline.txt
-│   ├── task_sheet.txt
-│   └── _index.json
-├── text_packs/            PDFs whose text was extracted to fit cache size
-├── server.log             Per-request log of bodies, durations, token use
-├── screenshots/           Manual end-to-end test captures
-├── test_transcripts/      JSON of automated chat + feedback runs
-├── ARCHITECTURE.md        This file
-├── README.md              Launch + test instructions
-├── NEXT_STEPS.md          Follow-up work for sessions 2-4
-└── BUILD_REPORT.md        What was built, what wasn't, what cost
+┌──────────────────────────────────────────────────────┐
+│  Anthropic API (claude-haiku-4-5)                    │
+│  • prompt caching at the system-prompt boundary      │
+│  • 5-min ephemeral cache, auto-renews on hit         │
+└──────────────────────────────────────────────────────┘
 ```
 
 ## Prompt assembly
 
 ### `/api/chat`
 
-The cache already encodes a per-question system instruction (see
-`lab_corpus.json` → packs[lab_q00X].system_instruction). At request time
-we send only the user's message and prior history as `contents`. The cached
-material plus the system instruction stay on Google's side.
+The Chamber's prompt is built per request from three pieces:
 
-History format on the wire matches Gemini's `Content` shape:
-
-```json
-{
-  "history": [
-    {"role": "user", "parts": [{"text": "..."}]},
-    {"role": "model", "parts": [{"text": "..."}]}
-  ],
-  "message": "what does Bostrom say about superintelligence?"
-}
 ```
+system = [
+  { type: "text", text: <generic Chamber instructions ~500 tok> },
+  { type: "text",
+    text: "--- CURATED READINGS (cluster: <name>) ---\n\n" + <cluster corpus>,
+    cache_control: { type: "ephemeral" } }
+]
+messages = [
+  { role: "user",      content: "My SACE Issues Study question is:\n\n> <text>\n\n…" },
+  { role: "assistant", content: "Understood. What's on your mind?" },
+  …last 12 turns of the student's history…,
+  { role: "user", content: <new message> }
+]
+```
+
+The cache-control flag goes on the *last system block* — the corpus —
+which is identical across every question that maps to the same cluster.
+Two students working on different questions in the same cluster reuse
+each other's cache entry.
+
+The student's question text lives in the **first user message**, not in
+`system`, so a question switch within a cluster doesn't invalidate the
+cached prefix.
 
 ### `/api/feedback`
 
-Uses no cache. The full prompt is built fresh per call with:
+No caching. The full prompt is built fresh per call (the rubric and
+exemplar text are short, the draft is unique to this student, and we
+won't re-feed an identical prefix). Structure:
 
-- The student's question (looked up from `cache_handles.json`)
-- The 7-criterion rubric extracted from `assessment_advice.txt`
-- The closest exemplar's full text (mapping below)
-- The student's draft
+```
+You are a SACE Stage 2 Philosophy moderator…
 
-Exemplar mapping for MVP:
+THE STUDENT'S QUESTION: <text>
+THE TASK SHEET: <task_sheet from extracted_docx>
+THE SACE ASSESSMENT ADVICE: <rubric from extracted_docx>
+REFERENCE EXEMPLAR — graded <A-|B|C+> by SACE moderators:
+"""<exemplar text>"""
+THE STUDENT'S DRAFT: """<draft>"""
 
-| Question domain | Exemplar used | Reason |
-|---|---|---|
-| `mind_tech` (Q5 -- phil zombies) | Student 3 (B) | Same question -- direct comparison |
-| All others (Q1-Q4) | Student 1 (A-) | Highest-grade SACE-supplied exemplar, demonstrates target dialectical structure |
+[structured-output instructions: KU1/KU2/RA1/RA2/RA3/CA1/C1-C2 + grade band + top 3 priorities]
+```
 
-For sessions 2+ this should become a domain-aware mapper that pulls
-relevant *passages* rather than whole exemplars (whole-exemplar prompts
-push us close to the input-token sweet spot).
+Domain → exemplar mapping (carried over from the previous architecture):
+- `mind_tech` → exemplar B
+- `religion` → exemplar C+
+- everything else → exemplar A-
 
-## Auth + billing
+## Cost mechanics (Anthropic Haiku 4.5)
 
-Service account: `~/.mcp-servers/ai-image/service-account.json` (project
-`gen-lang-client-0274569601`, region `us-central1`). Same rail as the MCP
-server's `vertex_full_client`. Credits apply: "Trial credit for GenAI
-App Builder" + "GCP Free Credit". Cost characteristics for the MVP:
+| Item | Rate |
+|---|---|
+| Input tokens | $1.00 / MTok |
+| Output tokens | $5.00 / MTok |
+| Cache write (5-min ephemeral) | $1.25 / MTok (input × 1.25x) |
+| Cache read | $0.10 / MTok (input × 0.1x) |
 
-- Cache build (one-time, all 5 packs): $0.20-0.40 each → ~$1.50 total
-- Cache storage: ~$0.14/day across all 5 caches (576k tokens × $0.01/M/h × 24h)
-- Chat call: ~$0.001-0.01 each (cached input at 10%, output at full Pro)
-- Feedback call: ~$0.02-0.05 each (no cache; ~15-25k input tokens)
+Per-call estimates with a ~50K-token cluster pack:
 
-Five cached packs storing for 70 days = ~$10 in storage, well under the
-$400 promo pool.
+| Scenario | Input | Cached read | Cache write | Output | Cost |
+|---|---:|---:|---:|---:|---:|
+| Cold-start chat (first message, writes cache) | ~50K | 0 | 50K | ~600 | ~$0.07 |
+| Warm chat (cache hit within 5 min) | ~200 | 50K | 0 | ~600 | ~$0.008 |
+| Feedback (no caching) | ~25K | 0 | 0 | ~1500 | ~$0.033 |
 
-## Logging
+For a 14-student / 5-week cohort with active classroom use (~80% cache
+hit rate during sessions), expect ~$30–50 in total spend. The hard cap
+on the API key is $20/month — close to the line, so if the bill starts
+to exceed plan, drop chat output to 600 tokens or trim the largest
+clusters further.
 
-Every API call writes a single JSON line to `lab/server.log` with:
-- timestamp
-- endpoint
-- request body (truncated to 4 KB)
-- response duration (ms)
-- token usage (from `usage_metadata`) when available
-- estimated USD cost
+## Reading content
 
-The log is plain JSONL so it can be loaded with `pandas.read_json(lines=True)`
-for ad-hoc cost / latency analysis later.
+`data/packs/<cluster_pack>.txt` is the canonical corpus the Chamber
+reads from. Built once by `build_packs.py`, which:
 
-## CORS / security
+1. For each of the 14 clusters, gathers the unique reading basenames
+   from `pack_metadata.json` whose questions map to that cluster.
+2. For each basename, prefers `text_packs/<basename>.txt` (already
+   plain-text); falls back to `readings/<basename>.pdf` extracted via
+   PyMuPDF.
+3. Concatenates with stable `=== filename ===` headers.
 
-CORS is allowed only from `http://localhost:5050` and `http://127.0.0.1:5050`.
-The server binds to `127.0.0.1` (loopback only); it will not accept
-connections from the LAN. The service-account JSON is read from
-`~/.mcp-servers/ai-image/service-account.json` -- never echoed in
-responses, never logged.
+Three clusters exceed Claude's 200K context window without trimming:
+Love (~310K tokens), Civic (~267K), Free Will (~249K). These need
+manual pruning when the build runs — `build_packs.py` reports the
+oversized packs but doesn't auto-truncate (silent truncation would lose
+specific readings the dialectic depends on).
 
-## Known limitations (intentional for MVP)
+## Persistence
 
-1. No auth -- single user, single laptop. Anyone with network access to
-   `127.0.0.1` could hit the API; on a personal machine that's nobody.
-2. No persistence -- chat history is held client-side only and lost on
-   page reload.
-3. No cache rebuild path -- if a cache expires mid-session the chat
-   endpoint will fail. The 70-day TTL makes this unlikely for a single
-   teaching unit; future sessions should add an auto-rebuild path
-   modelled on `chat_with_unit_pack`.
-4. 5 questions only -- full bank is ~110 questions; scaling needs the
-   GCS-upload path (some books are 30+ MB, can't fit inline).
-5. No streaming -- replies arrive all at once. UX-wise OK for MVP since
-   answers are typically <400 tokens.
+- **Server-side**: none. Functions are stateless.
+- **Client-side**: `localStorage` keyed by question id. Holds chat
+  history, draft text, last feedback, and the SACE exemplar that was
+  used. Restored on page reload.
+- **Audit log**: every Function call logs to Netlify's function log
+  with question id, duration, token usage, estimated cost. Pull with
+  `netlify functions:log <name>`.
+
+## Security / abuse surface
+
+- API key lives in Netlify env vars only. Never committed.
+- `.env` is gitignored for local development.
+- `_shared/lab.js` rate-limits per-IP at 30 requests/hour per warm
+  container. This is best-effort (concurrent invocations on different
+  containers don't share state); the $20/month spend cap on the API
+  key is the hard backstop.
+- The Chamber's system prompt explicitly refuses essay-writing
+  requests and prefill attempts.
+
+## Known limitations
+
+1. **Cluster context limit**: 3 of 14 clusters exceed Haiku's 200K
+   context until manually trimmed.
+2. **Rate limit is soft**: A determined abuser could spread requests
+   across enough containers to bypass the 30/hr cap. Real protection is
+   the $20/month spend cap, which simply stops the service when hit.
+3. **5-minute cache TTL**: Idle gaps over 5 min force a cache rewrite
+   on the next request (~$0.07 per cluster). For a heavily idle class,
+   1-hour cache would amortise better, but the cap-conscious default is
+   5-min.
+4. **Big-reading PDFs not downloadable**: students see the 39 big
+   readings in the readings list but their links resolve to plain
+   `.txt` files (the text_pack), not the original PDFs. Acceptable for
+   the Chamber's purposes; UX can be improved later by embedding the
+   text in a styled viewer.

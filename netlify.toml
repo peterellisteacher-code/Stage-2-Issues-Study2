@@ -1,36 +1,46 @@
-# Netlify config: static frontend + reverse proxy /api/* to Cloud Run.
+# Netlify config — static frontend + Functions backend.
 #
-# The Cloud Run URL is injected at deploy time as the env var BACKEND_URL.
-# Set it on Netlify (Site settings -> Environment variables) before the
-# first deploy, e.g. BACKEND_URL=https://issues-study-lab-xyz.run.app
+# The 2026-04 Vertex/Cloud Run architecture has been retired.
+# /api/* now routes to Netlify Functions in netlify/functions/, which
+# call Anthropic Haiku 4.5 directly. Set ANTHROPIC_API_KEY as an
+# environment variable in Site Settings → Environment variables before
+# the first deploy.
 
 [build]
-  # The lab files are at the repo root after the deploy restructure.
   publish = "."
   command = "echo 'no build step'"
+  functions = "netlify/functions"
 
-# Reverse-proxy /api/* AND /readings/* to the Cloud Run backend.
-# Cloud Run hosts both the Flask API and the 137 source PDFs (the readings/
-# folder is too big for a Netlify static deploy via the MCP path).
-# BACKEND_URL must be set on Netlify before the redirect resolves.
+[functions]
+  node_bundler = "esbuild"
+  # Bundle the data/ directory and extracted_docx alongside the function so
+  # they're accessible via fs.readFileSync at runtime.
+  included_files = ["data/**", "extracted_docx/**"]
+
+# /api/<name> → /.netlify/functions/<name>
 [[redirects]]
-  from = "/api/*"
-  to = "https://issues-study-lab-167911956198.us-central1.run.app/api/:splat"
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/readings/*"
-  to = "https://storage.googleapis.com/issues-study-lab-readings/:splat"
+  from = "/api/feedback"
+  to = "/.netlify/functions/feedback"
   status = 200
   force = true
 
-# Cache headers for the proxied PDFs -- they don't change once cached.
+# /readings/<file> → committed PDF in /readings/. The path resolves locally
+# against the static publish root; Netlify serves it from the CDN once
+# committed. (Files committed under readings/ inside the repo.)
+# This block is intentionally a no-op redirect that lets us add headers below.
 [[headers]]
   for = "/readings/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Don't let the browser cache the SPA shell or static data — they change
+# more often than the PDFs.
 [[headers]]
   for = "/styles.css"
   [headers.values]
@@ -50,3 +60,8 @@
   for = "/"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"

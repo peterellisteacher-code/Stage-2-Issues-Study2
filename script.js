@@ -1,15 +1,9 @@
 // Issues Study Lab — wizard SPA, vanilla JS.
-
-// ── Cross-origin Cloud Run base ─────────────────────────────────
-// On Netlify the /api/* edge proxy times out at 30s, killing chat calls.
-// So we hit Cloud Run directly. CORS allows the Netlify origin.
-const API_BASE = (location.hostname.endsWith(".netlify.app") || location.hostname.endsWith(".netlify.com"))
-  ? "https://issues-study-lab-167911956198.us-central1.run.app"
-  : "";
+// Static data (questions/readings/rubric) + Netlify Functions for /api/chat,
+// /api/feedback. No Cloud Run, no Vertex.
 
 const PAGES = ["welcome", "task", "bank", "readings", "chamber", "drafting"];
 const DEFAULT_PAGE = "welcome";
-// Pages that need a question selected before they're useful
 const NEEDS_QUESTION = new Set(["readings", "chamber", "drafting"]);
 
 const DOMAIN_LABELS = {
@@ -27,7 +21,8 @@ const state = {
   questions: [],            // [{id, domain, text, cluster_pack, ...}]
   questionId: null,         // currently picked question id
   question: null,           // resolved question object
-  readings: null,           // {readings, dialectic, ...} — cached per question
+  readings: null,           // {readings, dialectic, ...} per question, cached
+  readingsByQid: null,      // full /data/readings.json once loaded
   history: [],              // chat turns
   feedbackMd: "",
   exemplarUsed: null,
@@ -72,6 +67,8 @@ const els = {
   exportBtn: $("export-pdf-btn"),
   feedbackOutput: $("feedback-output"),
   autosave: $("autosave-indicator"),
+  // print
+  printView: $("print-view"),
 };
 
 // ── Persistence ────────────────────────────────────────────────
@@ -144,13 +141,19 @@ function renderMarkdown(md) {
   return out.join("\n");
 }
 
-// ── API helper ─────────────────────────────────────────────────
-async function api(path, body) {
+// ── Fetch helpers ──────────────────────────────────────────────
+async function fetchJson(path, body) {
   const opts = { method: body ? "POST" : "GET", headers: { "Content-Type": "application/json" } };
   if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(API_BASE + path, opts);
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || data.detail || `HTTP ${res.status}`);
+  const res = await fetch(path, opts);
+  let data = {};
+  try { data = await res.json(); } catch { /* leave empty */ }
+  if (!res.ok) {
+    const err = new Error(data.error || data.detail || `HTTP ${res.status}`);
+    err.status = res.status;
+    err.detail = data.detail;
+    throw err;
+  }
   return data;
 }
 
@@ -159,12 +162,10 @@ function setStatus(text, cls = "") { els.status.textContent = text; els.status.c
 // ── Router ─────────────────────────────────────────────────────
 function navigate(page, push = true) {
   if (!PAGES.includes(page)) page = DEFAULT_PAGE;
-  // Lock pages that need a question
   if (NEEDS_QUESTION.has(page) && !state.questionId) {
     page = "bank";
     setStatus("pick a question first", "error");
   } else if (page !== "welcome" && !getStudentName()) {
-    // Force name first
     page = "welcome";
     setStatus("enter your name to begin", "error");
   } else {
@@ -184,7 +185,6 @@ function navigate(page, push = true) {
   }
   window.scrollTo(0, 0);
 
-  // Page-specific entry hooks
   if (page === "bank" && state.questions.length === 0) loadQuestions();
   if (page === "readings" && state.questionId && !state.readings) loadReadings(state.questionId);
 }
@@ -193,15 +193,12 @@ function refreshControls() {
   const hasName = getStudentName().length > 0;
   const hasQ = !!state.questionId;
   els.beginBtn.disabled = !hasName;
-  // Chamber controls
   els.chatInput.disabled = !hasQ;
   els.chatSend.disabled = !hasQ;
-  // Drafting controls
   els.draftInput.disabled = !hasQ;
   const draftLen = els.draftInput.value.length;
   els.feedbackBtn.disabled = !hasQ || draftLen < 200;
   els.exportBtn.disabled = !hasQ || !hasName;
-  // Re-evaluate locked nav links
   els.navLinks.forEach(a => {
     a.classList.toggle("locked", NEEDS_QUESTION.has(a.dataset.page) && !state.questionId);
   });
@@ -211,8 +208,7 @@ function refreshControls() {
 async function loadQuestions() {
   setStatus("loading questions…");
   try {
-    const data = await api("/api/questions");
-    state.questions = data.questions || [];
+    state.questions = await fetchJson("/data/questions.json");
     setStatus(`${state.questions.length} questions loaded`, "ready");
     renderBank();
   } catch (e) {
@@ -233,9 +229,9 @@ function renderBank() {
     text.className = "q-text";
     text.textContent = q.text;
 
-    const dom = document.createElement("span");
-    dom.className = "q-domain";
-    dom.textContent = DOMAIN_LABELS[q.domain] || q.domain;
+    const dom2 = document.createElement("span");
+    dom2.className = "q-domain";
+    dom2.textContent = DOMAIN_LABELS[q.domain] || q.domain;
 
     const cluster = document.createElement("span");
     cluster.className = "q-cluster";
@@ -250,7 +246,7 @@ function renderBank() {
     actions.appendChild(pick);
 
     li.appendChild(text);
-    li.appendChild(dom);
+    li.appendChild(dom2);
     if (cluster.textContent) li.appendChild(cluster);
     li.appendChild(actions);
     li.addEventListener("click", () => {
@@ -278,7 +274,6 @@ function pickQuestion(qid) {
   localStorage.setItem(QID_KEY, qid);
   paintSelectedBanners();
 
-  // Restore saved state if any
   const saved = loadSavedStateFor(qid);
   if (saved) {
     state.history = saved.history || [];
@@ -320,7 +315,11 @@ function paintSelectedBanners() {
 async function loadReadings(qid) {
   setStatus("loading readings…");
   try {
-    const data = await api("/api/readings", { question_id: qid });
+    if (!state.readingsByQid) {
+      state.readingsByQid = await fetchJson("/data/readings.json");
+    }
+    const data = state.readingsByQid[qid];
+    if (!data) throw new Error(`unknown question_id: ${qid}`);
     state.readings = data;
     renderReadings(data);
     setStatus(`${data.readings.length} readings loaded`, "ready");
@@ -328,8 +327,8 @@ async function loadReadings(qid) {
     setStatus(`failed: ${e.message}`, "error");
   }
 }
+
 function renderReadings(data) {
-  // Dialectic
   els.dialecticBlock.innerHTML = data.dialectic ? renderMarkdown(data.dialectic) : "";
 
   const grouped = { primary: [], secondary: [] };
@@ -346,12 +345,13 @@ function renderReadings(data) {
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.className = "reading-title";
-      a.href = (API_BASE ? "" : "") + r.download_url;  // /readings/* (handled by Netlify redirect to GCS)
-      // when running on Netlify, /readings/* is rewritten by netlify.toml to GCS bucket; the relative path works
+      a.href = r.download_url;
       a.target = "_blank";
       a.rel = "noopener";
       a.textContent = r.filename.replace(/\.pdf$/i, "");
-      a.title = `Open / download (${(r.size_bytes / 1_000_000).toFixed(1)} MB)`;
+      a.title = r.size_bytes
+        ? `Open / download (${(r.size_bytes / 1_000_000).toFixed(1)} MB)`
+        : "Open / download";
       li.appendChild(a);
       if (r.folder) {
         const f = document.createElement("span");
@@ -377,7 +377,7 @@ function appendMessage(role, text, meta = "") {
   wrap.className = `message ${role}`;
   const r = document.createElement("div");
   r.className = "message-role";
-  r.textContent = role === "user" ? "You" : role === "model" ? "Library" : "Error";
+  r.textContent = role === "user" ? "You" : role === "model" ? "Chamber" : "Error";
   const body = document.createElement("div");
   body.className = "message-body";
   body.innerHTML = renderMarkdown(text);
@@ -403,19 +403,24 @@ async function onChatSubmit(e) {
   els.chatInput.value = "";
   els.chatInput.disabled = true;
   els.chatSend.disabled = true;
-  els.chatMeta.innerHTML = `<span class="spinner"></span>thinking… (first call may take 60-90s while the library warms up)`;
+  els.chatMeta.innerHTML = `<span class="spinner"></span>thinking… (first call after a quiet period rebuilds the cache and may take 10-20s)`;
   try {
-    const data = await api("/api/chat", {
+    const data = await fetchJson("/api/chat", {
       question_id: state.questionId,
       message,
       history: state.history.slice(0, -1).map(t => ({ role: t.role, text: t.text })),
     });
     appendMessage("model", data.text || "(no reply)");
     state.history.push({ role: "model", text: data.text || "" });
-    els.chatMeta.textContent = `${data.duration_ms} ms · ~$${(data.estimated_cost_usd || 0).toFixed(4)}`;
+    const cacheNote = data.usage && data.usage.cache_read_input_tokens
+      ? ` · cache hit (${data.usage.cache_read_input_tokens.toLocaleString()} tok read)`
+      : data.usage && data.usage.cache_creation_input_tokens
+      ? ` · cache write (${data.usage.cache_creation_input_tokens.toLocaleString()} tok)`
+      : "";
+    els.chatMeta.textContent = `${data.duration_ms} ms · ~$${(data.estimated_cost_usd || 0).toFixed(4)}${cacheNote}`;
     persistCurrent({ flush: true });
   } catch (err) {
-    appendMessage("error", `Request failed: ${err.message}`);
+    appendMessage("error", `Request failed: ${err.message}${err.detail ? "\n\n" + err.detail : ""}`);
     els.chatMeta.textContent = "";
   } finally {
     els.chatInput.disabled = false;
@@ -439,7 +444,10 @@ async function onFeedbackClick() {
   els.feedbackBtn.innerHTML = `<span class="spinner"></span>Generating feedback…`;
   els.feedbackOutput.innerHTML = `<p><em>The model is reading your draft against the rubric and the closest exemplar. Usually 15–30 seconds.</em></p>`;
   try {
-    const data = await api("/api/feedback", { question_id: state.questionId, draft_text: draft });
+    const data = await fetchJson("/api/feedback", {
+      question_id: state.questionId,
+      draft_text: draft,
+    });
     state.feedbackMd = data.feedback_markdown || "";
     state.exemplarUsed = data.exemplar_used || null;
     els.feedbackOutput.innerHTML =
@@ -447,14 +455,58 @@ async function onFeedbackClick() {
       + renderMarkdown(state.feedbackMd);
     persistCurrent({ flush: true });
   } catch (err) {
-    els.feedbackOutput.innerHTML = `<p class="message error">Feedback failed: ${err.message}</p>`;
+    els.feedbackOutput.innerHTML =
+      `<p class="message error">Feedback failed: ${escapeHtml(err.message)}${err.detail ? "<br/><small>" + escapeHtml(err.detail) + "</small>" : ""}</p>`;
   } finally {
     els.feedbackBtn.textContent = original;
     refreshControls();
   }
 }
 
-async function onExportClick() {
+// ── Print / Save as PDF (client-side, no server round trip) ──
+function buildPrintView() {
+  const studentName = getStudentName();
+  const q = state.question;
+  if (!q) return "";
+  const dateStr = new Date().toLocaleString();
+  const draft = els.draftInput.value || "";
+
+  const turnsHtml = state.history.length
+    ? state.history.map(t => {
+        const role = t.role === "user" ? "You" : "Chamber";
+        const klass = t.role === "user" ? "print-turn-user" : "print-turn-model";
+        return `<div class="print-turn ${klass}"><div class="print-turn-label">${role}</div><div class="print-turn-body">${renderMarkdown(t.text || "")}</div></div>`;
+      }).join("\n")
+    : "<p><em>No chat messages saved.</em></p>";
+
+  const draftHtml = draft.trim()
+    ? `<pre class="print-draft">${escapeHtml(draft)}</pre>`
+    : "<p><em>No draft saved.</em></p>";
+
+  const feedbackHtml = state.feedbackMd
+    ? renderMarkdown(state.feedbackMd)
+    : "<p><em>No feedback saved. Click <strong>Get feedback</strong> in the Lab to generate one.</em></p>";
+
+  return `
+    <h1>Issues Study Lab — Session export</h1>
+    <div class="print-meta">
+      <strong>Student:</strong> ${escapeHtml(studentName)}<br/>
+      <strong>Question ID:</strong> ${escapeHtml(q.id)} (${escapeHtml(q.domain)})<br/>
+      <strong>Question:</strong> ${escapeHtml(q.text)}<br/>
+      <strong>Exported:</strong> ${escapeHtml(dateStr)}
+    </div>
+    <h2>Chat history</h2>
+    ${turnsHtml}
+    <div class="print-pagebreak"></div>
+    <h2>Draft response</h2>
+    ${draftHtml}
+    <div class="print-pagebreak"></div>
+    <h2>Feedback</h2>
+    ${feedbackHtml}
+  `;
+}
+
+function onExportClick() {
   const studentName = getStudentName();
   if (!studentName) {
     setStatus("enter your name first", "error");
@@ -463,55 +515,26 @@ async function onExportClick() {
     return;
   }
   if (!state.questionId) return;
-  const original = els.exportBtn.textContent;
-  els.exportBtn.disabled = true;
-  els.exportBtn.innerHTML = `<span class="spinner"></span>Building PDF…`;
-  try {
-    const res = await fetch(API_BASE + "/api/export_pdf", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        student_name: studentName,
-        question_id: state.questionId,
-        history: state.history,
-        draft: els.draftInput.value || "",
-        feedback: state.feedbackMd || "",
-      }),
-    });
-    if (!res.ok) {
-      let detail; try { detail = (await res.json()).error; } catch { detail = `HTTP ${res.status}`; }
-      throw new Error(detail);
-    }
-    const blob = await res.blob();
-    const cd = res.headers.get("Content-Disposition") || "";
-    const m = cd.match(/filename="([^"]+)"/);
-    const filename = m ? m[1] : `issues_study_${state.questionId}.pdf`;
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = filename;
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
-    setStatus(`PDF downloaded: ${filename}`, "ready");
-  } catch (err) {
-    setStatus(`PDF export failed: ${err.message}`, "error");
-  } finally {
-    els.exportBtn.textContent = original;
-    refreshControls();
-  }
+  els.printView.innerHTML = buildPrintView();
+  // Defer to next frame so the DOM commits before the print dialog opens.
+  requestAnimationFrame(() => {
+    window.print();
+  });
 }
+
+// Clear the print view after the dialog is dismissed so it doesn't pile up
+// across re-runs.
+window.addEventListener("afterprint", () => {
+  if (els.printView) els.printView.innerHTML = "";
+});
 
 // ── Init ──────────────────────────────────────────────────────
 async function init() {
   loadStudentName();
 
-  // Restore last picked question if present
   const savedQid = localStorage.getItem(QID_KEY);
-  if (savedQid) {
-    // Defer setting state.questionId until after questions load (for state.question)
-    state.questionId = savedQid;
-  }
+  if (savedQid) state.questionId = savedQid;
 
-  // Wire events
   els.studentName.addEventListener("input", saveStudentName);
   $("welcome-form").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -534,9 +557,7 @@ async function init() {
     if (document.visibilityState === "hidden") persistCurrent({ flush: true });
   });
 
-  // Pre-load questions so the bank is instant when the user navigates there
   await loadQuestions();
-  // Resolve saved question
   if (state.questionId) {
     state.question = state.questions.find(q => q.id === state.questionId) || null;
     if (state.question) {
@@ -561,7 +582,6 @@ async function init() {
         }
       }
     } else {
-      // Saved qid not in current bank — clear it
       state.questionId = null;
       localStorage.removeItem(QID_KEY);
     }
