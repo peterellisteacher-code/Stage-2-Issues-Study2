@@ -96,7 +96,10 @@ ${dialectic}${attachedLines}${missingLines}`;
 // Primary-tier readings are attached first; anything that would push us over budget
 // goes into `missing` so the AI knows the title but is told not to invent quotes.
 function buildDocumentBlocks(entry, fileIds, readingsText) {
-  const TOKEN_BUDGET = 120_000;        // leaves ~80K for system + history + output
+  // Doc budget. Tight to fit Anthropic Tier 1 rate limit (50K input tokens/min).
+  // First turn: ~25K docs + ~1K system + ~1K context = ~27K, under 50K.
+  // Subsequent turns: docs cache (charged ~10%) ≈ 2.5K + history ≈ 5K total, comfortable.
+  const TOKEN_BUDGET = 25_000;
   const TOKENS_PER_PDF_BYTE = 1 / 20;  // ~50 tokens/KB
   const TOKENS_PER_TEXT_CHAR = 0.25;   // 4 chars/token
 
