@@ -1,0 +1,52 @@
+# Netlify config: static frontend + reverse proxy /api/* to Cloud Run.
+#
+# The Cloud Run URL is injected at deploy time as the env var BACKEND_URL.
+# Set it on Netlify (Site settings -> Environment variables) before the
+# first deploy, e.g. BACKEND_URL=https://issues-study-lab-xyz.run.app
+
+[build]
+  # The lab files are at the repo root after the deploy restructure.
+  publish = "."
+  command = "echo 'no build step'"
+
+# Reverse-proxy /api/* AND /readings/* to the Cloud Run backend.
+# Cloud Run hosts both the Flask API and the 137 source PDFs (the readings/
+# folder is too big for a Netlify static deploy via the MCP path).
+# BACKEND_URL must be set on Netlify before the redirect resolves.
+[[redirects]]
+  from = "/api/*"
+  to = "https://issues-study-lab-167911956198.us-central1.run.app/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/readings/*"
+  to = "https://storage.googleapis.com/issues-study-lab-readings/:splat"
+  status = 200
+  force = true
+
+# Cache headers for the proxied PDFs -- they don't change once cached.
+[[headers]]
+  for = "/readings/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
