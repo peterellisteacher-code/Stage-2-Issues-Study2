@@ -1,15 +1,9 @@
 // Issues Study Lab — wizard SPA, vanilla JS.
-
-// ── Cross-origin Cloud Run base ─────────────────────────────────
-// On Netlify the /api/* edge proxy times out at 30s, killing chat calls.
-// So we hit Cloud Run directly. CORS allows the Netlify origin.
-const API_BASE = (location.hostname.endsWith(".netlify.app") || location.hostname.endsWith(".netlify.com"))
-  ? "https://issues-study-lab-167911956198.us-central1.run.app"
-  : "";
+// Data is served as static JSON; chat + feedback go through Netlify
+// Functions (/api/chat, /api/feedback) which call Claude Haiku 4.5.
 
 const PAGES = ["welcome", "task", "bank", "readings", "chamber", "drafting"];
 const DEFAULT_PAGE = "welcome";
-// Pages that need a question selected before they're useful
 const NEEDS_QUESTION = new Set(["readings", "chamber", "drafting"]);
 
 const DOMAIN_LABELS = {
@@ -24,11 +18,11 @@ const DOMAIN_LABELS = {
 };
 
 const state = {
-  questions: [],            // [{id, domain, text, cluster_pack, ...}]
-  questionId: null,         // currently picked question id
-  question: null,           // resolved question object
-  readings: null,           // {readings, dialectic, ...} — cached per question
-  history: [],              // chat turns
+  questions: [],          // [{id, domain, text, ...}]
+  readingsByQid: {},      // { Q001: {dialectic, readings, ...}, ... }
+  questionId: null,
+  question: null,
+  history: [],            // [{role: "user"|"model", text}]
   feedbackMd: "",
   exemplarUsed: null,
 };
@@ -47,16 +41,19 @@ const els = {
   navLinks: document.querySelectorAll(".topnav a"),
   studentName: $("student-name"),
   beginBtn: $("begin-btn"),
-  // bank
+
+  // Bank
   domainFilter: $("domain-filter"),
   bankCount: $("bank-count"),
   questionList: $("question-list"),
-  // readings
+
+  // Readings
   selectedQReadings: $("selected-q-readings"),
   dialecticBlock: $("dialectic-block"),
   readingsPrimary: $("readings-primary"),
   readingsSecondary: $("readings-secondary"),
-  // chamber
+
+  // Chamber (live chat)
   selectedQChamber: $("selected-q-chamber"),
   chatWindow: $("chat-window"),
   chatEmpty: $("chat-empty"),
@@ -64,7 +61,13 @@ const els = {
   chatInput: $("chat-input"),
   chatSend: $("chat-send"),
   chatMeta: $("chat-meta"),
-  // drafting
+
+  // Chamber (handoff fallback)
+  chamberCopy: $("chamber-copy"),
+  chamberPrompt: $("chamber-prompt"),
+  chamberPromptMeta: $("chamber-prompt-meta"),
+
+  // Drafting
   selectedQDrafting: $("selected-q-drafting"),
   draftInput: $("draft-input"),
   draftCounter: $("draft-counter"),
@@ -72,6 +75,13 @@ const els = {
   exportBtn: $("export-pdf-btn"),
   feedbackOutput: $("feedback-output"),
   autosave: $("autosave-indicator"),
+
+  // Feedback handoff
+  feedbackCopy: $("feedback-copy"),
+  feedbackPrompt: $("feedback-prompt"),
+  feedbackPromptMeta: $("feedback-prompt-meta"),
+
+  printView: $("print-view"),
 };
 
 // ── Persistence ────────────────────────────────────────────────
@@ -107,8 +117,7 @@ function persistCurrent({ flush = false } = {}) {
       els.autosave.classList.remove("saved");
     }
   };
-  if (flush && saveDebounce) { clearTimeout(saveDebounce); saveDebounce = null; write(); }
-  else if (flush) write();
+  if (flush) { if (saveDebounce) { clearTimeout(saveDebounce); saveDebounce = null; } write(); }
   else { if (saveDebounce) clearTimeout(saveDebounce); saveDebounce = setTimeout(write, 600); }
 }
 function loadSavedStateFor(qid) {
@@ -144,13 +153,14 @@ function renderMarkdown(md) {
   return out.join("\n");
 }
 
-// ── API helper ─────────────────────────────────────────────────
-async function api(path, body) {
-  const opts = { method: body ? "POST" : "GET", headers: { "Content-Type": "application/json" } };
-  if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(API_BASE + path, opts);
+// ── API helpers ────────────────────────────────────────────────
+async function fetchJson(url, body) {
+  const opts = body
+    ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
+    : { method: "GET" };
+  const res = await fetch(url, opts);
   const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || data.detail || `HTTP ${res.status}`);
+  if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
   return data;
 }
 
@@ -159,12 +169,10 @@ function setStatus(text, cls = "") { els.status.textContent = text; els.status.c
 // ── Router ─────────────────────────────────────────────────────
 function navigate(page, push = true) {
   if (!PAGES.includes(page)) page = DEFAULT_PAGE;
-  // Lock pages that need a question
   if (NEEDS_QUESTION.has(page) && !state.questionId) {
     page = "bank";
     setStatus("pick a question first", "error");
   } else if (page !== "welcome" && !getStudentName()) {
-    // Force name first
     page = "welcome";
     setStatus("enter your name to begin", "error");
   } else {
@@ -172,7 +180,7 @@ function navigate(page, push = true) {
   }
 
   for (const [name, el] of Object.entries(els.pages)) {
-    el.classList.toggle("active", name === page);
+    if (el) el.classList.toggle("active", name === page);
   }
   els.navLinks.forEach(a => {
     a.classList.toggle("active", a.dataset.page === page);
@@ -184,43 +192,55 @@ function navigate(page, push = true) {
   }
   window.scrollTo(0, 0);
 
-  // Page-specific entry hooks
-  if (page === "bank" && state.questions.length === 0) loadQuestions();
-  if (page === "readings" && state.questionId && !state.readings) loadReadings(state.questionId);
+  if (page === "readings" && state.questionId) renderReadingsForCurrent();
+  if (page === "chamber" && state.questionId) updateChamberPrompt();
 }
 
 function refreshControls() {
   const hasName = getStudentName().length > 0;
   const hasQ = !!state.questionId;
-  els.beginBtn.disabled = !hasName;
-  // Chamber controls
-  els.chatInput.disabled = !hasQ;
-  els.chatSend.disabled = !hasQ;
-  // Drafting controls
-  els.draftInput.disabled = !hasQ;
-  const draftLen = els.draftInput.value.length;
-  els.feedbackBtn.disabled = !hasQ || draftLen < 200;
-  els.exportBtn.disabled = !hasQ || !hasName;
-  // Re-evaluate locked nav links
+  if (els.beginBtn) els.beginBtn.disabled = !hasName;
+
+  if (els.chatInput) els.chatInput.disabled = !hasQ;
+  if (els.chatSend) els.chatSend.disabled = !hasQ;
+  if (els.chatInput) {
+    els.chatInput.placeholder = hasQ
+      ? "Say what you're thinking. Cmd/Ctrl+Enter to send."
+      : "Pick a question first.";
+  }
+
+  if (els.draftInput) els.draftInput.disabled = !hasQ;
+  const draftLen = els.draftInput ? els.draftInput.value.length : 0;
+  if (els.feedbackBtn) els.feedbackBtn.disabled = !hasQ || draftLen < 200;
+  if (els.feedbackCopy) els.feedbackCopy.disabled = !hasQ || draftLen < 200;
+  if (els.exportBtn) els.exportBtn.disabled = !hasQ || !hasName;
+  if (els.chamberCopy) els.chamberCopy.disabled = !hasQ;
+
   els.navLinks.forEach(a => {
     a.classList.toggle("locked", NEEDS_QUESTION.has(a.dataset.page) && !state.questionId);
   });
 }
 
-// ── Bank ───────────────────────────────────────────────────────
-async function loadQuestions() {
-  setStatus("loading questions…");
+// ── Static data loaders ────────────────────────────────────────
+async function loadStaticData() {
+  setStatus("loading…");
   try {
-    const data = await api("/api/questions");
-    state.questions = data.questions || [];
+    const [qs, rd] = await Promise.all([
+      fetchJson("/data/questions.json"),
+      fetchJson("/data/readings.json"),
+    ]);
+    state.questions = Array.isArray(qs) ? qs : (qs.questions || []);
+    state.readingsByQid = rd || {};
     setStatus(`${state.questions.length} questions loaded`, "ready");
     renderBank();
   } catch (e) {
-    setStatus(`failed: ${e.message}`, "error");
+    setStatus(`failed to load lab data: ${e.message}`, "error");
   }
 }
 
+// ── Bank ───────────────────────────────────────────────────────
 function renderBank() {
+  if (!els.questionList) return;
   const dom = els.domainFilter.value;
   const filtered = state.questions.filter(q => !dom || q.domain === dom);
   els.bankCount.textContent = `${filtered.length} ${filtered.length === 1 ? "question" : "questions"}`;
@@ -233,9 +253,9 @@ function renderBank() {
     text.className = "q-text";
     text.textContent = q.text;
 
-    const dom = document.createElement("span");
-    dom.className = "q-domain";
-    dom.textContent = DOMAIN_LABELS[q.domain] || q.domain;
+    const dEl = document.createElement("span");
+    dEl.className = "q-domain";
+    dEl.textContent = DOMAIN_LABELS[q.domain] || q.domain;
 
     const cluster = document.createElement("span");
     cluster.className = "q-cluster";
@@ -250,7 +270,7 @@ function renderBank() {
     actions.appendChild(pick);
 
     li.appendChild(text);
-    li.appendChild(dom);
+    li.appendChild(dEl);
     if (cluster.textContent) li.appendChild(cluster);
     li.appendChild(actions);
     li.addEventListener("click", () => {
@@ -263,40 +283,40 @@ function renderBank() {
 
 function pickQuestion(qid) {
   state.questionId = qid;
-  state.question = state.questions.find(q => q.id === qid);
-  state.readings = null;
+  state.question = state.questions.find(q => q.id === qid) || null;
   state.history = [];
   state.feedbackMd = "";
   state.exemplarUsed = null;
-  els.draftInput.value = "";
-  els.feedbackOutput.innerHTML = "";
-  els.chatWindow.innerHTML = "";
-  els.chatWindow.appendChild(els.chatEmpty);
-  els.autosave.textContent = "not saved";
-  els.autosave.classList.remove("saved");
-  els.draftCounter.textContent = "0 / ~2000 words";
+  if (els.draftInput) els.draftInput.value = "";
+  if (els.feedbackOutput) els.feedbackOutput.innerHTML = "";
+  resetChatWindow();
+  if (els.autosave) {
+    els.autosave.textContent = "not saved";
+    els.autosave.classList.remove("saved");
+  }
+  if (els.draftCounter) els.draftCounter.textContent = "0 / ~2000 words";
   localStorage.setItem(QID_KEY, qid);
   paintSelectedBanners();
 
-  // Restore saved state if any
   const saved = loadSavedStateFor(qid);
   if (saved) {
     state.history = saved.history || [];
     state.feedbackMd = saved.feedback || "";
     state.exemplarUsed = saved.exemplar || null;
-    els.draftInput.value = saved.draft || "";
+    if (els.draftInput) els.draftInput.value = saved.draft || "";
     updateWordCount();
     if (state.history.length) {
-      els.chatWindow.innerHTML = "";
+      resetChatWindow();
+      els.chatWindow.removeChild(els.chatEmpty);
       for (const t of state.history) appendMessage(t.role, t.text);
     }
-    if (state.feedbackMd) {
+    if (state.feedbackMd && els.feedbackOutput) {
       const tag = state.exemplarUsed
-        ? `<p class="chat-meta">Restored from autosave · compared to SACE exemplar: ${state.exemplarUsed}</p>`
+        ? `<p class="chat-meta">Restored from autosave · compared to SACE exemplar: ${escapeHtml(state.exemplarUsed)}</p>`
         : `<p class="chat-meta">Restored from autosave</p>`;
       els.feedbackOutput.innerHTML = tag + renderMarkdown(state.feedbackMd);
     }
-    if (saved.savedAt) {
+    if (saved.savedAt && els.autosave) {
       els.autosave.textContent = `restored · saved ${new Date(saved.savedAt).toLocaleString()}`;
       els.autosave.classList.add("saved");
     }
@@ -309,35 +329,30 @@ function pickQuestion(qid) {
 function paintSelectedBanners() {
   const q = state.question;
   const html = q
-    ? `<div class="q-domain-tag">${(DOMAIN_LABELS[q.domain] || q.domain).toUpperCase()}${q.cluster_display_name ? " · cluster: " + q.cluster_display_name : ""}</div>${escapeHtml(q.text)}`
+    ? `<div class="q-domain-tag">${(DOMAIN_LABELS[q.domain] || q.domain).toUpperCase()}${q.cluster_display_name ? " · cluster: " + escapeHtml(q.cluster_display_name) : ""}</div>${escapeHtml(q.text)}`
     : "<em>Pick a question first.</em>";
-  els.selectedQReadings.innerHTML = html;
-  els.selectedQChamber.innerHTML = html;
-  els.selectedQDrafting.innerHTML = html;
+  if (els.selectedQReadings) els.selectedQReadings.innerHTML = html;
+  if (els.selectedQChamber) els.selectedQChamber.innerHTML = html;
+  if (els.selectedQDrafting) els.selectedQDrafting.innerHTML = html;
 }
 
 // ── Readings ───────────────────────────────────────────────────
-async function loadReadings(qid) {
-  setStatus("loading readings…");
-  try {
-    const data = await api("/api/readings", { question_id: qid });
-    state.readings = data;
-    renderReadings(data);
-    setStatus(`${data.readings.length} readings loaded`, "ready");
-  } catch (e) {
-    setStatus(`failed: ${e.message}`, "error");
+function renderReadingsForCurrent() {
+  if (!state.questionId) return;
+  const data = state.readingsByQid[state.questionId];
+  if (!data) {
+    els.dialecticBlock.innerHTML = "";
+    els.readingsPrimary.innerHTML = "<li><em>No readings on file for this question.</em></li>";
+    els.readingsSecondary.innerHTML = "";
+    return;
   }
-}
-function renderReadings(data) {
-  // Dialectic
   els.dialecticBlock.innerHTML = data.dialectic ? renderMarkdown(data.dialectic) : "";
 
   const grouped = { primary: [], secondary: [] };
-  for (const r of data.readings) (grouped[r.tier] || grouped.primary).push(r);
-  els.readingsPrimary.innerHTML = "";
-  els.readingsSecondary.innerHTML = "";
+  for (const r of (data.readings || [])) (grouped[r.tier] || grouped.primary).push(r);
   for (const tier of ["primary", "secondary"]) {
     const ul = tier === "primary" ? els.readingsPrimary : els.readingsSecondary;
+    ul.innerHTML = "";
     if (!grouped[tier].length) {
       ul.innerHTML = `<li><em>No ${tier} readings curated.</em></li>`;
       continue;
@@ -346,12 +361,11 @@ function renderReadings(data) {
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.className = "reading-title";
-      a.href = (API_BASE ? "" : "") + r.download_url;  // /readings/* (handled by Netlify redirect to GCS)
-      // when running on Netlify, /readings/* is rewritten by netlify.toml to GCS bucket; the relative path works
+      a.href = r.download_url;
       a.target = "_blank";
       a.rel = "noopener";
-      a.textContent = r.filename.replace(/\.pdf$/i, "");
-      a.title = `Open / download (${(r.size_bytes / 1_000_000).toFixed(1)} MB)`;
+      a.textContent = (r.filename || "").replace(/\.pdf$/i, "");
+      a.title = `Open / download${r.size_bytes ? ` (${(r.size_bytes / 1_000_000).toFixed(1)} MB)` : ""}`;
       li.appendChild(a);
       if (r.folder) {
         const f = document.createElement("span");
@@ -370,9 +384,18 @@ function renderReadings(data) {
   }
 }
 
-// ── Chamber ────────────────────────────────────────────────────
+// ── Chamber (live chat) ────────────────────────────────────────
+function resetChatWindow() {
+  if (!els.chatWindow) return;
+  els.chatWindow.innerHTML = "";
+  if (els.chatEmpty) els.chatWindow.appendChild(els.chatEmpty);
+}
+
 function appendMessage(role, text, meta = "") {
-  if (els.chatEmpty.parentNode === els.chatWindow) els.chatWindow.removeChild(els.chatEmpty);
+  if (!els.chatWindow) return null;
+  if (els.chatEmpty && els.chatEmpty.parentNode === els.chatWindow) {
+    els.chatWindow.removeChild(els.chatEmpty);
+  }
   const wrap = document.createElement("div");
   wrap.className = `message ${role}`;
   const r = document.createElement("div");
@@ -396,26 +419,27 @@ function appendMessage(role, text, meta = "") {
 
 async function onChatSubmit(e) {
   e.preventDefault();
-  const message = els.chatInput.value.trim();
+  const message = (els.chatInput.value || "").trim();
   if (!message || !state.questionId) return;
   appendMessage("user", message);
   state.history.push({ role: "user", text: message });
   els.chatInput.value = "";
   els.chatInput.disabled = true;
   els.chatSend.disabled = true;
-  els.chatMeta.innerHTML = `<span class="spinner"></span>thinking… (first call may take 60-90s while the library warms up)`;
+  els.chatMeta.innerHTML = `<span class="spinner"></span>thinking…`;
   try {
-    const data = await api("/api/chat", {
+    const data = await fetchJson("/api/chat", {
       question_id: state.questionId,
       message,
       history: state.history.slice(0, -1).map(t => ({ role: t.role, text: t.text })),
     });
     appendMessage("model", data.text || "(no reply)");
     state.history.push({ role: "model", text: data.text || "" });
-    els.chatMeta.textContent = `${data.duration_ms} ms · ~$${(data.estimated_cost_usd || 0).toFixed(4)}`;
+    const cost = (data.estimated_cost_usd || 0).toFixed(4);
+    els.chatMeta.textContent = `${data.duration_ms || 0} ms · ~$${cost}`;
     persistCurrent({ flush: true });
   } catch (err) {
-    appendMessage("error", `Request failed: ${err.message}`);
+    appendMessage("error", `Request failed: ${err.message}. The handoff fallback below still works.`);
     els.chatMeta.textContent = "";
   } finally {
     els.chatInput.disabled = false;
@@ -424,37 +448,198 @@ async function onChatSubmit(e) {
   }
 }
 
+function onChatKeydown(e) {
+  if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+    e.preventDefault();
+    els.chatForm.requestSubmit();
+  }
+}
+
+// ── Chamber (handoff prompt builder) ───────────────────────────
+function buildChamberPrompt() {
+  const q = state.question;
+  if (!q) return "";
+  const data = state.readingsByQid[q.id] || {};
+  const readings = (data.readings || [])
+    .map(r => {
+      const tier = r.tier === "primary" ? "primary" : "secondary";
+      const title = (r.filename || "").replace(/\.pdf$/i, "");
+      return `- [${tier}] ${title}${r.why ? " — " + r.why : ""}`;
+    }).join("\n");
+  const dialectic = data.dialectic || "";
+
+  return `You are the Library — a Socratic interlocutor for a SACE Stage 2 Philosophy student working on their Issues Study (AT3). The student must investigate one philosophical issue, present multiple positions with their reasoning, raise objections, and defend their own answer.
+
+Your role:
+1. Steel-man positions the student dismisses.
+2. Press for reasons, not just claims.
+3. Surface the most damaging objection to whatever position they're leaning toward, and ask how they'd respond.
+4. Refuse to write paragraphs of their essay. Push them to think; don't draft for them.
+5. Reference the readings by name when relevant — recommend which to consult first.
+6. Be brief. Ask questions, don't lecture. Under 200 words per reply unless asked for more depth.
+7. Ask early in the dialogue why they think this question is genuinely philosophical (RA1).
+
+Tone: warm, precise, intellectually serious. Clean Australian/British English.
+
+# The student's question
+${q.text}
+
+Domain: ${q.domain}${q.subdomain ? " · " + q.subdomain : ""}
+
+# The dialectic landscape
+${dialectic}
+
+# The curated readings the student has been given
+${readings || "(no curated readings on file)"}
+
+The student will now begin. Push them.`;
+}
+
+function updateChamberPrompt() {
+  if (!els.chamberPrompt) return;
+  const text = buildChamberPrompt();
+  els.chamberPrompt.value = text;
+  if (els.chamberPromptMeta) {
+    els.chamberPromptMeta.textContent = text ? `${text.length.toLocaleString()} chars` : "";
+  }
+}
+
+async function onChamberCopy() {
+  const text = els.chamberPrompt.value;
+  if (!text) return;
+  try {
+    await navigator.clipboard.writeText(text);
+    setStatus("chamber prompt copied", "ready");
+  } catch (e) {
+    els.chamberPrompt.select();
+    document.execCommand("copy");
+    setStatus("chamber prompt copied", "ready");
+  }
+}
+
 // ── Drafting ───────────────────────────────────────────────────
 function updateWordCount() {
+  if (!els.draftInput || !els.draftCounter) return;
   const text = els.draftInput.value;
   const words = text.trim() ? text.trim().split(/\s+/).length : 0;
   els.draftCounter.textContent = `${words.toLocaleString()} / ~2000 words`;
 }
 
 async function onFeedbackClick() {
-  const draft = els.draftInput.value.trim();
+  const draft = (els.draftInput.value || "").trim();
   if (!state.questionId || draft.length < 200) return;
   els.feedbackBtn.disabled = true;
   const original = els.feedbackBtn.textContent;
   els.feedbackBtn.innerHTML = `<span class="spinner"></span>Generating feedback…`;
   els.feedbackOutput.innerHTML = `<p><em>The model is reading your draft against the rubric and the closest exemplar. Usually 15–30 seconds.</em></p>`;
   try {
-    const data = await api("/api/feedback", { question_id: state.questionId, draft_text: draft });
+    const data = await fetchJson("/api/feedback", { question_id: state.questionId, draft_text: draft });
     state.feedbackMd = data.feedback_markdown || "";
     state.exemplarUsed = data.exemplar_used || null;
+    const cost = (data.estimated_cost_usd || 0).toFixed(4);
     els.feedbackOutput.innerHTML =
-      `<p class="chat-meta">Compared to SACE exemplar: ${data.exemplar_used} · ${data.duration_ms} ms · ~$${(data.estimated_cost_usd || 0).toFixed(4)}</p>`
+      `<p class="chat-meta">Compared to SACE exemplar: ${escapeHtml(state.exemplarUsed || "—")} · ${data.duration_ms || 0} ms · ~$${cost}</p>`
       + renderMarkdown(state.feedbackMd);
     persistCurrent({ flush: true });
   } catch (err) {
-    els.feedbackOutput.innerHTML = `<p class="message error">Feedback failed: ${err.message}</p>`;
+    els.feedbackOutput.innerHTML = `<p class="message error">Feedback failed: ${escapeHtml(err.message)}. The handoff fallback below still works.</p>`;
   } finally {
     els.feedbackBtn.textContent = original;
     refreshControls();
   }
 }
 
-async function onExportClick() {
+// ── Feedback handoff prompt builder ────────────────────────────
+function buildFeedbackPrompt() {
+  const q = state.question;
+  const draft = els.draftInput ? (els.draftInput.value || "").trim() : "";
+  if (!q || draft.length < 200) return "";
+  return `You are a SACE Stage 2 Philosophy moderator giving formative feedback on a student's Issues Study (AT3) draft. The student is graded on seven criteria: KU1, KU2, RA1, RA2, RA3, CA1, C1, C2.
+
+Return structured markdown feedback in EXACTLY this format:
+
+## Predicted band
+A single grade (A+/A/A-/B+/B/B-/C+/C/C-/D/E) with one sentence justifying it.
+
+## Strengths
+2–4 bullets with specific phrases or moves quoted from the draft.
+
+## Per-criterion feedback
+A short paragraph for each of: **KU1**, **KU2**, **RA1**, **RA2**, **RA3**, **CA1**, **C1/C2**. For each: what's there, what's missing, the single most useful revision.
+
+## Top three revisions
+Numbered, concrete, specific, actionable.
+
+Tone: honest senior reader. Never sycophantic. If weak, say so kindly. If strong, name precisely why.
+
+# The student's question
+${q.text}
+
+Domain: ${q.domain}${q.subdomain ? " · " + q.subdomain : ""}
+
+# The student's draft
+
+${draft}
+
+Now produce the feedback in the exact structure above.`;
+}
+
+function updateFeedbackPrompt() {
+  if (!els.feedbackPrompt) return;
+  const text = buildFeedbackPrompt();
+  els.feedbackPrompt.value = text;
+  if (els.feedbackPromptMeta) {
+    els.feedbackPromptMeta.textContent = text ? `${text.length.toLocaleString()} chars` : "draft must be at least 200 chars";
+  }
+}
+
+async function onFeedbackCopy() {
+  const text = els.feedbackPrompt.value;
+  if (!text) return;
+  try {
+    await navigator.clipboard.writeText(text);
+    setStatus("feedback prompt copied", "ready");
+  } catch (e) {
+    els.feedbackPrompt.select();
+    document.execCommand("copy");
+    setStatus("feedback prompt copied", "ready");
+  }
+}
+
+// ── PDF export (client-side, via window.print()) ───────────────
+function buildPrintView() {
+  if (!els.printView) return;
+  const name = getStudentName();
+  const q = state.question;
+  const draft = els.draftInput ? (els.draftInput.value || "") : "";
+  const today = new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+
+  const safe = (s) => escapeHtml(s || "");
+
+  const historyHtml = state.history.length
+    ? `<h2>Chamber dialogue</h2>` + state.history.map(t => {
+        const role = t.role === "user" ? "You" : "Library";
+        return `<div class="print-turn"><div class="print-turn-role">${safe(role)}</div><div class="print-turn-body">${renderMarkdown(t.text || "")}</div></div>`;
+      }).join("")
+    : "";
+
+  const feedbackHtml = state.feedbackMd
+    ? `<h2>Feedback</h2>${state.exemplarUsed ? `<p class="print-meta">Compared to SACE exemplar: ${safe(state.exemplarUsed)}</p>` : ""}<div class="print-feedback">${renderMarkdown(state.feedbackMd)}</div>`
+    : "";
+
+  els.printView.innerHTML = `
+    <header class="print-header">
+      <h1>Issues Study Lab — SACE Stage 2 Philosophy</h1>
+      <p class="print-meta">${safe(name)} · ${safe(today)}</p>
+    </header>
+    ${q ? `<section><h2>The question</h2><p class="print-question"><strong>${safe(DOMAIN_LABELS[q.domain] || q.domain)}</strong> — ${safe(q.text)}</p></section>` : ""}
+    <section><h2>Draft response</h2><div class="print-draft">${renderMarkdown(draft)}</div></section>
+    ${feedbackHtml ? `<section>${feedbackHtml}</section>` : ""}
+    ${historyHtml ? `<section>${historyHtml}</section>` : ""}
+  `;
+}
+
+function onExportClick() {
   const studentName = getStudentName();
   if (!studentName) {
     setStatus("enter your name first", "error");
@@ -463,55 +648,18 @@ async function onExportClick() {
     return;
   }
   if (!state.questionId) return;
-  const original = els.exportBtn.textContent;
-  els.exportBtn.disabled = true;
-  els.exportBtn.innerHTML = `<span class="spinner"></span>Building PDF…`;
-  try {
-    const res = await fetch(API_BASE + "/api/export_pdf", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        student_name: studentName,
-        question_id: state.questionId,
-        history: state.history,
-        draft: els.draftInput.value || "",
-        feedback: state.feedbackMd || "",
-      }),
-    });
-    if (!res.ok) {
-      let detail; try { detail = (await res.json()).error; } catch { detail = `HTTP ${res.status}`; }
-      throw new Error(detail);
-    }
-    const blob = await res.blob();
-    const cd = res.headers.get("Content-Disposition") || "";
-    const m = cd.match(/filename="([^"]+)"/);
-    const filename = m ? m[1] : `issues_study_${state.questionId}.pdf`;
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = filename;
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
-    setStatus(`PDF downloaded: ${filename}`, "ready");
-  } catch (err) {
-    setStatus(`PDF export failed: ${err.message}`, "error");
-  } finally {
-    els.exportBtn.textContent = original;
-    refreshControls();
-  }
+  buildPrintView();
+  // Allow the print view to render before the print dialog opens
+  setTimeout(() => window.print(), 50);
 }
 
 // ── Init ──────────────────────────────────────────────────────
 async function init() {
   loadStudentName();
 
-  // Restore last picked question if present
   const savedQid = localStorage.getItem(QID_KEY);
-  if (savedQid) {
-    // Defer setting state.questionId until after questions load (for state.question)
-    state.questionId = savedQid;
-  }
+  if (savedQid) state.questionId = savedQid;
 
-  // Wire events
   els.studentName.addEventListener("input", saveStudentName);
   $("welcome-form").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -520,13 +668,17 @@ async function init() {
   });
   els.domainFilter.addEventListener("change", renderBank);
   els.chatForm.addEventListener("submit", onChatSubmit);
+  els.chatInput.addEventListener("keydown", onChatKeydown);
   els.draftInput.addEventListener("input", () => {
     updateWordCount();
+    updateFeedbackPrompt();
     refreshControls();
     persistCurrent();
   });
   els.feedbackBtn.addEventListener("click", onFeedbackClick);
   els.exportBtn.addEventListener("click", onExportClick);
+  if (els.chamberCopy) els.chamberCopy.addEventListener("click", onChamberCopy);
+  if (els.feedbackCopy) els.feedbackCopy.addEventListener("click", onFeedbackCopy);
 
   window.addEventListener("hashchange", () => navigate(location.hash.replace(/^#/, "") || DEFAULT_PAGE, false));
   window.addEventListener("beforeunload", () => persistCurrent({ flush: true }));
@@ -534,9 +686,8 @@ async function init() {
     if (document.visibilityState === "hidden") persistCurrent({ flush: true });
   });
 
-  // Pre-load questions so the bank is instant when the user navigates there
-  await loadQuestions();
-  // Resolve saved question
+  await loadStaticData();
+
   if (state.questionId) {
     state.question = state.questions.find(q => q.id === state.questionId) || null;
     if (state.question) {
@@ -549,11 +700,15 @@ async function init() {
         els.draftInput.value = saved.draft || "";
         updateWordCount();
         if (state.history.length) {
-          els.chatWindow.innerHTML = "";
+          resetChatWindow();
+          els.chatWindow.removeChild(els.chatEmpty);
           for (const t of state.history) appendMessage(t.role, t.text);
         }
-        if (state.feedbackMd) {
-          els.feedbackOutput.innerHTML = renderMarkdown(state.feedbackMd);
+        if (state.feedbackMd && els.feedbackOutput) {
+          const tag = state.exemplarUsed
+            ? `<p class="chat-meta">Restored from autosave · compared to SACE exemplar: ${escapeHtml(state.exemplarUsed)}</p>`
+            : `<p class="chat-meta">Restored from autosave</p>`;
+          els.feedbackOutput.innerHTML = tag + renderMarkdown(state.feedbackMd);
         }
         if (saved.savedAt) {
           els.autosave.textContent = `restored · saved ${new Date(saved.savedAt).toLocaleString()}`;
@@ -561,12 +716,13 @@ async function init() {
         }
       }
     } else {
-      // Saved qid not in current bank — clear it
       state.questionId = null;
       localStorage.removeItem(QID_KEY);
     }
   }
 
+  updateChamberPrompt();
+  updateFeedbackPrompt();
   refreshControls();
   navigate(location.hash.replace(/^#/, "") || DEFAULT_PAGE, false);
 }
