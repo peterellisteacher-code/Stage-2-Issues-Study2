@@ -481,7 +481,7 @@ async function onChatSubmit(e) {
     els.chatMeta.textContent = `${data.duration_ms || 0} ms · ~$${cost}`;
     persistCurrent({ flush: true });
   } catch (err) {
-    appendMessage("error", `Request failed: ${err.message}. The handoff fallback below still works.`);
+    appendMessage("error", `Request failed: ${err.message}. You can still use the handoff fallback below.`);
     els.chatMeta.textContent = "";
   } finally {
     els.chatInput.disabled = false;
@@ -573,7 +573,7 @@ async function onFeedbackClick() {
   els.feedbackBtn.disabled = true;
   const original = els.feedbackBtn.textContent;
   els.feedbackBtn.innerHTML = `<span class="spinner"></span>Generating feedback…`;
-  els.feedbackOutput.innerHTML = `<p><em>The model is reading your draft against the rubric and the closest exemplar. Usually 15–30 seconds.</em></p>`;
+  els.feedbackOutput.innerHTML = `<p><em>The model is reading your draft against the rubric and the closest exemplar. This usually takes 15--30 seconds.</em></p>`;
   try {
     const data = await fetchJson("/api/feedback", { question_id: state.questionId, draft_text: draft });
     state.feedbackMd = data.feedback_markdown || "";
