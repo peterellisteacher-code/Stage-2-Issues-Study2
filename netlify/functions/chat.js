@@ -96,11 +96,16 @@ ${dialectic}${attachedLines}${missingLines}`;
 // Primary-tier readings are attached first; anything that would push us over budget
 // goes into `missing` so the AI knows the title but is told not to invent quotes.
 function buildDocumentBlocks(entry, fileIds, readingsText) {
-  // Doc budget. Tight to fit Anthropic Tier 1 rate limit (50K input tokens/min).
-  // First turn: ~25K docs + ~1K system + ~1K context = ~27K, under 50K.
-  // Subsequent turns: docs cache (charged ~10%) ≈ 2.5K + history ≈ 5K total, comfortable.
-  const TOKEN_BUDGET = 25_000;
-  const TOKENS_PER_PDF_BYTE = 1 / 20;  // ~50 tokens/KB
+  // Doc budget. Tuned for Anthropic Tier 2 (100K input tokens/min, excluding
+  // cache reads). First turn: ~80K docs + ~1K system + ~1K context = ~82K,
+  // under the 100K limit. Subsequent turns: docs cache and don't count
+  // toward ITPM at all (Tier 2 limit explicitly excludes cache reads).
+  const TOKEN_BUDGET = 80_000;
+  // Empirical: Anthropic charges PDFs ~1500-2500 tokens per page. For our
+  // academic articles that works out to ~165 tokens/KB of file size — a 56KB
+  // Pojman PDF cost ~9.4K tokens in a real call. Use 0.2 tok/byte (200/KB)
+  // as a slightly conservative estimate so the budget never overshoots.
+  const TOKENS_PER_PDF_BYTE = 0.2;
   const TOKENS_PER_TEXT_CHAR = 0.25;   // 4 chars/token
 
   const docs = [];
